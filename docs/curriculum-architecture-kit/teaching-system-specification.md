@@ -119,6 +119,51 @@ Each supported pacing track must state:
 Pacing changes route, density, sequencing, support, and practice volume. It
 must not silently lower the mastery standard.
 
+### 2.4 Explainable curriculum-map rule
+
+After the dependency order, pacing tracks, knowledge profile, and artifact
+families are defined, create an explainable curriculum map.
+
+The map is not merely a planning spreadsheet. It is a confidence-building
+artifact for teachers, learners, examiners, and future curriculum designers. It
+shows why each topic appears where it appears, what kind of learning it
+requires, and what evidence the learner will create.
+
+At minimum, the map should include:
+
+| Column | Purpose |
+|---|---|
+| Curriculum order | Shows the topic's position in the selected route, such as `Day01-order001` or `Module03-order004`. |
+| Section or layer | Shows the dependency layer, domain section, or curriculum block. |
+| Topic | Names the learnable capability or topic. |
+| Knowledge category | Separates knowledge, skill, representation/location, social/organizational, and embodied-skill categories. |
+| Knowledge type | Names the specific types, such as conceptual, procedural, diagnostic, embedded, or institutional. |
+| Artifact to create | States the learner work product or evidence form aligned to the category/type mix. |
+
+The order column must be derived from prerequisite and foundation logic first,
+then from the selected pacing track. A fast path may compress topics into fewer
+days or modules, but it must preserve the internal logic: foundations first,
+then capabilities that build on them, then integration and transfer.
+
+The artifact column must be derived from the knowledge profile rather than
+from convenience. For example:
+
+- declarative topics produce recall evidence;
+- conceptual topics produce diagrams, concept maps, or explanations;
+- procedural and embedded topics produce labs, runbooks, or configuration
+  records;
+- conditional and strategic topics produce decision tables, tradeoff matrices,
+  or architecture decision records;
+- causal and diagnostic topics produce cause-effect worksheets, incident
+  reconstructions, or troubleshooting records;
+- normative and institutional topics produce policy-to-control maps, RACI
+  charts, audit-evidence checklists, or risk reviews;
+- metacognitive topics produce error logs and confidence-calibration records.
+
+This map should be created before large-scale student or teacher material
+generation. It prevents hidden assumptions from being buried inside lessons,
+slides, labs, or practice questions.
+
 ## 3. Learning Unit Schema
 
 Every unit must define:
@@ -184,6 +229,38 @@ Use this default progression when it fits:
 
 Omit stages that add no learning value. Add stages when tacit, embodied,
 institutional, or high-risk performance requires more exposure.
+
+### 4.4 Artifact derivation rule
+
+Do not choose learner artifacts by habit. Choose them from the knowledge
+category and type that must be evidenced.
+
+Use this default mapping unless the domain gives a stronger reason to adapt it:
+
+| Category | Type | Default learner artifact |
+|---|---|---|
+| Knowledge | Declarative | Retrieval cards, glossary recall sheet, closed-book quiz record. |
+| Knowledge | Conceptual | Concept map, architecture diagram, comparison table, teach-back note. |
+| Knowledge | Conditional | Decision table, contrasting-scenario worksheet, choose-and-reject record. |
+| Knowledge | Causal | Cause-effect diagram, predict-observe-explain worksheet, experiment log. |
+| Knowledge | Normative | Policy/risk review, ethics case analysis, responsible-practice checklist. |
+| Skill | Procedural | Lab worksheet, runbook, worked example, independent task record. |
+| Skill | Diagnostic | Troubleshooting worksheet, incident reconstruction, root-cause postmortem. |
+| Skill | Strategic | Architecture decision record, tradeoff matrix, planning brief. |
+| Skill | Metacognitive | Error log, confidence-calibration note, learning adjustment record. |
+| Representation / Location | Explicit | Documentation map, reference checklist, standard operating procedure. |
+| Representation / Location | Tacit | Expert critique notes, weak-vs-strong case comparison, case library entry. |
+| Representation / Location | Implicit | Habit checklist, review rubric, cue-and-feedback record. |
+| Representation / Location | Embedded | Console/API configuration record, tool inspection worksheet, build-observe-modify log. |
+| Representation / Location | Institutional / Collective | RACI chart, policy-to-control evidence map, ownership and escalation register. |
+| Social / Organizational | Social / Relational | Stakeholder map, ownership register, escalation path. |
+| Embodied Skill | Embodied | Practice log, performance checklist, coaching notes. |
+
+When a unit has multiple types, combine artifact families rather than creating
+unrelated paperwork. Prioritize the artifact that best exposes the failure mode
+that would prevent real use. A diagnostic-procedural-embedded topic, for
+example, usually needs a troubleshooting worksheet plus a configuration or
+inspection record, not only a quiz.
 
 ## 5. Package Schemas
 

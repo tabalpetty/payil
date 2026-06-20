@@ -36,3 +36,4 @@ The 7-day accelerated path uses a stricter operational readiness gate:
 
 - [question-bank-specification.md](question-bank-specification.md)
 - [question-generation-prompt-intake.md](question-generation-prompt-intake.md)
+- [day-01-question-generation-prompts.md](day-01-question-generation-prompts.md)

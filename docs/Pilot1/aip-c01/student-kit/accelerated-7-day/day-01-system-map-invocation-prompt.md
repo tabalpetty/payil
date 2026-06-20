@@ -6,6 +6,14 @@ Establish the shared mental model for AIP-C01 GenAI systems on AWS. By the end
 of Day 1, you should be able to place services, explain the request/response
 flow, and create a minimal prompt evaluation record.
 
+## Focused Artifact Pack
+
+For audit-level traceability, complete the focused Day 1 artifacts here:
+
+[day-01-artifacts/README.md](day-01-artifacts/README.md)
+
+This roll-up workbook summarizes the evidence from those focused artifacts.
+
 ## Part A: GenAI System Map
 
 Draw or describe an end-to-end GenAI application.
@@ -99,4 +107,3 @@ Choose between two plausible options and reject the alternative.
 | I can classify ten service-use scenarios with rationale. |  |
 | I completed timed Day 1 practice. |  |
 | I logged misses and remediation. |  |
-

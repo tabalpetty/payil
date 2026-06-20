@@ -32,6 +32,7 @@ For actual reading and presentation material, use:
 | Slides | [presentations/README.md](presentations/README.md) | Day-by-day slide-style presentation outlines. |
 | 0 | [entry-diagnostic.md](entry-diagnostic.md) | Decide whether the accelerated route is suitable and identify risk areas. |
 | 1 | [day-01-system-map-invocation-prompt.md](day-01-system-map-invocation-prompt.md) | Build the foundation model, AWS service, invocation, and prompt baseline. |
+| 1 focused | [day-01-artifacts/README.md](day-01-artifacts/README.md) | Focused, auditable artifacts for each Day 1 curriculum topic. |
 | 2 | [day-02-rag-design-worksheet.md](day-02-rag-design-worksheet.md) | Design the data, embedding, vector-store, chunking, and basic RAG foundation. |
 | 3 | [day-03-integration-decision-record.md](day-03-integration-decision-record.md) | Decide advanced retrieval, prompt governance, API patterns, and resilience. |
 | 4 | [day-04-model-agent-implementation-architecture.md](day-04-model-agent-implementation-architecture.md) | Design deployment, model routing, enterprise integration, and agent behavior. |

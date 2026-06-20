@@ -8,6 +8,7 @@ Start with:
 - [source-identity-checkpoint.md](source-identity-checkpoint.md)
 - [accelerated-path-design.md](accelerated-path-design.md)
 - [accelerated-7-day-plan.md](accelerated-7-day-plan.md)
+- [aip-c01-topic-knowledge-category-map.md](aip-c01-topic-knowledge-category-map.md)
 
 ## Supported Pacing Tracks
 

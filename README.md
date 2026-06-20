@@ -26,7 +26,10 @@ implementation, is the first reference implementation.
 
 The first reusable
 [Teaching System Specification](docs/curriculum-architecture-kit/teaching-system-specification.md)
-is available. Lessons learned from pilots are tracked in
+is available. The
+[Curriculum Map Construction Guide](docs/curriculum-architecture-kit/curriculum-map-construction-guide.md)
+captures how to make topic ordering, knowledge classification, and artifact
+selection explainable. Lessons learned from pilots are tracked in
 [lessons-learned.md](docs/curriculum-architecture-kit/lessons-learned.md).
 
 Pilot1 has a clean artifact home at `docs/Pilot1/aip-c01/`. The next

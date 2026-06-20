@@ -99,3 +99,35 @@ commitments, risks, and unchanged mastery gates.
 **Kit update needed:** Yes. Add pacing-track rules to the teaching-system
 specification and require accelerated plans to state prerequisites and active
 learning commitments.
+
+### 2026-06-19: Make Curriculum Ordering And Artifact Logic Explainable
+
+**What happened:** While building the AIP-C01 accelerated path, the project
+created a topic map that combined curriculum placement, section/layer, topic,
+knowledge category, knowledge type, and artifact-to-create. The map used the
+existing prerequisite-oriented topic order, assigned each topic into the 7-day
+accelerated route, and derived artifact families from the knowledge
+category/type mix.
+
+**Why it matters:** Teachers and learners need to trust the system. A syllabus
+or calendar alone does not explain why a topic appears on a given day, why a
+specific teaching method is used, or why a learner is asked to create a
+particular artifact. The map makes the design inspectable: sequence comes from
+dependencies and pacing, methods come from knowledge type, and artifacts come
+from the evidence needed for mastery.
+
+**Reusable lesson:** Every serious implementation should include an explainable
+curriculum map before generating large volumes of lessons, slides, labs, or
+practice questions. The map should show:
+
+- route/order identifier, such as `Day01-order001`;
+- section or dependency layer;
+- topic or learnable capability;
+- knowledge category;
+- knowledge type;
+- artifact to create;
+- the rule used to assign order and derive artifacts.
+
+**Kit update needed:** Yes. Add an explainable curriculum-map rule and artifact
+derivation rule to the teaching-system specification, and provide a reusable
+construction guide/template.
