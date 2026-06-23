@@ -1,0 +1,118 @@
+{
+  "day": 2,
+  "generated": "2026-06-23",
+  "target_per_topic": 10,
+  "reviewed_item_count": 119,
+  "cull_count": 12,
+  "summary_rows": [
+    {
+      "curriculum_order": "Day02-order001",
+      "raw_normalized": 13,
+      "reviewed_candidates": 12,
+      "culled": 1,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    },
+    {
+      "curriculum_order": "Day02-order002",
+      "raw_normalized": 15,
+      "reviewed_candidates": 12,
+      "culled": 3,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    },
+    {
+      "curriculum_order": "Day02-order003",
+      "raw_normalized": 12,
+      "reviewed_candidates": 12,
+      "culled": 0,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    },
+    {
+      "curriculum_order": "Day02-order004",
+      "raw_normalized": 13,
+      "reviewed_candidates": 11,
+      "culled": 2,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    },
+    {
+      "curriculum_order": "Day02-order005",
+      "raw_normalized": 12,
+      "reviewed_candidates": 12,
+      "culled": 0,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    },
+    {
+      "curriculum_order": "Day02-order006",
+      "raw_normalized": 12,
+      "reviewed_candidates": 12,
+      "culled": 0,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    },
+    {
+      "curriculum_order": "Day02-order007",
+      "raw_normalized": 12,
+      "reviewed_candidates": 11,
+      "culled": 1,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    },
+    {
+      "curriculum_order": "Day02-order008",
+      "raw_normalized": 13,
+      "reviewed_candidates": 13,
+      "culled": 0,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    },
+    {
+      "curriculum_order": "Day02-order009",
+      "raw_normalized": 12,
+      "reviewed_candidates": 12,
+      "culled": 0,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    },
+    {
+      "curriculum_order": "Day02-order010",
+      "raw_normalized": 17,
+      "reviewed_candidates": 12,
+      "culled": 5,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    }
+  ],
+  "status_counts": {
+    "reviewed": 119
+  },
+  "source_trace_status_counts": {
+    "needs-final-source-check": 119
+  },
+  "per_topic_counts": {
+    "Day02-order001": 12,
+    "Day02-order002": 12,
+    "Day02-order003": 12,
+    "Day02-order004": 11,
+    "Day02-order005": 12,
+    "Day02-order006": 12,
+    "Day02-order007": 11,
+    "Day02-order008": 13,
+    "Day02-order009": 12,
+    "Day02-order010": 12
+  },
+  "short_topics": {},
+  "missing_required_fields": [],
+  "culls_missing_evidence": [],
+  "checks": {
+    "reviewed_items_present": true,
+    "all_items_reviewed_status": true,
+    "per_topic_target_met": true,
+    "required_fields_present": true,
+    "cull_evidence_present": true,
+    "final_source_verification_pending": true
+  }
+}

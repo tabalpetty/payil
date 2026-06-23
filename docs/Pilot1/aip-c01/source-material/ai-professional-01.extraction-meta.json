@@ -1,0 +1,18 @@
+{
+  "source_pdf": "ai-professional-01.pdf",
+  "source_pdf_sha256": "23f81b0e54773e22bba3b46d51ec3824c891a75fadbc1d0d08cc7b3f79c78119",
+  "page_count": 34,
+  "extraction_tool": "pypdf",
+  "generated_utc": "2026-06-23T00:50:06+00:00",
+  "derived_files": [
+    "ai-professional-01.extracted.md",
+    "ai-professional-01.objectives.json"
+  ],
+  "normalizations": [
+    "ligatures expanded",
+    "typographic quotes normalized",
+    "dash variants normalized",
+    "wrapped objective lines rejoined",
+    "page headers and footers removed from objective records"
+  ]
+}

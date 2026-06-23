@@ -14,6 +14,8 @@ curriculum, student, teacher, or exam-prep artifacts are generated.
 | Category | Professional |
 | Official exam guide URL | <https://docs.aws.amazon.com/aws-certification/latest/ai-professional-01/ai-professional-01.html> |
 | Attached syllabus snapshot | `docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf` |
+| Canonical objective map | `docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json` |
+| Searchable syllabus transcript | `docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md` |
 | Checked date | June 18, 2026 |
 
 ## Official Exam Baseline
@@ -46,6 +48,9 @@ curriculum, student, teacher, or exam-prep artifacts are generated.
 |---|---|
 | Official AWS AIP-C01 exam guide | Authority for exam identity, domains, tasks, skills, question format, timing, and score baseline. |
 | `ai-professional-01.pdf` | Local syllabus snapshot supplied for Pilot1. |
+| `ai-professional-01.objectives.json` | Canonical machine-readable official domain, task, skill, and weight source derived from the PDF. |
+| `ai-professional-01.extracted.md` | Human-readable transcript derived from the PDF for quick wording checks and audit. |
+| `ai-professional-01.extraction-meta.json` | Extraction provenance, including PDF SHA-256 and normalization notes. |
 | `AIP-C01_Teaching_Strategy.md` | Prior curriculum design strategy and dependency principles. |
 | `AIP-C01_Topics_Learning_Order_With_Knowledge_Type.xlsx` | Prior dependency-ordered topic sequence and teaching-method suggestions. |
 | `AIP-C01_Curriculum_Dependency_and_Mastery_Matrix.xlsx` | Prior source-to-topic coverage and mastery-gate planning view. |

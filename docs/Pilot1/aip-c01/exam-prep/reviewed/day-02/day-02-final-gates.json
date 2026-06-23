@@ -1,0 +1,99 @@
+{
+  "day": 2,
+  "generated": "2026-06-23",
+  "target_per_topic": 10,
+  "reviewed_item_count": 118,
+  "gate_status": {
+    "teaching_substrate_gate": "pass",
+    "source_objective_gate": "pass",
+    "raw_provenance_gate": "pass",
+    "schema_gate": "pass",
+    "traceability_gate": "pass",
+    "factual_verification_gate": "pass",
+    "review_evidence_gate": "pass",
+    "coverage_gate": "pass",
+    "distribution_gate": "pass",
+    "approved_output_gate": "pass",
+    "cost_gate": "recorded",
+    "iteration_gate": "pass",
+    "human_resolution_gate": "pass"
+  },
+  "blockers": [],
+  "pending_items": [],
+  "per_topic_counts": {
+    "Day02-order001": 12,
+    "Day02-order002": 12,
+    "Day02-order003": 12,
+    "Day02-order004": 11,
+    "Day02-order005": 12,
+    "Day02-order006": 12,
+    "Day02-order007": 11,
+    "Day02-order008": 12,
+    "Day02-order009": 12,
+    "Day02-order010": 12
+  },
+  "difficulty_counts": {
+    "hard": 49,
+    "medium": 53,
+    "exam-plus": 16
+  },
+  "question_format_counts": {
+    "multiple-choice": 91,
+    "multiple-response": 27
+  },
+  "cognitive_demand_counts": {
+    "diagnose": 23,
+    "explain": 10,
+    "select": 31,
+    "configure": 11,
+    "implement": 6,
+    "judge": 15,
+    "integrate": 8,
+    "optimize": 7,
+    "compare": 6,
+    "predict": 1
+  },
+  "answer_position_counts": {
+    "1": 70,
+    "multiple-response": 22,
+    "not-matched": 23,
+    "3": 1,
+    "2": 2
+  },
+  "source_trace_status_counts": {
+    "source-verified": 118
+  },
+  "objective_mismatches": [],
+  "remediation_missing": [],
+  "source_trace_missing": [],
+  "teaching_substrate_missing": [],
+  "approved_output_regressions": [],
+  "cost_summary": {
+    "api_calls": 2,
+    "token_totals": {
+      "input_tokens": 18410,
+      "output_tokens": 5126,
+      "total_tokens": 23536,
+      "candidate_count": 7
+    },
+    "calls": [
+      {
+        "log": "docs/Pilot1/aip-c01/exam-prep/logs/day-02/2026-06-23T060909Z-day-02-day02-order010-top-up-4.jsonl",
+        "run_id": "order010-top-up-4",
+        "candidate_count": 4,
+        "input_tokens": 9316,
+        "output_tokens": 2862,
+        "total_tokens": 12178
+      },
+      {
+        "log": "docs/Pilot1/aip-c01/exam-prep/logs/day-02/2026-06-23T060928Z-day-02-day02-order002-top-up-3.jsonl",
+        "run_id": "order002-top-up-3",
+        "candidate_count": 3,
+        "input_tokens": 9094,
+        "output_tokens": 2264,
+        "total_tokens": 11358
+      }
+    ]
+  },
+  "completion_status": "complete"
+}

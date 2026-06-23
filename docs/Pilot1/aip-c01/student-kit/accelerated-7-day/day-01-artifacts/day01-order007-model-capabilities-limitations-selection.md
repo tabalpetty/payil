@@ -30,6 +30,11 @@ Practise selecting a model based on fit, not popularity.
 
 ## Artifact B: Model Tradeoff Matrix
 
+For Day 1, candidates may be generic model approaches, such as larger text
+model, smaller/faster text model, embedding model plus retrieval, or multimodal
+model. Use named Bedrock models only if you have current availability and
+pricing information.
+
 | Candidate | Strength | Limitation | Best-fit use | Reject when |
 |---|---|---|---|---|
 |  |  |  |  |  |

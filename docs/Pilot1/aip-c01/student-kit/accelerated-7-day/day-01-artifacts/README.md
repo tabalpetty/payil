@@ -30,12 +30,22 @@ The parent Day 1 workbook remains the roll-up:
 | Day01-order009 | Prompt fundamentals, instructions, templates, and structured outputs | [day01-order009-prompt-fundamentals-structured-output.md](day01-order009-prompt-fundamentals-structured-output.md) |
 | Day01-order010 | Basic GenAI evaluation concepts and golden datasets | [day01-order010-basic-evaluation-golden-datasets.md](day01-order010-basic-evaluation-golden-datasets.md) |
 
+## Answer Guidance
+
+Attempt the blank artifacts before opening the answer guidance:
+
+[day-01-answer-guidance.md](day-01-answer-guidance.md)
+
+The guidance file gives filled exemplars and "what a 3 looks like" calibration
+for every Day 1 focused artifact.
+
 ## How To Use
 
 1. Read the Day 1 study guide.
 2. Complete these focused artifacts in order.
-3. Summarize the evidence in the parent Day 1 roll-up workbook.
-4. Record misses or weak answers in the daily error log.
+3. Compare your answers with the answer guidance.
+4. Summarize the evidence in the parent Day 1 roll-up workbook.
+5. Record misses or weak answers in the daily error log.
 
 ## Audit Rule
 

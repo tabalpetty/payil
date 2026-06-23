@@ -24,6 +24,7 @@ from urllib.request import Request, urlopen
 ROOT = Path(__file__).resolve().parents[1]
 PROMPT_PACK = ROOT / "docs/Pilot1/aip-c01/exam-prep/day-01-question-generation-prompts.md"
 RAW_DIR = ROOT / "docs/Pilot1/aip-c01/exam-prep/raw/day-01"
+REVIEWED_BANK = ROOT / "docs/Pilot1/aip-c01/exam-prep/reviewed/day-01/day-01-reviewed-question-bank.md"
 DEFAULT_MODEL = "gpt-4.1"
 
 BATCH_TO_SECTION = {
@@ -65,6 +66,30 @@ def extract_section(markdown: str, heading: str) -> str:
     return match.group("body").strip()
 
 
+def prior_stems_for_topic(topic: str) -> list[str]:
+    if not REVIEWED_BANK.exists():
+        return []
+
+    text = read_text(REVIEWED_BANK)
+    stems: list[str] = []
+    for block in re.split(r"^### ", text, flags=re.MULTILINE):
+        if f"| `learning_unit` | {topic} |" not in block:
+            continue
+        match = re.search(r"\nStem:\n\n(?P<stem>.*?)(?=\n\nOptions:\n)", block, re.DOTALL)
+        if match:
+            stems.append(" ".join(match.group("stem").split()))
+
+    cull_table = text.split("## Culled Items", 1)[-1]
+    for line in cull_table.splitlines():
+        if f"| {topic} |" not in line:
+            continue
+        parts = [part.strip() for part in line.strip().strip("|").split("|")]
+        if len(parts) >= 3 and parts[2] != "Stem excerpt":
+            stems.append(parts[2].replace("\\|", "|"))
+
+    return stems
+
+
 def build_prompt(section_heading: str) -> str:
     pack = read_text(PROMPT_PACK)
     selected = extract_section(pack, section_heading)
@@ -88,6 +113,50 @@ def build_prompt(section_heading: str) -> str:
 
         ===== SELECTED BATCH TO EXECUTE =====
         {selected}
+        """
+    )
+
+
+def build_top_up_prompt(section_heading: str, topic: str, count: int) -> str:
+    pack = read_text(PROMPT_PACK)
+    selected = extract_section(pack, section_heading)
+    prior_stems = prior_stems_for_topic(topic)
+    prior_stem_block = "\n".join(f"- {stem}" for stem in prior_stems) or "- No reviewed-bank stems found yet."
+
+    return textwrap.dedent(
+        f"""\
+        You are generating raw draft practice-question candidates for a curriculum repository.
+
+        Follow the complete Day 1 prompt pack below, especially the output schema,
+        global guardrails, and question quality requirements. Then execute the
+        selected topic prompt as a top-up generation.
+
+        IMPORTANT:
+        - Generate exactly {count} additional draft questions for {topic}.
+        - Return only a JSON array of the generated draft questions.
+        - Do not repeat stems, scenarios, constraints, misconceptions, or answer
+          patterns from prior raw or reviewed output.
+        - Make every item scenario-based and professional-level.
+        - Avoid glossary stems such as "Which AWS service...", "What is...",
+          "Which best describes...", or other keyword-recognition items.
+        - Avoid stale service-capability claims such as "currently does not
+          support" unless the exact official AWS source is identified in
+          source_trace_needed.
+        - Do not say you cannot source-review the items; instead mark source_trace_needed.
+        - Do not mark anything as approved.
+        - Do not include copied official exam questions or third-party question-bank content.
+
+        ===== DAY 1 PROMPT PACK =====
+        {pack}
+
+        ===== SELECTED TOPIC PROMPT TO EXECUTE AS TOP-UP =====
+        {selected}
+
+        ===== EXISTING STEMS AND REJECTED STEM EXCERPTS TO AVOID =====
+        {prior_stem_block}
+
+        ===== TOP-UP OVERRIDE =====
+        Generate exactly {count} questions for {topic}, not the full default topic count.
         """
     )
 
@@ -234,6 +303,17 @@ def main() -> int:
         action="store_true",
         help="Execute all ten Day 1 topic prompts sequentially.",
     )
+    target.add_argument(
+        "--top-up-topic",
+        choices=sorted(TOPIC_TO_SECTION),
+        help="Generate a smaller top-up set for one Day 1 topic.",
+    )
+    parser.add_argument(
+        "--count",
+        type=int,
+        default=2,
+        help="Number of questions for --top-up-topic. Defaults to 2.",
+    )
     parser.add_argument(
         "--model",
         default=os.environ.get("OPENAI_MODEL", DEFAULT_MODEL),
@@ -256,16 +336,31 @@ def main() -> int:
     if not args.dry_run and not api_key:
         raise SystemExit("OPENAI_API_KEY is not set. Use --dry-run to inspect the prompt without calling the API.")
 
-    if args.all_topics:
-        runs = [(topic.lower().replace("day01-", ""), section) for topic, section in TOPIC_TO_SECTION.items()]
+    if args.top_up_topic:
+        runs = [
+            (
+                f"{args.top_up_topic.lower().replace('day01-', '')}-top-up-{args.count}",
+                TOPIC_TO_SECTION[args.top_up_topic],
+                args.top_up_topic,
+                args.count,
+            )
+        ]
+    elif args.all_topics:
+        runs = [
+            (topic.lower().replace("day01-", ""), section, None, None)
+            for topic, section in TOPIC_TO_SECTION.items()
+        ]
     elif args.topic:
-        runs = [(args.topic.lower().replace("day01-", ""), TOPIC_TO_SECTION[args.topic])]
+        runs = [(args.topic.lower().replace("day01-", ""), TOPIC_TO_SECTION[args.topic], None, None)]
     else:
         batch = args.batch or "balanced"
-        runs = [(batch, BATCH_TO_SECTION[batch])]
+        runs = [(batch, BATCH_TO_SECTION[batch], None, None)]
 
-    for run_id, section in runs:
-        prompt = build_prompt(section)
+    for run_id, section, top_up_topic, top_up_count in runs:
+        if top_up_topic and top_up_count:
+            prompt = build_top_up_prompt(section, top_up_topic, top_up_count)
+        else:
+            prompt = build_prompt(section)
         if args.dry_run:
             path = write_dry_run(run_id, args.model, prompt)
             print(path.relative_to(ROOT))

@@ -51,6 +51,11 @@ Student Kit, and exam-preparation layer.
 - Pair every assessment with gap-specific remediation and a reassessment path.
 - Use current official AWS sources for AIP-C01 technical claims and preserve
   source traceability.
+- For AIP-C01 official syllabus/objective references, use
+  `docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json`
+  first. Use `ai-professional-01.extracted.md` for human wording checks and
+  `ai-professional-01.pdf` only as the source of record for audit or
+  regeneration.
 - Keep generic methodology free of unnecessary AWS-specific assumptions.
 
 ## Working Practice

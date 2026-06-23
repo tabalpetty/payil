@@ -60,8 +60,8 @@ For each day, copy the template into `my-run/` and fill that copy. If you are
 working directly in Markdown, one simple naming pattern is:
 
 ```text
-my-run/day-01-my-system-map-invocation-prompt.md
-my-run/day-02-my-rag-design-worksheet.md
+my-run/my-day-01-system-map-invocation-prompt.md
+my-run/my-day-02-rag-design-worksheet.md
 ...
 my-run/daily-error-log.md
 ```

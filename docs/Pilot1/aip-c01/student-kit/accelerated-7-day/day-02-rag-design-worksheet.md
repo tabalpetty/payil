@@ -5,6 +5,11 @@
 Design the data preparation, embedding, vector-store, metadata, chunking, and
 basic retrieval foundation for a RAG system.
 
+This is the roll-up workbook for Day 2. For topic-by-topic practice and answer
+guidance, use the focused artifacts:
+
+[day-02-artifacts/README.md](day-02-artifacts/README.md)
+
 ## Scenario
 
 | Field | Response |
@@ -99,4 +104,3 @@ Why this choice fits the scenario:
 | I can identify where data quality, sync, or retrieval failures appear. |  |
 | I completed timed Day 2 practice. |  |
 | I logged misses and remediation. |  |
-

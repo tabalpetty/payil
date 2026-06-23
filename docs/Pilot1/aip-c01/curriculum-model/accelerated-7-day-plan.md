@@ -89,7 +89,8 @@ move quickly into professional-level tasks.
 - cross-domain prerequisites;
 - Domain 1 Task 1.1 and Task 1.2 foundations;
 - Domain 1 Task 1.6 prompt foundations;
-- Domain 2 Task 2.4 basic FM API integration.
+- Domain 2 Task 2.4 basic FM API integration;
+- Domain 2 Task 2.5 basic application integration pattern selection.
 
 **Learning focus:**
 

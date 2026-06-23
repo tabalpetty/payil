@@ -1,0 +1,899 @@
+{
+  "day": 2,
+  "generated": "2026-06-23",
+  "minimum_reviewed_candidates_per_topic": 10,
+  "summary_by_topic": {
+    "Day02-order001": {
+      "raw_normalized": 13,
+      "reviewed_candidates": 12,
+      "culled": 1,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    },
+    "Day02-order002": {
+      "raw_normalized": 15,
+      "reviewed_candidates": 12,
+      "culled": 3,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    },
+    "Day02-order003": {
+      "raw_normalized": 12,
+      "reviewed_candidates": 12,
+      "culled": 0,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    },
+    "Day02-order004": {
+      "raw_normalized": 13,
+      "reviewed_candidates": 11,
+      "culled": 2,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    },
+    "Day02-order005": {
+      "raw_normalized": 12,
+      "reviewed_candidates": 12,
+      "culled": 0,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    },
+    "Day02-order006": {
+      "raw_normalized": 12,
+      "reviewed_candidates": 12,
+      "culled": 0,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    },
+    "Day02-order007": {
+      "raw_normalized": 12,
+      "reviewed_candidates": 11,
+      "culled": 1,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    },
+    "Day02-order008": {
+      "raw_normalized": 13,
+      "reviewed_candidates": 13,
+      "culled": 0,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    },
+    "Day02-order009": {
+      "raw_normalized": 12,
+      "reviewed_candidates": 12,
+      "culled": 0,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    },
+    "Day02-order010": {
+      "raw_normalized": 17,
+      "reviewed_candidates": 12,
+      "culled": 5,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    }
+  },
+  "prompt_improvement_signals": [
+    {
+      "failure_reason": "unsupported high-risk claim",
+      "count": 8,
+      "prompt_adjustment": "Ask the generator to avoid high-risk service-capability claims unless it cites an exact official source for review."
+    },
+    {
+      "failure_reason": "keyword-trivia stem",
+      "count": 4,
+      "prompt_adjustment": "Ban glossary-style or service-name stems; require a professional scenario with a constraint-driven decision."
+    },
+    {
+      "failure_reason": "stale or risky technical claim",
+      "count": 1,
+      "prompt_adjustment": "Avoid dated or capability-boundary claims unless the exact current AWS source is provided."
+    }
+  ],
+  "top_up_guidance": {
+    "Day02-order001": {
+      "reviewed_candidates": 12,
+      "deficit_to_10": 0,
+      "recommended_raw_top_up": 0
+    },
+    "Day02-order002": {
+      "reviewed_candidates": 12,
+      "deficit_to_10": 0,
+      "recommended_raw_top_up": 0
+    },
+    "Day02-order003": {
+      "reviewed_candidates": 12,
+      "deficit_to_10": 0,
+      "recommended_raw_top_up": 0
+    },
+    "Day02-order004": {
+      "reviewed_candidates": 11,
+      "deficit_to_10": 0,
+      "recommended_raw_top_up": 0
+    },
+    "Day02-order005": {
+      "reviewed_candidates": 12,
+      "deficit_to_10": 0,
+      "recommended_raw_top_up": 0
+    },
+    "Day02-order006": {
+      "reviewed_candidates": 12,
+      "deficit_to_10": 0,
+      "recommended_raw_top_up": 0
+    },
+    "Day02-order007": {
+      "reviewed_candidates": 11,
+      "deficit_to_10": 0,
+      "recommended_raw_top_up": 0
+    },
+    "Day02-order008": {
+      "reviewed_candidates": 13,
+      "deficit_to_10": 0,
+      "recommended_raw_top_up": 0
+    },
+    "Day02-order009": {
+      "reviewed_candidates": 12,
+      "deficit_to_10": 0,
+      "recommended_raw_top_up": 0
+    },
+    "Day02-order010": {
+      "reviewed_candidates": 12,
+      "deficit_to_10": 0,
+      "recommended_raw_top_up": 0
+    }
+  },
+  "reviewed_stems_by_topic": {
+    "Day02-order001": [
+      {
+        "item_id": "P1-AIP-D2-001",
+        "stem": "A data engineering team uses AWS Glue Data Quality to validate customer purchase records before feeding them to a foundation model for personalized recommendations. The model\u2019s output quality has degraded, and monitoring dashboards show a recent spike in missing values for key columns, but no schema drift. Which action should the team take FIRST?",
+        "raw_source": "2026-06-23T051527Z-openai-gpt-4.1-day-02-order001.md item 1"
+      },
+      {
+        "item_id": "P1-AIP-D2-002",
+        "stem": "During data exploration, your team notices that SageMaker Data Wrangler\u2019s data quality report for the training dataset highlights outlier values in several numeric columns, not previously flagged in the raw S3 files. Which is the MOST likely explanation?",
+        "raw_source": "2026-06-23T051527Z-openai-gpt-4.1-day-02-order001.md item 3"
+      },
+      {
+        "item_id": "P1-AIP-D2-003",
+        "stem": "A team is evaluating candidate foundation model input data in an Amazon S3 bucket. They want to automate regular checks for new data files containing unexpected null values and take corrective action. Which solution MOST directly enables automated detection and remediation?",
+        "raw_source": "2026-06-23T051527Z-openai-gpt-4.1-day-02-order001.md item 4"
+      },
+      {
+        "item_id": "P1-AIP-D2-004",
+        "stem": "A generative AI application periodically pulls data from a relational database into Amazon S3. Foundation model accuracy recently declined. On review, you find a spike in referential integrity issues and duplicate records. Which approach should you implement FIRST to ensure only high-quality data is sent to the model?",
+        "raw_source": "2026-06-23T051527Z-openai-gpt-4.1-day-02-order001.md item 5"
+      },
+      {
+        "item_id": "P1-AIP-D2-005",
+        "stem": "You are tasked with providing real-time alerting for data quality issues detected during ingestion of social media posts into S3, which are processed by a foundation model for content moderation. Which AWS-native solution enables near real-time alerting based on data quality rules?",
+        "raw_source": "2026-06-23T051527Z-openai-gpt-4.1-day-02-order001.md item 6"
+      },
+      {
+        "item_id": "P1-AIP-D2-006",
+        "stem": "You are implementing a data validation pipeline for tabular user activity logs. The logs must be checked for column-level nulls, data type mismatches, and sudden distribution changes. Which configuration provides the most scalable and maintainable validation workflow?",
+        "raw_source": "2026-06-23T051527Z-openai-gpt-4.1-day-02-order001.md item 7"
+      },
+      {
+        "item_id": "P1-AIP-D2-007",
+        "stem": "A team ingests customer support chat data from multiple regions into a data lake backed by Amazon S3. After deploying a new data generator, they see sudden inconsistencies in language codes and missing conversation IDs. Which validation step is MOST likely to help prevent poor model performance in downstream FM-based summarization?",
+        "raw_source": "2026-06-23T051527Z-openai-gpt-4.1-day-02-order001.md item 8"
+      },
+      {
+        "item_id": "P1-AIP-D2-008",
+        "stem": "While onboarding a new supplier's product catalog, extensive manual corrections are required after ingestion due to data type mismatches and inconsistent field delimiters. Existing automated checks use Lambda functions integrated with CloudWatch. What is the MOST effective technical step to reduce ongoing manual corrections?",
+        "raw_source": "2026-06-23T051527Z-openai-gpt-4.1-day-02-order001.md item 9"
+      },
+      {
+        "item_id": "P1-AIP-D2-009",
+        "stem": "You discover that a downstream LLM inference pipeline is returning inconsistent summaries for similar customer reviews. After checking the code base, you suspect data quality issues. What is the MOST effective first step to identify root causes?",
+        "raw_source": "2026-06-23T051527Z-openai-gpt-4.1-day-02-order001.md item 10"
+      },
+      {
+        "item_id": "P1-AIP-D2-010",
+        "stem": "A team is designing an automated pipeline for text ingestion and validation prior to FM inference. Data comes from multiple formats and sources (CSV, JSON, API streams). Which of the following practices will BEST ensure high data quality with minimal manual intervention? (Select TWO.)",
+        "raw_source": "2026-06-23T051527Z-openai-gpt-4.1-day-02-order001.md item 11"
+      },
+      {
+        "item_id": "P1-AIP-D2-011",
+        "stem": "A genomics project processes petabyte-scale sample data for input to a foundation model. Data arrives as CSVs with variable schema and inconsistent delimiters. Which TWO technical controls, if added to the pipeline, would MOST improve automated data validation accuracy before FM ingestion?",
+        "raw_source": "2026-06-23T051527Z-openai-gpt-4.1-day-02-order001.md item 12"
+      },
+      {
+        "item_id": "P1-AIP-D2-012",
+        "stem": "You are investigating inconsistent document summaries generated by a Bedrock-hosted FM. Analysis reveals a correlation with spikes in S3 ingestion activity. Which TWO actions would MOST likely help uncover the true cause? (Select TWO.)",
+        "raw_source": "2026-06-23T051527Z-openai-gpt-4.1-day-02-order001.md item 13"
+      }
+    ],
+    "Day02-order002": [
+      {
+        "item_id": "P1-AIP-D2-013",
+        "stem": "An ML engineer is building a pipeline to process scanned PDF invoices for a procurement FM solution. After integrating the latest model, they notice high rates of misclassification in fields extracted from the images. Which preprocessing step should the engineer prioritize to improve extraction accuracy before FM inference?",
+        "raw_source": "2026-06-23T051621Z-openai-gpt-4.1-day-02-order002.md item 1"
+      },
+      {
+        "item_id": "P1-AIP-D2-014",
+        "stem": "A team needs to preprocess tabular purchase records from CSV files for ingestion into a Bedrock FM that expects structured JSON input. Which approach best addresses data normalization and format conversion?",
+        "raw_source": "2026-06-23T051621Z-openai-gpt-4.1-day-02-order002.md item 4"
+      },
+      {
+        "item_id": "P1-AIP-D2-015",
+        "stem": "A company implements a multimodal RAG pipeline to summarize research articles containing both text and annotated diagrams. The FM output consistently omits key information from diagrams. What preprocessing enhancement will most likely improve summary completeness?",
+        "raw_source": "2026-06-23T051621Z-openai-gpt-4.1-day-02-order002.md item 5"
+      },
+      {
+        "item_id": "P1-AIP-D2-016",
+        "stem": "You are preparing a pipeline for ingesting customer feedback, including voice messages, attached images, and tabular survey results, into a Bedrock FM. Which TWO preprocessing steps are required to enable consistent semantic search across all data types? (Select TWO.)",
+        "raw_source": "2026-06-23T051621Z-openai-gpt-4.1-day-02-order002.md item 6"
+      },
+      {
+        "item_id": "P1-AIP-D2-017",
+        "stem": "A data pipeline for journal articles uses SageMaker Processing to clean up OCR-extracted text data before further FM ingestion. Recently, output quality dropped, with incoherent text and frequent tokens like \"fi\" and \"fl\" appearing mid-word (e.g., \"effi cient\"). What root cause should the team address?",
+        "raw_source": "2026-06-23T051621Z-openai-gpt-4.1-day-02-order002.md item 7"
+      },
+      {
+        "item_id": "P1-AIP-D2-018",
+        "stem": "A customer wants to run a multimodal sentiment analysis model using Amazon Bedrock. Their dataset consists of user reviews (text), uploaded screenshots (images), and survey responses in Excel spreadsheets. Which preprocessing action could cause downstream errors if overlooked?",
+        "raw_source": "2026-06-23T051621Z-openai-gpt-4.1-day-02-order002.md item 9"
+      },
+      {
+        "item_id": "P1-AIP-D2-019",
+        "stem": "A solutions architect is designing a scalable preprocessing workflow for user-uploaded resumes received as PDF files containing both text and images. The downstream FM application requires both structured text and image features. Which workflow is most appropriate?",
+        "raw_source": "2026-06-23T051621Z-openai-gpt-4.1-day-02-order002.md item 10"
+      },
+      {
+        "item_id": "P1-AIP-D2-020",
+        "stem": "An enterprise is designing an end-to-end pipeline to process customer support tickets containing free-form text, screenshots, and tabular error logs for subsequent FM-driven troubleshooting. Which THREE preprocessing actions should be implemented to support optimal FM inference? (Select THREE.)",
+        "raw_source": "2026-06-23T051621Z-openai-gpt-4.1-day-02-order002.md item 11"
+      },
+      {
+        "item_id": "P1-AIP-D2-021",
+        "stem": "A data engineer must design a preprocessing workflow to accommodate real-time social media text, user-uploaded images, and voice comments for a Bedrock FM marketing analytics solution. What is the most appropriate AWS tool combination for this requirement?",
+        "raw_source": "2026-06-23T051621Z-openai-gpt-4.1-day-02-order002.md item 12"
+      },
+      {
+        "item_id": "P1-AIP-D2-117",
+        "stem": "An AI team is seeing inconsistent foundation model outputs when dynamically merging tabular sales data with product catalog images as input to a Bedrock multimodal pipeline. The same table appears with different column orders in CSV files, and some images lack metadata. The FM response quality for certain products fluctuates as a result. What is the most likely root cause of this performance degradation?",
+        "raw_source": "2026-06-23T060943Z-openai-gpt-4.1-day-02-order002-top-up-3.md item 1"
+      },
+      {
+        "item_id": "P1-AIP-D2-118",
+        "stem": "A retailer wants to use a Foundation Model to generate product descriptions from item specifications (tabular data), product images, and customer review audio snippets. The reviews are recorded by field reps using different smartphone apps, resulting in a variety of file formats and quality levels. What is the most important data preprocessing action to ensure the FM can use the review audio data effectively?",
+        "raw_source": "2026-06-23T060943Z-openai-gpt-4.1-day-02-order002-top-up-3.md item 2"
+      },
+      {
+        "item_id": "P1-AIP-D2-119",
+        "stem": "A legal AI assistant is being designed to answer questions based on court transcripts (text), evidence images (JPEG/PNG), and time-stamped call logs (tabular data). The solution must prevent bias or omission due to inconsistent data quality and maximize reliability for downstream FM-driven analysis. Which TWO preprocessing controls best address these requirements?",
+        "raw_source": "2026-06-23T060943Z-openai-gpt-4.1-day-02-order002-top-up-3.md item 3"
+      }
+    ],
+    "Day02-order003": [
+      {
+        "item_id": "P1-AIP-D2-022",
+        "stem": "A team is preparing input data to send to an Amazon Bedrock FM endpoint using the InvokeModel API. Their raw dataset is a mix of plain strings and nested dictionaries. What is the most appropriate next step to ensure the model's input meets Bedrock's requirements?",
+        "raw_source": "2026-06-23T051717Z-openai-gpt-4.1-day-02-order003.md item 1"
+      },
+      {
+        "item_id": "P1-AIP-D2-023",
+        "stem": "You are designing a Lambda function to normalize dates from various formats in a dataset before sending it to a dialog FM for intent detection. Which normalization strategy is most appropriate for maximizing model consistency?",
+        "raw_source": "2026-06-23T051717Z-openai-gpt-4.1-day-02-order003.md item 2"
+      },
+      {
+        "item_id": "P1-AIP-D2-024",
+        "stem": "A data scientist is using SageMaker Processing to prepare structured input for an AI endpoint that expects all missing numerical values as zeroes and all text fields trimmed of whitespace. Which step should be implemented in the processing script to ensure FM compatibility?",
+        "raw_source": "2026-06-23T051717Z-openai-gpt-4.1-day-02-order003.md item 3"
+      },
+      {
+        "item_id": "P1-AIP-D2-025",
+        "stem": "You are debugging a classification FM endpoint that returns inconsistent results on seemingly similar user utterances. After reviewing the invocation logs, you notice significant variance in input string capitalization and punctuation. What is the most likely root cause?",
+        "raw_source": "2026-06-23T051717Z-openai-gpt-4.1-day-02-order003.md item 4"
+      },
+      {
+        "item_id": "P1-AIP-D2-026",
+        "stem": "A team is migrating from a legacy on-prem intent recognition system to use Amazon Bedrock with a conversational FM. The legacy system allowed multi-turn conversation context to be provided as a single large string. Bedrock\u2019s model expects a structured list of user/assistant message objects. What is the most important change to the input pipeline to meet Bedrock\u2019s requirements?",
+        "raw_source": "2026-06-23T051717Z-openai-gpt-4.1-day-02-order003.md item 5"
+      },
+      {
+        "item_id": "P1-AIP-D2-027",
+        "stem": "You are tasked with integrating Amazon Comprehend entity extraction to enhance data quality before sending customer support transcripts to an FM endpoint for summarization. Which pre-processing step most reliably improves downstream FM consistency for entity names?",
+        "raw_source": "2026-06-23T051717Z-openai-gpt-4.1-day-02-order003.md item 6"
+      },
+      {
+        "item_id": "P1-AIP-D2-028",
+        "stem": "You are designing a data-preprocessing pipeline to prepare news articles for Amazon Bedrock for topic classification. The content arrives with non-ASCII characters, inconsistent formatting, and embedded HTML tags. Which combination of pre-processing actions would maximize FM performance?",
+        "raw_source": "2026-06-23T051717Z-openai-gpt-4.1-day-02-order003.md item 7"
+      },
+      {
+        "item_id": "P1-AIP-D2-029",
+        "stem": "A developer wants to use Bedrock to format prompt strings for downstream FMs as part of an inference pipeline. Which benefit does using Bedrock's prompt formatting functionality provide over ad-hoc string concatenation?",
+        "raw_source": "2026-06-23T051717Z-openai-gpt-4.1-day-02-order003.md item 8"
+      },
+      {
+        "item_id": "P1-AIP-D2-030",
+        "stem": "You are configuring a pipeline to feed structured tabular data for regression to a SageMaker AI endpoint. Which actions are essential to ensure input data aligns with the model's expectations for robust inference?",
+        "raw_source": "2026-06-23T051717Z-openai-gpt-4.1-day-02-order003.md item 9"
+      },
+      {
+        "item_id": "P1-AIP-D2-031",
+        "stem": "An application normalizes all input text to lowercase before sending prompts to a text generation FM. What is a potential risk of this approach?",
+        "raw_source": "2026-06-23T051717Z-openai-gpt-4.1-day-02-order003.md item 10"
+      },
+      {
+        "item_id": "P1-AIP-D2-032",
+        "stem": "During batch inference using SageMaker, you observe that text summaries generated by your FM endpoint are much shorter for some records, even though the prompts and input lengths are similar. Your pipeline includes custom Lambda normalization before submission. What is a likely explanation?",
+        "raw_source": "2026-06-23T051717Z-openai-gpt-4.1-day-02-order003.md item 11"
+      },
+      {
+        "item_id": "P1-AIP-D2-033",
+        "stem": "A business analyst is using Amazon Bedrock to request text completions from an FM and is seeing frequent JSON parsing errors. What is the most likely cause?",
+        "raw_source": "2026-06-23T051717Z-openai-gpt-4.1-day-02-order003.md item 12"
+      }
+    ],
+    "Day02-order004": [
+      {
+        "item_id": "P1-AIP-D2-034",
+        "stem": "Your team is enhancing a product search engine using Amazon Bedrock embedding models. The product catalog covers both technical documentation and creative marketing descriptions. Which factor should most influence your choice of embedding model?",
+        "raw_source": "2026-06-23T051804Z-openai-gpt-4.1-day-02-order004.md item 1"
+      },
+      {
+        "item_id": "P1-AIP-D2-035",
+        "stem": "A semantic search API based on Amazon Titan embeddings is returning results that are mostly relevant but occasionally mixes up very similar product names. What is the most likely technical cause?",
+        "raw_source": "2026-06-23T051804Z-openai-gpt-4.1-day-02-order004.md item 2"
+      },
+      {
+        "item_id": "P1-AIP-D2-036",
+        "stem": "A team's vector search performance degrades as the number of documents grows into millions. The retrieval system uses default embeddings from an Amazon Bedrock model. What foundational factor should be evaluated first?",
+        "raw_source": "2026-06-23T051804Z-openai-gpt-4.1-day-02-order004.md item 5"
+      },
+      {
+        "item_id": "P1-AIP-D2-037",
+        "stem": "A data science lead asserts that cosine similarity will always yield the best results for semantic search using any embedding model. How should you assess this claim?",
+        "raw_source": "2026-06-23T051804Z-openai-gpt-4.1-day-02-order004.md item 6"
+      },
+      {
+        "item_id": "P1-AIP-D2-038",
+        "stem": "A developer wants to store document embeddings generated by Amazon Titan in a vector database. Which factor is least likely to be handled by the embedding model itself?",
+        "raw_source": "2026-06-23T051804Z-openai-gpt-4.1-day-02-order004.md item 7"
+      },
+      {
+        "item_id": "P1-AIP-D2-039",
+        "stem": "You are comparing semantic retrieval results using embeddings generated by two different Amazon Bedrock models. Both pass basic functional tests, but one yields noticeably more relevant results for legal documents. Which is the most likely explanation?",
+        "raw_source": "2026-06-23T051804Z-openai-gpt-4.1-day-02-order004.md item 8"
+      },
+      {
+        "item_id": "P1-AIP-D2-040",
+        "stem": "A developer is asked why semantic search results from the team\u2019s knowledge base sometimes omit recently uploaded documents, even though embeddings are generated immediately upon upload. Which is the most likely reason?",
+        "raw_source": "2026-06-23T051804Z-openai-gpt-4.1-day-02-order004.md item 9"
+      },
+      {
+        "item_id": "P1-AIP-D2-041",
+        "stem": "A company\u2019s semantic search pipeline uses Amazon Bedrock for embeddings and a managed vector database. Some users report that search results lack context-sensitive matches (for example, 'Apple' as a company vs. fruit). Which is the best course of action?",
+        "raw_source": "2026-06-23T051804Z-openai-gpt-4.1-day-02-order004.md item 10"
+      },
+      {
+        "item_id": "P1-AIP-D2-042",
+        "stem": "A team is evaluating potential embedding models for a new customer support chatbot that must handle product tech specs, installation instructions, and casual user queries. Which factors should they prioritize when selecting an embedding solution? (Select TWO.)",
+        "raw_source": "2026-06-23T051804Z-openai-gpt-4.1-day-02-order004.md item 11"
+      },
+      {
+        "item_id": "P1-AIP-D2-043",
+        "stem": "A financial analytics platform wants to maximize the relevance of retrieval-augmented search using document embeddings. Which practices can improve semantic retrieval performance? (Select TWO.)",
+        "raw_source": "2026-06-23T051804Z-openai-gpt-4.1-day-02-order004.md item 12"
+      },
+      {
+        "item_id": "P1-AIP-D2-044",
+        "stem": "A hospital IT department is evaluating embedding methods for searching EMR (electronic medical records) across multiple languages and formats. In addition to confirming the embedding model's support for medical vocabularies, which considerations should factor into their embedding workflow? (Select TWO.)",
+        "raw_source": "2026-06-23T051804Z-openai-gpt-4.1-day-02-order004.md item 13"
+      }
+    ],
+    "Day02-order005": [
+      {
+        "item_id": "P1-AIP-D2-045",
+        "stem": "A retail company is building a RAG solution on AWS to answer customer queries about order policies. Their source documents include contracts, long FAQs, and some internal wikis. To maximize relevant information in the LLM context and avoid splitting meaningful paragraphs, what chunking strategy should they implement in their preprocessing pipeline?",
+        "raw_source": "2026-06-23T051845Z-openai-gpt-4.1-day-02-order005.md item 1"
+      },
+      {
+        "item_id": "P1-AIP-D2-046",
+        "stem": "You notice that retrieval queries against your RAG-enabled customer-support system often return either irrelevant chunks or split answers that are incomplete. The document pipeline uses only a simple character-based fixed-size chunking strategy. What is the most likely cause of the poor retrieval quality?",
+        "raw_source": "2026-06-23T051845Z-openai-gpt-4.1-day-02-order005.md item 2"
+      },
+      {
+        "item_id": "P1-AIP-D2-047",
+        "stem": "A legal team is preparing long legal documents for ingestion into an FM-backed retrieval system. The documents are highly structured, often containing sections, subsections, and bullet points. Which method will best preserve the documents' original meaning and maximize retrieval relevance?",
+        "raw_source": "2026-06-23T051845Z-openai-gpt-4.1-day-02-order005.md item 3"
+      },
+      {
+        "item_id": "P1-AIP-D2-048",
+        "stem": "A startup reports that their RAG solution frequently returns duplicate or overlapping information to the FM, resulting in bloated inputs and cost overruns. They currently use sliding window chunking with 80% overlap. What should they change in their chunking strategy?",
+        "raw_source": "2026-06-23T051845Z-openai-gpt-4.1-day-02-order005.md item 4"
+      },
+      {
+        "item_id": "P1-AIP-D2-049",
+        "stem": "You are designing a chunking pipeline for a media company's RAG system. News articles range from a few paragraphs to dozens of pages. What is the best approach to provide flexible, contextually-coherent chunk sizes that adapt to document length?",
+        "raw_source": "2026-06-23T051845Z-openai-gpt-4.1-day-02-order005.md item 5"
+      },
+      {
+        "item_id": "P1-AIP-D2-050",
+        "stem": "A team creates vector embeddings from policy documents but retrieval often misses relevant context. Their chunking process segments each document into exactly 256-character chunks regardless of content. What is the principal drawback with this approach?",
+        "raw_source": "2026-06-23T051845Z-openai-gpt-4.1-day-02-order005.md item 6"
+      },
+      {
+        "item_id": "P1-AIP-D2-051",
+        "stem": "An AWS Generative AI team wants to optimize chunking for their specialized FM context. Their corpus consists of academic papers with consistent section headings and structure. Which approach should they choose to balance retrieval performance and storage requirements?",
+        "raw_source": "2026-06-23T051845Z-openai-gpt-4.1-day-02-order005.md item 7"
+      },
+      {
+        "item_id": "P1-AIP-D2-052",
+        "stem": "A team is tasked with segmenting a corpus of technical manuals for use in an FM retrieval pipeline. They want to optimize for retrieval precision and minimize out-of-context results. Which approaches should the team prioritize? (Select TWO.)",
+        "raw_source": "2026-06-23T051845Z-openai-gpt-4.1-day-02-order005.md item 8"
+      },
+      {
+        "item_id": "P1-AIP-D2-053",
+        "stem": "Your dataset contains short emails, entire books, and meeting transcripts. Which chunking architecture should you configure to best balance retrieval accuracy and computational efficiency for FM augmentation?",
+        "raw_source": "2026-06-23T051845Z-openai-gpt-4.1-day-02-order005.md item 9"
+      },
+      {
+        "item_id": "P1-AIP-D2-054",
+        "stem": "An enterprise is creating a chunking framework for a multilingual knowledge base with varying document lengths. To support efficient FM context augmentation and optimize retrieval, which considerations should they prioritize in their segmentation design? (Select THREE.)",
+        "raw_source": "2026-06-23T051845Z-openai-gpt-4.1-day-02-order005.md item 10"
+      },
+      {
+        "item_id": "P1-AIP-D2-055",
+        "stem": "After redesigning their chunking pipeline to segment insurance policies by both section and subsection, a company sees an uptick in retrieval relevance, but also a moderate increase in the number of chunks stored. What should they expect as a long-term effect of this adjustment?",
+        "raw_source": "2026-06-23T051845Z-openai-gpt-4.1-day-02-order005.md item 11"
+      },
+      {
+        "item_id": "P1-AIP-D2-056",
+        "stem": "A life sciences research team must chunk diverse lab protocols, which vary wildly in length, format, and structure. What best practices should they apply to optimize semantic retrieval? (Select TWO.)",
+        "raw_source": "2026-06-23T051845Z-openai-gpt-4.1-day-02-order005.md item 12"
+      }
+    ],
+    "Day02-order006": [
+      {
+        "item_id": "P1-AIP-D2-057",
+        "stem": "A team implements a vector store for FM-augmented Q&A over internal policy documents. Users from multiple departments need to receive contextually relevant answers and not see content from other departments. Which approach best ensures department-level access control during retrieval?",
+        "raw_source": "2026-06-23T051925Z-openai-gpt-4.1-day-02-order006.md item 1"
+      },
+      {
+        "item_id": "P1-AIP-D2-058",
+        "stem": "An enterprise vector search system is returning outdated financial documents when answering current events questions. Metadata for document upload time is available but not being used. What is the first configuration step to improve result freshness?",
+        "raw_source": "2026-06-23T051925Z-openai-gpt-4.1-day-02-order006.md item 2"
+      },
+      {
+        "item_id": "P1-AIP-D2-059",
+        "stem": "A compliance auditor needs to ensure only documents with verified authorship and explicit review dates are eligible for FM-based retrieval on a healthcare knowledge platform. Which metadata strategies should you implement to support these requirements? (Select TWO.)",
+        "raw_source": "2026-06-23T051925Z-openai-gpt-4.1-day-02-order006.md item 3"
+      },
+      {
+        "item_id": "P1-AIP-D2-060",
+        "stem": "A team is designing a RAG solution using Amazon OpenSearch with semantic search for technical document retrieval. They want search results to reflect not only topic relevance but document source reliability, such as whether the document came from an internal or external repository. How should they design their metadata framework?",
+        "raw_source": "2026-06-23T051925Z-openai-gpt-4.1-day-02-order006.md item 4"
+      },
+      {
+        "item_id": "P1-AIP-D2-061",
+        "stem": "During a post-incident review, a team discovers that confidential engineering documents were surfaced in search results for sales team queries. Which gap in metadata design most likely caused this issue?",
+        "raw_source": "2026-06-23T051925Z-openai-gpt-4.1-day-02-order006.md item 5"
+      },
+      {
+        "item_id": "P1-AIP-D2-062",
+        "stem": "A vector store used for RAG has implemented a tagging system to classify documents by domain and sensitivity. How does this improve FM-based search precision?",
+        "raw_source": "2026-06-23T051925Z-openai-gpt-4.1-day-02-order006.md item 6"
+      },
+      {
+        "item_id": "P1-AIP-D2-063",
+        "stem": "You are designing a knowledge base to serve a multilingual, multi-domain enterprise environment. Which metadata design approach best supports filtering for both language and business unit, while also supporting future scaling?",
+        "raw_source": "2026-06-23T051925Z-openai-gpt-4.1-day-02-order006.md item 7"
+      },
+      {
+        "item_id": "P1-AIP-D2-064",
+        "stem": "In a content archiving scenario, you need to guarantee that only documents newer than the company's annual retention threshold are considered during FM-augmented search. What is the most robust metadata-driven approach?",
+        "raw_source": "2026-06-23T051925Z-openai-gpt-4.1-day-02-order006.md item 8"
+      },
+      {
+        "item_id": "P1-AIP-D2-065",
+        "stem": "A retail company wants to surface the right user manual for each product in customer self-service FM search. Manuals are similar in content and often cover multiple product variants. What is the best use of metadata to enable precise result filtering?",
+        "raw_source": "2026-06-23T051925Z-openai-gpt-4.1-day-02-order006.md item 9"
+      },
+      {
+        "item_id": "P1-AIP-D2-066",
+        "stem": "A financial services application supports semantic retrieval for policy documentation and requires real-time filtering by region and compliance version. Which metadata practices should be used to support this? (Select TWO.)",
+        "raw_source": "2026-06-23T051925Z-openai-gpt-4.1-day-02-order006.md item 10"
+      },
+      {
+        "item_id": "P1-AIP-D2-067",
+        "stem": "An internal audit identifies that most retrieved documents for an FM-powered legal chatbot are outdated, but newer versions exist in the vector store. What metadata-related oversight is most likely at fault?",
+        "raw_source": "2026-06-23T051925Z-openai-gpt-4.1-day-02-order006.md item 11"
+      },
+      {
+        "item_id": "P1-AIP-D2-068",
+        "stem": "Your security team requires that FM-augmented retrieval systems do not leak customer-project documents during partner-facing search sessions. Which metadata-driven solutions should you apply to prevent this risk? (Select TWO.)",
+        "raw_source": "2026-06-23T051925Z-openai-gpt-4.1-day-02-order006.md item 12"
+      }
+    ],
+    "Day02-order007": [
+      {
+        "item_id": "P1-AIP-D2-069",
+        "stem": "A financial analytics team migrates from a traditional ML-driven search engine to a new semantic search platform for regulatory document retrieval. They want strong semantic similarity, must support hierarchical search (by regulation region and topic), and are using Amazon Bedrock models integrated with a vector database. Which architecture best covers these requirements and minimizes custom code?",
+        "raw_source": "2026-06-23T052016Z-openai-gpt-4.1-day-02-order007.md item 1"
+      },
+      {
+        "item_id": "P1-AIP-D2-070",
+        "stem": "An e-commerce company wants to implement a product recommendation engine using semantic search over product descriptions, reviews, and metadata. They want to maintain both semantic and keyword-based retrieval in a single solution with native AWS integration. Which technologies could satisfy these requirements? (Select TWO.)",
+        "raw_source": "2026-06-23T052016Z-openai-gpt-4.1-day-02-order007.md item 2"
+      },
+      {
+        "item_id": "P1-AIP-D2-071",
+        "stem": "A SaaS platform uses Amazon OpenSearch Service with the Neural plugin as its vector database for customer query semantic search. Retrieval accuracy sharply declines after switching to a third-party embedding model with different dimensionality. What is the most likely architectural issue?",
+        "raw_source": "2026-06-23T052016Z-openai-gpt-4.1-day-02-order007.md item 3"
+      },
+      {
+        "item_id": "P1-AIP-D2-072",
+        "stem": "A team is deciding between Amazon DynamoDB with a custom Lambda-based embedding pipeline and Amazon OpenSearch Service with the Neural plugin for semantic search. Their data is updated in real-time, search latency is critical, and custom ranking is required on certain fields. Which solution is more appropriate and why?",
+        "raw_source": "2026-06-23T052016Z-openai-gpt-4.1-day-02-order007.md item 4"
+      },
+      {
+        "item_id": "P1-AIP-D2-073",
+        "stem": "Your legal research application must provide semantic retrieval over several million legal documents, support strict access controls by user role, and integrate with future Amazon Bedrock FM-based Q&A workflows. Which architectural elements are most essential in your vector-store solution? (Select TWO.)",
+        "raw_source": "2026-06-23T052016Z-openai-gpt-4.1-day-02-order007.md item 5"
+      },
+      {
+        "item_id": "P1-AIP-D2-074",
+        "stem": "A startup uses Amazon Aurora with pgvector extension for a small RAG-based chatbot. As user volume and complexity grow, they require managed scaling, semantic search, and integration with other AWS analytics services. What would be the best path forward?",
+        "raw_source": "2026-06-23T052016Z-openai-gpt-4.1-day-02-order007.md item 6"
+      },
+      {
+        "item_id": "P1-AIP-D2-075",
+        "stem": "A media analytics company wants to provide semantic search for both text and image metadata at scale. Which vector-store integration approach should they prefer to maximize native AWS service compatibility and scalability with minimal custom orchestration?",
+        "raw_source": "2026-06-23T052016Z-openai-gpt-4.1-day-02-order007.md item 7"
+      },
+      {
+        "item_id": "P1-AIP-D2-076",
+        "stem": "Your content moderation platform must store billions of embeddings for real-time moderation and comply with strict access policies. Which strategies will help build a maintainable and scalable vector store architecture on AWS? (Select TWO.)",
+        "raw_source": "2026-06-23T052016Z-openai-gpt-4.1-day-02-order007.md item 8"
+      },
+      {
+        "item_id": "P1-AIP-D2-077",
+        "stem": "A global help desk chatbot team is evaluating whether to switch from a self-managed OpenSearch cluster (deployed on EC2) to Amazon OpenSearch Service with the Neural plugin for their semantic vector store. Which is the strongest AWS-native rationale to make the switch?",
+        "raw_source": "2026-06-23T052016Z-openai-gpt-4.1-day-02-order007.md item 9"
+      },
+      {
+        "item_id": "P1-AIP-D2-078",
+        "stem": "A pharmaceutical research group is designing a knowledge base that must combine semantic search over documents with strict audit logging for compliance and support future extension to RAG-based workflows. Which AWS architecture balances regulatory requirements and FM scalability?",
+        "raw_source": "2026-06-23T052016Z-openai-gpt-4.1-day-02-order007.md item 10"
+      },
+      {
+        "item_id": "P1-AIP-D2-079",
+        "stem": "A global knowledge repository team is configuring its Bedrock Knowledge Base to segment vector search by domain (product, HR, legal) and restrict content by region (EU, APAC, US). What is the most effective approach for achieving this using AWS-native design patterns?",
+        "raw_source": "2026-06-23T052016Z-openai-gpt-4.1-day-02-order007.md item 12"
+      }
+    ],
+    "Day02-order008": [
+      {
+        "item_id": "P1-AIP-D2-080",
+        "stem": "A distributed semantic search application using Amazon OpenSearch Service experiences high query latency as data volume increases. The development team has noticed that only one shard per index is being utilized for queries. What is the most likely root cause?",
+        "raw_source": "2026-06-23T052105Z-openai-gpt-4.1-day-02-order008.md item 1"
+      },
+      {
+        "item_id": "P1-AIP-D2-081",
+        "stem": "Your team is designing an OpenSearch-based vector store to serve high-throughput semantic retrieval for multiple product categories. Each category\u2019s documents must be isolated with minimal cross-category query interference, while supporting rapid scaling and updates. Which architecture choice would most directly address these requirements?",
+        "raw_source": "2026-06-23T052105Z-openai-gpt-4.1-day-02-order008.md item 2"
+      },
+      {
+        "item_id": "P1-AIP-D2-082",
+        "stem": "A retrieval pipeline reads streaming updates from S3 into OpenSearch vector indices. Lately, some document queries return out-of-date information. What maintenance strategy would minimize index staleness while balancing operational cost?",
+        "raw_source": "2026-06-23T052105Z-openai-gpt-4.1-day-02-order008.md item 3"
+      },
+      {
+        "item_id": "P1-AIP-D2-083",
+        "stem": "A semantic retrieval solution using OpenSearch Service begins failing to ingest new vectors under heavy load. The application logs show repeated 'Too many open files' errors on index nodes. What adjustment best addresses this scalability bottleneck?",
+        "raw_source": "2026-06-23T052105Z-openai-gpt-4.1-day-02-order008.md item 4"
+      },
+      {
+        "item_id": "P1-AIP-D2-084",
+        "stem": "A global enterprise needs fast vector-based search for multilingual documents across regions. Which architectural choice would optimize both query performance and data-residency compliance?",
+        "raw_source": "2026-06-23T052105Z-openai-gpt-4.1-day-02-order008.md item 5"
+      },
+      {
+        "item_id": "P1-AIP-D2-085",
+        "stem": "You\u2019re tasked with ingesting frequently changing knowledge base content into an OpenSearch vector store designed for rapid semantic search. Which mechanism will help maintain high data freshness with minimal manual oversight?",
+        "raw_source": "2026-06-23T052105Z-openai-gpt-4.1-day-02-order008.md item 6"
+      },
+      {
+        "item_id": "P1-AIP-D2-086",
+        "stem": "A knowledge-intensive GenAI system using vector retrieval on OpenSearch frequently experiences degraded query throughput during peak hours. Metrics show high CPU and memory use on a small subset of nodes. What revision will most directly improve throughput and balance resource usage?",
+        "raw_source": "2026-06-23T052105Z-openai-gpt-4.1-day-02-order008.md item 7"
+      },
+      {
+        "item_id": "P1-AIP-D2-087",
+        "stem": "A developer must enable fast semantic search on hundreds of millions of scientific documents, while supporting domain-specific search optimizations. Which OpenSearch design most directly supports scalable performance and targeted optimizations?",
+        "raw_source": "2026-06-23T052105Z-openai-gpt-4.1-day-02-order008.md item 8"
+      },
+      {
+        "item_id": "P1-AIP-D2-088",
+        "stem": "Your team manages an OpenSearch vector database cluster at scale. Which TWO strategies directly help optimize search performance and minimize cluster resource bottlenecks?",
+        "raw_source": "2026-06-23T052105Z-openai-gpt-4.1-day-02-order008.md item 9"
+      },
+      {
+        "item_id": "P1-AIP-D2-089",
+        "stem": "You are scaling a vector-enabled OpenSearch cluster for high availability and performance. Which THREE configuration or design choices help prevent search hot spots and maximize throughput?",
+        "raw_source": "2026-06-23T052105Z-openai-gpt-4.1-day-02-order008.md item 10"
+      },
+      {
+        "item_id": "P1-AIP-D2-090",
+        "stem": "Your AI platform\u2019s OpenSearch vector store supports multiple business units with dramatically different workloads. To optimize performance and minimize the risk of cross-team bottlenecks, which TWO approaches are most appropriate?",
+        "raw_source": "2026-06-23T052105Z-openai-gpt-4.1-day-02-order008.md item 11"
+      },
+      {
+        "item_id": "P1-AIP-D2-091",
+        "stem": "A retrieval team needs strict SLAs on OpenSearch vector search throughput during seasonal peaks. Which configuration should be considered LEAST effective in preventing search latency spikes?",
+        "raw_source": "2026-06-23T052105Z-openai-gpt-4.1-day-02-order008.md item 12"
+      },
+      {
+        "item_id": "P1-AIP-D2-092",
+        "stem": "A GenAI RAG system\u2019s OpenSearch domain has grown to handle billions of tokens in hundreds of indices. Recent operational reports show unpredictable search times and maintenance windows exceeding planned outages. Which design flaw is most likely contributing to these side effects?",
+        "raw_source": "2026-06-23T052105Z-openai-gpt-4.1-day-02-order008.md item 13"
+      }
+    ],
+    "Day02-order009": [
+      {
+        "item_id": "P1-AIP-D2-093",
+        "stem": "A team is using Amazon Bedrock to integrate FM-powered Q&A into their internal document portal. They receive feedback that search results are often irrelevant, even though all documents are present in the vector store. What is the MOST likely cause?",
+        "raw_source": "2026-06-23T052154Z-openai-gpt-4.1-day-02-order009.md item 1"
+      },
+      {
+        "item_id": "P1-AIP-D2-094",
+        "stem": "A startup is deploying a GenAI chatbot using Amazon Bedrock and wants to improve the relevance of answers provided in a RAG pipeline. Which retrieval method should they configure to allow semantic similarity search between user questions and document passages?",
+        "raw_source": "2026-06-23T052154Z-openai-gpt-4.1-day-02-order009.md item 2"
+      },
+      {
+        "item_id": "P1-AIP-D2-095",
+        "stem": "A healthcare provider uses Amazon Aurora with the pgvector extension to support semantic retrieval for a GenAI-based patient Q&A system. Why is this approach superior to SQL text search for their use case?",
+        "raw_source": "2026-06-23T052154Z-openai-gpt-4.1-day-02-order009.md item 3"
+      },
+      {
+        "item_id": "P1-AIP-D2-096",
+        "stem": "A manufacturing firm's RAG pipeline uses OpenSearch with vector search enabled. Retrieval quality is poor for industry jargon, although the embedding model is state-of-the-art. Which adjustment is MOST likely to increase relevance for these specialized queries?",
+        "raw_source": "2026-06-23T052154Z-openai-gpt-4.1-day-02-order009.md item 4"
+      },
+      {
+        "item_id": "P1-AIP-D2-097",
+        "stem": "An ecommerce team is building a product assistant using Bedrock Knowledge Bases to answer customer questions. What is the PRIMARY advantage of using vector search over keyword-only search for this workflow?",
+        "raw_source": "2026-06-23T052154Z-openai-gpt-4.1-day-02-order009.md item 5"
+      },
+      {
+        "item_id": "P1-AIP-D2-098",
+        "stem": "Which of the following are essential configuration steps when enabling semantic vector search for a RAG workflow with Amazon OpenSearch Service? (Select TWO.)",
+        "raw_source": "2026-06-23T052154Z-openai-gpt-4.1-day-02-order009.md item 6"
+      },
+      {
+        "item_id": "P1-AIP-D2-099",
+        "stem": "A legal firm uses RAG with Amazon Aurora and the pgvector extension to retrieve relevant case studies. What happens if a user\u2019s query is semantically very different from any document in the database, but vector search is still used?",
+        "raw_source": "2026-06-23T052154Z-openai-gpt-4.1-day-02-order009.md item 7"
+      },
+      {
+        "item_id": "P1-AIP-D2-100",
+        "stem": "A financial data company wants to use RAG with OpenSearch Service and vector similarity search. The business requires (1) secure retrieval for regulated users and (2) the highest possible relevance. Which configuration is MOST likely to meet these requirements?",
+        "raw_source": "2026-06-23T052154Z-openai-gpt-4.1-day-02-order009.md item 8"
+      },
+      {
+        "item_id": "P1-AIP-D2-101",
+        "stem": "A team is evaluating three approaches for improving semantic retrieval relevance in their Bedrock Knowledge Bases pipeline. Which strategies would directly increase the accuracy of results? (Select TWO.)",
+        "raw_source": "2026-06-23T052154Z-openai-gpt-4.1-day-02-order009.md item 9"
+      },
+      {
+        "item_id": "P1-AIP-D2-102",
+        "stem": "A developer is asked why semantic vector search in their solution may still return imprecise answers after deploying Bedrock Knowledge Bases. Which action is MOST likely to improve result precision?",
+        "raw_source": "2026-06-23T052154Z-openai-gpt-4.1-day-02-order009.md item 10"
+      },
+      {
+        "item_id": "P1-AIP-D2-103",
+        "stem": "You are troubleshooting a Bedrock-powered RAG application where users report that queries about new policy documents are not returning expected results. All embeddings were generated last quarter. The source data is up to date in S3 and accessible. What is the MOST likely cause?",
+        "raw_source": "2026-06-23T052154Z-openai-gpt-4.1-day-02-order009.md item 11"
+      },
+      {
+        "item_id": "P1-AIP-D2-104",
+        "stem": "A media company is designing a semantic retrieval layer for its FAQ chatbot using Amazon Aurora and pgvector. Which steps are REQUIRED to enable FM-powered semantic search in this architecture? (Select TWO.)",
+        "raw_source": "2026-06-23T052154Z-openai-gpt-4.1-day-02-order009.md item 12"
+      }
+    ],
+    "Day02-order010": [
+      {
+        "item_id": "P1-AIP-D2-105",
+        "stem": "You are architecting a Retrieval-Augmented Generation (RAG) pipeline. The pipeline must allow future FM replacements without disrupting access patterns to the retrieval back end. Which design enables this flexibility?",
+        "raw_source": "2026-06-23T052302Z-openai-gpt-4.1-day-02-order010.md item 2"
+      },
+      {
+        "item_id": "P1-AIP-D2-106",
+        "stem": "After deploying a basic RAG architecture, users notice that the FM sometimes hallucinates outdated facts, even though recent documents are added to the knowledge base. Which underlying architectural gap is most likely responsible?",
+        "raw_source": "2026-06-23T052302Z-openai-gpt-4.1-day-02-order010.md item 3"
+      },
+      {
+        "item_id": "P1-AIP-D2-107",
+        "stem": "A new RAG-based document assistant is deployed using Amazon Bedrock Knowledge Bases. The development team wants consistent FM behavior when scaling to multiple business units with differing data privacy requirements. Which design best supports secure, seamless RAG for this scenario?",
+        "raw_source": "2026-06-23T052302Z-openai-gpt-4.1-day-02-order010.md item 4"
+      },
+      {
+        "item_id": "P1-AIP-D2-108",
+        "stem": "During a code review, a junior developer suggests invoking search APIs directly from within the FM inference handler so the model can locate and retrieve the information it needs. What is the primary architectural flaw in this approach?",
+        "raw_source": "2026-06-23T052302Z-openai-gpt-4.1-day-02-order010.md item 6"
+      },
+      {
+        "item_id": "P1-AIP-D2-109",
+        "stem": "A cross-functional AWS team needs to integrate a new document source into their RAG pipeline while maintaining consistent retrieval and FM consumption. What is the FIRST step to preserve seamless API-based retrieval augmentation?",
+        "raw_source": "2026-06-23T052302Z-openai-gpt-4.1-day-02-order010.md item 8"
+      },
+      {
+        "item_id": "P1-AIP-D2-110",
+        "stem": "In a cost review, you find that RAG inference spends more on outbound network transfer fees than on FM inference. Each query retrieves dozens of full documents as context. Which architectural change best addresses this?",
+        "raw_source": "2026-06-23T052302Z-openai-gpt-4.1-day-02-order010.md item 9"
+      },
+      {
+        "item_id": "P1-AIP-D2-111",
+        "stem": "An engineering team must ensure low-latency, reliable retrieval of relevant chunks for each FM query in their Bedrock-based RAG pipeline. Which configuration best supports this requirement?",
+        "raw_source": "2026-06-23T052302Z-openai-gpt-4.1-day-02-order010.md item 12"
+      },
+      {
+        "item_id": "P1-AIP-D2-112",
+        "stem": "A large organization is facing high latency in FM responses within its RAG workflow on AWS. The RAG system uses Amazon Bedrock with a managed knowledge base, but users report slow answer times. What is the FIRST tuning parameter to evaluate for overall response time optimization?",
+        "raw_source": "2026-06-23T052302Z-openai-gpt-4.1-day-02-order010.md item 13"
+      },
+      {
+        "item_id": "P1-AIP-D2-113",
+        "stem": "A team is building a language support chatbot using a RAG pipeline on AWS. The business requires the ability to swap out the FM provider in the future without rewriting the retrieval and context-assembly logic. Which design pattern best ensures this separation and future portability?",
+        "raw_source": "2026-06-23T060928Z-openai-gpt-4.1-day-02-order010-top-up-4.md item 1"
+      },
+      {
+        "item_id": "P1-AIP-D2-114",
+        "stem": "A FinTech company notices inconsistent relevance in their FM-generated answers within their RAG workflow. Investigation shows that retrieval calls sometimes fetch context from the incorrect knowledge base. What is the most likely root cause?",
+        "raw_source": "2026-06-23T060928Z-openai-gpt-4.1-day-02-order010-top-up-4.md item 2"
+      },
+      {
+        "item_id": "P1-AIP-D2-115",
+        "stem": "A retailer\u2019s RAG pipeline for product information must support consistent, adaptable access as new document types and knowledge repositories are added. Which architectural practices best enable ongoing extensibility while minimizing disruptions? (Select TWO.)",
+        "raw_source": "2026-06-23T060928Z-openai-gpt-4.1-day-02-order010-top-up-4.md item 3"
+      },
+      {
+        "item_id": "P1-AIP-D2-116",
+        "stem": "A legal team requires that every FM response from a RAG-enabled assistant contains not just the relevant answer, but also supporting source citations extracted from multiple underlying repositories. What retrieval architecture best enforces this requirement in production while minimizing business risk and future maintenance burden?",
+        "raw_source": "2026-06-23T060928Z-openai-gpt-4.1-day-02-order010-top-up-4.md item 4"
+      }
+    ]
+  },
+  "culled_items": [
+    {
+      "raw_source": "2026-06-23T051527Z-openai-gpt-4.1-day-02-order001.md item 2",
+      "curriculum_order": "Day02-order001",
+      "stem": "An enterprise is building an ingestion pipeline for financial transaction data intended for use with an LLM via Amazon Bedrock. The team must implement automated monitoring to detect and alert on data anomalies, such as unexpected nulls and distribution shifts. Which AWS service combination provides the MOST effective monitoring for this scenario?",
+      "reasons": [
+        "keyword-trivia stem",
+        "stale or risky technical claim"
+      ],
+      "evidence": [
+        "keyword-trivia stem: matched weak stem pattern(s): which aws service; stem=\"An enterprise is building an ingestion pipeline for financial transaction data intended for use with an LLM via Amazon Bedrock. The team must implement automated monitoring to detect and alert on data anomalies, such as unexpected nulls and distribution shi...\"",
+        "stale or risky technical claim: pattern=sagemaker studio classic; excerpt=\"e data quality integrated with amazon cloudwatch metrics aws lambda and step functions state machine for anomaly detection amazon sagemaker studio classic data profiler custom cloudwatch alarms configured on s3 putobject events aws glue data quality integrated with amazon clou...\""
+      ]
+    },
+    {
+      "raw_source": "2026-06-23T051621Z-openai-gpt-4.1-day-02-order002.md item 2",
+      "curriculum_order": "Day02-order002",
+      "stem": "A data scientist is designing a pipeline to convert podcast audio files into text summaries using an FM. What is the most suitable service to use for automated audio-to-text conversion in this workflow?",
+      "reasons": [
+        "keyword-trivia stem"
+      ],
+      "evidence": [
+        "keyword-trivia stem: matched weak stem pattern(s): what is the most suitable service; stem=\"A data scientist is designing a pipeline to convert podcast audio files into text summaries using an FM. What is the most suitable service to use for automated audio-to-text conversion in this workflow?\""
+      ]
+    },
+    {
+      "raw_source": "2026-06-23T051621Z-openai-gpt-4.1-day-02-order002.md item 3",
+      "curriculum_order": "Day02-order002",
+      "stem": "A data engineering team must preprocess a diverse dataset comprising text documents, medical x-ray images, and call center audio recordings for an FM-enabled analytics system. Which AWS services and architectural components should be included to handle preprocessing for each data type? (Select TWO that apply.)",
+      "reasons": [
+        "keyword-trivia stem"
+      ],
+      "evidence": [
+        "keyword-trivia stem: matched weak stem pattern(s): which aws service; stem=\"A data engineering team must preprocess a diverse dataset comprising text documents, medical x-ray images, and call center audio recordings for an FM-enabled analytics system. Which AWS services and architectural components should be included to handle prep...\""
+      ]
+    },
+    {
+      "raw_source": "2026-06-23T051621Z-openai-gpt-4.1-day-02-order002.md item 8",
+      "curriculum_order": "Day02-order002",
+      "stem": "You are building a pipeline to process incoming video files and need to extract both audio and image frames for FM-based content analysis. Which service combination will meet the preprocessing requirements most efficiently?",
+      "reasons": [
+        "unsupported high-risk claim"
+      ],
+      "evidence": [
+        "unsupported high-risk claim: pattern=frame extraction; excerpt=\"t analysis. which service combination will meet the preprocessing requirements most efficiently? use amazon rekognition for image frame extraction and aws transcribe for audio transcription. use amazon polly for audio extraction and aws glue for image extraction. use aws tran\""
+      ]
+    },
+    {
+      "raw_source": "2026-06-23T051804Z-openai-gpt-4.1-day-02-order004.md item 3",
+      "curriculum_order": "Day02-order004",
+      "stem": "You are tasked with deploying a cross-lingual semantic search system using an Amazon Bedrock embedding model. What limitation must you most carefully account for in such a system?",
+      "reasons": [
+        "unsupported high-risk claim"
+      ],
+      "evidence": [
+        "unsupported high-risk claim: pattern=true bedrock model multilingual support limitations; excerpt=\"bedrock & titan embeddings multilingual capabilities documentation scenario: multilingual system design; reviewer should confirm true bedrock model multilingual support limitations.\""
+      ]
+    },
+    {
+      "raw_source": "2026-06-23T051804Z-openai-gpt-4.1-day-02-order004.md item 4",
+      "curriculum_order": "Day02-order004",
+      "stem": "An e-learning company needs to batch generate vector embeddings for newly uploaded course transcripts. Which AWS service combination best automates this embedding workflow for scale and flexibility?",
+      "reasons": [
+        "keyword-trivia stem"
+      ],
+      "evidence": [
+        "keyword-trivia stem: matched weak stem pattern(s): which aws service; stem=\"An e-learning company needs to batch generate vector embeddings for newly uploaded course transcripts. Which AWS service combination best automates this embedding workflow for scale and flexibility?\""
+      ]
+    },
+    {
+      "raw_source": "2026-06-23T052016Z-openai-gpt-4.1-day-02-order007.md item 11",
+      "curriculum_order": "Day02-order007",
+      "stem": "Your product search platform needs to perform hybrid searches that blend both semantic and keyword search capabilities. Which AWS solution offers the best foundation for this use case?",
+      "reasons": [
+        "unsupported high-risk claim"
+      ],
+      "evidence": [
+        "unsupported high-risk claim: pattern=hybrid support is current; excerpt=\"-guides/day-02-data-embeddings-vector-stores-rag.md hybrid search is a common requirement. reviewer must ensure neural/opensearch hybrid support is current.\""
+      ]
+    },
+    {
+      "raw_source": "2026-06-23T052302Z-openai-gpt-4.1-day-02-order010.md item 1",
+      "curriculum_order": "Day02-order010",
+      "stem": "A team is building an enterprise Q&A system on AWS. They need to ensure that their Foundation Model only receives the most relevant context snippets from a managed vector store. Which configuration provides a standardized, seamless method for retrieving contextual information for the FM through API integration?",
+      "reasons": [
+        "unsupported high-risk claim"
+      ],
+      "evidence": [
+        "unsupported high-risk claim: pattern=mcp; excerpt=\"r retrieving contextual information for the fm through api integration? configure the solution to use the model context protocol (mcp) client to orchestrate vector queries and return top-k context chunks through a standardized api. add a lambda function that scra\""
+      ]
+    },
+    {
+      "raw_source": "2026-06-23T052302Z-openai-gpt-4.1-day-02-order010.md item 5",
+      "curriculum_order": "Day02-order010",
+      "stem": "A developer needs to design a RAG solution integrating with Amazon Bedrock and a managed vector store. The business case requires minimal custom code for context retrieval and high developer productivity. Which approach best achieves this?",
+      "reasons": [
+        "unsupported high-risk claim"
+      ],
+      "evidence": [
+        "unsupported high-risk claim: pattern=function calling; excerpt=\"se requires minimal custom code for context retrieval and high developer productivity. which approach best achieves this? use the function calling interface supported by bedrock, connecting to the managed vector store using a standardized api pattern. build a custom context r\""
+      ]
+    },
+    {
+      "raw_source": "2026-06-23T052302Z-openai-gpt-4.1-day-02-order010.md item 7",
+      "curriculum_order": "Day02-order010",
+      "stem": "A company is designing a RAG workflow to support product-question answering using Bedrock and its managed Knowledge Base. Which options are best practices for consistent, seamless integration between the Foundation Model and the retrieval system? (Select TWO.)",
+      "reasons": [
+        "unsupported high-risk claim"
+      ],
+      "evidence": [
+        "unsupported high-risk claim: pattern=mcp; excerpt=\"etrieval system? (select two.) leverage bedrock\u2019s function-calling interface to obtain top relevant chunks for the fm prompt. use mcp-compliant clients to abstract vector queries and standardize data flow to the fm. allow the fm to parse entire document sets dire\"; pattern=function calling; excerpt=\"cts/day02-order010-basic-rag-design.md tests multiple integration best-practices. reviewer to check current documentation for mcp/function calling support.\""
+      ]
+    },
+    {
+      "raw_source": "2026-06-23T052302Z-openai-gpt-4.1-day-02-order010.md item 10",
+      "curriculum_order": "Day02-order010",
+      "stem": "A customer\u2019s RAG deployment yields inconsistent results. Sometimes the FM answers correctly, but at other times it ignores highly relevant source material. Which issues could cause this behavior? (Select TWO.)",
+      "reasons": [
+        "unsupported high-risk claim"
+      ],
+      "evidence": [
+        "unsupported high-risk claim: pattern=function calling; excerpt=\"s. vector search retrieves too many irrelevant chunks due to poor query tuning. the fm\u2019s underlying architecture does not support function calling. apis return results in json format, which the fm cannot interpret. document embeddings are generated using inconsistent preproce\""
+      ]
+    },
+    {
+      "raw_source": "2026-06-23T052302Z-openai-gpt-4.1-day-02-order010.md item 11",
+      "curriculum_order": "Day02-order010",
+      "stem": "While supporting multiple RAG client applications, a central platform team needs all integrations to be reliable and future-proof. Which practices support these goals? (Select TWO.)",
+      "reasons": [
+        "unsupported high-risk claim"
+      ],
+      "evidence": [
+        "unsupported high-risk claim: pattern=mcp; excerpt=\"ration. embed all vector store credentials within the fm prompt for dynamic connection. require retrieval endpoints to conform to mcp protocol for all client integrations. standardize api contract for retrieval callbacks regardless of fm implementation.; require\"; pattern=function calling; excerpt=\"d couples retrieval handlers too closely with fms.; use only function-calling-compatible interfaces for retrieval orchestration.: function calling is useful, but protocol-enforced compatibility brings more reliability across fms.; embed all vector store credentials within the\""
+      ]
+    }
+  ]
+}

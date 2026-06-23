@@ -34,17 +34,24 @@ Classify AWS services by the role they play in a GenAI system.
 ## Artifact B: Embedded Knowledge Inspection
 
 Inspect documentation, console screenshots, examples, or your own AWS account
-if available.
+if available. Complete at least one inspection row for each role family. You
+may inspect a service page, API reference, console screen, architecture
+example, or trusted course note; record the observable fact that helps you
+place the service in a GenAI system.
 
-| Service | What I inspected | What this taught me |
-|---|---|---|
-| Amazon Bedrock |  |  |
-| Amazon SageMaker AI |  |  |
-| AWS Lambda |  |  |
-| Amazon API Gateway |  |  |
-| Amazon OpenSearch Service |  |  |
-| Amazon CloudWatch |  |  |
-| AWS IAM |  |  |
+| Role family | Example service/capability | What I inspected | What this taught me |
+|---|---|---|---|
+| Model access | Amazon Bedrock |  |  |
+| Model hosting/customization | Amazon Bedrock customization/import or SageMaker AI |  |  |
+| Application compute | AWS Lambda or container service |  |  |
+| API boundary | Amazon API Gateway |  |  |
+| Orchestration/workflow | AWS Step Functions |  |  |
+| Eventing/queueing | Amazon SQS or Amazon EventBridge |  |  |
+| Storage | Amazon S3 |  |  |
+| App state | Amazon DynamoDB |  |  |
+| Retrieval/vector search | Amazon OpenSearch Service or Bedrock Knowledge Bases |  |  |
+| Observability | CloudWatch, X-Ray, or CloudTrail |  |  |
+| Security | IAM, VPC endpoints, encryption, or resource policies |  |  |
 
 ## Self-Check
 

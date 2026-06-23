@@ -102,6 +102,59 @@ Question quality requirements:
   `security-afterthought`, `prompt-as-one-off`, or `evaluation-after-deployment`.
 ```
 
+## Review Feedback From Prior Day 1 Generation
+
+The first Day 1 raw generation pass was reviewed and culled. Use these failure
+patterns to improve the next generation pass.
+
+Do not generate stems that start like glossary checks:
+
+```text
+Which best describes...
+What is a token...
+What does increasing temperature cause...
+Which AWS service...
+Where is the model located...
+What is a key benefit...
+```
+
+Instead, every item should put the learner inside a concrete operational
+scenario with a goal, constraint, failure mode, or tradeoff. Prefer stems like:
+
+```text
+A team is building...
+A production workload...
+An application fails because...
+Your team must choose...
+After replacing a model...
+```
+
+Avoid technical claims that depend on stale dates or uncertain service
+limitations unless the source is named for later review. Do not write phrases
+such as:
+
+```text
+as of early 2024
+currently does not support
+no current support
+Bedrock does not yet...
+```
+
+If an item needs a fast-changing service capability, write the item around the
+decision process and mark the exact AWS documentation needed in
+`source_trace_needed`.
+
+For each topic-level batch, generate at least 12 candidates when the target is
+10 approved items. The review pass may cull weak or duplicate items, so exact
+10-item raw batches are likely to underfill the reviewed bank.
+
+For top-up generation, include the existing approved stems and rejected stem
+excerpts for the same curriculum-order topic in the prompt. New items must use
+different scenarios, constraints, misconceptions, and answer patterns. The
+review pass will reject exact or near-duplicate stems even if the prompt asked
+for novelty, and duplicate culls must show both the rejected stem and the
+matched approved stem.
+
 ## Prompt 1: Day 1 Balanced Mini-Batch
 
 Use this prompt when you want the full Day 1 draft pool.
@@ -110,10 +163,10 @@ Use this prompt when you want the full Day 1 draft pool.
 Act as an expert AWS Certified Generative AI Developer - Professional
 (AIP-C01) instructor and exam-item writer.
 
-Generate 100 original draft practice questions for Day 1 of an accelerated
+Generate 120 original draft practice questions for Day 1 of an accelerated
 AIP-C01 curriculum.
 
-Create exactly 10 questions for each curriculum order:
+Create exactly 12 questions for each curriculum order:
 
 1. Day01-order001 - Foundation models and GenAI fundamentals
 2. Day01-order002 - Tokens, context windows, inference, temperature, top-k, and top-p
@@ -126,14 +179,45 @@ Create exactly 10 questions for each curriculum order:
 9. Day01-order009 - Prompt fundamentals, instructions, templates, and structured outputs
 10. Day01-order010 - Basic GenAI evaluation concepts and golden datasets
 
-Use a mix of multiple-choice and multiple-response questions. At least 80 of
-the 100 questions must be scenario-based. Make the questions tricky and
+Use a mix of multiple-choice and multiple-response questions. At least 100 of
+the 120 questions must be scenario-based. Make the questions tricky and
 professional-level, with plausible distractors and detailed explanations.
 
 Use the output schema specified above.
 
-[PASTE GLOBAL GUARDRAILS]
-[PASTE QUESTION QUALITY REQUIREMENTS]
+Global guardrails:
+
+Create original practice questions only. Do not copy official AWS practice
+questions, exam dumps, proprietary question banks, or third-party copyrighted
+questions. The questions are draft learning items and must be source-reviewed
+before approval.
+
+Use the official exam name: AWS Certified Generative AI Developer -
+Professional (AIP-C01).
+
+Make questions scenario-based when possible. Avoid trivia unless the knowledge
+type is explicitly declarative. Include plausible distractors that test real
+misconceptions. Prefer professional judgment over keyword matching.
+
+Question quality requirements:
+
+- Generate tough, tricky, professional-level questions suitable for serious
+  AIP-C01 preparation.
+- At least 80% of questions must be scenario-based.
+- Include realistic distractors that are technically plausible but wrong
+  because of a constraint, priority, AWS service boundary, operational risk,
+  security issue, or misunderstanding.
+- Avoid obvious answers, toy scenarios, and questions that can be answered by
+  keyword matching.
+- Include a mix of direct best-answer selection, best architecture/control,
+  most likely failure/risk, first action, and multiple-response formats.
+- Mark each question with difficulty: `medium`, `hard`, or `exam-plus`.
+  Do not generate easy questions unless explicitly requested.
+- For every distractor, explain why it is tempting and why it is wrong or less
+  suitable.
+- Include misconception tags, such as `model-vs-application-confusion`,
+  `bigger-context-is-always-better`, `service-role-confusion`,
+  `security-afterthought`, `prompt-as-one-off`, or `evaluation-after-deployment`.
 ```
 
 ## Prompt 2: Day 1 Foundation Concepts
@@ -143,12 +227,12 @@ Use this prompt for Day01-order001 and Day01-order002.
 ```text
 Act as an expert AIP-C01 instructor and exam-item writer.
 
-Generate 20 original draft practice questions for Day 1 foundation concepts:
+Generate 24 original draft practice questions for Day 1 foundation concepts:
 
 - Day01-order001 - Foundation models and GenAI fundamentals
 - Day01-order002 - Tokens, context windows, inference, temperature, top-k, and top-p
 
-Create exactly 10 questions per curriculum order.
+Create exactly 12 questions per curriculum order.
 
 Test declarative, conceptual, and causal understanding. Include scenarios
 where the learner must reason about model behavior, context limits,
@@ -165,7 +249,7 @@ Use this prompt for Day01-order003 through Day01-order006.
 ```text
 Act as an expert AIP-C01 instructor and exam-item writer.
 
-Generate 40 original draft practice questions for Day 1 AWS GenAI system
+Generate 48 original draft practice questions for Day 1 AWS GenAI system
 orientation:
 
 - Day01-order003 - AWS GenAI service landscape
@@ -173,7 +257,7 @@ orientation:
 - Day01-order005 - IAM, trust boundaries, least privilege, networking, and data protection
 - Day01-order006 - GenAI requirements analysis and basic solution architecture
 
-Create exactly 10 questions per curriculum order.
+Create exactly 12 questions per curriculum order.
 
 Test conceptual, conditional, strategic, normative, and embedded knowledge.
 Use scenarios where the learner must place services in the correct role,
@@ -191,14 +275,14 @@ Use this prompt for Day01-order007 through Day01-order010.
 ```text
 Act as an expert AIP-C01 instructor and exam-item writer.
 
-Generate 40 original draft practice questions for Day 1 applied foundations:
+Generate 48 original draft practice questions for Day 1 applied foundations:
 
 - Day01-order007 - Foundation-model capabilities, limitations, and basic model selection
 - Day01-order008 - Basic Amazon Bedrock model invocation
 - Day01-order009 - Prompt fundamentals, instructions, templates, and structured outputs
 - Day01-order010 - Basic GenAI evaluation concepts and golden datasets
 
-Create exactly 10 questions per curriculum order.
+Create exactly 12 questions per curriculum order.
 
 Test procedural, embedded, conditional, strategic, conceptual, and causal
 understanding. Include scenarios involving model selection tradeoffs, basic
@@ -213,7 +297,7 @@ schema, global guardrails, and question quality requirements from this file.
 ## Topic-Level Prompts
 
 Use these prompts when you want maximum quality and cleanest traceability: one
-API call per Day 1 topic, exactly 10 questions per call.
+API call per Day 1 topic, exactly 12 questions per call.
 
 ### Topic Prompt: Day01-order001 Foundation Models And GenAI Fundamentals
 
@@ -221,7 +305,7 @@ API call per Day 1 topic, exactly 10 questions per call.
 Act as an expert AWS Certified Generative AI Developer - Professional
 (AIP-C01) instructor and exam-item writer.
 
-Generate exactly 10 original draft practice questions for:
+Generate exactly 12 original draft practice questions for:
 
 - curriculum_order: Day01-order001
 - topic: Foundation models and GenAI fundamentals
@@ -242,7 +326,7 @@ requirements from this file.
 Act as an expert AWS Certified Generative AI Developer - Professional
 (AIP-C01) instructor and exam-item writer.
 
-Generate exactly 10 original draft practice questions for:
+Generate exactly 12 original draft practice questions for:
 
 - curriculum_order: Day01-order002
 - topic: Tokens, context windows, inference, temperature, top-k, and top-p
@@ -264,7 +348,7 @@ requirements from this file.
 Act as an expert AWS Certified Generative AI Developer - Professional
 (AIP-C01) instructor and exam-item writer.
 
-Generate exactly 10 original draft practice questions for:
+Generate exactly 12 original draft practice questions for:
 
 - curriculum_order: Day01-order003
 - topic: AWS GenAI service landscape
@@ -286,7 +370,7 @@ requirements from this file.
 Act as an expert AWS Certified Generative AI Developer - Professional
 (AIP-C01) instructor and exam-item writer.
 
-Generate exactly 10 original draft practice questions for:
+Generate exactly 12 original draft practice questions for:
 
 - curriculum_order: Day01-order004
 - topic: API, event-driven, serverless, container, and workflow fundamentals
@@ -308,7 +392,7 @@ requirements from this file.
 Act as an expert AWS Certified Generative AI Developer - Professional
 (AIP-C01) instructor and exam-item writer.
 
-Generate exactly 10 original draft practice questions for:
+Generate exactly 12 original draft practice questions for:
 
 - curriculum_order: Day01-order005
 - topic: IAM, trust boundaries, least privilege, networking, and data-protection fundamentals
@@ -330,7 +414,7 @@ requirements from this file.
 Act as an expert AWS Certified Generative AI Developer - Professional
 (AIP-C01) instructor and exam-item writer.
 
-Generate exactly 10 original draft practice questions for:
+Generate exactly 12 original draft practice questions for:
 
 - curriculum_order: Day01-order006
 - topic: GenAI requirements analysis and basic solution architecture
@@ -352,7 +436,7 @@ requirements from this file.
 Act as an expert AWS Certified Generative AI Developer - Professional
 (AIP-C01) instructor and exam-item writer.
 
-Generate exactly 10 original draft practice questions for:
+Generate exactly 12 original draft practice questions for:
 
 - curriculum_order: Day01-order007
 - topic: Foundation-model capabilities, limitations, and basic model selection
@@ -374,7 +458,7 @@ requirements from this file.
 Act as an expert AWS Certified Generative AI Developer - Professional
 (AIP-C01) instructor and exam-item writer.
 
-Generate exactly 10 original draft practice questions for:
+Generate exactly 12 original draft practice questions for:
 
 - curriculum_order: Day01-order008
 - topic: Basic Amazon Bedrock model invocation
@@ -396,7 +480,7 @@ requirements from this file.
 Act as an expert AWS Certified Generative AI Developer - Professional
 (AIP-C01) instructor and exam-item writer.
 
-Generate exactly 10 original draft practice questions for:
+Generate exactly 12 original draft practice questions for:
 
 - curriculum_order: Day01-order009
 - topic: Prompt fundamentals, instructions, templates, and structured outputs
@@ -418,7 +502,7 @@ requirements from this file.
 Act as an expert AWS Certified Generative AI Developer - Professional
 (AIP-C01) instructor and exam-item writer.
 
-Generate exactly 10 original draft practice questions for:
+Generate exactly 12 original draft practice questions for:
 
 - curriculum_order: Day01-order010
 - topic: Basic GenAI evaluation concepts and golden datasets
@@ -436,12 +520,12 @@ requirements from this file.
 
 ## Batch Generation Advice
 
-The full Day 1 pool is 100 draft questions. If the LLM struggles with length,
+The full Day 1 pool is 120 draft questions. If the LLM struggles with length,
 generate by topic or by prompt group:
 
-- 20 questions for Prompt 2;
-- 40 questions for Prompt 3;
-- 40 questions for Prompt 4.
+- 24 questions for Prompt 2;
+- 48 questions for Prompt 3;
+- 48 questions for Prompt 4.
 
 Do not accept low-quality volume. If a batch contains shallow questions,
 obvious answers, weak distractors, or hallucinated AWS claims, discard or

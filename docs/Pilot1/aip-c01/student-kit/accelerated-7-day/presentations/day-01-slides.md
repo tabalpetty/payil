@@ -1,4 +1,6 @@
-# Day 1 Slides: Foundations, System Map, Invocation, Prompt
+# Day 1 Slide Outline: Foundations, System Map, Invocation, Prompt
+
+This is a facilitator talking-point outline, not a finished presentation deck.
 
 ## Slide 1: Today's Job
 
@@ -64,4 +66,3 @@ Fill:
 - FM behavior table;
 - invocation record;
 - prompt regression mini-set.
-

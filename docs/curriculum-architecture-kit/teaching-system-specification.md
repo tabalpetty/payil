@@ -119,7 +119,37 @@ Each supported pacing track must state:
 Pacing changes route, density, sequencing, support, and practice volume. It
 must not silently lower the mastery standard.
 
-### 2.4 Explainable curriculum-map rule
+### 2.4 Generated-material governance rule
+
+When generated, imported, scraped, or AI-assisted material is used to create
+teaching-system artifacts, separate the evidence from the approved artifact.
+Use three layers:
+
+```text
+prompt/source -> raw response or gathered material -> reviewed normalized artifact
+```
+
+This rule applies beyond question banks. It can apply to draft lessons, slide
+outlines, worksheets, rubrics, examples, scenarios, remediation notes, and
+exam-prep items.
+
+At minimum:
+
+- preserve the prompt, source, import path, or authoring context;
+- preserve the raw response or gathered material when practical;
+- label true provenance, such as external LLM generation, manual authoring,
+  Codex-assisted authoring, imported source, transformed source, or reviewer
+  rewrite;
+- do not treat generated or gathered material as approved curriculum content
+  until it has been reviewed against the relevant specification;
+- keep provider/model metadata only for content actually produced by that
+  provider/model;
+- normalize approved material into the appropriate durable artifact or schema;
+- track generation/review cost where the workflow can multiply calls or human
+  effort, including run budget, soft and hard thresholds, stage-level spend,
+  and any authorized overage.
+
+### 2.5 Explainable curriculum-map rule
 
 After the dependency order, pacing tracks, knowledge profile, and artifact
 families are defined, create an explainable curriculum map.
@@ -316,6 +346,37 @@ The package may use guides, diagrams, cards, labs, investigations, scenarios,
 audio, video, discussion, or other media. Media are chosen for learning
 function and accessibility, not decorative variety.
 
+### 5.4 Unit readiness gate
+
+A unit is not ready merely because every mapped topic has a learner artifact.
+Before marking a unit complete, check that artifact coverage does not outrun
+teaching coverage.
+
+For every learner artifact, confirm:
+
+- the relevant dominant and secondary knowledge types are taught explicitly;
+- every worksheet row, activity, self-check, and artifact prompt can be
+  completed from the provided study material, examples, and answer guidance;
+- every glossary term, retrieval card, table term, and learner-facing label is
+  explicitly taught, linked to teaching, or removed;
+- every future-depth concept is labeled as a forward reference with the later
+  unit, module, or day that teaches it;
+- the learner has seen at least one worked, partially worked, or contrastive
+  exemplar before being asked to self-assess;
+- procedural and embedded topics include a concrete reference artifact,
+  demonstration, tool/API example, configuration, or faithful simulation to
+  inspect;
+- answer guidance or a rubric shows what strong, partial, and weak evidence
+  look like;
+- remediation targets point to existing files, sections, activities, or
+  teacher actions.
+- source notes and citations resolve, and their labels accurately describe the
+  linked source.
+
+If any check fails, or if the reverse activity-to-teaching test is only
+`mostly yes` or `borderline`, the artifact remains a draft prompt for work,
+not a complete teaching-system component.
+
 ## 6. Mastery, Assessment, and Remediation
 
 ### 6.1 Mastery contract
@@ -361,6 +422,14 @@ minimum, record:
 - calculator, navigation, review, language, or delivery constraints when
   relevant.
 
+Before using official objectives as tags, run a source-extraction readiness
+check. Confirm that the source format and extraction method expose the deepest
+objective level the curriculum will claim, such as domain, task, skill,
+subskill, standard, or rubric criterion. Record the source file or URL,
+access date or version, extraction tool or method, extracted hierarchy, and
+known gaps. If an extraction pass misses data that exists in the source, treat
+that as a tooling/process gap rather than a source limitation.
+
 Practice tests should simulate the official format closely enough to reveal
 readiness gaps, but internal readiness gates should be slightly stricter than
 the published passing standard. For example, if the official exam reports a
@@ -381,6 +450,70 @@ tags include:
 - misconception or distractor pattern;
 - remediation target;
 - item status, review date, and source trace.
+
+Question-bank provenance must be explicit and must remain separate from review
+status. Raw item inputs should state whether they came from an external LLM
+generation, manual authoring, Codex-assisted authoring, imported source,
+transformation of an existing item, or reviewer rewrite. A reviewed bank may
+approve items from multiple origins, but provider/model metadata must only be
+used for content actually produced by that provider/model.
+
+Question-bank review must be auditable. Rejected or culled items should carry
+both a structured reason code and a human-readable evidence note. The evidence
+should cite the concrete field value, missing field, matched stem pattern,
+matched source phrase, duplicate comparison, unsupported claim, or other
+observable fact that caused the rejection.
+
+Generated question-bank workflows must use review culls as improvement data.
+Before any regeneration or top-up pass, summarize culls by reason and revise
+the next prompt or authoring brief to address the dominant failure patterns.
+Include approved stems, rejected stem excerpts, source-sensitive claims to
+verify, and the minimum surplus needed above the exact deficit so review can
+cull weak, duplicate, or unverifiable items without leaving the bank short.
+
+The continuous-improvement loop is:
+
+```text
+review cull summary -> prompt or brief revision -> surplus top-up generation
+-> review rerun -> coverage and approved-output checks
+```
+
+Question-bank review must cover the full item, not only the stem or correct
+answer. Review source accuracy, stale claims, duplication, and teaching quality
+across learner-visible text surfaces: stem, options, correct rationale,
+distractor rationales, misconception tags, source traces, and remediation
+links. Distractor rationales are teaching content and can fail an item even
+when the keyed answer is defensible.
+
+Known-pattern scans are not factual verification. For source-sensitive or
+high-rot technical claims, extract atomic claims and verify them against
+official sources when possible. Examples include service limits, supported
+formats, Region availability, API fields, security behavior, networking
+support, data-residency claims, and capability comparisons. Unresolved
+`needs-source-check` claims should be held out of any bank marked complete.
+When LLMs are used for generation and judgment, reduce correlated blind spots
+with a different reviewer model/provider, adversarial review framing, multiple
+review passes, or human review for residual source-sensitive claims.
+
+Final fact checking is a learner-trust gate. A question bank must not be marked
+complete or approved until every learner-visible item has either passed source
+verification or been removed/resolved with human review. This includes
+operational and remediation claims, not only service-capability claims. If
+final fact checking culls an item, add the cull to the audit log with the stem,
+challenged claim or rationale, and review finding, then recompute per-topic
+coverage before declaring the bank complete.
+
+Question-bank completion should include distribution checks, not only item
+counts. Review difficulty spread, cognitive-demand spread, answer-position
+balance, per-topic knowledge-type coverage, and any official-domain weighting
+needed for the bank's intended use. A per-topic practice bank may deliberately
+use equal topic counts; a full exam simulation pool should support official
+domain/task weighting.
+
+After review, run negative-control checks against the approved bank for known
+rejected patterns. A review pass is incomplete if a phrase, schema defect,
+duplicate pattern, stale claim, source-trace gap, or provenance problem that is
+treated as disqualifying in the cull log still appears in approved content.
 
 Question-bank review is not remediation by itself. After a practice exam, the
 learner should receive a gap report that links missed or weak items back to
@@ -486,6 +619,15 @@ lessons learned.
 The Curriculum Architecture Kit is the durable reusable asset. Pilot
 implementations may be revised, regenerated, or discarded, but reusable
 learning from those pilots should strengthen the kit.
+
+Keep generic methodology and pilot implementation artifacts separate. The kit
+may contain subject-agnostic specifications, templates, review methods,
+quality gates, examples, and distilled lessons. Pilot directories should
+contain subject-specific source material, curriculum models, teacher kits,
+student kits, exam-prep banks, raw generated outputs, and implementation
+decisions. Do not move pilot-specific facts, service choices, exam details, or
+day plans into the generic kit unless they are clearly labeled as examples and
+the reusable rule is stated independently.
 
 Maintain a lessons-learned register for:
 
