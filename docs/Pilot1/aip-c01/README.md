@@ -24,6 +24,11 @@ project source material. Keep source traceability from exam guide to curriculum
 unit, teaching activity, learner artifact, assessment, remediation, and
 exam-prep item.
 
+The end-to-end authoring, review, verification, and release workflow is defined
+by the subject-agnostic
+[Curriculum Production Agent Architecture](../../curriculum-architecture-kit/curriculum-production-agent-architecture.md).
+Pilot1 is its reference implementation.
+
 ## Current First Artifact
 
 Start with the accelerated curriculum path:

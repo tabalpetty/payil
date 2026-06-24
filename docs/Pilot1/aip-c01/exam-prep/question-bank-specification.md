@@ -44,6 +44,12 @@ A day's reviewed bank can contain a smaller approved slice for early use, but
 it does not count as complete until it has at least `10` approved items for
 each curriculum-order topic covered that day.
 
+Topic volume is necessary but not sufficient. Every official skill mapped to a
+day's curriculum topics must appear as the primary `exam_skill` on at least one
+approved item. The final gate must also reject an item whose `(learning_unit,
+exam_skill)` pair does not exist in the source-to-topic traceability matrix.
+Skills mapped to only one topic are must-not-drift objectives.
+
 For example, a day with 10 curriculum-order topics needs at least 100 approved
 items before the day's bank is complete. A smaller set must be labeled as a
 minimum viable approved slice, pilot slice, or partial bank.
@@ -142,4 +148,11 @@ Before approval, confirm:
 - distractors are plausible but defensibly wrong;
 - the explanation teaches the relevant distinction;
 - technical claims can be checked against official AWS sources;
+- every material technical assertion has an atomic-claim verification record
+  with a source, evidence, and `supported`, `contradicted`, or `unresolved`
+  verdict; source-file presence or service-name matching alone is insufficient;
+- learner-visible fields contain no reviewer instructions or verification
+  commentary;
+- single-answer positions are parseable and reasonably distributed rather
+  than concentrated in one option;
 - remediation points to a specific learning resource.

@@ -4,8 +4,10 @@
     {
       "item_id": "P1-AIP-D2-001",
       "learning_unit": "Day02-order001",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "AWS Glue Data Quality documentation for handling missing values; focused artifact",
       "service_terms": [
         "AWS Glue Data Quality"
@@ -17,13 +19,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-002",
       "learning_unit": "Day02-order001",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "SageMaker Data Wrangler documentation; focused artifact",
       "service_terms": [
         "SageMaker Data Wrangler"
@@ -35,13 +41,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-003",
       "learning_unit": "Day02-order001",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "Glue Data Quality documentation; study guide",
       "service_terms": [
         "Amazon CloudWatch",
@@ -54,13 +64,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-004",
       "learning_unit": "Day02-order001",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "AWS Glue Data Quality referential integrity rule docs; focused artifact",
       "service_terms": [
         "Amazon S3"
@@ -72,13 +86,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-005",
       "learning_unit": "Day02-order001",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "Glue Data Quality + CloudWatch metrics documentation; study guide",
       "service_terms": [
         "AWS Glue Data Quality",
@@ -92,13 +110,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-006",
       "learning_unit": "Day02-order001",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "Glue Data Quality, ETL rule orchestration docs; answer guidance",
       "service_terms": [],
       "local_sources": [
@@ -108,13 +130,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-007",
       "learning_unit": "Day02-order001",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "Glue Data Quality conditional checks docs; focused artifact",
       "service_terms": [
         "Amazon S3"
@@ -126,13 +152,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-008",
       "learning_unit": "Day02-order001",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "Glue Data Quality rules vs. Lambda documentation; focused artifact",
       "service_terms": [
         "AWS Glue Data Quality",
@@ -145,13 +175,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-009",
       "learning_unit": "Day02-order001",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "Glue Data Quality profiling docs; study guide",
       "service_terms": [
         "AWS Glue Data Quality"
@@ -163,13 +197,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-010",
       "learning_unit": "Day02-order001",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "Glue Data Quality rules, deduplication docs; answer guidance",
       "service_terms": [],
       "local_sources": [
@@ -179,13 +217,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-011",
       "learning_unit": "Day02-order001",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "Glue Data Quality delimiter checking docs; focused artifact",
       "service_terms": [],
       "local_sources": [
@@ -195,13 +237,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-012",
       "learning_unit": "Day02-order001",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "Glue Data Quality spike event documentation; answer guidance",
       "service_terms": [],
       "local_sources": [
@@ -211,13 +257,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-013",
       "learning_unit": "Day02-order002",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "source: study guide, AWS Textract docs for preprocessing recommendations",
       "service_terms": [],
       "local_sources": [
@@ -227,13 +277,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-014",
       "learning_unit": "Day02-order002",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "source: Bedrock API input requirements for tabular data",
       "service_terms": [
         "AWS Transcribe",
@@ -246,13 +300,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-015",
       "learning_unit": "Day02-order002",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "source: study guide, Bedrock multimodal documentation",
       "service_terms": [],
       "local_sources": [
@@ -262,13 +320,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-016",
       "learning_unit": "Day02-order002",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "source: Bedrock input data requirements and study guide for semantic search",
       "service_terms": [
         "AWS Transcribe"
@@ -280,13 +342,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-017",
       "learning_unit": "Day02-order002",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "source: OCR postprocessing challenges in preprocessing pipelines",
       "service_terms": [
         "SageMaker Processing"
@@ -298,13 +364,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-018",
       "learning_unit": "Day02-order002",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "source: Bedrock input requirements for structured/tabular data",
       "service_terms": [
         "Amazon Bedrock"
@@ -316,13 +386,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-019",
       "learning_unit": "Day02-order002",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "source: AWS Textract and Rekognition limitations and workflow examples",
       "service_terms": [
         "AWS Transcribe"
@@ -334,13 +408,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-020",
       "learning_unit": "Day02-order002",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "source: Bedrock and SageMaker recommendations for tabular, image, and text input handling",
       "service_terms": [
         "SageMaker Processing"
@@ -352,13 +430,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-021",
       "learning_unit": "Day02-order002",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "source: AWS documentation (Rekognition, Transcribe, SageMaker Processing)",
       "service_terms": [
         "AWS Lambda",
@@ -374,13 +456,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-022",
       "learning_unit": "Day02-order003",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-invoke.html, study_guide, focused_artifact",
       "service_terms": [
         "Amazon Bedrock"
@@ -392,13 +478,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-023",
       "learning_unit": "Day02-order003",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "study_guide, focused_artifact, answer_guidance",
       "service_terms": [],
       "local_sources": [
@@ -408,13 +498,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-024",
       "learning_unit": "Day02-order003",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "study_guide, focused_artifact",
       "service_terms": [
         "SageMaker Processing"
@@ -426,13 +520,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-025",
       "learning_unit": "Day02-order003",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "focused_artifact, answer_guidance",
       "service_terms": [],
       "local_sources": [
@@ -442,13 +540,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-026",
       "learning_unit": "Day02-order003",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-messages.html",
       "service_terms": [
         "Amazon Bedrock"
@@ -460,13 +562,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-027",
       "learning_unit": "Day02-order003",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "focused_artifact",
       "service_terms": [],
       "local_sources": [
@@ -476,13 +582,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-028",
       "learning_unit": "Day02-order003",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "focused_artifact, answer_guidance",
       "service_terms": [
         "Amazon Bedrock"
@@ -494,13 +604,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-029",
       "learning_unit": "Day02-order003",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "study_guide",
       "service_terms": [
         "OpenSearch"
@@ -512,13 +626,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-030",
       "learning_unit": "Day02-order003",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "focused_artifact, answer_guidance",
       "service_terms": [],
       "local_sources": [
@@ -528,13 +646,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-031",
       "learning_unit": "Day02-order003",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "focused_artifact",
       "service_terms": [],
       "local_sources": [
@@ -544,13 +666,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-032",
       "learning_unit": "Day02-order003",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "study_guide, focused_artifact",
       "service_terms": [],
       "local_sources": [
@@ -560,13 +686,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-033",
       "learning_unit": "Day02-order003",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "study_guide, focused_artifact",
       "service_terms": [
         "Amazon Bedrock"
@@ -578,13 +708,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-034",
       "learning_unit": "Day02-order004",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "Amazon Bedrock documentation, Bedrock embedding model selection guide",
       "service_terms": [
         "Amazon Bedrock"
@@ -596,13 +730,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-035",
       "learning_unit": "Day02-order004",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "Amazon Titan embedding documentation, semantic vector search troubleshooting guide",
       "service_terms": [
         "Amazon Titan"
@@ -614,13 +752,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-036",
       "learning_unit": "Day02-order004",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "Amazon Bedrock documentation on embedding models, vector database scaling guides",
       "service_terms": [
         "Amazon Bedrock"
@@ -632,13 +774,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-037",
       "learning_unit": "Day02-order004",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "Amazon Bedrock/Titan embedding tutorials, vector similarity best-practices docs",
       "service_terms": [],
       "local_sources": [
@@ -648,13 +794,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-038",
       "learning_unit": "Day02-order004",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "Amazon Titan embedding documentation; vector database security practices",
       "service_terms": [
         "Amazon Titan"
@@ -666,13 +816,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-039",
       "learning_unit": "Day02-order004",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "Amazon Bedrock documentation, model card details",
       "service_terms": [
         "Amazon Bedrock"
@@ -684,13 +838,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-040",
       "learning_unit": "Day02-order004",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "Vector store index update documentation",
       "service_terms": [],
       "local_sources": [
@@ -700,13 +858,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-041",
       "learning_unit": "Day02-order004",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "Amazon Bedrock embedding docs, prompt engineering for context disambiguation",
       "service_terms": [
         "Amazon Bedrock"
@@ -718,13 +880,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-042",
       "learning_unit": "Day02-order004",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "Amazon Bedrock embedding solution selection guides",
       "service_terms": [],
       "local_sources": [
@@ -734,13 +900,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-043",
       "learning_unit": "Day02-order004",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "Domain-specific embedding best-practices; Bedrock embedding pipelines",
       "service_terms": [],
       "local_sources": [
@@ -750,13 +920,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-044",
       "learning_unit": "Day02-order004",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "Multilingual and domain vocabulary embedding guides; Bedrock/Titan healthcare embedding docs",
       "service_terms": [],
       "local_sources": [
@@ -766,13 +940,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-045",
       "learning_unit": "Day02-order005",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order005-document-chunking-segmentation.md",
       "service_terms": [],
       "local_sources": [
@@ -782,13 +960,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-046",
       "learning_unit": "Day02-order005",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order005-document-chunking-segmentation.md",
       "service_terms": [],
       "local_sources": [
@@ -798,13 +980,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-047",
       "learning_unit": "Day02-order005",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order005-document-chunking-segmentation.md",
       "service_terms": [],
       "local_sources": [
@@ -814,13 +1000,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-048",
       "learning_unit": "Day02-order005",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order005-document-chunking-segmentation.md",
       "service_terms": [],
       "local_sources": [
@@ -830,13 +1020,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-049",
       "learning_unit": "Day02-order005",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order005-document-chunking-segmentation.md",
       "service_terms": [],
       "local_sources": [
@@ -846,13 +1040,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-050",
       "learning_unit": "Day02-order005",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order005-document-chunking-segmentation.md",
       "service_terms": [],
       "local_sources": [
@@ -862,13 +1060,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-051",
       "learning_unit": "Day02-order005",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order005-document-chunking-segmentation.md",
       "service_terms": [],
       "local_sources": [
@@ -878,13 +1080,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-052",
       "learning_unit": "Day02-order005",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order005-document-chunking-segmentation.md",
       "service_terms": [],
       "local_sources": [
@@ -894,13 +1100,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-053",
       "learning_unit": "Day02-order005",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order005-document-chunking-segmentation.md",
       "service_terms": [],
       "local_sources": [
@@ -910,13 +1120,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-054",
       "learning_unit": "Day02-order005",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order005-document-chunking-segmentation.md",
       "service_terms": [],
       "local_sources": [
@@ -926,13 +1140,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-055",
       "learning_unit": "Day02-order005",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order005-document-chunking-segmentation.md",
       "service_terms": [],
       "local_sources": [
@@ -942,13 +1160,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-056",
       "learning_unit": "Day02-order005",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order005-document-chunking-segmentation.md",
       "service_terms": [],
       "local_sources": [
@@ -958,13 +1180,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-057",
       "learning_unit": "Day02-order006",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order006-metadata-design-filtering.md",
       "service_terms": [],
       "local_sources": [
@@ -974,13 +1200,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-058",
       "learning_unit": "Day02-order006",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order006-metadata-design-filtering.md",
       "service_terms": [],
       "local_sources": [
@@ -990,13 +1220,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-059",
       "learning_unit": "Day02-order006",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order006-metadata-design-filtering.md",
       "service_terms": [],
       "local_sources": [
@@ -1006,13 +1240,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-060",
       "learning_unit": "Day02-order006",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order006-metadata-design-filtering.md",
       "service_terms": [
         "OpenSearch"
@@ -1024,13 +1262,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-061",
       "learning_unit": "Day02-order006",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order006-metadata-design-filtering.md",
       "service_terms": [],
       "local_sources": [
@@ -1040,13 +1282,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-062",
       "learning_unit": "Day02-order006",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order006-metadata-design-filtering.md",
       "service_terms": [],
       "local_sources": [
@@ -1056,13 +1302,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-063",
       "learning_unit": "Day02-order006",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order006-metadata-design-filtering.md",
       "service_terms": [],
       "local_sources": [
@@ -1072,13 +1322,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-064",
       "learning_unit": "Day02-order006",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order006-metadata-design-filtering.md",
       "service_terms": [],
       "local_sources": [
@@ -1088,13 +1342,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-065",
       "learning_unit": "Day02-order006",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order006-metadata-design-filtering.md",
       "service_terms": [],
       "local_sources": [
@@ -1104,13 +1362,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-066",
       "learning_unit": "Day02-order006",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order006-metadata-design-filtering.md",
       "service_terms": [],
       "local_sources": [
@@ -1120,13 +1382,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-067",
       "learning_unit": "Day02-order006",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order006-metadata-design-filtering.md",
       "service_terms": [],
       "local_sources": [
@@ -1136,13 +1402,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-068",
       "learning_unit": "Day02-order006",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order006-metadata-design-filtering.md",
       "service_terms": [],
       "local_sources": [
@@ -1152,13 +1422,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-069",
       "learning_unit": "Day02-order007",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/study-guides/day-02-data-embeddings-vector-stores-rag.md",
       "service_terms": [
         "Amazon Bedrock",
@@ -1174,13 +1448,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-070",
       "learning_unit": "Day02-order007",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/study-guides/day-02-data-embeddings-vector-stores-rag.md",
       "service_terms": [
         "Amazon Bedrock",
@@ -1196,13 +1474,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-071",
       "learning_unit": "Day02-order007",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order007-vector-store-architecture.md",
       "service_terms": [
         "Bedrock Knowledge Bases",
@@ -1216,13 +1498,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-072",
       "learning_unit": "Day02-order007",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order007-vector-store-architecture.md",
       "service_terms": [
         "Amazon OpenSearch Service",
@@ -1235,13 +1521,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-073",
       "learning_unit": "Day02-order007",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/study-guides/day-02-data-embeddings-vector-stores-rag.md",
       "service_terms": [
         "Amazon Bedrock",
@@ -1254,13 +1544,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-074",
       "learning_unit": "Day02-order007",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order007-vector-store-architecture.md",
       "service_terms": [
         "Amazon S3",
@@ -1278,13 +1572,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-075",
       "learning_unit": "Day02-order007",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order007-vector-store-architecture.md",
       "service_terms": [
         "Amazon Bedrock",
@@ -1299,13 +1597,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-076",
       "learning_unit": "Day02-order007",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order007-vector-store-architecture.md",
       "service_terms": [
         "Amazon OpenSearch Service",
@@ -1318,13 +1620,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-077",
       "learning_unit": "Day02-order007",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/study-guides/day-02-data-embeddings-vector-stores-rag.md",
       "service_terms": [
         "Amazon OpenSearch Service",
@@ -1337,13 +1643,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-078",
       "learning_unit": "Day02-order007",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/study-guides/day-02-data-embeddings-vector-stores-rag.md",
       "service_terms": [
         "Amazon Bedrock",
@@ -1360,13 +1670,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-079",
       "learning_unit": "Day02-order007",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order007-vector-store-architecture.md",
       "service_terms": [
         "Bedrock Knowledge Bases"
@@ -1378,13 +1692,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-080",
       "learning_unit": "Day02-order008",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs.aws.amazon.com/opensearch-service/latest/developerguide/index-management.html",
       "service_terms": [
         "Amazon OpenSearch Service",
@@ -1397,13 +1715,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-081",
       "learning_unit": "Day02-order008",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs.aws.amazon.com/opensearch-service/latest/developerguide/sizing-domains.html",
       "service_terms": [
         "OpenSearch"
@@ -1415,13 +1737,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-082",
       "learning_unit": "Day02-order008",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs.aws.amazon.com/opensearch-service/latest/developerguide/index-data.html#backing-up-index-data",
       "service_terms": [
         "OpenSearch"
@@ -1433,13 +1759,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-084",
       "learning_unit": "Day02-order008",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs.aws.amazon.com/opensearch-service/latest/developerguide/regional-endpoints.html",
       "service_terms": [
         "OpenSearch"
@@ -1451,13 +1781,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-085",
       "learning_unit": "Day02-order008",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order008-vector-indexing-scaling-performance.md\ndocs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
       "service_terms": [
         "OpenSearch"
@@ -1469,13 +1803,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-086",
       "learning_unit": "Day02-order008",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs.aws.amazon.com/opensearch-service/latest/developerguide/shards.html",
       "service_terms": [
         "OpenSearch"
@@ -1487,13 +1825,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-087",
       "learning_unit": "Day02-order008",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs.aws.amazon.com/opensearch-service/latest/developerguide/bp-index-management.html",
       "service_terms": [
         "OpenSearch"
@@ -1505,13 +1847,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-088",
       "learning_unit": "Day02-order008",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day-02-answer-guidance.md\ndocs.aws.amazon.com/opensearch-service/latest/developerguide/shards.html",
       "service_terms": [
         "OpenSearch"
@@ -1523,13 +1869,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-089",
       "learning_unit": "Day02-order008",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs.aws.amazon.com/opensearch-service/latest/developerguide/shards.html",
       "service_terms": [
         "OpenSearch"
@@ -1541,13 +1891,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-090",
       "learning_unit": "Day02-order008",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/study-guides/day-02-data-embeddings-vector-stores-rag.md\ndocs.aws.amazon.com/opensearch-service/latest/developerguide/shards.html\ndocs.aws.amazon.com/opensearch-service/latest/developerguide/index-management.html",
       "service_terms": [
         "OpenSearch"
@@ -1559,13 +1913,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-091",
       "learning_unit": "Day02-order008",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs.aws.amazon.com/opensearch-service/latest/developerguide/shards.html",
       "service_terms": [
         "OpenSearch"
@@ -1577,13 +1935,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-092",
       "learning_unit": "Day02-order008",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs.aws.amazon.com/opensearch-service/latest/developerguide/bp-index-management.html",
       "service_terms": [
         "OpenSearch"
@@ -1595,13 +1957,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-093",
       "learning_unit": "Day02-order009",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order009-basic-semantic-retrieval.md",
       "service_terms": [
         "Amazon Bedrock",
@@ -1614,13 +1980,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-094",
       "learning_unit": "Day02-order009",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order009-basic-semantic-retrieval.md",
       "service_terms": [
         "Amazon S3",
@@ -1634,13 +2004,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-095",
       "learning_unit": "Day02-order009",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order009-basic-semantic-retrieval.md",
       "service_terms": [
         "Amazon Aurora",
@@ -1653,13 +2027,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-096",
       "learning_unit": "Day02-order009",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order009-basic-semantic-retrieval.md",
       "service_terms": [
         "OpenSearch"
@@ -1671,13 +2049,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-097",
       "learning_unit": "Day02-order009",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order009-basic-semantic-retrieval.md",
       "service_terms": [
         "Bedrock Knowledge Bases"
@@ -1689,13 +2071,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-098",
       "learning_unit": "Day02-order009",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order009-basic-semantic-retrieval.md",
       "service_terms": [
         "Amazon OpenSearch Service",
@@ -1708,13 +2094,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-099",
       "learning_unit": "Day02-order009",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order009-basic-semantic-retrieval.md",
       "service_terms": [
         "Amazon Aurora",
@@ -1727,13 +2117,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-100",
       "learning_unit": "Day02-order009",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order009-basic-semantic-retrieval.md",
       "service_terms": [
         "OpenSearch"
@@ -1745,13 +2139,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-101",
       "learning_unit": "Day02-order009",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order009-basic-semantic-retrieval.md",
       "service_terms": [
         "Bedrock Knowledge Bases"
@@ -1763,13 +2161,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-102",
       "learning_unit": "Day02-order009",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order009-basic-semantic-retrieval.md",
       "service_terms": [
         "Bedrock Knowledge Bases"
@@ -1781,13 +2183,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-103",
       "learning_unit": "Day02-order009",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order009-basic-semantic-retrieval.md",
       "service_terms": [
         "OpenSearch"
@@ -1799,13 +2205,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-104",
       "learning_unit": "Day02-order009",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order009-basic-semantic-retrieval.md",
       "service_terms": [
         "Amazon Aurora",
@@ -1818,13 +2228,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-105",
       "learning_unit": "Day02-order010",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order010-basic-rag-design.md",
       "service_terms": [],
       "local_sources": [
@@ -1834,13 +2248,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-106",
       "learning_unit": "Day02-order010",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order010-basic-rag-design.md",
       "service_terms": [],
       "local_sources": [
@@ -1850,13 +2268,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-107",
       "learning_unit": "Day02-order010",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order010-basic-rag-design.md",
       "service_terms": [
         "Amazon Bedrock",
@@ -1869,13 +2291,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-108",
       "learning_unit": "Day02-order010",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order010-basic-rag-design.md",
       "service_terms": [],
       "local_sources": [
@@ -1885,13 +2311,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-109",
       "learning_unit": "Day02-order010",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order010-basic-rag-design.md",
       "service_terms": [],
       "local_sources": [
@@ -1901,13 +2331,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-110",
       "learning_unit": "Day02-order010",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order010-basic-rag-design.md",
       "service_terms": [],
       "local_sources": [
@@ -1917,13 +2351,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-111",
       "learning_unit": "Day02-order010",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order010-basic-rag-design.md",
       "service_terms": [],
       "local_sources": [
@@ -1933,13 +2371,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-112",
       "learning_unit": "Day02-order010",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order010-basic-rag-design.md",
       "service_terms": [
         "Amazon Bedrock"
@@ -1951,13 +2393,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-113",
       "learning_unit": "Day02-order010",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order010-basic-rag-design.md",
       "service_terms": [],
       "local_sources": [
@@ -1967,13 +2413,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-114",
       "learning_unit": "Day02-order010",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order010-basic-rag-design.md",
       "service_terms": [],
       "local_sources": [
@@ -1983,13 +2433,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-115",
       "learning_unit": "Day02-order010",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order010-basic-rag-design.md",
       "service_terms": [],
       "local_sources": [
@@ -1999,13 +2453,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-116",
       "learning_unit": "Day02-order010",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order010-basic-rag-design.md",
       "service_terms": [],
       "local_sources": [
@@ -2015,13 +2473,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-117",
       "learning_unit": "Day02-order002",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order002-multimodal-data-preprocessing.md",
       "service_terms": [],
       "local_sources": [
@@ -2031,13 +2493,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-118",
       "learning_unit": "Day02-order002",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order002-multimodal-data-preprocessing.md",
       "service_terms": [],
       "local_sources": [
@@ -2047,13 +2513,17 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     },
     {
       "item_id": "P1-AIP-D2-119",
       "learning_unit": "Day02-order002",
-      "status": "source-verified",
-      "reasons": [],
+      "status": "needs-human-source-review",
+      "reasons": [
+        "claim verification verdict is unresolved"
+      ],
       "source_trace": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order002-multimodal-data-preprocessing.md",
       "service_terms": [],
       "local_sources": [
@@ -2063,7 +2533,9 @@
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.extracted.md",
         "docs/Pilot1/aip-c01/source-material/ai-professional-01.pdf"
-      ]
+      ],
+      "claim_verification_record": true,
+      "atomic_claim_count": 1
     }
   ]
 }

@@ -15,6 +15,9 @@ The central design rule is:
 The specification does not prescribe novelty for its own sake. Method variety
 must follow the learning need of the unit.
 
+For the multi-agent production implementation of this specification, see
+[curriculum-production-agent-architecture.md](curriculum-production-agent-architecture.md).
+
 ## 1. Design Axes
 
 Keep the following axes separate. A unit is described across all four rather
@@ -86,6 +89,60 @@ reveals a mistaken assumption.
 14. Validate a complete pilot before scaling the curriculum.
 15. Capture reusable lessons, mistakes, remediations, and efficiencies in the
     kit lessons-learned register.
+
+### 2.0 Source identity tooling rule
+
+Before source extraction or syllabus decomposition, confirm source identity in
+a dedicated upstream checkpoint. Tooling for this checkpoint may be interactive,
+but it must preserve the trust boundary:
+
+- the browser or client collects intent, displays evidence, and records human
+  confirmation;
+- the server or trusted backend fetches official sources, follows redirects,
+  computes checksums, extracts metadata, compares claims, and writes the
+  canonical checkpoint;
+- local browser storage is for transparent drafts only, not authoritative
+  source truth;
+- service-worker caching should be limited to the app shell and non-sensitive
+  static assets unless the user explicitly opts in;
+- browser permissions should be avoided unless a user action clearly requires
+  them.
+
+For a cautious user, a curriculum source-identity tool should not unexpectedly
+ask for push notifications, file-system access, background sync, persistent
+storage, or clipboard access. Prefer in-app polling or server-sent events for
+job progress before using browser push. If push or real-time sync is added, it
+should support a clear asynchronous or multi-user need rather than be enabled
+by default.
+
+The checkpoint output must clearly say whether the source is approved,
+rejected, or still needs review. Do not start extraction or decomposition from
+an unapproved source unless the risk is explicit and recorded.
+
+### 2.0.1 Source-to-decomposition coverage rule
+
+After faithful source extraction and before downstream generation, run a
+source-to-decomposition coverage audit. The audit must compare the official
+source hierarchy against the curriculum decomposition and show, for each
+official objective, whether it is covered, intentionally deferred, or missing.
+
+For external exams or standards, audit at the deepest official objective level
+the curriculum will claim, such as domain, task, skill, subskill, standard, or
+rubric criterion. Do not rely on day-level summaries alone when downstream
+artifacts will tag finer-grained objectives.
+
+The coverage audit should produce both a human-readable report and a
+machine-readable result. Treat it as a blocking gate when:
+
+- an official objective is neither covered nor explicitly deferred;
+- a curriculum topic has no source-objective trace;
+- a deferral lacks a reason and planned handling path;
+- downstream topic briefs, prompts, assessments, or remediation would need to
+  invent official objective tags after decomposition.
+
+This gate protects against the right-to-left failure mode: if decomposition
+misses an official objective, every later step can appear complete while never
+teaching, practicing, assessing, or remediating that objective.
 
 ### 2.1 Dependency rule
 
@@ -166,6 +223,7 @@ At minimum, the map should include:
 | Curriculum order | Shows the topic's position in the selected route, such as `Day01-order001` or `Module03-order004`. |
 | Section or layer | Shows the dependency layer, domain section, or curriculum block. |
 | Topic | Names the learnable capability or topic. |
+| Source objectives | Records covered official objective IDs or links to the source-to-topic coverage map. |
 | Knowledge category | Separates knowledge, skill, representation/location, social/organizational, and embodied-skill categories. |
 | Knowledge type | Names the specific types, such as conceptual, procedural, diagnostic, embedded, or institutional. |
 | Artifact to create | States the learner work product or evidence form aligned to the category/type mix. |

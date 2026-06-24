@@ -1,5 +1,77 @@
+# ---------------------------------------------------------------------------
+# .gitignore for payil (Polymethod Teaching System)
+# Project is docs-first (Markdown) + Python tooling under scripts/ + one
+# vendored Node tool under docs/.../tools/. Deliverables (docs, reviewed banks,
+# .json/.jsonl reports, source .xlsx/.pdf) are intentionally NOT ignored.
+# ---------------------------------------------------------------------------
+
+# --- OS cruft ---
 .DS_Store
-*.tmp
-*.log
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+Desktop.ini
+
+# --- Editor / IDE ---
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+build/
+dist/
+.eggs/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# --- Node / JS tooling (vendored tools, e.g. source-identity-workbench) ---
+node_modules/
+.next/
+out/
+.turbo/
+.cache/
+coverage/
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# --- Office / spreadsheet lock & temp files ---
 ~$*
-.env.local
+.~lock.*#
+
+# --- Environment / secrets ---
+.env
+.env.*
+!.env.example
+
+# --- Generic temp / backup ---
+*.tmp
+*.temp
+*.bak
+*.orig
+
+# --- Run logs ---
+# Agent run logs are treated as ephemeral telemetry. The machine-readable
+# .jsonl records (consumed by the cost/provenance gates) are kept; the
+# human-readable .log mirrors are not.
+*.log

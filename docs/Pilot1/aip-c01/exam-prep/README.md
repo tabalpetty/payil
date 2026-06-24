@@ -29,6 +29,25 @@ objective JSON exists and contains the official domain, task, and Skill X.Y.Z
 statements used by the question-bank schema. If a field is local editorial
 focus, label it separately from the official objective field.
 
+Upstream source-identity tooling should follow
+`docs/decisions/0008-source-identity-workbench-architecture.md`: server-side
+verification on Cloud Run, React/Next.js for the UI, Workbox for app-shell
+caching, Dexie/IndexedDB only for transparent drafts, and no unnecessary
+browser permissions. The V1 workbench lives at
+`docs/curriculum-architecture-kit/tools/source-identity-workbench/`.
+
+Before claiming whole-syllabus coverage, run the Layer 0
+source-to-decomposition gate:
+
+```bash
+python3 scripts/audit_source_decomposition_coverage.py --strict
+```
+
+The current audit report is
+`docs/Pilot1/aip-c01/curriculum-model/source-to-decomposition-coverage-audit.md`.
+Intentional source-objective deferrals are recorded in
+`docs/Pilot1/aip-c01/curriculum-model/source-to-decomposition-deferrals.md`.
+
 ## Bank Completion Rule
 
 A day's bank is complete only after review approves at least `10` items per
@@ -49,10 +68,12 @@ the quality gate.
 
 ## Source Verification Rule
 
-Final gates must not pass while any item has unresolved source markers, stale
-claim patterns, or unsupported high-risk service claims. The source-verifier
-report must explain each unresolved item; factual culls discovered at this
-stage must be added to the cull log with observable evidence.
+Final gates must not pass while any item has unresolved source markers,
+contradicted claims, or missing atomic-claim evidence. Source-file presence,
+service-name matching, and absence of stale phrases are screening checks, not
+proof. The source-verifier report must explain each unresolved item; factual
+culls discovered at this stage must be added to the cull log with observable
+evidence.
 
 ## Official Baseline
 
@@ -84,8 +105,11 @@ The 7-day accelerated path uses a stricter operational readiness gate:
 - [question-generation-prompt-intake.md](question-generation-prompt-intake.md)
 - [agent_creation_progress.md](agent_creation_progress.md)
 - [exam-prep-agent-architecture.md](exam-prep-agent-architecture.md)
+- [../../../curriculum-architecture-kit/curriculum-production-agent-architecture.md](../../../curriculum-architecture-kit/curriculum-production-agent-architecture.md)
 - [exam-prep-agent-architecture.drawio](exam-prep-agent-architecture.drawio)
 - [exam-prep-agent-design-lessons.md](exam-prep-agent-design-lessons.md)
+- [../../../decisions/0008-source-identity-workbench-architecture.md](../../../decisions/0008-source-identity-workbench-architecture.md)
+- [../../../curriculum-architecture-kit/tools/source-identity-workbench/README.md](../../../curriculum-architecture-kit/tools/source-identity-workbench/README.md)
 - [topic-briefs/day-02/README.md](topic-briefs/day-02/README.md)
 - [day-02-question-generation-prompts.md](day-02-question-generation-prompts.md)
 - [reviewed/day-02/day-02-reviewed-question-bank.md](reviewed/day-02/day-02-reviewed-question-bank.md)

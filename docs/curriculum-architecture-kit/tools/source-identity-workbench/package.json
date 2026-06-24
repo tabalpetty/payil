@@ -1,0 +1,26 @@
+{
+  "name": "source-identity-workbench",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Layer -2 source identity checkpoint workbench for the Curriculum Architecture Kit.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "dexie": "^4.0.11",
+    "next": "^15.3.4",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.29.0",
+    "eslint-config-next": "^15.3.4"
+  },
+  "overrides": {
+    "postcss": "8.5.10"
+  }
+}

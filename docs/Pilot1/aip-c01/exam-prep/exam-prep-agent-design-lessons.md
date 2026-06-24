@@ -386,3 +386,33 @@ After a run, before trusting the gate report, also confirm:
   controls, so a row of `pass` cannot mask one `pending`;
 - key metrics were independently recomputed from the produced bank, not taken
   from the run's own summary.
+
+## 2026-06-23: A Gate Must Validate Its Named Guarantee
+
+A reported metric is not an enforced gate. Answer-position counts, iteration
+limits, source traces, and costs can all appear in a report while the verdict
+ignores them. Every gate must derive its result from the evidence it claims to
+protect, and tests should force both passing and failing examples.
+
+## 2026-06-23: Source Presence Is Not Claim Verification
+
+Finding a service name in a trusted document proves only that the service is
+mentioned. It does not prove the item's specific capability, limitation,
+causal, comparative, or temporal claim. Production approval requires an
+item-level ledger of atomic claims with source, evidence, and verdict. Missing
+claim evidence must remain unresolved rather than defaulting to verified.
+
+## 2026-06-23: Topic Volume Can Hide Objective Drift
+
+The `10 per topic` rule measures practice depth, not objective alignment. Final
+coverage must also verify every `(curriculum topic, official skill)` pair
+against the canonical traceability matrix and require at least one approved
+item for every mapped skill. Skills mapped to only one topic are
+must-not-drift objectives.
+
+## 2026-06-23: Labels Must Match What The Evidence Means
+
+Top-up labels such as `top-up-4` may encode candidate count rather than loop
+iteration. Operational gates must read structured events instead of inferring
+state from filenames. Cull reasons must likewise distinguish false claims,
+unverified claims, out-of-day scope, and reviewer meta-text.

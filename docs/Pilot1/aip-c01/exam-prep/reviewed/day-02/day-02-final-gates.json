@@ -8,18 +8,24 @@
     "source_objective_gate": "pass",
     "raw_provenance_gate": "pass",
     "schema_gate": "pass",
-    "traceability_gate": "pass",
-    "factual_verification_gate": "pass",
+    "traceability_gate": "fail",
+    "factual_verification_gate": "pending",
     "review_evidence_gate": "pass",
-    "coverage_gate": "pass",
+    "coverage_gate": "fail",
     "distribution_gate": "pass",
     "approved_output_gate": "pass",
-    "cost_gate": "recorded",
+    "cost_gate": "pass",
     "iteration_gate": "pass",
-    "human_resolution_gate": "pass"
+    "human_resolution_gate": "pending"
   },
-  "blockers": [],
-  "pending_items": [],
+  "blockers": [
+    "traceability_gate",
+    "coverage_gate"
+  ],
+  "pending_items": [
+    "factual_verification_gate",
+    "human_resolution_gate"
+  ],
   "per_topic_counts": {
     "Day02-order001": 12,
     "Day02-order002": 12,
@@ -54,31 +60,155 @@
     "predict": 1
   },
   "answer_position_counts": {
-    "1": 70,
-    "multiple-response": 22,
-    "not-matched": 23,
-    "3": 1,
-    "2": 2
+    "1": 23,
+    "2": 23,
+    "3": 23,
+    "4": 22,
+    "multiple-response": 27
   },
+  "answer_position_max_share": 0.2527,
   "source_trace_status_counts": {
-    "source-verified": 118
+    "needs-human-source-review": 118
   },
   "objective_mismatches": [],
+  "topic_skill_mismatches": [
+    "P1-AIP-D2-105: Day02-order010 does not map to Skill 1.5.6",
+    "P1-AIP-D2-106: Day02-order010 does not map to Skill 1.5.6",
+    "P1-AIP-D2-107: Day02-order010 does not map to Skill 1.5.6",
+    "P1-AIP-D2-108: Day02-order010 does not map to Skill 1.5.6",
+    "P1-AIP-D2-109: Day02-order010 does not map to Skill 1.5.6",
+    "P1-AIP-D2-110: Day02-order010 does not map to Skill 1.5.6",
+    "P1-AIP-D2-111: Day02-order010 does not map to Skill 1.5.6",
+    "P1-AIP-D2-112: Day02-order010 does not map to Skill 1.5.6",
+    "P1-AIP-D2-113: Day02-order010 does not map to Skill 1.5.6",
+    "P1-AIP-D2-114: Day02-order010 does not map to Skill 1.5.6",
+    "P1-AIP-D2-115: Day02-order010 does not map to Skill 1.5.6",
+    "P1-AIP-D2-116: Day02-order010 does not map to Skill 1.5.6"
+  ],
+  "missing_mapped_skills": {
+    "Day02-order003": [
+      "1.3.4"
+    ],
+    "Day02-order007": [
+      "1.5.3"
+    ],
+    "Day02-order010": [
+      "1.4.1",
+      "1.5.3"
+    ]
+  },
+  "must_not_drift_skills": [
+    "1.3.1",
+    "1.3.2",
+    "1.3.4",
+    "1.4.2",
+    "1.4.3",
+    "1.5.1",
+    "1.5.2"
+  ],
   "remediation_missing": [],
   "source_trace_missing": [],
   "teaching_substrate_missing": [],
   "approved_output_regressions": [],
   "cost_summary": {
-    "api_calls": 2,
+    "api_calls": 13,
     "token_totals": {
-      "input_tokens": 18410,
-      "output_tokens": 5126,
-      "total_tokens": 23536,
-      "candidate_count": 7
+      "input_tokens": 105212,
+      "output_tokens": 98092,
+      "total_tokens": 203304,
+      "candidate_count": 153
     },
     "calls": [
       {
-        "log": "docs/Pilot1/aip-c01/exam-prep/logs/day-02/2026-06-23T060909Z-day-02-day02-order010-top-up-4.jsonl",
+        "raw_source": "2026-06-23T051327Z-openai-gpt-4.1-day-02-balanced.md",
+        "run_id": "balanced",
+        "candidate_count": 22,
+        "input_tokens": 7687,
+        "output_tokens": 12973,
+        "total_tokens": 20660
+      },
+      {
+        "raw_source": "2026-06-23T051527Z-openai-gpt-4.1-day-02-order001.md",
+        "run_id": "order001",
+        "candidate_count": 13,
+        "input_tokens": 7881,
+        "output_tokens": 7973,
+        "total_tokens": 15854
+      },
+      {
+        "raw_source": "2026-06-23T051621Z-openai-gpt-4.1-day-02-order002.md",
+        "run_id": "order002",
+        "candidate_count": 12,
+        "input_tokens": 7904,
+        "output_tokens": 7646,
+        "total_tokens": 15550
+      },
+      {
+        "raw_source": "2026-06-23T051717Z-openai-gpt-4.1-day-02-order003.md",
+        "run_id": "order003",
+        "candidate_count": 12,
+        "input_tokens": 7920,
+        "output_tokens": 7695,
+        "total_tokens": 15615
+      },
+      {
+        "raw_source": "2026-06-23T051804Z-openai-gpt-4.1-day-02-order004.md",
+        "run_id": "order004",
+        "candidate_count": 13,
+        "input_tokens": 7872,
+        "output_tokens": 7749,
+        "total_tokens": 15621
+      },
+      {
+        "raw_source": "2026-06-23T051845Z-openai-gpt-4.1-day-02-order005.md",
+        "run_id": "order005",
+        "candidate_count": 12,
+        "input_tokens": 7902,
+        "output_tokens": 7440,
+        "total_tokens": 15342
+      },
+      {
+        "raw_source": "2026-06-23T051925Z-openai-gpt-4.1-day-02-order006.md",
+        "run_id": "order006",
+        "candidate_count": 12,
+        "input_tokens": 7880,
+        "output_tokens": 7360,
+        "total_tokens": 15240
+      },
+      {
+        "raw_source": "2026-06-23T052016Z-openai-gpt-4.1-day-02-order007.md",
+        "run_id": "order007",
+        "candidate_count": 12,
+        "input_tokens": 7973,
+        "output_tokens": 8949,
+        "total_tokens": 16922
+      },
+      {
+        "raw_source": "2026-06-23T052105Z-openai-gpt-4.1-day-02-order008.md",
+        "run_id": "order008",
+        "candidate_count": 13,
+        "input_tokens": 7950,
+        "output_tokens": 8424,
+        "total_tokens": 16374
+      },
+      {
+        "raw_source": "2026-06-23T052154Z-openai-gpt-4.1-day-02-order009.md",
+        "run_id": "order009",
+        "candidate_count": 12,
+        "input_tokens": 7918,
+        "output_tokens": 7751,
+        "total_tokens": 15669
+      },
+      {
+        "raw_source": "2026-06-23T052302Z-openai-gpt-4.1-day-02-order010.md",
+        "run_id": "order010",
+        "candidate_count": 13,
+        "input_tokens": 7915,
+        "output_tokens": 9006,
+        "total_tokens": 16921
+      },
+      {
+        "raw_source": "2026-06-23T060928Z-openai-gpt-4.1-day-02-order010-top-up-4.md",
         "run_id": "order010-top-up-4",
         "candidate_count": 4,
         "input_tokens": 9316,
@@ -86,14 +216,23 @@
         "total_tokens": 12178
       },
       {
-        "log": "docs/Pilot1/aip-c01/exam-prep/logs/day-02/2026-06-23T060928Z-day-02-day02-order002-top-up-3.jsonl",
+        "raw_source": "2026-06-23T060943Z-openai-gpt-4.1-day-02-order002-top-up-3.md",
         "run_id": "order002-top-up-3",
         "candidate_count": 3,
         "input_tokens": 9094,
         "output_tokens": 2264,
         "total_tokens": 11358
       }
-    ]
+    ],
+    "used_external_raw_sources": 12,
+    "missing_telemetry": [],
+    "telemetry_complete": true
   },
-  "completion_status": "complete"
+  "iteration_summary": {
+    "observed_iterations": 1,
+    "configured_max_iterations": 3,
+    "blocked": false,
+    "within_limit": true
+  },
+  "completion_status": "blocked"
 }

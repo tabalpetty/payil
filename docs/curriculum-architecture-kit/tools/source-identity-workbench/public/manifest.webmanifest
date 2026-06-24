@@ -1,0 +1,19 @@
+{
+  "name": "Source Identity Workbench",
+  "short_name": "Source ID",
+  "description": "Layer -2 source identity confirmation before extraction and decomposition.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f7f5ef",
+  "theme_color": "#253238",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
+

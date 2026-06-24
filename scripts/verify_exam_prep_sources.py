@@ -98,6 +98,10 @@ def report_json_path(day: int) -> Path:
     return reviewed_dir(day) / f"{day_slug(day)}-source-verification.json"
 
 
+def claim_ledger_path(day: int) -> Path:
+    return reviewed_dir(day) / f"{day_slug(day)}-claim-verification-ledger.json"
+
+
 def topic_brief_dir(day: int) -> Path:
     return EXAM_PREP / f"topic-briefs/{day_slug(day)}"
 
@@ -205,11 +209,24 @@ def terms_in_text(text: str, terms: list[str]) -> list[str]:
     return [term for term in terms if term.lower() in lowered]
 
 
+def load_claim_ledger(day: int) -> dict[str, dict[str, Any]]:
+    path = claim_ledger_path(day)
+    if not path.exists():
+        return {}
+    data = json.loads(path.read_text(encoding="utf-8"))
+    return {
+        record["item_id"]: record
+        for record in data.get("items", [])
+        if record.get("item_id")
+    }
+
+
 def verify_item(
     item: str,
     *,
     topic_source_paths: dict[str, list[Path]],
     objective_text: str,
+    claim_ledger: dict[str, dict[str, Any]],
 ) -> dict[str, Any]:
     fields = parse_fields(item)
     item_id = fields.get("item_id", "unknown")
@@ -248,6 +265,25 @@ def verify_item(
     if not source_paths and not any(marker.lower() in lowered_trace for marker in TRUSTED_EXTERNAL_MARKERS):
         reasons.append("no trusted local source path or recognizable official-source marker")
 
+    ledger_record = claim_ledger.get(item_id)
+    claim_checks = ledger_record.get("claims", []) if ledger_record else []
+    if not ledger_record:
+        reasons.append("missing item-level claim verification ledger record")
+    elif ledger_record.get("verdict") != "verified":
+        reasons.append(f"claim verification verdict is {ledger_record.get('verdict', 'missing')}")
+    elif not claim_checks:
+        reasons.append("claim verification record has no atomic claims")
+    else:
+        for claim in claim_checks:
+            if claim.get("verdict") != "supported":
+                reasons.append(
+                    f"atomic claim is not supported: {claim.get('claim', 'unnamed claim')}"
+                )
+            if not claim.get("evidence") or not claim.get("source"):
+                reasons.append(
+                    f"atomic claim lacks source/evidence: {claim.get('claim', 'unnamed claim')}"
+                )
+
     status = "source-verified" if not reasons else "needs-human-source-review"
     return {
         "item_id": item_id,
@@ -257,6 +293,8 @@ def verify_item(
         "source_trace": trace,
         "service_terms": item_services,
         "local_sources": [str(path.relative_to(ROOT)) for path in dict.fromkeys(source_paths)],
+        "claim_verification_record": bool(ledger_record),
+        "atomic_claim_count": len(claim_checks),
     }
 
 
@@ -264,6 +302,51 @@ def replace_status(item: str, status: str) -> str:
     if "| `source_trace_status` |" not in item:
         return item
     return re.sub(r"\| `source_trace_status` \| .*? \|", f"| `source_trace_status` | {status} |", item, count=1)
+
+
+def initialize_claim_ledger(day: int, items: list[str]) -> None:
+    existing = load_claim_ledger(day)
+    records = []
+    for item in items:
+        fields = parse_fields(item)
+        item_id = fields.get("item_id", "unknown")
+        if item_id in existing:
+            records.append(existing[item_id])
+            continue
+        correct = extract_block(item, "Correct answer:", ["Rationale:"])
+        rationale = extract_block(item, "Rationale:", ["Distractors:"])
+        records.append(
+            {
+                "item_id": item_id,
+                "verdict": "unresolved",
+                "claims": [
+                    {
+                        "claim": f"Keyed answer and rationale: {correct} - {rationale}",
+                        "source": source_trace(item),
+                        "evidence": "",
+                        "verdict": "unresolved"
+                    }
+                ]
+            }
+        )
+    claim_ledger_path(day).write_text(
+        json.dumps(
+            {
+                "day": day,
+                "status": "in-progress",
+                "instructions": [
+                    "Split compound claim candidates into atomic claims before verification.",
+                    "Use exact official or trusted sources.",
+                    "Record concise evidence or a faithful paraphrase.",
+                    "Set the item verdict to verified only when every material claim is supported."
+                ],
+                "items": records
+            },
+            indent=2,
+        )
+        + "\n",
+        encoding="utf-8",
+    )
 
 
 def rebuild_bank(original: str, items: list[str]) -> str:
@@ -282,8 +365,9 @@ def render_report(day: int, results: list[dict[str, Any]]) -> str:
         f"Generated: {date.today().isoformat()}",
         "",
         "This report records deterministic source verification against trusted local",
-        "teaching/remediation sources, official objective extraction, and source-trace",
-        "markers. Items that still need live AWS documentation judgment remain",
+        "teaching/remediation sources, official objective extraction, source-trace",
+        "markers, and an item-level atomic-claim ledger. Source presence alone never",
+        "produces a verified verdict. Items without claim evidence remain",
         "`needs-human-source-review`.",
         "",
         "## Summary",
@@ -304,6 +388,11 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--day", type=int, required=True, choices=range(1, 8))
     parser.add_argument("--write", action="store_true", help="Update source_trace_status fields in the reviewed bank.")
+    parser.add_argument(
+        "--initialize-ledger",
+        action="store_true",
+        help="Create unresolved item-level claim records without overwriting existing records.",
+    )
     args = parser.parse_args()
 
     bank = bank_path(args.day)
@@ -312,10 +401,18 @@ def main() -> int:
 
     original = bank.read_text(encoding="utf-8")
     items = split_items(original)
+    if args.initialize_ledger:
+        initialize_claim_ledger(args.day, items)
     topic_source_paths = topic_sources(args.day)
     objective_text = load_objective_text()
+    claim_ledger = load_claim_ledger(args.day)
     results = [
-        verify_item(item, topic_source_paths=topic_source_paths, objective_text=objective_text)
+        verify_item(
+            item,
+            topic_source_paths=topic_source_paths,
+            objective_text=objective_text,
+            claim_ledger=claim_ledger,
+        )
         for item in items
     ]
 

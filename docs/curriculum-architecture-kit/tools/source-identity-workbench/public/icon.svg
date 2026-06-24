@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Source Identity Workbench">
+  <rect width="128" height="128" rx="22" fill="#253238"/>
+  <path d="M30 31h44a19 19 0 0 1 19 19v47H49a19 19 0 0 1-19-19V31Z" fill="#f7f5ef"/>
+  <path d="M47 54h35M47 70h27M47 86h35" stroke="#253238" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="92" cy="36" r="18" fill="#c75f3f"/>
+  <path d="m84 36 6 6 12-14" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+

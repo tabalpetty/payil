@@ -130,6 +130,8 @@ def build_prompt(day: int, section_heading: str) -> str:
             "- Do not mark anything as approved.",
             "- Do not include copied official exam questions or third-party question-bank content.",
             "- Preserve exact official objective values from the selected prompt.",
+            "- Never place reviewer instructions or verification commentary in learner-visible stems, options, answers, rationales, or source traces.",
+            "- Put any reviewer-only concern in generation_notes.",
             "",
             f"===== DAY {day} PROMPT PACK =====",
             pack,
@@ -186,6 +188,8 @@ def render_review_feedback_for_topic(day: int, topic: str) -> str:
         "Global prompt-improvement signals:",
     ]
     for signal in global_signals:
+        if signal.get("failure_reason") == "unsupported high-risk claim":
+            continue
         lines.append(
             f"- {signal.get('failure_reason')}: {signal.get('prompt_adjustment')} "
             f"(count={signal.get('count')})"
@@ -196,15 +200,20 @@ def render_review_feedback_for_topic(day: int, topic: str) -> str:
         lines.append(f"- {item.get('item_id')}: {truncate(item.get('stem', ''), 260)}")
 
     lines.extend(["", "Rejected stems and cull evidence for this topic. Avoid these failure modes:"])
-    if culled:
-        for item in culled[:15]:
+    actionable_culls = [
+        item
+        for item in culled
+        if item.get("reasons") != ["unsupported high-risk claim"]
+    ]
+    if actionable_culls:
+        for item in actionable_culls[:15]:
             evidence = " | ".join(str(entry) for entry in item.get("evidence", []))
             lines.append(
                 f"- raw_source={item.get('raw_source')}; reasons={', '.join(item.get('reasons', []))}; "
                 f"stem={truncate(item.get('stem', ''), 240)}; evidence={truncate(evidence, 320)}"
             )
     else:
-        lines.append("- No culled stems for this topic in the prior pass.")
+        lines.append("- No currently actionable culled stems for this topic in the prior pass.")
 
     lines.extend(
         [
@@ -212,6 +221,7 @@ def render_review_feedback_for_topic(day: int, topic: str) -> str:
             "Top-up-specific instructions:",
             "- Do not create service-name lookup questions.",
             "- Do not use high-risk service-capability claims unless the exact official AWS source is named in `source_trace_needed`.",
+            "- Do not place phrases such as 'reviewer should confirm' or 'verify against current documentation' in learner-visible fields.",
             "- Prefer decision, diagnosis, tradeoff, or first-action questions grounded in the topic brief.",
             "",
         ]

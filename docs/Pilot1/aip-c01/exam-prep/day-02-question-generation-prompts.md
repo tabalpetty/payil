@@ -19,14 +19,14 @@ Default raw-generation target: `12` candidates per topic. A complete reviewed ba
 |---|---|---|---|
 | Day02-order001 | Data-quality validation and monitoring | Task 1.3: Implement data validation and processing pipelines for FM consumption. | Skill 1.3.1 |
 | Day02-order002 | Text, image, audio, and tabular-data preprocessing | Task 1.3: Implement data validation and processing pipelines for FM consumption. | Skill 1.3.2 |
-| Day02-order003 | Model-specific input formatting and data normalization | Task 1.3: Implement data validation and processing pipelines for FM consumption. | Skill 1.3.3 |
+| Day02-order003 | Model-specific input formatting and data normalization | Task 1.3: Implement data validation and processing pipelines for FM consumption. | Skill 1.3.3, Skill 1.3.4 |
 | Day02-order004 | Embeddings and vector-similarity fundamentals | Task 1.5: Design retrieval mechanisms for FM augmentation. | Skill 1.5.2 |
 | Day02-order005 | Document chunking and segmentation | Task 1.5: Design retrieval mechanisms for FM augmentation. | Skill 1.5.1 |
 | Day02-order006 | Metadata design and filtering | Task 1.4: Design and implement vector store solutions. | Skill 1.4.2 |
-| Day02-order007 | Vector-store technologies and architecture | Task 1.4: Design and implement vector store solutions. | Skill 1.4.1 |
+| Day02-order007 | Vector-store technologies and architecture | Task 1.4: Design and implement vector store solutions.<br>Task 1.5: Design retrieval mechanisms for FM augmentation. | Skill 1.4.1, Skill 1.5.3 |
 | Day02-order008 | Vector indexing, sharding, scaling, and performance | Task 1.4: Design and implement vector store solutions. | Skill 1.4.3 |
 | Day02-order009 | Basic semantic retrieval | Task 1.5: Design retrieval mechanisms for FM augmentation. | Skill 1.5.3 |
-| Day02-order010 | Basic Retrieval-Augmented Generation | Task 1.5: Design retrieval mechanisms for FM augmentation. | Skill 1.5.6 |
+| Day02-order010 | Basic Retrieval-Augmented Generation | Task 1.4: Design and implement vector store solutions.<br>Task 1.5: Design retrieval mechanisms for FM augmentation. | Skill 1.4.1, Skill 1.5.3 |
 
 ## Output Schema Required From The LLM
 
@@ -39,10 +39,10 @@ Return a single JSON array. Each object must contain these fields:
 | `accelerated_day` | Always `Day 2`. |
 | `curriculum_order` | Exact curriculum-order value from the prompt. |
 | `topic` | Exact topic name from the prompt. |
-| `exam_domain` | Preserve the exact official value from the topic brief. |
-| `exam_task` | Preserve the exact official value from the topic brief. |
-| `exam_skill` | Preserve the exact official value from the topic brief. |
-| `secondary_exam_skills` | Preserve the exact value from the topic brief. |
+| `exam_domain` | Use the exact domain from the selected allowed objective mapping. |
+| `exam_task` | Use the exact task from one allowed objective mapping for the topic. |
+| `exam_skill` | Use the exact skill from the same allowed objective mapping. |
+| `secondary_exam_skills` | Optional exact additional mapped skill; otherwise `None.` |
 | `knowledge_category` | Exact knowledge category from the topic brief. |
 | `knowledge_type` | Exact knowledge type from the topic brief. |
 | `question_format` | `multiple-choice` or `multiple-response`. |
@@ -100,6 +100,10 @@ Question quality requirements:
   keyword matching.
 - Include a mix of direct best-answer selection, best architecture/control,
   most likely failure/risk, first action, and multiple-response formats.
+- For multiple-choice items, distribute the correct answer across option
+  positions 1, 2, 3, and 4. Counts per position must differ by at most one.
+  Do not place every correct answer first and do not move weak distractors merely
+  to satisfy the quota.
 - Mark each question with difficulty: `medium`, `hard`, or `exam-plus`.
 - For every distractor, explain why it is tempting and why it is wrong or less
   suitable.
@@ -176,10 +180,13 @@ Generate exactly 12 original draft practice questions for:
 - accelerated_day: Day 2
 - knowledge_category: Skill; Knowledge; Representation / Location
 - knowledge_type: Procedural; Causal; Embedded
-- exam_domain: Content Domain 1: Foundation Model Integration, Data Management, and Compliance
-- exam_task: Task 1.3: Implement data validation and processing pipelines for FM consumption.
-- exam_skill: Skill 1.3.1: Create comprehensive data validation workflows to ensure data meets quality standards for FM consumption (for example, by using AWS Glue Data Quality, SageMaker Data Wrangler, custom Lambda functions, Amazon CloudWatch metrics).
-- secondary_exam_skills: None.
+
+Allowed official objective mappings:
+- Content Domain 1: Foundation Model Integration, Data Management, and Compliance | Task 1.3: Implement data validation and processing pipelines for FM consumption. | Skill 1.3.1: Create comprehensive data validation workflows to ensure data meets quality standards for FM consumption (for example, by using AWS Glue Data Quality, SageMaker Data Wrangler, custom Lambda functions, Amazon CloudWatch metrics).
+
+Use only these mappings. For every item, copy one complete
+domain/task/skill tuple exactly. Generate at least 12 item(s)
+for each mapped skill before using the remaining item budget.
 
 Question focus:
 - Ask for next step, runbook step, configuration choice, or failure-handling action.
@@ -201,8 +208,10 @@ Generate approximately 9 multiple-choice and 3 multiple-response items for this 
 Every item must be scenario-based unless the item is testing a necessary
 declarative fact inside a realistic work situation.
 
-Preserve the official objective fields exactly. Do not invent, paraphrase, or
-rename the official domain, task, or skill.
+For multiple-choice items, distribute correct answers across positions 1, 2,
+3, and 4 with counts differing by at most one. Preserve official objective
+fields exactly. Do not invent, paraphrase, or rename the official domain, task,
+or skill.
 
 Return only a JSON array of draft items using the required schema.
 ```
@@ -222,10 +231,13 @@ Generate exactly 12 original draft practice questions for:
 - accelerated_day: Day 2
 - knowledge_category: Knowledge; Skill
 - knowledge_type: Conceptual; Procedural; Conditional
-- exam_domain: Content Domain 1: Foundation Model Integration, Data Management, and Compliance
-- exam_task: Task 1.3: Implement data validation and processing pipelines for FM consumption.
-- exam_skill: Skill 1.3.2: Create data processing workflows to handle complex data types including text, image, audio, and tabular data with specialized processing requirements for FM consumption (for example, by using Amazon Bedrock multimodal models, SageMaker Processing, AWS Transcribe, advanced multimodal pipeline architectures).
-- secondary_exam_skills: None.
+
+Allowed official objective mappings:
+- Content Domain 1: Foundation Model Integration, Data Management, and Compliance | Task 1.3: Implement data validation and processing pipelines for FM consumption. | Skill 1.3.2: Create data processing workflows to handle complex data types including text, image, audio, and tabular data with specialized processing requirements for FM consumption (for example, by using Amazon Bedrock multimodal models, SageMaker Processing, AWS Transcribe, advanced multimodal pipeline architectures).
+
+Use only these mappings. For every item, copy one complete
+domain/task/skill tuple exactly. Generate at least 12 item(s)
+for each mapped skill before using the remaining item budget.
 
 Question focus:
 - Ask the learner to explain relationships, boundaries, or system roles.
@@ -247,8 +259,10 @@ Generate approximately 9 multiple-choice and 3 multiple-response items for this 
 Every item must be scenario-based unless the item is testing a necessary
 declarative fact inside a realistic work situation.
 
-Preserve the official objective fields exactly. Do not invent, paraphrase, or
-rename the official domain, task, or skill.
+For multiple-choice items, distribute correct answers across positions 1, 2,
+3, and 4 with counts differing by at most one. Preserve official objective
+fields exactly. Do not invent, paraphrase, or rename the official domain, task,
+or skill.
 
 Return only a JSON array of draft items using the required schema.
 ```
@@ -268,10 +282,14 @@ Generate exactly 12 original draft practice questions for:
 - accelerated_day: Day 2
 - knowledge_category: Knowledge; Skill; Representation / Location
 - knowledge_type: Declarative; Procedural; Embedded
-- exam_domain: Content Domain 1: Foundation Model Integration, Data Management, and Compliance
-- exam_task: Task 1.3: Implement data validation and processing pipelines for FM consumption.
-- exam_skill: Skill 1.3.3: Format input data for FM inference according to model-specific requirements (for example, by using JSON formatting for Amazon Bedrock API requests, structured data preparation for SageMaker AI endpoints, conversation formatting for dialog-based applications).
-- secondary_exam_skills: Skill 1.3.4: Enhance input data quality to improve FM response quality and consistency (for example, by using Amazon Bedrock to reformat text, Amazon Comprehend to extract entities, Lambda functions to normalize data).
+
+Allowed official objective mappings:
+- Content Domain 1: Foundation Model Integration, Data Management, and Compliance | Task 1.3: Implement data validation and processing pipelines for FM consumption. | Skill 1.3.3: Format input data for FM inference according to model-specific requirements (for example, by using JSON formatting for Amazon Bedrock API requests, structured data preparation for SageMaker AI endpoints, conversation formatting for dialog-based applications).
+- Content Domain 1: Foundation Model Integration, Data Management, and Compliance | Task 1.3: Implement data validation and processing pipelines for FM consumption. | Skill 1.3.4: Enhance input data quality to improve FM response quality and consistency (for example, by using Amazon Bedrock to reformat text, Amazon Comprehend to extract entities, Lambda functions to normalize data).
+
+Use only these mappings. For every item, copy one complete
+domain/task/skill tuple exactly. Generate at least 6 item(s)
+for each mapped skill before using the remaining item budget.
 
 Question focus:
 - Test necessary recall only inside a scenario; avoid glossary-only stems.
@@ -292,8 +310,10 @@ Generate approximately 9 multiple-choice and 3 multiple-response items for this 
 Every item must be scenario-based unless the item is testing a necessary
 declarative fact inside a realistic work situation.
 
-Preserve the official objective fields exactly. Do not invent, paraphrase, or
-rename the official domain, task, or skill.
+For multiple-choice items, distribute correct answers across positions 1, 2,
+3, and 4 with counts differing by at most one. Preserve official objective
+fields exactly. Do not invent, paraphrase, or rename the official domain, task,
+or skill.
 
 Return only a JSON array of draft items using the required schema.
 ```
@@ -313,10 +333,13 @@ Generate exactly 12 original draft practice questions for:
 - accelerated_day: Day 2
 - knowledge_category: Knowledge
 - knowledge_type: Declarative; Conceptual
-- exam_domain: Content Domain 1: Foundation Model Integration, Data Management, and Compliance
-- exam_task: Task 1.5: Design retrieval mechanisms for FM augmentation.
-- exam_skill: Skill 1.5.2: Select and configure optimal embedding solutions to create efficient vector representations for semantic search (for example, by using Amazon Titan embeddings based on dimensionality and domain fit, by evaluating performance characteristics of Amazon Bedrock embedding models, by using Lambda functions to batch generate embeddings).
-- secondary_exam_skills: None.
+
+Allowed official objective mappings:
+- Content Domain 1: Foundation Model Integration, Data Management, and Compliance | Task 1.5: Design retrieval mechanisms for FM augmentation. | Skill 1.5.2: Select and configure optimal embedding solutions to create efficient vector representations for semantic search (for example, by using Amazon Titan embeddings based on dimensionality and domain fit, by evaluating performance characteristics of Amazon Bedrock embedding models, by using Lambda functions to batch generate embeddings).
+
+Use only these mappings. For every item, copy one complete
+domain/task/skill tuple exactly. Generate at least 12 item(s)
+for each mapped skill before using the remaining item budget.
 
 Question focus:
 - Test necessary recall only inside a scenario; avoid glossary-only stems.
@@ -337,8 +360,10 @@ Generate approximately 9 multiple-choice and 3 multiple-response items for this 
 Every item must be scenario-based unless the item is testing a necessary
 declarative fact inside a realistic work situation.
 
-Preserve the official objective fields exactly. Do not invent, paraphrase, or
-rename the official domain, task, or skill.
+For multiple-choice items, distribute correct answers across positions 1, 2,
+3, and 4 with counts differing by at most one. Preserve official objective
+fields exactly. Do not invent, paraphrase, or rename the official domain, task,
+or skill.
 
 Return only a JSON array of draft items using the required schema.
 ```
@@ -358,10 +383,13 @@ Generate exactly 12 original draft practice questions for:
 - accelerated_day: Day 2
 - knowledge_category: Knowledge; Skill
 - knowledge_type: Conceptual; Procedural; Causal; Conditional
-- exam_domain: Content Domain 1: Foundation Model Integration, Data Management, and Compliance
-- exam_task: Task 1.5: Design retrieval mechanisms for FM augmentation.
-- exam_skill: Skill 1.5.1: Develop effective document segmentation approaches to optimize retrieval performance for FM context augmentation (for example, by using Amazon Bedrock chunking capabilities, Lambda functions to implement fixed-size chunking, custom processing for hierarchical chunking based on content structure).
-- secondary_exam_skills: None.
+
+Allowed official objective mappings:
+- Content Domain 1: Foundation Model Integration, Data Management, and Compliance | Task 1.5: Design retrieval mechanisms for FM augmentation. | Skill 1.5.1: Develop effective document segmentation approaches to optimize retrieval performance for FM context augmentation (for example, by using Amazon Bedrock chunking capabilities, Lambda functions to implement fixed-size chunking, custom processing for hierarchical chunking based on content structure).
+
+Use only these mappings. For every item, copy one complete
+domain/task/skill tuple exactly. Generate at least 12 item(s)
+for each mapped skill before using the remaining item budget.
 
 Question focus:
 - Ask the learner to explain relationships, boundaries, or system roles.
@@ -384,8 +412,10 @@ Generate approximately 9 multiple-choice and 3 multiple-response items for this 
 Every item must be scenario-based unless the item is testing a necessary
 declarative fact inside a realistic work situation.
 
-Preserve the official objective fields exactly. Do not invent, paraphrase, or
-rename the official domain, task, or skill.
+For multiple-choice items, distribute correct answers across positions 1, 2,
+3, and 4 with counts differing by at most one. Preserve official objective
+fields exactly. Do not invent, paraphrase, or rename the official domain, task,
+or skill.
 
 Return only a JSON array of draft items using the required schema.
 ```
@@ -405,10 +435,13 @@ Generate exactly 12 original draft practice questions for:
 - accelerated_day: Day 2
 - knowledge_category: Knowledge; Skill
 - knowledge_type: Conceptual; Procedural; Conditional
-- exam_domain: Content Domain 1: Foundation Model Integration, Data Management, and Compliance
-- exam_task: Task 1.4: Design and implement vector store solutions.
-- exam_skill: Skill 1.4.2: Develop comprehensive metadata frameworks to improve search precision and context awareness for FM interactions (for example, by using S3 object metadata for document timestamps, custom attributes for authorship information, tagging systems for domain classification).
-- secondary_exam_skills: None.
+
+Allowed official objective mappings:
+- Content Domain 1: Foundation Model Integration, Data Management, and Compliance | Task 1.4: Design and implement vector store solutions. | Skill 1.4.2: Develop comprehensive metadata frameworks to improve search precision and context awareness for FM interactions (for example, by using S3 object metadata for document timestamps, custom attributes for authorship information, tagging systems for domain classification).
+
+Use only these mappings. For every item, copy one complete
+domain/task/skill tuple exactly. Generate at least 12 item(s)
+for each mapped skill before using the remaining item budget.
 
 Question focus:
 - Ask the learner to explain relationships, boundaries, or system roles.
@@ -430,8 +463,10 @@ Generate approximately 9 multiple-choice and 3 multiple-response items for this 
 Every item must be scenario-based unless the item is testing a necessary
 declarative fact inside a realistic work situation.
 
-Preserve the official objective fields exactly. Do not invent, paraphrase, or
-rename the official domain, task, or skill.
+For multiple-choice items, distribute correct answers across positions 1, 2,
+3, and 4 with counts differing by at most one. Preserve official objective
+fields exactly. Do not invent, paraphrase, or rename the official domain, task,
+or skill.
 
 Return only a JSON array of draft items using the required schema.
 ```
@@ -451,10 +486,14 @@ Generate exactly 12 original draft practice questions for:
 - accelerated_day: Day 2
 - knowledge_category: Knowledge; Skill; Representation / Location
 - knowledge_type: Conceptual; Conditional; Strategic; Embedded
-- exam_domain: Content Domain 1: Foundation Model Integration, Data Management, and Compliance
-- exam_task: Task 1.4: Design and implement vector store solutions.
-- exam_skill: Skill 1.4.1: Create advanced vector database architectures specifically for FM augmentation to enable efficient semantic retrieval beyond traditional search capabilities (for example, by using Amazon Bedrock Knowledge Bases for hierarchical organization, Amazon OpenSearch Service with the Neural plugin for Amazon Bedrock integration for topic-based segmentation, Amazon RDS with Amazon S3 document repositories, Amazon DynamoDB with vector databases for metadata and embeddings).
-- secondary_exam_skills: Skill 1.5.3: Deploy and configure vector search solutions to enable semantic search capabilities for FM augmentation (for example, by using OpenSearch Service with vector search capabilities, Amazon Aurora with the pgvector extension, Amazon Bedrock Knowledge Bases with managed vector store functionality).
+
+Allowed official objective mappings:
+- Content Domain 1: Foundation Model Integration, Data Management, and Compliance | Task 1.4: Design and implement vector store solutions. | Skill 1.4.1: Create advanced vector database architectures specifically for FM augmentation to enable efficient semantic retrieval beyond traditional search capabilities (for example, by using Amazon Bedrock Knowledge Bases for hierarchical organization, Amazon OpenSearch Service with the Neural plugin for Amazon Bedrock integration for topic-based segmentation, Amazon RDS with Amazon S3 document repositories, Amazon DynamoDB with vector databases for metadata and embeddings).
+- Content Domain 1: Foundation Model Integration, Data Management, and Compliance | Task 1.5: Design retrieval mechanisms for FM augmentation. | Skill 1.5.3: Deploy and configure vector search solutions to enable semantic search capabilities for FM augmentation (for example, by using OpenSearch Service with vector search capabilities, Amazon Aurora with the pgvector extension, Amazon Bedrock Knowledge Bases with managed vector store functionality).
+
+Use only these mappings. For every item, copy one complete
+domain/task/skill tuple exactly. Generate at least 6 item(s)
+for each mapped skill before using the remaining item budget.
 
 Question focus:
 - Ask the learner to explain relationships, boundaries, or system roles.
@@ -477,8 +516,10 @@ Generate approximately 9 multiple-choice and 3 multiple-response items for this 
 Every item must be scenario-based unless the item is testing a necessary
 declarative fact inside a realistic work situation.
 
-Preserve the official objective fields exactly. Do not invent, paraphrase, or
-rename the official domain, task, or skill.
+For multiple-choice items, distribute correct answers across positions 1, 2,
+3, and 4 with counts differing by at most one. Preserve official objective
+fields exactly. Do not invent, paraphrase, or rename the official domain, task,
+or skill.
 
 Return only a JSON array of draft items using the required schema.
 ```
@@ -498,10 +539,13 @@ Generate exactly 12 original draft practice questions for:
 - accelerated_day: Day 2
 - knowledge_category: Knowledge; Skill; Representation / Location
 - knowledge_type: Conceptual; Procedural; Causal; Embedded
-- exam_domain: Content Domain 1: Foundation Model Integration, Data Management, and Compliance
-- exam_task: Task 1.4: Design and implement vector store solutions.
-- exam_skill: Skill 1.4.3: Implement high-performance vector database architectures to optimize semantic search performance at scale for FM retrieval (for example, by using OpenSearch sharding strategies, multi-index approaches for specialized domains, hierarchical indexing techniques).
-- secondary_exam_skills: Skill 1.4.5: Design and deploy data maintenance systems to ensure that vector stores contain current and accurate information for FM augmentation (for example, by using incremental update mechanisms, real-time change detection systems, automated synchronization workflows, scheduled refresh pipelines).
+
+Allowed official objective mappings:
+- Content Domain 1: Foundation Model Integration, Data Management, and Compliance | Task 1.4: Design and implement vector store solutions. | Skill 1.4.3: Implement high-performance vector database architectures to optimize semantic search performance at scale for FM retrieval (for example, by using OpenSearch sharding strategies, multi-index approaches for specialized domains, hierarchical indexing techniques).
+
+Use only these mappings. For every item, copy one complete
+domain/task/skill tuple exactly. Generate at least 12 item(s)
+for each mapped skill before using the remaining item budget.
 
 Question focus:
 - Ask the learner to explain relationships, boundaries, or system roles.
@@ -524,8 +568,10 @@ Generate approximately 9 multiple-choice and 3 multiple-response items for this 
 Every item must be scenario-based unless the item is testing a necessary
 declarative fact inside a realistic work situation.
 
-Preserve the official objective fields exactly. Do not invent, paraphrase, or
-rename the official domain, task, or skill.
+For multiple-choice items, distribute correct answers across positions 1, 2,
+3, and 4 with counts differing by at most one. Preserve official objective
+fields exactly. Do not invent, paraphrase, or rename the official domain, task,
+or skill.
 
 Return only a JSON array of draft items using the required schema.
 ```
@@ -545,10 +591,13 @@ Generate exactly 12 original draft practice questions for:
 - accelerated_day: Day 2
 - knowledge_category: Knowledge; Skill
 - knowledge_type: Conceptual; Procedural
-- exam_domain: Content Domain 1: Foundation Model Integration, Data Management, and Compliance
-- exam_task: Task 1.5: Design retrieval mechanisms for FM augmentation.
-- exam_skill: Skill 1.5.3: Deploy and configure vector search solutions to enable semantic search capabilities for FM augmentation (for example, by using OpenSearch Service with vector search capabilities, Amazon Aurora with the pgvector extension, Amazon Bedrock Knowledge Bases with managed vector store functionality).
-- secondary_exam_skills: Skill 1.5.4: Create advanced search architectures to improve the relevance and accuracy of retrieved information for FM context (for example, by using OpenSearch for semantic search, hybrid search that combines keywords and vectors, Amazon Bedrock reranker models).
+
+Allowed official objective mappings:
+- Content Domain 1: Foundation Model Integration, Data Management, and Compliance | Task 1.5: Design retrieval mechanisms for FM augmentation. | Skill 1.5.3: Deploy and configure vector search solutions to enable semantic search capabilities for FM augmentation (for example, by using OpenSearch Service with vector search capabilities, Amazon Aurora with the pgvector extension, Amazon Bedrock Knowledge Bases with managed vector store functionality).
+
+Use only these mappings. For every item, copy one complete
+domain/task/skill tuple exactly. Generate at least 12 item(s)
+for each mapped skill before using the remaining item budget.
 
 Question focus:
 - Ask the learner to explain relationships, boundaries, or system roles.
@@ -569,8 +618,10 @@ Generate approximately 9 multiple-choice and 3 multiple-response items for this 
 Every item must be scenario-based unless the item is testing a necessary
 declarative fact inside a realistic work situation.
 
-Preserve the official objective fields exactly. Do not invent, paraphrase, or
-rename the official domain, task, or skill.
+For multiple-choice items, distribute correct answers across positions 1, 2,
+3, and 4 with counts differing by at most one. Preserve official objective
+fields exactly. Do not invent, paraphrase, or rename the official domain, task,
+or skill.
 
 Return only a JSON array of draft items using the required schema.
 ```
@@ -590,10 +641,14 @@ Generate exactly 12 original draft practice questions for:
 - accelerated_day: Day 2
 - knowledge_category: Knowledge; Skill
 - knowledge_type: Conceptual; Procedural; Strategic
-- exam_domain: Content Domain 1: Foundation Model Integration, Data Management, and Compliance
-- exam_task: Task 1.5: Design retrieval mechanisms for FM augmentation.
-- exam_skill: Skill 1.5.6: Create consistent access mechanisms to enable seamless integration with FMs (for example, by using function calling interfaces for vector search, Model Context Protocol [MCP] clients for vector queries, standardized API patterns for retrieval augmentation).
-- secondary_exam_skills: Skill 1.1.1: Create comprehensive architectural designs that align with specific business needs and technical constraints (for example, by using appropriate FMs, integration patterns, deployment strategies).
+
+Allowed official objective mappings:
+- Content Domain 1: Foundation Model Integration, Data Management, and Compliance | Task 1.4: Design and implement vector store solutions. | Skill 1.4.1: Create advanced vector database architectures specifically for FM augmentation to enable efficient semantic retrieval beyond traditional search capabilities (for example, by using Amazon Bedrock Knowledge Bases for hierarchical organization, Amazon OpenSearch Service with the Neural plugin for Amazon Bedrock integration for topic-based segmentation, Amazon RDS with Amazon S3 document repositories, Amazon DynamoDB with vector databases for metadata and embeddings).
+- Content Domain 1: Foundation Model Integration, Data Management, and Compliance | Task 1.5: Design retrieval mechanisms for FM augmentation. | Skill 1.5.3: Deploy and configure vector search solutions to enable semantic search capabilities for FM augmentation (for example, by using OpenSearch Service with vector search capabilities, Amazon Aurora with the pgvector extension, Amazon Bedrock Knowledge Bases with managed vector store functionality).
+
+Use only these mappings. For every item, copy one complete
+domain/task/skill tuple exactly. Generate at least 6 item(s)
+for each mapped skill before using the remaining item budget.
 
 Question focus:
 - Ask the learner to explain relationships, boundaries, or system roles.
@@ -615,8 +670,10 @@ Generate approximately 9 multiple-choice and 3 multiple-response items for this 
 Every item must be scenario-based unless the item is testing a necessary
 declarative fact inside a realistic work situation.
 
-Preserve the official objective fields exactly. Do not invent, paraphrase, or
-rename the official domain, task, or skill.
+For multiple-choice items, distribute correct answers across positions 1, 2,
+3, and 4 with counts differing by at most one. Preserve official objective
+fields exactly. Do not invent, paraphrase, or rename the official domain, task,
+or skill.
 
 Return only a JSON array of draft items using the required schema.
 ```

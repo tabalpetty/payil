@@ -16,6 +16,7 @@ ROOT = Path(__file__).resolve().parents[1]
 PILOT = ROOT / "docs/Pilot1/aip-c01"
 EXAM_PREP = PILOT / "exam-prep"
 OBJECTIVES_JSON = PILOT / "source-material/ai-professional-01.objectives.json"
+TRACEABILITY_MATRIX = PILOT / "curriculum-model/source-to-topic-traceability-matrix.md"
 
 
 def day_slug(day: int) -> str:
@@ -136,12 +137,18 @@ def source_trace(item: str) -> str:
     return extract_block(item, "Source trace:", ["Remediation target:", "### "])
 
 
-def correct_answer_index(item: str) -> str:
+def normalized_answer(value: str) -> str:
+    value = re.sub(r"^\s*(?:option\s*)?\d+[.):\-]\s*", "", value, flags=re.IGNORECASE)
+    value = re.sub(r"\s+", " ", value).strip().rstrip(".")
+    return value.casefold()
+
+
+def correct_answer_index(item: str, question_format: str) -> str:
     options_block = extract_block(item, "Options:", ["Correct answer:"])
     correct = extract_block(item, "Correct answer:", ["Rationale:"])
     if not correct:
         return "missing"
-    if "," in correct:
+    if question_format == "multiple-response":
         return "multiple-response"
     options = []
     for line in options_block.splitlines():
@@ -149,38 +156,115 @@ def correct_answer_index(item: str) -> str:
         if match:
             options.append((int(match.group(1)), match.group(2).strip()))
     for index, option in options:
-        if option == correct:
+        if normalized_answer(option) == normalized_answer(correct):
             return str(index)
     return "not-matched"
 
 
-def cost_summary(day: int) -> dict[str, Any]:
-    calls = []
+def raw_response_records(day: int) -> list[dict[str, Any]]:
+    records: list[dict[str, Any]] = []
+    raw_directory = EXAM_PREP / f"raw/{day_slug(day)}"
+    for path in sorted(raw_directory.glob("*-openai-*.md")):
+        text = path.read_text(encoding="utf-8")
+        metadata_match = re.search(r"## Metadata\s+```json\s+(.*?)\s+```", text, re.DOTALL)
+        response_match = re.search(r"## Raw Response JSON\s+```json\s+(.*?)\s+```", text, re.DOTALL)
+        if not metadata_match or not response_match:
+            continue
+        try:
+            metadata = json.loads(metadata_match.group(1))
+            response = json.loads(response_match.group(1))
+        except json.JSONDecodeError:
+            continue
+        usage = response.get("usage", {})
+        output_text = section(text, "Raw Response Text", ["Raw Response JSON"])
+        records.append(
+            {
+                "raw_source": path.name,
+                "run_id": metadata.get("run_id"),
+                "candidate_count": len(re.findall(r'"stem"\s*:', output_text)),
+                "input_tokens": usage.get("input_tokens") or 0,
+                "output_tokens": usage.get("output_tokens") or 0,
+                "total_tokens": usage.get("total_tokens") or 0,
+            }
+        )
+    return records
+
+
+def cost_summary(day: int, fields: list[dict[str, str]]) -> dict[str, Any]:
+    calls = raw_response_records(day)
     totals = Counter()
-    if not logs_dir(day).exists():
-        return {"api_calls": 0, "token_totals": {}, "calls": []}
-    for path in sorted(logs_dir(day).glob("*.jsonl")):
+    for call in calls:
+        for key in ["input_tokens", "output_tokens", "total_tokens", "candidate_count"]:
+            totals[key] += int(call[key] or 0)
+    used_external_sources = {
+        field.get("raw_source", "").split(" item ", 1)[0]
+        for field in fields
+        if field.get("raw_provider") == "openai"
+    }
+    metered_sources = {call["raw_source"] for call in calls}
+    missing_telemetry = sorted(source for source in used_external_sources if source not in metered_sources)
+    return {
+        "api_calls": len(calls),
+        "token_totals": dict(totals),
+        "calls": calls,
+        "used_external_raw_sources": len(used_external_sources),
+        "missing_telemetry": missing_telemetry,
+        "telemetry_complete": not missing_telemetry,
+    }
+
+
+def mapped_skills_by_topic(day: int) -> dict[str, set[str]]:
+    result: dict[str, set[str]] = defaultdict(set)
+    if not TRACEABILITY_MATRIX.exists():
+        return result
+    for line in TRACEABILITY_MATRIX.read_text(encoding="utf-8").splitlines():
+        order_match = re.search(rf"\|\s*(Day{day:02d}-order\d{{3}})\s*\|", line)
+        skill_match = re.search(r"\|\s*(\d+\.\d+\.\d+)\s*\|", line)
+        if order_match and skill_match:
+            result[order_match.group(1)].add(skill_match.group(1))
+    return result
+
+
+def topic_counts_by_skill() -> Counter[str]:
+    counts: Counter[str] = Counter()
+    if not TRACEABILITY_MATRIX.exists():
+        return counts
+    for line in TRACEABILITY_MATRIX.read_text(encoding="utf-8").splitlines():
+        skill_match = re.search(r"\|\s*(\d+\.\d+\.\d+)\s*\|", line)
+        order_match = re.search(r"\|\s*(Day\d{2}-order\d{3})\s*\|", line)
+        if skill_match and order_match:
+            counts[skill_match.group(1)] += 1
+    return counts
+
+
+def skill_id(value: str) -> str:
+    match = re.search(r"\bSkill\s+(\d+\.\d+\.\d+)\b", value)
+    return match.group(1) if match else ""
+
+
+def iteration_summary(day: int) -> dict[str, Any]:
+    observed = 0
+    configured_limits: list[int] = []
+    blocked = False
+    for path in sorted(logs_dir(day).glob("*-topup-loop.jsonl")):
         for line in path.read_text(encoding="utf-8").splitlines():
             try:
                 record = json.loads(line)
             except json.JSONDecodeError:
                 continue
-            if record.get("event") != "api-request-complete":
-                continue
-            call = {
-                "log": str(path.relative_to(ROOT)),
-                "run_id": record.get("run_id"),
-                "candidate_count": record.get("candidate_count"),
-                "input_tokens": record.get("input_tokens") or 0,
-                "output_tokens": record.get("output_tokens") or 0,
-                "total_tokens": record.get("total_tokens") or 0,
-            }
-            calls.append(call)
-            totals["input_tokens"] += int(call["input_tokens"])
-            totals["output_tokens"] += int(call["output_tokens"])
-            totals["total_tokens"] += int(call["total_tokens"])
-            totals["candidate_count"] += int(call["candidate_count"] or 0)
-    return {"api_calls": len(calls), "token_totals": dict(totals), "calls": calls}
+            if record.get("event") == "loop-start":
+                configured_limits.append(int(record.get("max_iterations", 0)))
+            if record.get("event") == "iteration-start":
+                observed = max(observed, int(record.get("iteration", 0)))
+            if record.get("event") == "loop-blocked":
+                blocked = True
+    configured = max(configured_limits, default=3)
+    return {
+        "observed_iterations": observed,
+        "configured_max_iterations": configured,
+        "blocked": blocked,
+        "within_limit": not blocked and observed <= configured,
+    }
 
 
 def teaching_substrate_check(day: int) -> tuple[bool, list[str]]:
@@ -241,13 +325,20 @@ def run_gates(day: int, target: int) -> dict[str, Any]:
     format_counts = Counter(field.get("question_format", "MISSING") for field in fields)
     cognitive = Counter(field.get("cognitive_demand", "MISSING") for field in fields)
     source_status = Counter(field.get("source_trace_status", "MISSING") for field in fields)
-    answer_positions = Counter(correct_answer_index(item) for item in items)
+    answer_positions = Counter(
+        correct_answer_index(item, field.get("question_format", ""))
+        for item, field in zip(items, fields)
+    )
     teaching_ok, teaching_missing = teaching_substrate_check(day)
     approved_regressions = approved_output_regressions(items)
 
     objective_mismatches = []
     remediation_missing = []
     source_trace_missing = []
+    topic_skill_mismatches = []
+    skills_tested_by_topic: dict[str, set[str]] = defaultdict(set)
+    mapped_skills = mapped_skills_by_topic(day)
+    global_skill_topic_counts = topic_counts_by_skill()
     for index, (item, field) in enumerate(zip(items, fields), 1):
         item_id = field.get("item_id", f"item-{index}")
         if field.get("exam_domain") not in domains:
@@ -256,6 +347,14 @@ def run_gates(day: int, target: int) -> dict[str, Any]:
             objective_mismatches.append(f"{item_id}: exam_task")
         if field.get("exam_skill") not in skills:
             objective_mismatches.append(f"{item_id}: exam_skill")
+        item_skill = skill_id(field.get("exam_skill", ""))
+        topic = field.get("learning_unit", "")
+        if item_skill:
+            skills_tested_by_topic[topic].add(item_skill)
+        if topic in mapped_skills and item_skill not in mapped_skills[topic]:
+            topic_skill_mismatches.append(
+                f"{item_id}: {topic} does not map to Skill {item_skill}"
+            )
 
         paths = remediation_paths(item)
         if not paths or any(not path_exists(path) for path in paths):
@@ -265,22 +364,53 @@ def run_gates(day: int, target: int) -> dict[str, Any]:
             source_trace_missing.append(item_id)
 
     short_topics = {topic: count for topic, count in sorted(per_topic.items()) if count < target}
+    missing_mapped_skills = {
+        topic: sorted(expected - skills_tested_by_topic.get(topic, set()))
+        for topic, expected in sorted(mapped_skills.items())
+        if expected - skills_tested_by_topic.get(topic, set())
+    }
+    must_not_drift_skills = sorted(
+        {
+            skill
+            for expected in mapped_skills.values()
+            for skill in expected
+            if global_skill_topic_counts[skill] == 1
+        }
+    )
     final_source_pending = any(status != "source-verified" for status in source_status)
-    cost = cost_summary(day)
+    cost = cost_summary(day, fields)
+    iteration = iteration_summary(day)
+    single_answer_positions = {
+        position: count
+        for position, count in answer_positions.items()
+        if position in {"1", "2", "3", "4", "5"}
+    }
+    single_answer_total = sum(single_answer_positions.values())
+    max_position_share = (
+        max(single_answer_positions.values(), default=0) / single_answer_total
+        if single_answer_total
+        else 1.0
+    )
+    position_ok = (
+        answer_positions.get("not-matched", 0) == 0
+        and answer_positions.get("missing", 0) == 0
+        and len(single_answer_positions) >= 3
+        and max_position_share <= 0.50
+    )
 
     gates = {
         "teaching_substrate_gate": "pass" if teaching_ok else "fail",
         "source_objective_gate": "pass" if OBJECTIVES_JSON.exists() and not objective_mismatches else "fail",
         "raw_provenance_gate": "pass" if all(field.get("raw_provider") and field.get("raw_model") for field in fields) else "fail",
         "schema_gate": "pass" if step12["checks"]["required_fields_present"] else "fail",
-        "traceability_gate": "pass" if not objective_mismatches and not remediation_missing and not source_trace_missing else "fail",
+        "traceability_gate": "pass" if not objective_mismatches and not remediation_missing and not source_trace_missing and not topic_skill_mismatches else "fail",
         "factual_verification_gate": "pending" if final_source_pending else "pass",
         "review_evidence_gate": "pass" if step12["checks"]["cull_evidence_present"] else "fail",
-        "coverage_gate": "pass" if not short_topics else "fail",
-        "distribution_gate": "pass" if len(difficulty) >= 2 and len(cognitive) >= 4 and "multiple-response" in format_counts else "review",
+        "coverage_gate": "pass" if not short_topics and not missing_mapped_skills else "fail",
+        "distribution_gate": "pass" if len(difficulty) >= 2 and len(cognitive) >= 4 and "multiple-response" in format_counts and position_ok else "fail",
         "approved_output_gate": "pass" if not approved_regressions else "fail",
-        "cost_gate": "recorded",
-        "iteration_gate": "pass",
+        "cost_gate": "pass" if cost["telemetry_complete"] else "fail",
+        "iteration_gate": "pass" if iteration["within_limit"] else "fail",
         "human_resolution_gate": "pending" if final_source_pending else "pass",
     }
 
@@ -304,13 +434,18 @@ def run_gates(day: int, target: int) -> dict[str, Any]:
         "question_format_counts": dict(format_counts),
         "cognitive_demand_counts": dict(cognitive),
         "answer_position_counts": dict(answer_positions),
+        "answer_position_max_share": round(max_position_share, 4),
         "source_trace_status_counts": dict(source_status),
         "objective_mismatches": objective_mismatches,
+        "topic_skill_mismatches": topic_skill_mismatches,
+        "missing_mapped_skills": missing_mapped_skills,
+        "must_not_drift_skills": must_not_drift_skills,
         "remediation_missing": remediation_missing,
         "source_trace_missing": source_trace_missing,
         "teaching_substrate_missing": teaching_missing,
         "approved_output_regressions": approved_regressions,
         "cost_summary": cost,
+        "iteration_summary": iteration,
         "completion_status": "blocked" if blockers else ("pending-final-source-verification" if pending else "complete"),
     }
 
@@ -353,12 +488,15 @@ def render_report(result: dict[str, Any]) -> str:
             f"- Question format: `{result['question_format_counts']}`",
             f"- Cognitive demand: `{result['cognitive_demand_counts']}`",
             f"- Answer positions: `{result['answer_position_counts']}`",
+            f"- Maximum single-answer position share: `{result['answer_position_max_share']}`",
             "",
             "## Traceability",
             "",
             f"- Objective mismatches: `{result['objective_mismatches'] or 'none'}`",
             f"- Missing remediation targets: `{result['remediation_missing'] or 'none'}`",
             f"- Missing source traces: `{result['source_trace_missing'] or 'none'}`",
+            f"- Topic/skill mismatches: `{result['topic_skill_mismatches'] or 'none'}`",
+            f"- Missing mapped skills: `{result['missing_mapped_skills'] or 'none'}`",
             f"- Source trace status: `{result['source_trace_status_counts']}`",
             f"- Teaching substrate missing: `{result['teaching_substrate_missing'] or 'none'}`",
             f"- Approved-output regressions: `{result['approved_output_regressions'] or 'none'}`",
@@ -367,6 +505,8 @@ def render_report(result: dict[str, Any]) -> str:
             "",
             f"- API calls recorded: `{result['cost_summary']['api_calls']}`",
             f"- Token totals: `{result['cost_summary']['token_totals']}`",
+            f"- Missing cost telemetry: `{result['cost_summary']['missing_telemetry'] or 'none'}`",
+            f"- Iteration summary: `{result['iteration_summary']}`",
             "",
             "Dollar cost is not estimated here because no versioned model-price table",
             "is configured in the repository. Token usage is recorded for budget",

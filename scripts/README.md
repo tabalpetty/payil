@@ -25,6 +25,43 @@ curriculum and exam-prep scripts should read
 `ai-professional-01.objectives.json` first. The PDF remains the source of
 record; the Markdown transcript is the human-readable audit view.
 
+## Source-To-Decomposition Coverage Audit
+
+Use `audit_source_decomposition_coverage.py` after source extraction and before
+topic briefs, prompt packs, question banks, or teaching-package generation.
+This Layer 0 gate checks whether official source objectives are represented in
+the curriculum decomposition or explicitly deferred.
+
+```bash
+# Regenerate the canonical skill-to-topic relationships when source objectives
+# or the curriculum decomposition changes.
+python3 scripts/export_source_topic_traceability_matrix.py
+
+# Write the audit report and machine-readable result.
+python3 scripts/audit_source_decomposition_coverage.py
+
+# Use strict mode in automation to fail when Layer 0 is incomplete.
+python3 scripts/audit_source_decomposition_coverage.py --strict
+```
+
+Generated files:
+
+```text
+docs/Pilot1/aip-c01/curriculum-model/source-to-topic-traceability-matrix.md
+docs/Pilot1/aip-c01/curriculum-model/source-to-decomposition-coverage-audit.md
+docs/Pilot1/aip-c01/curriculum-model/source-to-decomposition-coverage-audit.json
+```
+
+Intentional gaps belong in:
+
+```text
+docs/Pilot1/aip-c01/curriculum-model/source-to-decomposition-deferrals.md
+```
+
+The AIP-C01 audit verifies task coverage, every official Skill X.Y.Z
+relationship, and traceability for every curriculum topic. Mapped curriculum
+coverage and delivered teaching-package coverage remain separate measures.
+
 ## Exam-Prep Agent Planning
 
 Use `build_exam_prep_day.py` to convert curriculum-map rows into deterministic

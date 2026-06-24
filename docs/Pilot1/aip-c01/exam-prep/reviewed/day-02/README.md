@@ -17,6 +17,8 @@ for Day 2 exam-prep review.
 - `day-02-final-gate-report.md`: Step 13 final gate report.
 - `day-02-final-gates.json`: Step 13 machine-readable final gate results.
 
-Step 13 currently reports `completion_status=complete` for the reviewed bank.
+Step 13 currently reports `completion_status=blocked` for the reviewed
+candidate bank. See `day-02-final-gate-report.md` for topic-skill drift,
+and unresolved atomic-claim verification. Answer-position balance now passes.
 If the project wants a separately named approved bank, promote this
 source-verified reviewed bank without regenerating Step 12 outputs.

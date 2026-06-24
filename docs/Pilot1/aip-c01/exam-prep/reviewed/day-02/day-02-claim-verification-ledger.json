@@ -1,0 +1,1428 @@
+{
+  "day": 2,
+  "status": "in-progress",
+  "instructions": [
+    "Split compound claim candidates into atomic claims before verification.",
+    "Use exact official or trusted sources.",
+    "Record concise evidence or a faithful paraphrase.",
+    "Set the item verdict to verified only when every material claim is supported."
+  ],
+  "items": [
+    {
+      "item_id": "P1-AIP-D2-001",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Investigate and remediate the data source responsible for the missing values. - Addressing the root cause of the missing values in the data source is the logical first step before any downstream retraining or pipeline changes.",
+          "source": "AWS Glue Data Quality documentation for handling missing values; focused artifact",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-002",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Data Wrangler applies additional statistical validation beyond schema checks. - SageMaker Data Wrangler provides advanced profiling, detecting not only basic schema violations but also distributional anomalies like outliers.",
+          "source": "SageMaker Data Wrangler documentation; focused artifact",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-003",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Build a Glue Data Quality rule set and trigger a Lambda function when a rule fails. - Combining Glue Data Quality for detection and Lambda for automated remediation provides a scalable, automated approach.",
+          "source": "Glue Data Quality documentation; study guide",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-004",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Add data quality rules in AWS Glue to detect and block records with integrity violations before exporting. - Data quality rules can automatically prevent corrupt or duplicate data from entering downstream processing.",
+          "source": "AWS Glue Data Quality referential integrity rule docs; focused artifact",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-005",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Configure AWS Glue Data Quality to publish rule evaluation metrics to Amazon CloudWatch and set up CloudWatch alarms. - Glue Data Quality provides native integration with CloudWatch for fast alerting, suitable for operational triggers.",
+          "source": "Glue Data Quality + CloudWatch metrics documentation; study guide",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-006",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Develop Glue Data Quality rule sets and orchestrate checks as part of your ETL job. - Glue Data Quality allows rule-based, repeatable, and scalable validation directly integrated into ETL processes.",
+          "source": "Glue Data Quality, ETL rule orchestration docs; answer guidance",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-007",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Add Glue Data Quality rule sets for allowed language codes and presence of conversation IDs. - Validating input constraints at the ingestion step helps catch non-conforming records before they degrade downstream FM inference.",
+          "source": "Glue Data Quality conditional checks docs; focused artifact",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-008",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Implement AWS Glue Data Quality rule sets for all schema and content checks, replacing custom Lambda code. - Glue Data Quality provides out-of-the-box rules for schema and content validation, reducing custom code maintenance and improving coverage.",
+          "source": "Glue Data Quality rules vs. Lambda documentation; focused artifact",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-009",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Run data quality profiling using AWS Glue Data Quality on recent customer reviews. - Profiling helps to diagnose potential schema, content, or distribution issues affecting consistency.",
+          "source": "Glue Data Quality profiling docs; study guide",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-010",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Implement schema validation and null-checks in Glue Data Quality rule sets for each data source.; Add duplicate record detection to the validation workflow. - Schema, null, and duplicate checks are crucial for preventing downstream errors and ensuring consistent input for FMs.",
+          "source": "Glue Data Quality rules, deduplication docs; answer guidance",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-011",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Use Glue Data Quality rule sets to enforce schema and delimiter consistency before ingestion.; Integrate automatic schema inference and mismatch reporting into ETL jobs. - Automated rules and schema inference help identify mismatches and inconsistencies prior to model input, vital for scalable genomics use cases.",
+          "source": "Glue Data Quality delimiter checking docs; focused artifact",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-012",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Review recent Glue Data Quality rule evaluation reports for ingestion windows with elevated activity.; Check for S3 object versioning or overwrite anomalies during spike periods. - Rule evaluation results and storage anomalies may expose ingestion or data integrity issues driving output inconsistency.",
+          "source": "Glue Data Quality spike event documentation; answer guidance",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-013",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Apply image binarization and orientation correction to the scanned PDFs before text extraction. - Image binarization and orientation correction enhances the quality and alignment of text in scanned PDFs, which significantly improves text extraction (e.g., via OCR) and downstream FM processing.",
+          "source": "source: study guide, AWS Textract docs for preprocessing recommendations",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-014",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Build a SageMaker Processing pipeline to transform the CSV files into normalized JSON objects. - SageMaker Processing is suited for custom data transformation workflows such as normalizing tabular CSV data and converting it to the expected JSON format.",
+          "source": "source: Bedrock API input requirements for tabular data",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-015",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Integrate an image-to-text extraction step that converts annotated diagrams to text before FM ingestion. - Extracting information from diagrams to text allows the FM to access diagram content, facilitating more complete and accurate summaries.",
+          "source": "source: study guide, Bedrock multimodal documentation",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-016",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Transcribe voice messages to text using AWS Transcribe.; Convert tabular survey results into structured JSON records. - Transcribing voice to text enables text-based semantic search, and structuring tabular data in JSON ensures FM can process and index responses uniformly.",
+          "source": "source: Bedrock input data requirements and study guide for semantic search",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-017",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: OCR software failed to merge or normalize frequently ligatured character sequences. - Post-OCR text often contains fragmented ligatures like \"fi\" and \"fl,\" which must be normalized to ensure data quality before FM processing.",
+          "source": "source: OCR postprocessing challenges in preprocessing pipelines",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-018",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Failing to convert Excel survey responses to structured JSON before FM ingestion. - Structured survey data (from Excel) must be converted to the expected structured input format (e.g., JSON) for the model to parse input meaningfully.",
+          "source": "source: Bedrock input requirements for structured/tabular data",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-019",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Use Textract to extract structured text and Rekognition to process embedded images from the PDFs. - Textract specializes in extracting structured text from PDFs, and Rekognition can process and extract features from images embedded in the documents, providing data in the formats required.",
+          "source": "source: AWS Textract and Rekognition limitations and workflow examples",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-020",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Extract and normalize text from free-form ticket fields using a SageMaker Processing job.; Apply OCR to screenshots to extract textual context for the FM.; Transform error logs from spreadsheet format to structured JSON. - Text normalization ensures input consistency; OCR enables the FM to access information in screenshots; converting logs to JSON provides structure, all supporting robust FM operations.",
+          "source": "source: Bedrock and SageMaker recommendations for tabular, image, and text input handling",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-021",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: SageMaker Processing, Amazon Rekognition, and AWS Transcribe - SageMaker Processing is flexible for text, Rekognition handles image analysis, and Transcribe processes audio\u2014all aligned to their respective modality requirements.",
+          "source": "source: AWS documentation (Rekognition, Transcribe, SageMaker Processing)",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-022",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Convert each data item to a JSON-encoded string respecting model's expected schema before sending - Bedrock APIs expect input in a model-specific JSON structure; ensuring all data is encoded in the correct JSON format is essential before submission.",
+          "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-invoke.html, study_guide, focused_artifact",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-023",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Standardize all dates to ISO 8601 (YYYY-MM-DD) format regardless of input variant - Using a consistent, unambiguous date format reduces ambiguity, benefiting FM consistency and downstream processing.",
+          "source": "study_guide, focused_artifact, answer_guidance",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-024",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Impute missing numerical values with zero and strip whitespace from all string fields - The FM expects zero-imputation and trimmed strings. This ensures input matches expectations and prevents unpredictable inference behavior.",
+          "source": "study_guide, focused_artifact",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-025",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Input normalization steps are missing, leading to inconsistent representations before inference - Inconsistent input string capitalization and punctuation cause FMs to interpret otherwise similar utterances differently; normalization is critical.",
+          "source": "focused_artifact, answer_guidance",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-026",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Reformat incoming conversation history into a JSON array of message objects with explicit roles - Bedrock FMs (especially for chat) expect multi-turn context in a JSON format where each turn is an object specifying 'user' or 'assistant'.",
+          "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-messages.html",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-027",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Normalize extracted entity names so each appears in a standardized canonical form - Standardizing entity names ensures the FM receives consistent references, reducing ambiguity in summarization.",
+          "source": "focused_artifact",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-028",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Remove HTML tags; Normalize Unicode to standard ASCII where possible; Trim leading/trailing whitespace; Ensure the input payload is structured in JSON matching Bedrock requirements - Cleaning and normalizing text, as well as structuring the payload to model/API requirements, prevents parsing issues and ensures consistent model performance.",
+          "source": "focused_artifact, answer_guidance",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-029",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: It automatically structures prompts according to model's requirements and reduces inconsistencies - Bedrock prompt formatting utilities help ensure that prompts are constructed as expected by the target FM, reducing inconsistencies from manual string handling.",
+          "source": "study_guide",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-030",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Normalize all numeric fields to a standard range or distribution as used during training; Validate input schema and data types match the model\u2019s input signature; Standardize missing values handling as per model requirements - Maintaining feature scaling, matching expected input schemas, and handling nulls are all critical for accurate model inference.",
+          "source": "focused_artifact, answer_guidance",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-031",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Loss of important semantic cues such as proper nouns, acronyms, or emphasis - Lowercasing can remove distinctions critical for names, acronyms, or context, potentially degrading FM output clarity.",
+          "source": "focused_artifact",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-032",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: The normalization script is inadvertently truncating or stripping key content during processing - If normalization removes or shortens input, model outputs will shrink regardless of the supplied prompts.",
+          "source": "study_guide, focused_artifact",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-033",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: The input payload does not match the JSON schema expected by the selected Bedrock FM - Parsing errors commonly result from mismatched input structure rather than size or encoding issues.",
+          "source": "study_guide, focused_artifact",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-034",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: The domain fit between the embedding model and your catalog content types. - Selecting an embedding model whose training and capabilities align with your actual data domain (technical docs & creative marketing) will yield better semantic representations, improving retrieval relevance.",
+          "source": "Amazon Bedrock documentation, Bedrock embedding model selection guide",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-035",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: The embedding vectors for similar product names are not sufficiently separated in the embedding space. - Semantic similarity depends on the vector separation. If similar names yield close embeddings, retrieval may confuse them unless the embedding model or data processing is improved.",
+          "source": "Amazon Titan embedding documentation, semantic vector search troubleshooting guide",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-036",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: The domain and dimensionality fit of the embedding model for the growing corpus size. - If embeddings are not optimal for the domain or have suboptimal dimensionality, search quality and performance can deteriorate as data scales.",
+          "source": "Amazon Bedrock documentation on embedding models, vector database scaling guides",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-037",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Cosine similarity is commonly used, but the actual effectiveness depends on how the embedding model\u2019s geometry represents semantic similarity. - Different models may encode semantic similarity in ways that suit cosine, Euclidean, or other metrics; best practice is empirical alignment, not assumption.",
+          "source": "Amazon Bedrock/Titan embedding tutorials, vector similarity best-practices docs",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-038",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Enforcing fine-grained access control on embedded data. - Embedding models only generate semantic representations. Data access/security is managed by storage or application layers, not the embedding model.",
+          "source": "Amazon Titan embedding documentation; vector database security practices",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-039",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: The more relevant embedding model has been pretrained or fine-tuned on legal-domain content. - Domain-specific pretraining or fine-tuning enables the embedding model to recognize and encode relevant legal concepts and vocabulary with greater accuracy.",
+          "source": "Amazon Bedrock documentation, model card details",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-040",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: The vector index is not updated or reloaded after new embeddings are generated. - For new documents to be searchable, their embeddings must be added to the vector index. Simply generating embeddings is insufficient.",
+          "source": "Vector store index update documentation",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-041",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Assess if the embedding model sufficiently encodes disambiguating context and consider using prompt engineering or model selection tuned for disambiguation. - Contextual embedding models or prompt engineering may increase the ability to distinguish between meanings of ambiguous words, improving semantic matches.",
+          "source": "Amazon Bedrock embedding docs, prompt engineering for context disambiguation",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-042",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Alignment between the model\u2019s pretraining corpus and the support document domains.; Embedding model suitability for both formal technical text and informal language. - For a support chatbot, domain alignment ensures accurate semantic search, while the ability to handle both formal and informal text ensures broad coverage of varied user queries.",
+          "source": "Amazon Bedrock embedding solution selection guides",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-043",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Choose an embedding model trained or tuned for the financial domain.; Preprocess input text to remove extraneous formatting and unify terminology. - Semantic retrieval is improved by domain-specific embeddings and normalization/unification to reduce term ambiguity.",
+          "source": "Domain-specific embedding best-practices; Bedrock embedding pipelines",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-044",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Ensuring embeddings are generated consistently across all supported languages.; Evaluating the model's handling of rare and out-of-vocabulary medical terms. - Multilingual and specialized domain data require models capable of consistent embeddings across languages and proper handling of specialized/rare terms.",
+          "source": "Multilingual and domain vocabulary embedding guides; Bedrock/Titan healthcare embedding docs",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-045",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Hierarchical chunking based on document structure, with paragraph-level segmentation wherever possible - Hierarchical chunking respects the underlying document structure and reduces the risk of splitting informative paragraphs, leading to more contextually relevant retrievals by the FM.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order005-document-chunking-segmentation.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-046",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Chunk boundaries do not align with semantic units, causing loss of contextual meaning - Simple character-based chunking often splits sentences or semantic blocks, resulting in out-of-context chunks and degraded retrieval.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order005-document-chunking-segmentation.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-047",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Custom chunking pipeline that segments documents at headers and subheaders - Segmenting documents at logical boundaries helps retain context and makes it easier to retrieve coherent, relevant passages.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order005-document-chunking-segmentation.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-048",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Reduce chunk overlap to minimize redundancy and post-processing cost - High overlap leads to redundancy and increased retrieval/inference costs; reducing overlap is recommended unless context retention is critical.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order005-document-chunking-segmentation.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-049",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Implement adaptive chunking, adjusting chunk size based on document structure and length - Adaptive chunking allows for optimized retrieval by matching chunk sizes to both document structure and length\u2014handling small and large articles appropriately.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order005-document-chunking-segmentation.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-050",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Character-based chunking can split sentences or topics, losing context for retrieval - Breaking by character count can ignore natural breaks in information and result in poor semantic retrieval.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order005-document-chunking-segmentation.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-051",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Segment documents at each major section heading and produce embeddings for each section - Section-based chunking retains topical context, improves retrieval and manages a predictable number of chunks per document.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order005-document-chunking-segmentation.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-052",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Chunk documents at logical section and subsection boundaries; Implement minimal or no overlap unless context retention is essential - Both strategies preserve semantics and reduce the risk of redundant or irrelevant retrieval.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order005-document-chunking-segmentation.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-053",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Apply dynamic chunking: use whole-text embedding for short documents and section-based chunking for long documents - Dynamic chunking adapts to document length and structure, combining retrieval accuracy and computational efficiency.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order005-document-chunking-segmentation.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-054",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Chunk at logical boundaries respecting language-specific structures; Allow document-type-specific chunking rules; Balance chunk size to avoid exceeding FM context window limits - Respecting structure and language increases retrieval precision, document-type rules allow tuning, and respecting context size avoids truncation.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order005-document-chunking-segmentation.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-055",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Retrieval performance and precision will improve, with manageable storage cost increase - Granular, structure-aware segmentation boosts retrieval relevance. The storage cost increase is expected, but manageable compared to the improvement.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order005-document-chunking-segmentation.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-056",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Analyze each protocol's structure and apply custom chunking rules based on layout; Set a variable chunk size threshold tuned by document type and structure - Structure-aware and adaptive strategies boost retrieval accuracy for complex, non-uniform scientific documents.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order005-document-chunking-segmentation.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-057",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Tag documents in the vector store with department metadata and apply metadata filters at query time - This method uses metadata tags for department ownership and leverages metadata filtering during retrieval, enforcing access policies efficiently and precisely.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order006-metadata-design-filtering.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-058",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Incorporate document upload timestamps in metadata filters during query - Filtering results by upload timestamp ensures only recent documents are retrieved, directly targeting freshness.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order006-metadata-design-filtering.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-059",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Add custom metadata fields for author ID and review date during ingestion; Filter retrieval queries based on completeness of author and review metadata - Creating and leveraging custom metadata ensures only documents with required attributes are considered in retrieval, directly supporting the compliance need.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order006-metadata-design-filtering.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-060",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Implement a custom metadata field for source type and include it in query-time filtering or ranking - Adding and using a source-type metadata field allows searches or re-ranking to account for reliability during retrieval, not just in final generation.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order006-metadata-design-filtering.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-061",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Missing or improperly used document access-level metadata - Access-level metadata enables document filtering by audience, preventing cross-group document leakage in retrieval.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order006-metadata-design-filtering.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-062",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: It enables filtering and prioritization based on document characteristics during search - Tags allow retrieval to filter or re-rank documents by relevant attributes, sharpening result precision for the query.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order006-metadata-design-filtering.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-063",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Develop custom metadata attributes for language and business unit and implement query-time filtering using these attributes - Custom, independent metadata attributes allow flexible, granular filtering and easier future expansion, compared to merging attributes or inferring from structure.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order006-metadata-design-filtering.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-064",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Enforce retention threshold using document creation-date metadata and filter queries accordingly - Creation-date metadata enables precise filtering based on business policy, automating compliance with retention.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order006-metadata-design-filtering.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-065",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Assign metadata tags for each product variant and filter search by requested variant - Variant-level metadata enables queries to return precisely the right manual based on explicit filters, preventing ambiguity.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order006-metadata-design-filtering.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-066",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Define structured metadata fields for region and compliance version during ingestion; Implement query-time filtering based on metadata for both attributes - These practices enable precise and maintainable filtering, meeting business constraints for real-time, multi-attribute retrieval.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order006-metadata-design-filtering.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-067",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Retrieval queries do not filter or rank by document version or update date metadata - Filtering or ranking by version/update metadata helps ensure the newest, most relevant document is retrieved, not the oldest.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order006-metadata-design-filtering.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-068",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Tag all customer-project documents with a sensitivity level at ingestion; Enforce metadata-based filtering by sensitivity when partners search - These approaches ensure retrieval is restricted to appropriate sensitivity by tagging content and enforcing attribute-based filtering.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order006-metadata-design-filtering.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-069",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Amazon Bedrock Knowledge Bases with hierarchical metadata and managed vector store - Bedrock Knowledge Bases natively support hierarchical metadata for organization/region/topic and embed a managed vector store for semantic retrieval, requiring minimal custom code.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/study-guides/day-02-data-embeddings-vector-stores-rag.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-070",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Amazon OpenSearch Service with Neural plugin; Amazon Bedrock Knowledge Bases - OpenSearch with Neural plugin supports both vector (semantic) and keyword (traditional) retrieval in one solution. Bedrock Knowledge Bases can manage semantic retrieval and typically connect to underlying stores that can perform keyword retrieval as well.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/study-guides/day-02-data-embeddings-vector-stores-rag.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-071",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: The vector store's index was not rebuilt to match the new embedding dimensionality. - Vector database indexes must be rebuilt or adjusted to match the dimensionality of the vectors in use\u2014otherwise, similarity search accuracy is degraded or fails.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order007-vector-store-architecture.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-072",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Amazon OpenSearch Service with Neural plugin, because it supports real-time ingestion and native vector + filter-based queries - OpenSearch with Neural plugin is optimized for semantic search with fast ingestion, native filtered queries, and support for ranking, making it ideal for latency-sensitive semantic retrieval.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order007-vector-store-architecture.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-073",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: A vector database with support for role-based metadata filtering; Managed service for vector and metadata storage, such as Bedrock Knowledge Bases - Role-based filtering and managed metadata ensure compliance with access controls and scalability for large legal data sets. Bedrock Knowledge Bases streamline future FM integration and security.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/study-guides/day-02-data-embeddings-vector-stores-rag.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-074",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Move to Amazon OpenSearch Service with Neural plugin to gain managed vector search scaling and analytics integration - OpenSearch Service provides scalable managed vector database operations, advanced semantic search, and integrates with AWS analytics services.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order007-vector-store-architecture.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-075",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Amazon Bedrock Knowledge Bases with managed vector store - Bedrock Knowledge Bases provide native AWS service compatibility for scalable semantic search and can manage both text and, in many scenarios, image metadata embeddings with little custom orchestration.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order007-vector-store-architecture.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-076",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Leverage Amazon OpenSearch Service with Neural plugin for scalable, managed vector indexing; Implement role-based metadata filtering in the vector database layer - OpenSearch with Neural plugin provides managed scalability for indexing huge numbers of vectors and supports fast queries. Implementing role-based metadata filtering at the vector database allows for secure, efficient access control.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order007-vector-store-architecture.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-077",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Amazon OpenSearch Service provides managed scaling, built-in Neural plugin updates, and tight AWS integration. - The managed service removes the burden of scaling, patching, and plugin management, while integrating well with AWS security and monitoring.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/study-guides/day-02-data-embeddings-vector-stores-rag.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-078",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Implement Amazon Bedrock Knowledge Bases with managed vector store and enable CloudTrail for audit logging - Bedrock Knowledge Bases support scalable semantic search and integrate with AWS-native audit controls such as CloudTrail, meeting compliance needs and facilitating future RAG development.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/study-guides/day-02-data-embeddings-vector-stores-rag.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-079",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Apply domain and region metadata as hierarchical attributes within Knowledge Base documents and use these for filtered vector queries - Hierarchical attributes and metadata filtering on the vector store provide efficient, scalable, and AWS-supported mechanisms for restricted and segmented retrieval.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order007-vector-store-architecture.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-080",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Only the primary shard is being used due to single-shard configuration. - Using a single shard per index means all queries are routed to just one primary shard, which becomes a bottleneck as data scales.",
+          "source": "docs.aws.amazon.com/opensearch-service/latest/developerguide/index-management.html",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-081",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Multi-index architecture, with a separate index for each product category - This approach provides true isolation and scaling for each category, preventing query interference and allowing per-category optimization and updates.",
+          "source": "docs.aws.amazon.com/opensearch-service/latest/developerguide/sizing-domains.html",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-082",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Implement incremental update pipelines that push only changed documents to the index - Incremental update pipelines ensure only updated or new documents are reindexed, minimizing staleness while keeping operational cost low compared to full reindexing.",
+          "source": "docs.aws.amazon.com/opensearch-service/latest/developerguide/index-data.html#backing-up-index-data",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-084",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Deploy multiple OpenSearch clusters, one per region, each containing region-specific indices - Multiple regional clusters provide local low-latency search and ensure data residency compliance by storing data within regulatory boundaries.",
+          "source": "docs.aws.amazon.com/opensearch-service/latest/developerguide/regional-endpoints.html",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-085",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Configure an automated incremental update pipeline with change detection from the source - Automated incremental updates ensure new and changed data are quickly reflected in the index without requiring full rebuilds or heavy manual effort.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order008-vector-indexing-scaling-performance.md\ndocs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-086",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Redistribute shards more evenly across all nodes - Balancing shards across nodes ensures queries and indexing are spread evenly, reducing per-node resource contention and boosting throughput.",
+          "source": "docs.aws.amazon.com/opensearch-service/latest/developerguide/shards.html",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-087",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Multiple indices, one per scientific sub-domain - Using multiple indices by domain supports more granular optimizations and avoids bottlenecks of global over-sharding.",
+          "source": "docs.aws.amazon.com/opensearch-service/latest/developerguide/bp-index-management.html",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-088",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Evenly distributing primary shards across data nodes; Using multi-index design, with smaller indices per domain - Balanced sharding and multi-index architectures minimize resource contention, isolate workloads, and provide search optimization opportunities.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day-02-answer-guidance.md\ndocs.aws.amazon.com/opensearch-service/latest/developerguide/shards.html",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-089",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Increase the number of primary shards with awareness of node count; Design indices based on data domain rather than single monolithic index; Schedule periodic shard rebalancing as data grows - Sharding for node-awareness, domain-based indices, and scheduled rebalancing all directly prevent resource hot spots and enable sustainable scaling.",
+          "source": "docs.aws.amazon.com/opensearch-service/latest/developerguide/shards.html",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-090",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Create a separate index per business unit; Dynamically allocate and rebalance shards based on observed workload - Per-business unit indices isolate workloads, while dynamic shard rebalancing addresses shifting bottlenecks as use patterns change.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/study-guides/day-02-data-embeddings-vector-stores-rag.md\ndocs.aws.amazon.com/opensearch-service/latest/developerguide/shards.html\ndocs.aws.amazon.com/opensearch-service/latest/developerguide/index-management.html",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-091",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Increase the number of replicas without adjusting primary shard allocation - Adding replicas improves availability and read scaling only up to a point; if primary shards are not properly configured, search traffic can still bottleneck on hot primaries.",
+          "source": "docs.aws.amazon.com/opensearch-service/latest/developerguide/shards.html",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-092",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Too many small shards causing excessive overhead and cluster management challenges - Over-sharding leads to resource exhaustion, maintenance complexity, and unpredictable cluster performance.",
+          "source": "docs.aws.amazon.com/opensearch-service/latest/developerguide/bp-index-management.html",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-093",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Embeddings were generated using an unrelated domain model. - Using unrelated domain models for embedding generation results in vectors that do not capture the semantics of the target domain, degrading retrieval quality.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order009-basic-semantic-retrieval.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-094",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Vector search using Bedrock Knowledge Bases - Vector search using Bedrock Knowledge Bases enables semantic similarity search between user inputs and document chunks through embeddings.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order009-basic-semantic-retrieval.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-095",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: It allows for retrieval based on meaning, not just keywords. - Semantic vector search enables searching for conceptually similar content, not just exact tokens or strings.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order009-basic-semantic-retrieval.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-096",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Switch to an embedding model trained on manufacturing domain data - Domain-specific embedding models better capture the meaning of industry jargon, improving retrieval quality.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order009-basic-semantic-retrieval.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-097",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: It retrieves passages semantically similar to the user\u2019s query. - Vector search enables retrieval of contextually relevant content even when query terms differ from passage wording.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order009-basic-semantic-retrieval.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-098",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Generate document embeddings using a supported model; Configure a vector field in the OpenSearch index mapping - Embeddings must be generated for semantically meaningful vectors, and a vector field must exist in the index mapping for OpenSearch to store and retrieve vectors.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order009-basic-semantic-retrieval.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-099",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: The closest (least distant) document vectors will be returned, but results are likely irrelevant. - Vector search always returns the nearest neighbors; with no close semantic matches, irrelevant results are surfaced.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order009-basic-semantic-retrieval.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-100",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Combine vector search with document-level access filters and reranker models. - Combining semantic similarity, secure access filtering, and post-processing rerankers optimizes both relevance and compliance in retrieval.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order009-basic-semantic-retrieval.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-101",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Implementing hybrid search that combines keyword and vector similarity; Applying reranker models after initial retrieval - Hybrid search covers cases where embeddings or keywords alone would miss relevant results. Rerankers reorder candidates for maximal relevance.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order009-basic-semantic-retrieval.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-102",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Increase the granularity of document chunking during preprocessing - Smaller, context-aware chunks produce more focused embeddings, leading to more precise retrieval.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order009-basic-semantic-retrieval.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-103",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Vector embeddings have not been updated for the latest documents. - Unless embeddings are refreshed after new documents are added, semantic retrieval cannot surface up-to-date content.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order009-basic-semantic-retrieval.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-104",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Storing document embeddings in Aurora along with content; Implementing vector similarity queries with pgvector functions - Semantic search requires both persistent vector storage and specialized similarity queries using pgvector.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order009-basic-semantic-retrieval.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-105",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Define a consistent retrieval interface with a function-calling protocol and abstract retrieval logic from the FM endpoint. - A standardized interface decouples retrieval and generation, allowing models to be swapped without major backend rewrites.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order010-basic-rag-design.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-106",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: The retrieval process does not enforce synchronization between the vector store and live source documents. - If embedding/vector stores are not regularly refreshed from the primary content sources, retrieval can serve stale or missing information, leading to outdated FM responses.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order010-basic-rag-design.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-107",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Apply metadata-based access controls on vector store queries and standardize API integration to filter context for each business unit. - Access control at the retrieval/query layer ensures the FM receives only appropriate context for each business unit, in a scalable, manageable way using standardized APIs.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order010-basic-rag-design.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-108",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: It incorrectly assumes that the FM can autonomously conduct searches and navigate external APIs. - FM endpoints cannot independently interact with external APIs\u2014retrieval orchestration and context injection must occur outside the FM.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order010-basic-rag-design.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-109",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Implement a document chunker that formats new source data to match retrieval interface requirements. - Consistent chunking and formatting allows the new source to be added to the retrieval pipeline, maintaining API compatibility and seamless augmentation.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order010-basic-rag-design.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-110",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Restrict context retrieval to top-k most semantically similar chunks using Bedrock\u2019s retrieval API. - Top-k retrieval limits outbound data by only sending the most relevant chunks, reducing network usage without sacrificing RAG answer quality.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order010-basic-rag-design.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-111",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Tune the top-k retrieval parameter in Bedrock Knowledge Base API to minimize context size while retaining relevance. - Adjusting top-k retrieval helps control retrieval latency and limits how much text the FM must process, improving end-to-end responsiveness.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order010-basic-rag-design.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-112",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: The top-k retrieval limit used for fetching context from the vector store. - Reducing the number of chunks (top-k) retrieved can have an immediate and significant impact on query performance and FM response times.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order010-basic-rag-design.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-113",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Implement a service layer that exposes a standardized retrieval API and keeps FM consumption code separate from retrieval logic. - A service layer with a standardized API abstracts retrieval and context construction, allowing the FM to be replaced without affecting retrieval logic\u2014a best practice aligned with modular and maintainable RAG architectures.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order010-basic-rag-design.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-114",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Retrieval requests lack explicit knowledge base or domain parameters, causing ambiguous routing. - Ambiguous retrieval calls often default to an unintended source if request parameters do not make the intended knowledge base or domain unambiguous, leading to incorrect or irrelevant context.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order010-basic-rag-design.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-115",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Use versioned, well-documented retrieval APIs to abstract vector store implementations.; Implement modular adapters for new repository types following a common interface. - Versioned APIs and modular adapters enable extension and replacement of retrieval or storage backends without impacting existing integrations, supporting continuous evolution.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order010-basic-rag-design.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-116",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Implement a context assembly layer that tags each chunk with its source metadata and enforces standardized citation in the assembled FM prompt. - Only an explicit context assembly layer can guarantee structured, reliable citation for each fragment\u2014avoiding user-driven errors, future drift, and audit gaps.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order010-basic-rag-design.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-117",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Inconsistent input data ordering and missing image metadata are leading to unreliable feature extraction and context loss during preprocessing. - The inconsistent column ordering in tabular data and lack of image metadata can generate context misalignment or missing features during preprocessing, which undermines the FM's ability to merge information accurately across modalities.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order002-multimodal-data-preprocessing.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-118",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Normalize all audio files to a standard format and bitrate before transcription. - Audio normalization ensures that disparate inputs are compatible with downstream transcription services and the FM, mitigating quality and format variation that would otherwise degrade transcription and feature integration.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order002-multimodal-data-preprocessing.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    },
+    {
+      "item_id": "P1-AIP-D2-119",
+      "verdict": "unresolved",
+      "claims": [
+        {
+          "claim": "Keyed answer and rationale: Implement schema validation and type-checking for tabular call logs before ingestion.; Apply image resolution checks and standardize color profiles for evidence images. - Schema validation for tabular data and standardizing image quality help address inconsistencies that introduce bias or omissions in downstream FM analysis, promoting reliable context integration.",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order002-multimodal-data-preprocessing.md",
+          "evidence": "",
+          "verdict": "unresolved"
+        }
+      ]
+    }
+  ]
+}

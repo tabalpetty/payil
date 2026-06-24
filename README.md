@@ -29,7 +29,10 @@ The first reusable
 is available. The
 [Curriculum Map Construction Guide](docs/curriculum-architecture-kit/curriculum-map-construction-guide.md)
 captures how to make topic ordering, knowledge classification, and artifact
-selection explainable. Lessons learned from pilots are tracked in
+selection explainable. The
+[Curriculum Production Agent Architecture](docs/curriculum-architecture-kit/curriculum-production-agent-architecture.md)
+defines the orchestrated author-review-verify-release workflow for producing
+complete teaching and assessment packages. Lessons learned from pilots are tracked in
 [lessons-learned.md](docs/curriculum-architecture-kit/lessons-learned.md).
 
 Pilot1 has a clean artifact home at `docs/Pilot1/aip-c01/`. The next

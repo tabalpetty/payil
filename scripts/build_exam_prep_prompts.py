@@ -9,6 +9,7 @@ question-bank content.
 from __future__ import annotations
 
 import argparse
+import json
 import re
 import sys
 from dataclasses import dataclass
@@ -20,6 +21,14 @@ PILOT = ROOT / "docs/Pilot1/aip-c01"
 EXAM_PREP = PILOT / "exam-prep"
 OBJECTIVES_JSON = PILOT / "source-material/ai-professional-01.objectives.json"
 QUESTION_SPEC = EXAM_PREP / "question-bank-specification.md"
+TRACEABILITY_MATRIX = PILOT / "curriculum-model/source-to-topic-traceability-matrix.md"
+
+
+@dataclass(frozen=True)
+class ObjectiveMapping:
+    domain: str
+    task: str
+    skill: str
 
 
 @dataclass(frozen=True)
@@ -38,6 +47,7 @@ class Brief:
     secondary_exam_skills: str
     question_focus: list[str]
     misconceptions: list[str]
+    objective_mappings: tuple[ObjectiveMapping, ...]
     path: Path
 
 
@@ -125,8 +135,40 @@ def parse_brief(path: Path) -> Brief:
         secondary_exam_skills=bullet_value(text, "secondary_exam_skills"),
         question_focus=section_bullets(text, "Question Focus"),
         misconceptions=section_bullets(text, "Misconceptions And Traps To Test"),
+        objective_mappings=(),
         path=path,
     )
+
+
+def traceability_mappings() -> dict[str, tuple[ObjectiveMapping, ...]]:
+    objectives = json.loads(read_required(OBJECTIVES_JSON))
+    official_by_skill: dict[str, ObjectiveMapping] = {}
+    for domain in objectives.get("domains", []):
+        for task in domain.get("tasks", []):
+            for skill in task.get("skills", []):
+                official_by_skill[skill["skill_id"]] = ObjectiveMapping(
+                    domain=domain["domain"],
+                    task=task["task"],
+                    skill=skill["skill"],
+                )
+
+    mappings: dict[str, list[ObjectiveMapping]] = {}
+    for line in read_required(TRACEABILITY_MATRIX).splitlines():
+        if not line.startswith("| Domain "):
+            continue
+        cells = [cell.strip().replace(r"\|", "|") for cell in line.strip("|").split("|")]
+        if len(cells) != 7:
+            continue
+        _, _, _, skill_id, _, order, _ = cells
+        if skill_id == "Skill index":
+            continue
+        if skill_id not in official_by_skill:
+            raise SystemExit(f"Traceability matrix references unknown Skill {skill_id}")
+        mappings.setdefault(order, []).append(official_by_skill[skill_id])
+    return {
+        order: tuple(dict.fromkeys(values))
+        for order, values in mappings.items()
+    }
 
 
 def load_briefs(day: int) -> list[Brief]:
@@ -136,7 +178,21 @@ def load_briefs(day: int) -> list[Brief]:
     paths = sorted(directory.glob(f"day{day:02d}-order*-topic-brief.md"))
     if not paths:
         raise SystemExit(f"No topic briefs found in {directory}")
-    briefs = [parse_brief(path) for path in paths]
+    matrix = traceability_mappings()
+    briefs = []
+    for path in paths:
+        brief = parse_brief(path)
+        mappings = matrix.get(brief.order, ())
+        if not mappings:
+            raise SystemExit(f"No official skill mapping for {brief.order} in {TRACEABILITY_MATRIX}")
+        briefs.append(
+            Brief(
+                **{
+                    **brief.__dict__,
+                    "objective_mappings": mappings,
+                }
+            )
+        )
     if any(brief.day_number != day for brief in briefs):
         raise SystemExit(f"One or more briefs do not match Day {day}")
     return briefs
@@ -160,10 +216,10 @@ Return a single JSON array. Each object must contain these fields:
 | `accelerated_day` | Always `Day {day}`. |
 | `curriculum_order` | Exact curriculum-order value from the prompt. |
 | `topic` | Exact topic name from the prompt. |
-| `exam_domain` | Preserve the exact official value from the topic brief. |
-| `exam_task` | Preserve the exact official value from the topic brief. |
-| `exam_skill` | Preserve the exact official value from the topic brief. |
-| `secondary_exam_skills` | Preserve the exact value from the topic brief. |
+| `exam_domain` | Use the exact domain from the selected allowed objective mapping. |
+| `exam_task` | Use the exact task from one allowed objective mapping for the topic. |
+| `exam_skill` | Use the exact skill from the same allowed objective mapping. |
+| `secondary_exam_skills` | Optional exact additional mapped skill; otherwise `None.` |
 | `knowledge_category` | Exact knowledge category from the topic brief. |
 | `knowledge_type` | Exact knowledge type from the topic brief. |
 | `question_format` | `multiple-choice` or `multiple-response`. |
@@ -224,6 +280,10 @@ Question quality requirements:
   keyword matching.
 - Include a mix of direct best-answer selection, best architecture/control,
   most likely failure/risk, first action, and multiple-response formats.
+- For multiple-choice items, distribute the correct answer across option
+  positions 1, 2, 3, and 4. Counts per position must differ by at most one.
+  Do not place every correct answer first and do not move weak distractors merely
+  to satisfy the quota.
 - Mark each question with difficulty: `medium`, `hard`, or `exam-plus`.
 - For every distractor, explain why it is tempting and why it is wrong or less
   suitable.
@@ -251,7 +311,12 @@ These prompts intentionally incorporate the Day 1 lessons:
 
 
 def render_scope(briefs: list[Brief], day: int) -> str:
-    rows = "\n".join(f"| {brief.order} | {brief.topic} | {brief.exam_task} | {brief.exam_skill.split(':', 1)[0]} |" for brief in briefs)
+    rows = "\n".join(
+        f"| {brief.order} | {brief.topic} | "
+        f"{'<br>'.join(dict.fromkeys(mapping.task for mapping in brief.objective_mappings))} | "
+        f"{', '.join(mapping.skill.split(':', 1)[0] for mapping in brief.objective_mappings)} |"
+        for brief in briefs
+    )
     return f"""## Day {day} Scope
 
 | Curriculum order | Topic | Official task | Primary skill |
@@ -294,7 +359,12 @@ Do not mark anything as approved.
 def render_topic_prompt(brief: Brief, per_topic: int) -> str:
     focus = "\n".join(f"- {item}" for item in brief.question_focus)
     misconceptions = "\n".join(f"- {item}" for item in brief.misconceptions)
-    secondary = brief.secondary_exam_skills
+    objective_rows = "\n".join(
+        f"- {mapping.domain} | {mapping.task} | {mapping.skill}"
+        for mapping in brief.objective_mappings
+    )
+    skill_count = len(brief.objective_mappings)
+    minimum_per_skill = max(1, per_topic // skill_count)
     return f"""## Topic Prompt: {brief.order} {brief.topic}
 
 Use this prompt for focused generation or top-up generation for `{brief.order}`.
@@ -310,10 +380,13 @@ Generate exactly {per_topic} original draft practice questions for:
 - accelerated_day: Day {brief.day_number}
 - knowledge_category: {brief.knowledge_category}
 - knowledge_type: {brief.knowledge_type}
-- exam_domain: {brief.exam_domain}
-- exam_task: {brief.exam_task}
-- exam_skill: {brief.exam_skill}
-- secondary_exam_skills: {secondary}
+
+Allowed official objective mappings:
+{objective_rows}
+
+Use only these mappings. For every item, copy one complete
+domain/task/skill tuple exactly. Generate at least {minimum_per_skill} item(s)
+for each mapped skill before using the remaining item budget.
 
 Question focus:
 {focus}
@@ -331,8 +404,10 @@ Generate approximately {count_format_target(per_topic)} items for this topic.
 Every item must be scenario-based unless the item is testing a necessary
 declarative fact inside a realistic work situation.
 
-Preserve the official objective fields exactly. Do not invent, paraphrase, or
-rename the official domain, task, or skill.
+For multiple-choice items, distribute correct answers across positions 1, 2,
+3, and 4 with counts differing by at most one. Preserve official objective
+fields exactly. Do not invent, paraphrase, or rename the official domain, task,
+or skill.
 
 Return only a JSON array of draft items using the required schema.
 ```
@@ -379,6 +454,8 @@ def main() -> int:
         raise SystemExit(f"Missing canonical objectives JSON: {OBJECTIVES_JSON}")
     if not QUESTION_SPEC.exists():
         raise SystemExit(f"Missing question-bank specification: {QUESTION_SPEC}")
+    if not TRACEABILITY_MATRIX.exists():
+        raise SystemExit(f"Missing source-to-topic traceability matrix: {TRACEABILITY_MATRIX}")
 
     briefs = load_briefs(args.day)
     output = output_path(args.day)

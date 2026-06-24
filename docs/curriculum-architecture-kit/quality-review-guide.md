@@ -17,6 +17,7 @@ It has two parts:
 
 Related kit documents: [teaching-system-specification.md](teaching-system-specification.md),
 [curriculum-map-construction-guide.md](curriculum-map-construction-guide.md),
+[curriculum-production-agent-architecture.md](curriculum-production-agent-architecture.md),
 [lessons-learned.md](lessons-learned.md). When a review reveals a reusable
 lesson, record it in the lessons register and, if needed, fold it back into the
 relevant spec.
@@ -38,9 +39,10 @@ Operating principles:
   grade from assumption.
 - **Evidence over impression.** Every finding cites a file, line, or command
   output. "This feels thin" is a hypothesis; quote the text that proves it.
-- **Adversarial by default.** Try to break each claim. Assume a factual
-  statement is wrong until the source confirms it. Assume a worksheet is
-  unteachable until you find the teaching.
+- **Constructive skepticism.** Try to refute important claims and locate the
+  teaching behind each activity, but do not manufacture defects to make the
+  review look rigorous. Default unresolved factual claims to uncertain until
+  the source confirms them; explicitly pass work that satisfies the standard.
 - **Severity honesty.** Separate real defects from cosmetic nits from
   consciously-deferred scope. Do not inflate nits; do not bury defects.
 - **No silent pass.** If you bounded coverage (sampled, checked only one day,
@@ -295,6 +297,44 @@ On every recheck:
 
 Keep a record of the prior pass (ratings, counts, sizes) so "did anything move"
 is answerable mechanically rather than from memory.
+
+### Reviewer calibration / self-disposition
+
+A disposition reply - where the authors accept, dispute, or correct your
+findings - is the highest-signal feedback a reviewer gets: a domain expert
+adversarially checking your work. Do not treat it only as defenses to overcome.
+Disputed findings cluster into recurring reviewer error-modes, and capturing the
+pattern turns one-off corrections into calibration. Apply the same disciplines to
+your own findings that you demand of the artifact's self-report.
+
+Recurring error-modes to self-check before delivery:
+
+- **Wrong-target-check** - calling a mapping or claim wrong by judging it against
+  your *assumption* of the target, without reading the target's actual
+  definition. (Recompute from source applies to your own finding too.)
+- **Overstated verb** - "stub / verifies nothing / does nothing" when the thing
+  does *less than required* but not *nothing*. Calibrate the verb to the evidence;
+  only claim zero when you have shown zero.
+- **Too-absolute** - "cannot / never / always" where the boundary case is
+  reachable (e.g. 11 skills across 12 questions *can* be one each). Prefer
+  "cannot do *well* / leaves no surplus."
+- **Wrong-evidence** - citing an artifact name or field whose semantics you never
+  confirmed (a filename token, a status string). A correct conclusion from wrong
+  evidence is still a process miss - verify the evidence, not just the verdict.
+- **Stale-snapshot** - quoting a count or state from an earlier pass. Re-snapshot
+  at delivery time.
+
+The loop:
+
+1. **Self-disposition pass before sending.** For each of your own findings, write
+   the authors' strongest rebuttal and try to defeat it. What survives ships;
+   what does not gets downgraded or dropped.
+2. **Tag each finding's confidence** (verified / inferred / suspected) so authors
+   can triage, and so low-confidence findings are not stated as fact.
+3. **After the real disposition, categorize every *valid* dispute** by error-mode
+   above. The histogram over time exposes your systematic biases - that is the
+   feedback signal. A finding the authors correctly overturned is not wasted
+   experience; it is the most useful data point in the cycle.
 
 ## Severity Calibration
 

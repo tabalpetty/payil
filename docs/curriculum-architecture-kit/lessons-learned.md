@@ -427,3 +427,80 @@ create candidates; final fact checking earns learner trust. The gate must:
 **Kit update needed:** Yes. Strengthen question-bank completion rules,
 quality-review guidance, and generated-agent workflow templates so final
 fact-checking is required before any bank is labeled complete or approved.
+
+### 2026-06-23: Audit Source-To-Decomposition Coverage Before Generation
+
+**What happened:** While designing upstream layers for the exam-prep agent, the
+project recognized that every downstream artifact depends on the original
+source decomposition. The AIP-C01 accelerated plan references all 20 official
+tasks, but the topic map does not yet explicitly record official Skill X.Y.Z
+coverage or deferrals for all 98 official skills.
+
+**Why it matters:** If decomposition silently misses an official objective,
+later topic briefs, lessons, artifacts, question banks, remediation routes, and
+coverage reports can all appear complete while never touching the missing
+objective. Late checks around question-bank coverage are too far downstream to
+repair a missing source-to-topic bridge cheaply.
+
+**Reusable lesson:** Add a Layer 0 source-to-decomposition coverage gate after
+source extraction and before curriculum generation. The gate should compare
+the official source hierarchy against the curriculum decomposition and require
+each official objective to be covered or explicitly deferred. Day-level task
+coverage is useful, but it is not enough when downstream artifacts claim
+skill-level traceability.
+
+**Kit update needed:** Yes. The teaching-system specification now includes a
+source-to-decomposition coverage rule, and Pilot1 has a reusable audit script
+plus a deferrals register.
+
+### 2026-06-23: Do Not Confuse Source Presence With Claim Verification
+
+**What happened:** An assessment verifier marked items `source-verified` when
+their source traces existed, risky phrases were absent, and mentioned service
+names appeared somewhere in a trusted corpus. Those checks were useful
+screening but did not prove the item's specific capability, limitation,
+comparison, causal, or remediation claims.
+
+**Why it matters:** A green factual-verification gate can be more dangerous than
+an explicit pending state if its evidence does not support its label. Learners
+may be taught a false rule even though every referenced file exists.
+
+**Reusable lesson:** Require item-level atomic-claim records for generated
+assessment content. Each material claim needs a trusted source, concise
+evidence, and a supported, contradicted, or unresolved verdict. Missing evidence
+must block approval. Also verify objective alignment at the relationship level:
+an official skill may exist globally while still being invalid for the item's
+curriculum topic.
+
+**Kit update needed:** Yes. Assessment-agent templates and quality gates should
+separate source presence, source relevance, and claim verification, and should
+enforce topic-to-objective relationships rather than checking identifiers only
+against global lists.
+
+### 2026-06-23: Orchestrate Curriculum Production As A Multi-Agent System
+
+**What happened:** High-quality Day 1 and Day 2 materials required a repeated
+sequence of source checking, decomposition, teaching, artifact design, answer
+guidance, independent review, revision, fact checking, reverse testing,
+assessment production, and lessons capture. The exam-prep agent automated only
+the assessment branch and correctly treated study material as an upstream
+dependency.
+
+**Why it matters:** A single authoring prompt cannot reliably own source
+authority, curriculum order, teaching depth, activity design, answer
+calibration, independent review, factual verification, and release judgment.
+Combining all roles also lets a model approve its own assumptions and makes
+partial workflow state difficult to audit.
+
+**Reusable lesson:** Use one deterministic production orchestrator with bounded
+worker roles. Keep authoring, independent semantic review, deterministic
+validation, factual verification, and release authority separate. Teaching
+must precede dependent activities; guidance must precede self-assessment;
+assessment must consume a passed teaching substrate. Preserve raw author and
+review output, normalize findings, bound revision loops, and let confirmed
+defects improve prompts, tests, specifications, and lessons at the appropriate
+level.
+
+**Kit update needed:** Yes. The kit now includes a project-level Curriculum
+Production Agent Architecture and a decision record for the multi-agent
+authority model.

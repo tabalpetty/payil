@@ -1,5 +1,17 @@
 # Agent Creation Progress
 
+## Upstream Layers
+
+These layers sit before the numbered exam-prep production steps. They protect
+against the most expensive failure mode: building a complete-looking workflow
+from an incomplete or wrong source decomposition.
+
+| Layer | What It Means | Current Status |
+|---:|---|---|
+| -2 | Confirm source identity and legitimacy before extraction | completed - AIP-C01 source identity checkpoint exists at `docs/Pilot1/aip-c01/curriculum-model/source-identity-checkpoint.md`; official source URL, local PDF snapshot, extracted transcript, and objective JSON are recorded. A reusable Source Identity Workbench V1 is implemented at `docs/curriculum-architecture-kit/tools/source-identity-workbench/`. |
+| -1 | Extract the official source faithfully into reusable structured/text forms | completed - AIP-C01 PDF was converted into `ai-professional-01.extracted.md`, `ai-professional-01.objectives.json`, and `ai-professional-01.extraction-meta.json`; the missing-PDF-extractor lesson has been captured in the kit. |
+| 0 | Audit source-to-decomposition coverage before downstream generation | completed - the canonical source-to-topic matrix records all 98 official skills across 226 relationships and accounts for all 133 curriculum topics. The strict audit passes task coverage, skill coverage, and topic traceability. |
+
 ## Progress Table
 
 | Step | What It Means | Current Status |
@@ -12,20 +24,22 @@
 | 6 | Generate prompts for raw question candidates | completed - coded and run for Day 2. Prompt pack is `day-02-question-generation-prompts.md` with a 120-candidate raw-generation target. |
 | 7 | Generate or manually add raw question candidates | completed - Day 2 has 131 raw candidates after feedback-informed top-ups, with at least 12 raw candidates per topic. |
 | 8 | Normalize raw questions into the bank schema | completed - coded and run for Day 2. Normalized 131 draft candidates with zero parse errors into `reviewed/day-02/`. |
-| 9 | Review and cull weak, duplicate, or unsupported questions | completed - coded and run for Day 2. Reviewed 118 source-verified candidates and culled 13 with auditable evidence, including the Step 13 fact-check cull. |
-| 10 | Check coverage: at least 10 approved items per topic | completed - Day 2 final source-verified coverage meets the target, with 11-12 items per topic after fact-check culling. |
+| 9 | Review and cull weak, duplicate, or unsupported questions | completed - coded and run for Day 2. Produced 118 reviewed candidates and culled 13 with auditable evidence. Final source approval remains Step 13 work. |
+| 10 | Check coverage: at least 10 approved items per topic | in-progress - aggregate topic volume is 11-12 reviewed candidates per topic, but approved coverage is not complete because mapped-skill coverage and atomic-claim verification still fail. |
 | 11 | Top up topics that are short | completed - implemented a loop that normalizes, reviews, generates feedback-informed top-ups for short topics, and repeats until coverage passes or max iterations is reached. |
 | 12 | Write reviewed question bank, cull log, and checks | completed - coded and run for Day 2. Wrote reviewed bank, cull log, and review-output checks. |
-| 13 | Run final gates: traceability, source checks, distribution, and cost | completed - fact-check source verifier is coded and run for Day 2; final gates report `completion_status=complete`. |
+| 13 | Run final gates: traceability, source checks, distribution, and cost | in-progress - gate enforcement is corrected and rerun. Answer positions are rebalanced and the distribution gate passes. Day 2 remains blocked on atomic-claim verification and topic-skill drift/missing skill coverage. Cost telemetry and iteration-limit checks pass. |
 
 ## Current Action
 
-completed - Day 2 exam-prep agent flow now has source verification and final
-gates passing. The final bank contains 118 source-verified items, and every
-topic remains above the 10-item target.
+in-progress - Layer 0 remains complete, but the corrected Step 13 gate has
+withdrawn Day 2 production approval. The bank has 118 reviewed candidates, yet
+all require atomic-claim evidence, 12 items carry an off-map topic/skill pair,
+and four mapped topic-skill obligations are untested. The existing bank's
+multiple-choice keys are now balanced `23/23/23/22` across positions 1-4.
 
 ## Next Action
 
-yet to start - Decide whether to promote the Day 2
-source-verified reviewed bank into a separately named approved bank, or start
-applying the same agent flow to Day 3.
+yet to start - Repair or regenerate the Day 2 items needed for mapped-skill
+coverage, then complete the item-level claim-verification ledger. Rerun source
+verification and final gates only after those repairs.

@@ -1,5 +1,17 @@
 # Exam Prep Production Agent Architecture
 
+## Project-Level Context
+
+This document defines the exam-preparation subsystem. It is coordinated by the
+broader
+[Curriculum Production Agent Architecture](../../../curriculum-architecture-kit/curriculum-production-agent-architecture.md),
+which also governs study guides, learner activities, answer guidance,
+exemplars, teacher materials, review, verification, packaging, and continuous
+improvement.
+
+The Exam Prep Production Agent consumes an approved teaching substrate. It
+does not own or generate that substrate.
+
 ## Purpose
 
 The Exam Prep Production Agent produces review-ready exam-prep material for a
@@ -58,6 +70,9 @@ Agent design lessons:
   explicit source-check status.
 - The agent does not treat absence of a banned phrase as proof that an item is
   factually current.
+- The agent does not treat source-file presence or a matching service name as
+  claim verification. A `source-verified` item requires an item-level
+  atomic-claim record with source, evidence, and supported verdicts.
 
 ## Intended Bank Uses
 
@@ -73,7 +88,29 @@ not the same as full-exam weighting. A full simulated exam should be assembled
 from the reviewed pool using the official exam guide's domain and task
 distribution rather than taking equal counts from every curriculum topic.
 
+The daily coverage gate must also enforce the source-to-topic matrix:
+
+- each item's `(learning_unit, exam_skill)` pair must be mapped;
+- every mapped skill for the day needs at least one approved primary item;
+- a skill mapped to only one topic is a must-not-drift objective;
+- multi-skill topics need per-skill sub-quotas, not only an aggregate item
+  target.
+
 ## Inputs
+
+The exam-prep production agent starts only after the upstream source layers
+are trustworthy:
+
+| Upstream layer | Gate | Output |
+|---:|---|---|
+| `-2` | Source identity and legitimacy confirmed. | Approved source identity checkpoint. |
+| `-1` | Official source extracted faithfully. | Structured objectives and searchable text. |
+| `0` | Official source coverage matches the decomposition, or intentional deferrals are recorded. | Source-to-decomposition coverage audit. |
+
+If Layer `0` has not run, the agent may still produce a reviewed slice, but it
+must not claim whole-syllabus coverage. Downstream coverage gates can only
+check the decomposed topics they were given; they cannot recover official
+objectives that never entered the curriculum map.
 
 | Input | Purpose |
 |---|---|
@@ -90,6 +127,103 @@ For Pilot1 Day 2, the generator-of-record must be stated before raw files are
 created. If the run uses Codex-assisted authoring or manual top-up instead of
 an external LLM API, the raw metadata and filenames must say so from the first
 candidate file.
+
+## Upstream Source Identity Workbench
+
+Layer `-2` is supported by an interactive Source Identity Workbench:
+
+`docs/curriculum-architecture-kit/tools/source-identity-workbench/`
+
+The workbench confirms that the curriculum is being built from the right
+official source before extraction, decomposition, teaching, or exam-prep
+generation begins.
+
+### Technology Choice
+
+| Layer | Technology | Intended use |
+|---|---|---|
+| Hosting and edge compute | Google Cloud Run | Host the Next.js application and server-side verification/extraction APIs. |
+| Frontend SSR and UI | React + Next.js | Provide the guided checkpoint workflow, evidence review, confirmation screens, and export views. |
+| Network and caching | Workbox | Cache the application shell and non-sensitive static assets for PWA reliability. |
+| Client storage | IndexedDB through Dexie.js | Store minimal local drafts and pending UI state when the user explicitly benefits from it. |
+| Push and real-time sync | Firebase | Optional later layer for async job completion or cross-session sync; avoid browser push in v1 unless clearly needed. |
+
+### Trust Boundary
+
+The browser is a thin interaction surface. It collects user intent, displays
+evidence, supports human confirmation, and may hold temporary drafts. It is
+not the authority for source verification.
+
+Authoritative work belongs on the server:
+
+- fetch official source pages or PDFs;
+- follow redirects and record final source URLs;
+- compute checksums for downloaded source snapshots;
+- extract title, code, version, domains, tasks, skills, dates, and baseline
+  exam metadata;
+- compare user-supplied claims against official evidence;
+- generate the canonical `-2` checkpoint artifact;
+- store audit logs and verification status.
+
+Browser responsibilities are intentionally narrow:
+
+- collect intended exam/course details;
+- show server-produced evidence and differences;
+- request reviewer approval, rejection, or follow-up;
+- export or download the checkpoint on explicit user action;
+- preserve small draft state only when transparent to the user.
+
+### Browser Permission Policy
+
+The workbench should avoid browser permissions unless a user action clearly
+requires them. A cautious user should not be surprised by a curriculum tool
+asking for notification, file-system, clipboard, background sync, or persistent
+storage permissions.
+
+Default v1 posture:
+
+- no browser push notifications;
+- no File System Access API;
+- no background sync permission;
+- no silent persistent-storage request;
+- no clipboard access except after an explicit copy action;
+- no caching of official PDFs, extracted source text, or sensitive drafts in
+  IndexedDB by default;
+- no service-worker caching beyond app shell and non-sensitive static assets.
+
+Progress updates should use in-app polling or server-sent events before push
+notifications. Firebase push/sync becomes appropriate only after the workflow
+has real asynchronous jobs or multi-device collaboration that justifies the
+extra permission and trust cost.
+
+### Workbench Output
+
+The `-2` workbench output should be a source identity checkpoint with at least:
+
+```text
+status: approved | needs-review | rejected
+source_name
+source_code_or_version
+official_authority
+official_source_url
+resolved_source_url
+local_snapshot_path
+source_checksum
+accessed_on
+candidate_or_learner_profile
+official_baseline_metadata
+known_confusions_or_exclusions
+verification_evidence
+reviewer_decision
+ready_for: -1 source extraction
+```
+
+Rule:
+
+```text
+No -1 source extraction starts until -2 is approved or explicitly accepted
+with documented risk.
+```
 
 ## Outputs
 

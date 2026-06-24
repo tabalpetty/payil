@@ -84,7 +84,7 @@ Checks: `docs/Pilot1/aip-c01/exam-prep/reviewed/day-02/day-02-review-output-chec
 | `cognitive_demand` | diagnose |
 | `estimated_time_seconds` | 150 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051527Z-openai-gpt-4.1-day-02-order001.md item 1 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -138,7 +138,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | diagnose |
 | `estimated_time_seconds` | 150 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051527Z-openai-gpt-4.1-day-02-order001.md item 3 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -151,8 +151,8 @@ During data exploration, your team notices that SageMaker Data Wrangler’s data
 
 Options:
 
-1. Data Wrangler applies additional statistical validation beyond schema checks.
-2. The raw data in S3 does not support profiling outlier values.
+1. The raw data in S3 does not support profiling outlier values.
+2. Data Wrangler applies additional statistical validation beyond schema checks.
 3. SageMaker Data Wrangler cannot read S3 data directly.
 4. The outliers are only introduced during data processing in Data Wrangler.
 
@@ -192,7 +192,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | explain |
 | `estimated_time_seconds` | 120 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051527Z-openai-gpt-4.1-day-02-order001.md item 4 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -205,9 +205,9 @@ A team is evaluating candidate foundation model input data in an Amazon S3 bucke
 
 Options:
 
-1. Build a Glue Data Quality rule set and trigger a Lambda function when a rule fails.
-2. Manually inspect S3 files each day for null values before running the pipeline.
-3. Set up Amazon CloudWatch Events on S3 file creation to trigger data processing jobs.
+1. Manually inspect S3 files each day for null values before running the pipeline.
+2. Set up Amazon CloudWatch Events on S3 file creation to trigger data processing jobs.
+3. Build a Glue Data Quality rule set and trigger a Lambda function when a rule fails.
 4. Configure S3 object lock to prevent ingestion of files with null values.
 
 Correct answer: Build a Glue Data Quality rule set and trigger a Lambda function when a rule fails.
@@ -246,7 +246,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | select |
 | `estimated_time_seconds` | 120 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051527Z-openai-gpt-4.1-day-02-order001.md item 5 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -259,10 +259,10 @@ A generative AI application periodically pulls data from a relational database i
 
 Options:
 
-1. Add data quality rules in AWS Glue to detect and block records with integrity violations before exporting.
-2. Add an S3 lifecycle policy to automatically expire old data.
-3. Increase batch job frequency to send fresher data.
-4. Manually review all exported records each cycle before S3 ingestion.
+1. Add an S3 lifecycle policy to automatically expire old data.
+2. Increase batch job frequency to send fresher data.
+3. Manually review all exported records each cycle before S3 ingestion.
+4. Add data quality rules in AWS Glue to detect and block records with integrity violations before exporting.
 
 Correct answer: Add data quality rules in AWS Glue to detect and block records with integrity violations before exporting.
 
@@ -300,7 +300,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | configure |
 | `estimated_time_seconds` | 120 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051527Z-openai-gpt-4.1-day-02-order001.md item 6 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -354,7 +354,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | implement |
 | `estimated_time_seconds` | 120 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051527Z-openai-gpt-4.1-day-02-order001.md item 7 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -367,8 +367,8 @@ You are implementing a data validation pipeline for tabular user activity logs. 
 
 Options:
 
-1. Develop Glue Data Quality rule sets and orchestrate checks as part of your ETL job.
-2. Write custom Python scripts in Lambda to scan each file for the required issues.
+1. Write custom Python scripts in Lambda to scan each file for the required issues.
+2. Develop Glue Data Quality rule sets and orchestrate checks as part of your ETL job.
 3. Use SageMaker Studio to interactively review sample logs each week.
 4. Manually export query results from Athena and inspect them in spreadsheets.
 
@@ -408,7 +408,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | judge |
 | `estimated_time_seconds` | 150 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051527Z-openai-gpt-4.1-day-02-order001.md item 8 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -421,9 +421,9 @@ A team ingests customer support chat data from multiple regions into a data lake
 
 Options:
 
-1. Add Glue Data Quality rule sets for allowed language codes and presence of conversation IDs.
-2. Increase the foundation model’s context window to absorb more chat history.
-3. Configure S3 event notifications to trigger retraining on every new file.
+1. Increase the foundation model’s context window to absorb more chat history.
+2. Configure S3 event notifications to trigger retraining on every new file.
+3. Add Glue Data Quality rule sets for allowed language codes and presence of conversation IDs.
 4. Enable CloudTrail logging on data generator API calls.
 
 Correct answer: Add Glue Data Quality rule sets for allowed language codes and presence of conversation IDs.
@@ -462,7 +462,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | diagnose |
 | `estimated_time_seconds` | 180 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051527Z-openai-gpt-4.1-day-02-order001.md item 9 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -475,10 +475,10 @@ While onboarding a new supplier's product catalog, extensive manual corrections 
 
 Options:
 
-1. Implement AWS Glue Data Quality rule sets for all schema and content checks, replacing custom Lambda code.
-2. Increase CloudWatch alarm sensitivity to notify earlier on all Lambda failures.
-3. Add a SageMaker Data Wrangler job to reformat ingested data after detection.
-4. Schedule manual data audits before every model inference step.
+1. Increase CloudWatch alarm sensitivity to notify earlier on all Lambda failures.
+2. Add a SageMaker Data Wrangler job to reformat ingested data after detection.
+3. Schedule manual data audits before every model inference step.
+4. Implement AWS Glue Data Quality rule sets for all schema and content checks, replacing custom Lambda code.
 
 Correct answer: Implement AWS Glue Data Quality rule sets for all schema and content checks, replacing custom Lambda code.
 
@@ -516,7 +516,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | diagnose |
 | `estimated_time_seconds` | 120 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051527Z-openai-gpt-4.1-day-02-order001.md item 10 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -570,7 +570,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | integrate |
 | `estimated_time_seconds` | 150 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051527Z-openai-gpt-4.1-day-02-order001.md item 11 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -625,7 +625,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | optimize |
 | `estimated_time_seconds` | 150 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051527Z-openai-gpt-4.1-day-02-order001.md item 12 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -680,7 +680,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | diagnose |
 | `estimated_time_seconds` | 180 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051527Z-openai-gpt-4.1-day-02-order001.md item 13 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -735,7 +735,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | diagnose |
 | `estimated_time_seconds` | 120 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051621Z-openai-gpt-4.1-day-02-order002.md item 1 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -748,8 +748,8 @@ An ML engineer is building a pipeline to process scanned PDF invoices for a proc
 
 Options:
 
-1. Apply image binarization and orientation correction to the scanned PDFs before text extraction.
-2. Increase FM context window size during inference.
+1. Increase FM context window size during inference.
+2. Apply image binarization and orientation correction to the scanned PDFs before text extraction.
 3. Add entity recognition post-processing after FM inference.
 4. Directly pass raw images without preprocessing to the FM endpoint.
 
@@ -789,7 +789,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | select |
 | `estimated_time_seconds` | 120 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051621Z-openai-gpt-4.1-day-02-order002.md item 4 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -802,9 +802,9 @@ A team needs to preprocess tabular purchase records from CSV files for ingestion
 
 Options:
 
-1. Build a SageMaker Processing pipeline to transform the CSV files into normalized JSON objects.
-2. Directly upload the raw CSV files to the Bedrock endpoint.
-3. Use AWS Transcribe to convert the CSV data into text.
+1. Directly upload the raw CSV files to the Bedrock endpoint.
+2. Use AWS Transcribe to convert the CSV data into text.
+3. Build a SageMaker Processing pipeline to transform the CSV files into normalized JSON objects.
 4. Ingest the CSV into Redshift and issue SQL queries without further conversion.
 
 Correct answer: Build a SageMaker Processing pipeline to transform the CSV files into normalized JSON objects.
@@ -843,7 +843,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | diagnose |
 | `estimated_time_seconds` | 150 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051621Z-openai-gpt-4.1-day-02-order002.md item 5 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -856,10 +856,10 @@ A company implements a multimodal RAG pipeline to summarize research articles co
 
 Options:
 
-1. Integrate an image-to-text extraction step that converts annotated diagrams to text before FM ingestion.
-2. Fine-tune the FM exclusively on text paragraphs.
-3. Reduce the chunk size for text segments prior to FM inference.
-4. Increase the model's temperature parameter during generation.
+1. Fine-tune the FM exclusively on text paragraphs.
+2. Reduce the chunk size for text segments prior to FM inference.
+3. Increase the model's temperature parameter during generation.
+4. Integrate an image-to-text extraction step that converts annotated diagrams to text before FM ingestion.
 
 Correct answer: Integrate an image-to-text extraction step that converts annotated diagrams to text before FM ingestion.
 
@@ -897,7 +897,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/study-guides/day-02-data-embed
 | `cognitive_demand` | implement |
 | `estimated_time_seconds` | 150 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051621Z-openai-gpt-4.1-day-02-order002.md item 6 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -952,7 +952,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | diagnose |
 | `estimated_time_seconds` | 120 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051621Z-openai-gpt-4.1-day-02-order002.md item 7 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -1006,7 +1006,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day-02-answer
 | `cognitive_demand` | judge |
 | `estimated_time_seconds` | 150 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051621Z-openai-gpt-4.1-day-02-order002.md item 9 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -1019,8 +1019,8 @@ A customer wants to run a multimodal sentiment analysis model using Amazon Bedro
 
 Options:
 
-1. Failing to convert Excel survey responses to structured JSON before FM ingestion.
-2. Applying NLP preprocessing steps to screenshot image data.
+1. Applying NLP preprocessing steps to screenshot image data.
+2. Failing to convert Excel survey responses to structured JSON before FM ingestion.
 3. Normalizing text to lowercase before providing data to the FM.
 4. Creating embeddings for each record prior to Bedrock API requests.
 
@@ -1060,7 +1060,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | select |
 | `estimated_time_seconds` | 120 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051621Z-openai-gpt-4.1-day-02-order002.md item 10 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -1073,9 +1073,9 @@ A solutions architect is designing a scalable preprocessing workflow for user-up
 
 Options:
 
-1. Use Textract to extract structured text and Rekognition to process embedded images from the PDFs.
-2. Use AWS Transcribe to process the PDF files directly.
-3. Send the PDFs as-is to the FM, relying on its built-in preprocessing.
+1. Use AWS Transcribe to process the PDF files directly.
+2. Send the PDFs as-is to the FM, relying on its built-in preprocessing.
+3. Use Textract to extract structured text and Rekognition to process embedded images from the PDFs.
 4. Convert PDFs to CSV and import into SageMaker Studio.
 
 Correct answer: Use Textract to extract structured text and Rekognition to process embedded images from the PDFs.
@@ -1114,7 +1114,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day-02-answer
 | `cognitive_demand` | integrate |
 | `estimated_time_seconds` | 180 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051621Z-openai-gpt-4.1-day-02-order002.md item 11 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -1169,7 +1169,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | configure |
 | `estimated_time_seconds` | 120 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051621Z-openai-gpt-4.1-day-02-order002.md item 12 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -1182,10 +1182,10 @@ A data engineer must design a preprocessing workflow to accommodate real-time so
 
 Options:
 
-1. SageMaker Processing, Amazon Rekognition, and AWS Transcribe
-2. Amazon Comprehend, AWS Glue, and AWS Lambda
-3. Amazon Textract, Aurora, and Amazon Polly
-4. AWS DataSync, S3 Select, and AWS CloudTrail
+1. Amazon Comprehend, AWS Glue, and AWS Lambda
+2. Amazon Textract, Aurora, and Amazon Polly
+3. AWS DataSync, S3 Select, and AWS CloudTrail
+4. SageMaker Processing, Amazon Rekognition, and AWS Transcribe
 
 Correct answer: SageMaker Processing, Amazon Rekognition, and AWS Transcribe
 
@@ -1223,7 +1223,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/study-guides/day-02-data-embed
 | `cognitive_demand` | configure |
 | `estimated_time_seconds` | 120 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051717Z-openai-gpt-4.1-day-02-order003.md item 1 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -1277,7 +1277,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | select |
 | `estimated_time_seconds` | 120 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051717Z-openai-gpt-4.1-day-02-order003.md item 2 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -1290,8 +1290,8 @@ You are designing a Lambda function to normalize dates from various formats in a
 
 Options:
 
-1. Standardize all dates to ISO 8601 (YYYY-MM-DD) format regardless of input variant
-2. Pass dates as-is for the FM to learn variants during training
+1. Pass dates as-is for the FM to learn variants during training
+2. Standardize all dates to ISO 8601 (YYYY-MM-DD) format regardless of input variant
 3. Map all dates to localized long-form text (e.g., 'January 1st, 2023')
 4. Remove all date fields to avoid input ambiguity
 
@@ -1331,7 +1331,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | implement |
 | `estimated_time_seconds` | 120 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051717Z-openai-gpt-4.1-day-02-order003.md item 3 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -1344,9 +1344,9 @@ A data scientist is using SageMaker Processing to prepare structured input for a
 
 Options:
 
-1. Impute missing numerical values with zero and strip whitespace from all string fields
-2. Leave missing values as null and preserve all whitespace to avoid data loss
-3. Convert missing fields into the string 'missing' for all columns
+1. Leave missing values as null and preserve all whitespace to avoid data loss
+2. Convert missing fields into the string 'missing' for all columns
+3. Impute missing numerical values with zero and strip whitespace from all string fields
 4. Encode all fields as base64 to ensure safe transport
 
 Correct answer: Impute missing numerical values with zero and strip whitespace from all string fields
@@ -1385,7 +1385,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | diagnose |
 | `estimated_time_seconds` | 150 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051717Z-openai-gpt-4.1-day-02-order003.md item 4 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -1398,10 +1398,10 @@ You are debugging a classification FM endpoint that returns inconsistent results
 
 Options:
 
-1. Input normalization steps are missing, leading to inconsistent representations before inference
-2. The FM’s training data is corrupted, causing unpredictable answers
-3. bedrock:InvokeModel is being rate-limited, truncating responses
-4. The endpoint is using unsupported language codes in the input payload
+1. The FM’s training data is corrupted, causing unpredictable answers
+2. bedrock:InvokeModel is being rate-limited, truncating responses
+3. The endpoint is using unsupported language codes in the input payload
+4. Input normalization steps are missing, leading to inconsistent representations before inference
 
 Correct answer: Input normalization steps are missing, leading to inconsistent representations before inference
 
@@ -1439,7 +1439,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day-02-answer
 | `cognitive_demand` | judge |
 | `estimated_time_seconds` | 150 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051717Z-openai-gpt-4.1-day-02-order003.md item 5 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -1493,7 +1493,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/study-guides/day-02-data-embed
 | `cognitive_demand` | select |
 | `estimated_time_seconds` | 150 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051717Z-openai-gpt-4.1-day-02-order003.md item 6 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -1506,8 +1506,8 @@ You are tasked with integrating Amazon Comprehend entity extraction to enhance d
 
 Options:
 
-1. Normalize extracted entity names so each appears in a standardized canonical form
-2. Discard entity names as FMs can always resolve references based on context
+1. Discard entity names as FMs can always resolve references based on context
+2. Normalize extracted entity names so each appears in a standardized canonical form
 3. Embed raw transcripts directly without modification
 4. Substitute all identified entities with random placeholders for anonymization
 
@@ -1547,7 +1547,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | integrate |
 | `estimated_time_seconds` | 180 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051717Z-openai-gpt-4.1-day-02-order003.md item 7 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -1602,7 +1602,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day-02-answer
 | `cognitive_demand` | select |
 | `estimated_time_seconds` | 120 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051717Z-openai-gpt-4.1-day-02-order003.md item 8 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -1615,9 +1615,9 @@ A developer wants to use Bedrock to format prompt strings for downstream FMs as 
 
 Options:
 
-1. It automatically structures prompts according to model's requirements and reduces inconsistencies
-2. It guarantees lowest inference latency for all FMs
-3. It enables direct integration with OpenSearch without custom adapters
+1. It guarantees lowest inference latency for all FMs
+2. It enables direct integration with OpenSearch without custom adapters
+3. It automatically structures prompts according to model's requirements and reduces inconsistencies
 4. It prevents any potential data drift in model usage
 
 Correct answer: It automatically structures prompts according to model's requirements and reduces inconsistencies
@@ -1656,7 +1656,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/study-guides/day-02-data-embed
 | `cognitive_demand` | configure |
 | `estimated_time_seconds` | 150 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051717Z-openai-gpt-4.1-day-02-order003.md item 9 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -1711,7 +1711,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | select |
 | `estimated_time_seconds` | 120 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051717Z-openai-gpt-4.1-day-02-order003.md item 10 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -1724,10 +1724,10 @@ An application normalizes all input text to lowercase before sending prompts to 
 
 Options:
 
-1. Loss of important semantic cues such as proper nouns, acronyms, or emphasis
-2. Increased computational cost with no benefit
-3. Greater model hallucination due to normalization
-4. Violation of Bedrock API security requirements
+1. Increased computational cost with no benefit
+2. Greater model hallucination due to normalization
+3. Violation of Bedrock API security requirements
+4. Loss of important semantic cues such as proper nouns, acronyms, or emphasis
 
 Correct answer: Loss of important semantic cues such as proper nouns, acronyms, or emphasis
 
@@ -1765,7 +1765,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day-02-answer
 | `cognitive_demand` | diagnose |
 | `estimated_time_seconds` | 150 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051717Z-openai-gpt-4.1-day-02-order003.md item 11 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -1819,7 +1819,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/study-guides/day-02-data-embed
 | `cognitive_demand` | implement |
 | `estimated_time_seconds` | 120 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051717Z-openai-gpt-4.1-day-02-order003.md item 12 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -1832,8 +1832,8 @@ A business analyst is using Amazon Bedrock to request text completions from an F
 
 Options:
 
-1. The input payload does not match the JSON schema expected by the selected Bedrock FM
-2. The FM is unable to process any text input longer than 100 tokens
+1. The FM is unable to process any text input longer than 100 tokens
+2. The input payload does not match the JSON schema expected by the selected Bedrock FM
 3. Bedrock does not support synchronous text completion requests
 4. The FM endpoint requires all payloads to be base64 encoded
 
@@ -1873,7 +1873,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/study-guides/day-02-data-embed
 | `cognitive_demand` | select |
 | `estimated_time_seconds` | 120 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051804Z-openai-gpt-4.1-day-02-order004.md item 1 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -1886,9 +1886,9 @@ Your team is enhancing a product search engine using Amazon Bedrock embedding mo
 
 Options:
 
-1. The domain fit between the embedding model and your catalog content types.
-2. The embedding model's default output dimensionality.
-3. Whether the model supports multilingual inputs.
+1. The embedding model's default output dimensionality.
+2. Whether the model supports multilingual inputs.
+3. The domain fit between the embedding model and your catalog content types.
 4. The model's real-time batch processing throughput.
 
 Correct answer: The domain fit between the embedding model and your catalog content types.
@@ -1927,7 +1927,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | diagnose |
 | `estimated_time_seconds` | 120 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051804Z-openai-gpt-4.1-day-02-order004.md item 2 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -1940,10 +1940,10 @@ A semantic search API based on Amazon Titan embeddings is returning results that
 
 Options:
 
-1. The embedding vectors for similar product names are not sufficiently separated in the embedding space.
-2. The retrieval index is not refreshing on schedule.
-3. The search is case-sensitive due to input preprocessing.
-4. The model does not support batch embedding generation.
+1. The retrieval index is not refreshing on schedule.
+2. The search is case-sensitive due to input preprocessing.
+3. The model does not support batch embedding generation.
+4. The embedding vectors for similar product names are not sufficiently separated in the embedding space.
 
 Correct answer: The embedding vectors for similar product names are not sufficiently separated in the embedding space.
 
@@ -1981,7 +1981,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day-02-answer
 | `cognitive_demand` | select |
 | `estimated_time_seconds` | 120 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051804Z-openai-gpt-4.1-day-02-order004.md item 5 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -2035,7 +2035,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/study-guides/day-02-data-embed
 | `cognitive_demand` | explain |
 | `estimated_time_seconds` | 150 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051804Z-openai-gpt-4.1-day-02-order004.md item 6 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -2048,8 +2048,8 @@ A data science lead asserts that cosine similarity will always yield the best re
 
 Options:
 
-1. Cosine similarity is commonly used, but the actual effectiveness depends on how the embedding model’s geometry represents semantic similarity.
-2. Cosine similarity is always superior to all other similarity metrics for embedding-based search.
+1. Cosine similarity is always superior to all other similarity metrics for embedding-based search.
+2. Cosine similarity is commonly used, but the actual effectiveness depends on how the embedding model’s geometry represents semantic similarity.
 3. You should use Euclidean distance instead since it is designed for high-dimensional data.
 4. The choice of similarity metric has no impact on search results.
 
@@ -2089,7 +2089,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | select |
 | `estimated_time_seconds` | 120 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051804Z-openai-gpt-4.1-day-02-order004.md item 7 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -2102,9 +2102,9 @@ A developer wants to store document embeddings generated by Amazon Titan in a ve
 
 Options:
 
-1. Enforcing fine-grained access control on embedded data.
-2. Ensuring consistent vector dimensions.
-3. Capturing semantic similarity for domain-specific language.
+1. Ensuring consistent vector dimensions.
+2. Capturing semantic similarity for domain-specific language.
+3. Enforcing fine-grained access control on embedded data.
 4. Outputting in a standard vector serialization format.
 
 Correct answer: Enforcing fine-grained access control on embedded data.
@@ -2143,7 +2143,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day-02-answer
 | `cognitive_demand` | compare |
 | `estimated_time_seconds` | 120 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051804Z-openai-gpt-4.1-day-02-order004.md item 8 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -2156,10 +2156,10 @@ You are comparing semantic retrieval results using embeddings generated by two d
 
 Options:
 
-1. The more relevant embedding model has been pretrained or fine-tuned on legal-domain content.
-2. The less relevant model uses higher-dimensional embeddings.
-3. The underlying vector database is misconfigured.
-4. Vector similarity metric differs between the two runs.
+1. The less relevant model uses higher-dimensional embeddings.
+2. The underlying vector database is misconfigured.
+3. Vector similarity metric differs between the two runs.
+4. The more relevant embedding model has been pretrained or fine-tuned on legal-domain content.
 
 Correct answer: The more relevant embedding model has been pretrained or fine-tuned on legal-domain content.
 
@@ -2197,7 +2197,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | integrate |
 | `estimated_time_seconds` | 120 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051804Z-openai-gpt-4.1-day-02-order004.md item 9 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -2251,7 +2251,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day-02-answer
 | `cognitive_demand` | diagnose |
 | `estimated_time_seconds` | 150 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051804Z-openai-gpt-4.1-day-02-order004.md item 10 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -2264,8 +2264,8 @@ A company’s semantic search pipeline uses Amazon Bedrock for embeddings and a 
 
 Options:
 
-1. Assess if the embedding model sufficiently encodes disambiguating context and consider using prompt engineering or model selection tuned for disambiguation.
-2. Switch to a traditional keyword-based search engine.
+1. Switch to a traditional keyword-based search engine.
+2. Assess if the embedding model sufficiently encodes disambiguating context and consider using prompt engineering or model selection tuned for disambiguation.
 3. Increase the vector dimensionality during storage.
 4. Disable stop-word removal in preprocessing.
 
@@ -2305,7 +2305,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/study-guides/day-02-data-embed
 | `cognitive_demand` | judge |
 | `estimated_time_seconds` | 180 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051804Z-openai-gpt-4.1-day-02-order004.md item 11 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -2360,7 +2360,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/study-guides/day-02-data-embed
 | `cognitive_demand` | select |
 | `estimated_time_seconds` | 180 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051804Z-openai-gpt-4.1-day-02-order004.md item 12 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -2415,7 +2415,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | compare |
 | `estimated_time_seconds` | 150 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051804Z-openai-gpt-4.1-day-02-order004.md item 13 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -2470,7 +2470,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | implement |
 | `estimated_time_seconds` | 120 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051845Z-openai-gpt-4.1-day-02-order005.md item 1 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -2483,9 +2483,9 @@ A retail company is building a RAG solution on AWS to answer customer queries ab
 
 Options:
 
-1. Hierarchical chunking based on document structure, with paragraph-level segmentation wherever possible
-2. Fixed-size chunking using a token count (e.g., 256 tokens per chunk)
-3. Chunking based on arbitrary character count boundaries
+1. Fixed-size chunking using a token count (e.g., 256 tokens per chunk)
+2. Chunking based on arbitrary character count boundaries
+3. Hierarchical chunking based on document structure, with paragraph-level segmentation wherever possible
 4. No chunking; the entire document is embedded as a single vector
 
 Correct answer: Hierarchical chunking based on document structure, with paragraph-level segmentation wherever possible
@@ -2524,7 +2524,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | diagnose |
 | `estimated_time_seconds` | 150 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051845Z-openai-gpt-4.1-day-02-order005.md item 2 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -2537,10 +2537,10 @@ You notice that retrieval queries against your RAG-enabled customer-support syst
 
 Options:
 
-1. Chunk boundaries do not align with semantic units, causing loss of contextual meaning
-2. The embedding model's dimensionality is too low for the domain
-3. Customer queries use keywords not present in the original documents
-4. The vector store lacks real-time synchronization with the source repository
+1. The embedding model's dimensionality is too low for the domain
+2. Customer queries use keywords not present in the original documents
+3. The vector store lacks real-time synchronization with the source repository
+4. Chunk boundaries do not align with semantic units, causing loss of contextual meaning
 
 Correct answer: Chunk boundaries do not align with semantic units, causing loss of contextual meaning
 
@@ -2578,7 +2578,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | select |
 | `estimated_time_seconds` | 120 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051845Z-openai-gpt-4.1-day-02-order005.md item 3 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -2632,7 +2632,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | diagnose |
 | `estimated_time_seconds` | 150 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051845Z-openai-gpt-4.1-day-02-order005.md item 4 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -2645,8 +2645,8 @@ A startup reports that their RAG solution frequently returns duplicate or overla
 
 Options:
 
-1. Reduce chunk overlap to minimize redundancy and post-processing cost
-2. Switch to no-overlap chunking, even if chunks become larger
+1. Switch to no-overlap chunking, even if chunks become larger
+2. Reduce chunk overlap to minimize redundancy and post-processing cost
 3. Adopt random-sized chunking to introduce variability
 4. Increase overlap even further for more context per chunk
 
@@ -2686,7 +2686,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | compare |
 | `estimated_time_seconds` | 150 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051845Z-openai-gpt-4.1-day-02-order005.md item 5 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -2699,9 +2699,9 @@ You are designing a chunking pipeline for a media company's RAG system. News art
 
 Options:
 
-1. Implement adaptive chunking, adjusting chunk size based on document structure and length
-2. Enforce a strict chunk size (e.g., always 512 tokens) for all documents
-3. Chunk each sentence as a separate unit for maximum granularity
+1. Enforce a strict chunk size (e.g., always 512 tokens) for all documents
+2. Chunk each sentence as a separate unit for maximum granularity
+3. Implement adaptive chunking, adjusting chunk size based on document structure and length
 4. Pre-merge all articles into a corpus and embed as a single large document
 
 Correct answer: Implement adaptive chunking, adjusting chunk size based on document structure and length
@@ -2740,7 +2740,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | explain |
 | `estimated_time_seconds` | 120 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051845Z-openai-gpt-4.1-day-02-order005.md item 6 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -2753,10 +2753,10 @@ A team creates vector embeddings from policy documents but retrieval often misse
 
 Options:
 
-1. Character-based chunking can split sentences or topics, losing context for retrieval
-2. It reduces chunk quantity, improving search times but hurting granularity
-3. It standardizes chunk size across all documents, simplifying storage
-4. The model embedding the chunks only supports JSON-formatted input
+1. It reduces chunk quantity, improving search times but hurting granularity
+2. It standardizes chunk size across all documents, simplifying storage
+3. The model embedding the chunks only supports JSON-formatted input
+4. Character-based chunking can split sentences or topics, losing context for retrieval
 
 Correct answer: Character-based chunking can split sentences or topics, losing context for retrieval
 
@@ -2794,7 +2794,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | select |
 | `estimated_time_seconds` | 120 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051845Z-openai-gpt-4.1-day-02-order005.md item 7 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -2848,7 +2848,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | judge |
 | `estimated_time_seconds` | 150 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051845Z-openai-gpt-4.1-day-02-order005.md item 8 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -2903,7 +2903,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | configure |
 | `estimated_time_seconds` | 120 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051845Z-openai-gpt-4.1-day-02-order005.md item 9 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -2916,8 +2916,8 @@ Your dataset contains short emails, entire books, and meeting transcripts. Which
 
 Options:
 
-1. Apply dynamic chunking: use whole-text embedding for short documents and section-based chunking for long documents
-2. Chunk all documents into equally sized, fixed-overlap windows regardless of document type
+1. Chunk all documents into equally sized, fixed-overlap windows regardless of document type
+2. Apply dynamic chunking: use whole-text embedding for short documents and section-based chunking for long documents
 3. Always split text after a standard number of words, no matter the document length
 4. Combine multiple documents into large super-chunks before embedding
 
@@ -2957,7 +2957,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | integrate |
 | `estimated_time_seconds` | 180 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051845Z-openai-gpt-4.1-day-02-order005.md item 10 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -3012,7 +3012,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | predict |
 | `estimated_time_seconds` | 120 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051845Z-openai-gpt-4.1-day-02-order005.md item 11 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -3025,9 +3025,9 @@ After redesigning their chunking pipeline to segment insurance policies by both 
 
 Options:
 
-1. Retrieval performance and precision will improve, with manageable storage cost increase
-2. Retrieval quality will worsen due to over-segmentation
-3. Inference latency will skyrocket, making the system unusable
+1. Retrieval quality will worsen due to over-segmentation
+2. Inference latency will skyrocket, making the system unusable
+3. Retrieval performance and precision will improve, with manageable storage cost increase
 4. FM context windows will consistently be exceeded, causing input errors
 
 Correct answer: Retrieval performance and precision will improve, with manageable storage cost increase
@@ -3066,7 +3066,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | optimize |
 | `estimated_time_seconds` | 150 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051845Z-openai-gpt-4.1-day-02-order005.md item 12 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -3121,7 +3121,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | select |
 | `estimated_time_seconds` | 150 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051925Z-openai-gpt-4.1-day-02-order006.md item 1 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -3134,10 +3134,10 @@ A team implements a vector store for FM-augmented Q&A over internal policy docum
 
 Options:
 
-1. Tag documents in the vector store with department metadata and apply metadata filters at query time
-2. Rely on embedding space distance to separate department content
-3. Add department names to document text so FM-generated responses reflect access constraints
-4. Configure per-user API keys for the vector store, without attaching metadata
+1. Rely on embedding space distance to separate department content
+2. Add department names to document text so FM-generated responses reflect access constraints
+3. Configure per-user API keys for the vector store, without attaching metadata
+4. Tag documents in the vector store with department metadata and apply metadata filters at query time
 
 Correct answer: Tag documents in the vector store with department metadata and apply metadata filters at query time
 
@@ -3175,7 +3175,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | diagnose |
 | `estimated_time_seconds` | 120 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051925Z-openai-gpt-4.1-day-02-order006.md item 2 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -3229,7 +3229,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | select |
 | `estimated_time_seconds` | 150 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051925Z-openai-gpt-4.1-day-02-order006.md item 3 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -3284,7 +3284,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | configure |
 | `estimated_time_seconds` | 120 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051925Z-openai-gpt-4.1-day-02-order006.md item 4 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -3297,8 +3297,8 @@ A team is designing a RAG solution using Amazon OpenSearch with semantic search 
 
 Options:
 
-1. Implement a custom metadata field for source type and include it in query-time filtering or ranking
-2. Increase the context window size to capture both topic and reliability in FM input
+1. Increase the context window size to capture both topic and reliability in FM input
+2. Implement a custom metadata field for source type and include it in query-time filtering or ranking
 3. Store source reliability information only in document body for the FM to process
 4. Rely on OpenSearch built-in scoring to handle both relevance and reliability
 
@@ -3338,7 +3338,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | explain |
 | `estimated_time_seconds` | 120 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051925Z-openai-gpt-4.1-day-02-order006.md item 5 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -3351,9 +3351,9 @@ During a post-incident review, a team discovers that confidential engineering do
 
 Options:
 
-1. Missing or improperly used document access-level metadata
-2. Overly broad semantic embeddings in the vector store
-3. Document titles do not specify access group
+1. Overly broad semantic embeddings in the vector store
+2. Document titles do not specify access group
+3. Missing or improperly used document access-level metadata
 4. Outdated document versions in the index
 
 Correct answer: Missing or improperly used document access-level metadata
@@ -3392,7 +3392,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | explain |
 | `estimated_time_seconds` | 120 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051925Z-openai-gpt-4.1-day-02-order006.md item 6 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -3405,10 +3405,10 @@ A vector store used for RAG has implemented a tagging system to classify documen
 
 Options:
 
-1. It enables filtering and prioritization based on document characteristics during search
-2. It increases the semantic similarity between query and document embeddings
-3. It automatically summarizes documents before retrieval
-4. It causes the FM to ignore untagged documents in all queries
+1. It increases the semantic similarity between query and document embeddings
+2. It automatically summarizes documents before retrieval
+3. It causes the FM to ignore untagged documents in all queries
+4. It enables filtering and prioritization based on document characteristics during search
 
 Correct answer: It enables filtering and prioritization based on document characteristics during search
 
@@ -3446,7 +3446,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | select |
 | `estimated_time_seconds` | 120 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051925Z-openai-gpt-4.1-day-02-order006.md item 7 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -3500,7 +3500,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | select |
 | `estimated_time_seconds` | 120 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051925Z-openai-gpt-4.1-day-02-order006.md item 8 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -3513,8 +3513,8 @@ In a content archiving scenario, you need to guarantee that only documents newer
 
 Options:
 
-1. Enforce retention threshold using document creation-date metadata and filter queries accordingly
-2. Add retention information as a disclaimer in the document text
+1. Add retention information as a disclaimer in the document text
+2. Enforce retention threshold using document creation-date metadata and filter queries accordingly
 3. Increase the semantic similarity threshold during retrieval
 4. Exclude older documents manually from the index every year
 
@@ -3554,7 +3554,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | select |
 | `estimated_time_seconds` | 120 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051925Z-openai-gpt-4.1-day-02-order006.md item 9 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -3567,9 +3567,9 @@ A retail company wants to surface the right user manual for each product in cust
 
 Options:
 
-1. Assign metadata tags for each product variant and filter search by requested variant
-2. Embed the product code into the manual text and rely on semantic similarity for retrieval
-3. Use only manual titles for product identification
+1. Embed the product code into the manual text and rely on semantic similarity for retrieval
+2. Use only manual titles for product identification
+3. Assign metadata tags for each product variant and filter search by requested variant
 4. Do not use document metadata; allow FM to synthesize the most relevant manual
 
 Correct answer: Assign metadata tags for each product variant and filter search by requested variant
@@ -3608,7 +3608,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | select |
 | `estimated_time_seconds` | 150 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051925Z-openai-gpt-4.1-day-02-order006.md item 10 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -3663,7 +3663,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | select |
 | `estimated_time_seconds` | 150 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051925Z-openai-gpt-4.1-day-02-order006.md item 11 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -3676,10 +3676,10 @@ An internal audit identifies that most retrieved documents for an FM-powered leg
 
 Options:
 
-1. Retrieval queries do not filter or rank by document version or update date metadata
-2. Semantic embeddings do not distinguish between old and new information
-3. The FM model lacks knowledge of complex legal changes
-4. Default sort order favors longer documents over current ones
+1. Semantic embeddings do not distinguish between old and new information
+2. The FM model lacks knowledge of complex legal changes
+3. Default sort order favors longer documents over current ones
+4. Retrieval queries do not filter or rank by document version or update date metadata
 
 Correct answer: Retrieval queries do not filter or rank by document version or update date metadata
 
@@ -3717,7 +3717,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | select |
 | `estimated_time_seconds` | 150 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T051925Z-openai-gpt-4.1-day-02-order006.md item 12 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -3772,7 +3772,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | select |
 | `estimated_time_seconds` | 150 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T052016Z-openai-gpt-4.1-day-02-order007.md item 1 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -3826,7 +3826,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | judge |
 | `estimated_time_seconds` | 180 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T052016Z-openai-gpt-4.1-day-02-order007.md item 2 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -3881,7 +3881,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | diagnose |
 | `estimated_time_seconds` | 120 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T052016Z-openai-gpt-4.1-day-02-order007.md item 3 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -3894,8 +3894,8 @@ A SaaS platform uses Amazon OpenSearch Service with the Neural plugin as its vec
 
 Options:
 
-1. The vector store's index was not rebuilt to match the new embedding dimensionality.
-2. Bedrock Knowledge Bases were not reconfigured to support external embedding sources.
+1. Bedrock Knowledge Bases were not reconfigured to support external embedding sources.
+2. The vector store's index was not rebuilt to match the new embedding dimensionality.
 3. OpenSearch snapshot restore was not completed after new deployment.
 4. IAM policies for customer data replication were not updated appropriately.
 
@@ -3935,7 +3935,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day-02-answer
 | `cognitive_demand` | compare |
 | `estimated_time_seconds` | 150 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T052016Z-openai-gpt-4.1-day-02-order007.md item 4 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -3948,9 +3948,9 @@ A team is deciding between Amazon DynamoDB with a custom Lambda-based embedding 
 
 Options:
 
-1. Amazon OpenSearch Service with Neural plugin, because it supports real-time ingestion and native vector + filter-based queries
-2. Amazon DynamoDB with Lambda, because it scales better for real-time updates and natively supports custom Lambda ranking
-3. Amazon DynamoDB, because its consistency and key/value retrievals outperform OpenSearch for complex ranking
+1. Amazon DynamoDB with Lambda, because it scales better for real-time updates and natively supports custom Lambda ranking
+2. Amazon DynamoDB, because its consistency and key/value retrievals outperform OpenSearch for complex ranking
+3. Amazon OpenSearch Service with Neural plugin, because it supports real-time ingestion and native vector + filter-based queries
 4. Amazon OpenSearch Service with Neural plugin, because it can trigger Lambdas after every vector insert for custom ranking
 
 Correct answer: Amazon OpenSearch Service with Neural plugin, because it supports real-time ingestion and native vector + filter-based queries
@@ -3989,7 +3989,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day-02-answer
 | `cognitive_demand` | integrate |
 | `estimated_time_seconds` | 150 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T052016Z-openai-gpt-4.1-day-02-order007.md item 5 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -4044,7 +4044,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | select |
 | `estimated_time_seconds` | 120 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T052016Z-openai-gpt-4.1-day-02-order007.md item 6 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -4057,10 +4057,10 @@ A startup uses Amazon Aurora with pgvector extension for a small RAG-based chatb
 
 Options:
 
-1. Move to Amazon OpenSearch Service with Neural plugin to gain managed vector search scaling and analytics integration
-2. Add Amazon Bedrock Knowledge Bases while leaving data in Aurora to leverage Bedrock’s managed vector interface
-3. Implement a custom sharding layer on Aurora with pgvector for scaling
-4. Use Amazon S3 with object-level metadata for embeddings
+1. Add Amazon Bedrock Knowledge Bases while leaving data in Aurora to leverage Bedrock’s managed vector interface
+2. Implement a custom sharding layer on Aurora with pgvector for scaling
+3. Use Amazon S3 with object-level metadata for embeddings
+4. Move to Amazon OpenSearch Service with Neural plugin to gain managed vector search scaling and analytics integration
 
 Correct answer: Move to Amazon OpenSearch Service with Neural plugin to gain managed vector search scaling and analytics integration
 
@@ -4098,7 +4098,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day-02-answer
 | `cognitive_demand` | judge |
 | `estimated_time_seconds` | 150 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T052016Z-openai-gpt-4.1-day-02-order007.md item 7 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -4152,7 +4152,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day-02-answer
 | `cognitive_demand` | optimize |
 | `estimated_time_seconds` | 180 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T052016Z-openai-gpt-4.1-day-02-order007.md item 8 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -4207,7 +4207,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day-02-answer
 | `cognitive_demand` | explain |
 | `estimated_time_seconds` | 120 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T052016Z-openai-gpt-4.1-day-02-order007.md item 9 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -4220,8 +4220,8 @@ A global help desk chatbot team is evaluating whether to switch from a self-mana
 
 Options:
 
-1. Amazon OpenSearch Service provides managed scaling, built-in Neural plugin updates, and tight AWS integration.
-2. A self-managed cluster offers improved AWS IAM integration and predictable maintenance costs.
+1. A self-managed cluster offers improved AWS IAM integration and predictable maintenance costs.
+2. Amazon OpenSearch Service provides managed scaling, built-in Neural plugin updates, and tight AWS integration.
 3. Amazon OpenSearch Service Neural plugin allows deployment in on-premises environments.
 4. Amazon OpenSearch Service with Neural plugin automatically manages hybrid batch/streaming ingestion out of the box.
 
@@ -4261,7 +4261,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | judge |
 | `estimated_time_seconds` | 150 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T052016Z-openai-gpt-4.1-day-02-order007.md item 10 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -4274,9 +4274,9 @@ A pharmaceutical research group is designing a knowledge base that must combine 
 
 Options:
 
-1. Implement Amazon Bedrock Knowledge Bases with managed vector store and enable CloudTrail for audit logging
-2. Store all embeddings and logs as S3 objects with DynamoDB providing pointer mapping
-3. Use Amazon OpenSearch Service with Neural plugin plus Glue Data Catalog for compliance
+1. Store all embeddings and logs as S3 objects with DynamoDB providing pointer mapping
+2. Use Amazon OpenSearch Service with Neural plugin plus Glue Data Catalog for compliance
+3. Implement Amazon Bedrock Knowledge Bases with managed vector store and enable CloudTrail for audit logging
 4. Deploy Amazon Aurora with pgvector for documents and Lambda for logging access events
 
 Correct answer: Implement Amazon Bedrock Knowledge Bases with managed vector store and enable CloudTrail for audit logging
@@ -4315,7 +4315,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | configure |
 | `estimated_time_seconds` | 180 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T052016Z-openai-gpt-4.1-day-02-order007.md item 12 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -4328,10 +4328,10 @@ A global knowledge repository team is configuring its Bedrock Knowledge Base to 
 
 Options:
 
-1. Apply domain and region metadata as hierarchical attributes within Knowledge Base documents and use these for filtered vector queries
-2. Maintain separate vector indexes for each domain-region combination, managed outside of Bedrock Knowledge Base
-3. Write all domain and region info into S3 object keys, and point the Knowledge Base at matching S3 prefixes
-4. Add domain and region fields to embedding vectors themselves, so the similarity search accounts for both
+1. Maintain separate vector indexes for each domain-region combination, managed outside of Bedrock Knowledge Base
+2. Write all domain and region info into S3 object keys, and point the Knowledge Base at matching S3 prefixes
+3. Add domain and region fields to embedding vectors themselves, so the similarity search accounts for both
+4. Apply domain and region metadata as hierarchical attributes within Knowledge Base documents and use these for filtered vector queries
 
 Correct answer: Apply domain and region metadata as hierarchical attributes within Knowledge Base documents and use these for filtered vector queries
 
@@ -4369,7 +4369,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day-02-answer
 | `cognitive_demand` | diagnose |
 | `estimated_time_seconds` | 120 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T052105Z-openai-gpt-4.1-day-02-order008.md item 1 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -4382,9 +4382,9 @@ A distributed semantic search application using Amazon OpenSearch Service experi
 
 Options:
 
-1. All indices have too few shards, causing hot spot usage.
-2. The embedding vectors are imbalanced across shards.
-3. Only the primary shard is being used due to single-shard configuration.
+1. Only the primary shard is being used due to single-shard configuration.
+2. All indices have too few shards, causing hot spot usage.
+3. The embedding vectors are imbalanced across shards.
 4. Index replicas are overloaded, affecting search performance.
 
 Correct answer: Only the primary shard is being used due to single-shard configuration.
@@ -4423,7 +4423,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | select |
 | `estimated_time_seconds` | 120 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T052105Z-openai-gpt-4.1-day-02-order008.md item 2 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -4477,7 +4477,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/study-guides/day-02-data-embed
 | `cognitive_demand` | explain |
 | `estimated_time_seconds` | 150 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T052105Z-openai-gpt-4.1-day-02-order008.md item 3 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -4491,8 +4491,8 @@ A retrieval pipeline reads streaming updates from S3 into OpenSearch vector indi
 Options:
 
 1. Increase the frequency of scheduled full reindexing jobs
-2. Implement incremental update pipelines that push only changed documents to the index
-3. Run real-time index flush commands on all OpenSearch nodes
+2. Run real-time index flush commands on all OpenSearch nodes
+3. Implement incremental update pipelines that push only changed documents to the index
 4. Manually synchronize S3 and OpenSearch at the end of each day
 
 Correct answer: Implement incremental update pipelines that push only changed documents to the index
@@ -4531,7 +4531,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day-02-answer
 | `cognitive_demand` | integrate |
 | `estimated_time_seconds` | 150 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T052105Z-openai-gpt-4.1-day-02-order008.md item 5 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -4545,9 +4545,9 @@ A global enterprise needs fast vector-based search for multilingual documents ac
 Options:
 
 1. Deploy a single, large OpenSearch cluster in one region with high shard count
-2. Deploy multiple OpenSearch clusters, one per region, each containing region-specific indices
-3. Use a global index with centralized shard allocation optimized for East-West network traffic
-4. Store all vectors in S3 and apply Lambda for search queries
+2. Use a global index with centralized shard allocation optimized for East-West network traffic
+3. Store all vectors in S3 and apply Lambda for search queries
+4. Deploy multiple OpenSearch clusters, one per region, each containing region-specific indices
 
 Correct answer: Deploy multiple OpenSearch clusters, one per region, each containing region-specific indices
 
@@ -4585,7 +4585,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/study-guides/day-02-data-embed
 | `cognitive_demand` | configure |
 | `estimated_time_seconds` | 120 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T052105Z-openai-gpt-4.1-day-02-order008.md item 6 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -4640,7 +4640,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | optimize |
 | `estimated_time_seconds` | 150 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T052105Z-openai-gpt-4.1-day-02-order008.md item 7 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -4653,8 +4653,8 @@ A knowledge-intensive GenAI system using vector retrieval on OpenSearch frequent
 
 Options:
 
-1. Redistribute shards more evenly across all nodes
-2. Switch from vector to lexical search mode
+1. Switch from vector to lexical search mode
+2. Redistribute shards more evenly across all nodes
 3. Reduce the index refresh interval
 4. Increase document chunk size
 
@@ -4694,7 +4694,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day-02-answer
 | `cognitive_demand` | compare |
 | `estimated_time_seconds` | 120 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T052105Z-openai-gpt-4.1-day-02-order008.md item 8 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -4708,8 +4708,8 @@ A developer must enable fast semantic search on hundreds of millions of scientif
 Options:
 
 1. Single global index with many shards
-2. Multiple indices, one per scientific sub-domain
-3. Single index per document type with massive over-sharding
+2. Single index per document type with massive over-sharding
+3. Multiple indices, one per scientific sub-domain
 4. One monolithic index with daily reindexing
 
 Correct answer: Multiple indices, one per scientific sub-domain
@@ -4748,7 +4748,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day-02-answer
 | `cognitive_demand` | select |
 | `estimated_time_seconds` | 150 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T052105Z-openai-gpt-4.1-day-02-order008.md item 9 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -4804,7 +4804,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day-02-answer
 | `cognitive_demand` | configure |
 | `estimated_time_seconds` | 180 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T052105Z-openai-gpt-4.1-day-02-order008.md item 10 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -4859,7 +4859,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | optimize |
 | `estimated_time_seconds` | 180 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T052105Z-openai-gpt-4.1-day-02-order008.md item 11 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -4916,7 +4916,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/study-guides/day-02-data-embed
 | `cognitive_demand` | judge |
 | `estimated_time_seconds` | 150 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T052105Z-openai-gpt-4.1-day-02-order008.md item 12 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -4930,9 +4930,9 @@ A retrieval team needs strict SLAs on OpenSearch vector search throughput during
 Options:
 
 1. Implement scheduled periodic shard rebalancing operations
-2. Increase the number of replicas without adjusting primary shard allocation
-3. Adopt a multi-index approach based on traffic domain
-4. Use workload-aware sharding guided by query distribution metrics
+2. Adopt a multi-index approach based on traffic domain
+3. Use workload-aware sharding guided by query distribution metrics
+4. Increase the number of replicas without adjusting primary shard allocation
 
 Correct answer: Increase the number of replicas without adjusting primary shard allocation
 
@@ -4970,7 +4970,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | judge |
 | `estimated_time_seconds` | 180 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T052105Z-openai-gpt-4.1-day-02-order008.md item 13 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -5024,7 +5024,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/study-guides/day-02-data-embed
 | `cognitive_demand` | diagnose |
 | `estimated_time_seconds` | 150 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T052154Z-openai-gpt-4.1-day-02-order009.md item 1 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -5037,8 +5037,8 @@ A team is using Amazon Bedrock to integrate FM-powered Q&A into their internal d
 
 Options:
 
-1. Embeddings were generated using an unrelated domain model.
-2. The vector search is not properly connected to the document source.
+1. The vector search is not properly connected to the document source.
+2. Embeddings were generated using an unrelated domain model.
 3. The FM was not fine-tuned on the internal document set.
 4. OpenSearch is not configured with hybrid search enabled.
 
@@ -5078,7 +5078,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/study-guides/day-02-data-embed
 | `cognitive_demand` | select |
 | `estimated_time_seconds` | 120 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T052154Z-openai-gpt-4.1-day-02-order009.md item 2 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -5091,9 +5091,9 @@ A startup is deploying a GenAI chatbot using Amazon Bedrock and wants to improve
 
 Options:
 
-1. Vector search using Bedrock Knowledge Bases
-2. Keyword search on Amazon S3 object metadata
-3. Scanning the entire S3 bucket using Lambda
+1. Keyword search on Amazon S3 object metadata
+2. Scanning the entire S3 bucket using Lambda
+3. Vector search using Bedrock Knowledge Bases
 4. Database search using SQL LIKE queries in Aurora
 
 Correct answer: Vector search using Bedrock Knowledge Bases
@@ -5132,7 +5132,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | explain |
 | `estimated_time_seconds` | 120 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T052154Z-openai-gpt-4.1-day-02-order009.md item 3 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -5145,10 +5145,10 @@ A healthcare provider uses Amazon Aurora with the pgvector extension to support 
 
 Options:
 
-1. It allows for retrieval based on meaning, not just keywords.
-2. It prioritizes queries with the fewest spelling errors.
-3. It automatically restricts results by patient privacy tags.
-4. It supports scheduled document re-indexing out of the box.
+1. It prioritizes queries with the fewest spelling errors.
+2. It automatically restricts results by patient privacy tags.
+3. It supports scheduled document re-indexing out of the box.
+4. It allows for retrieval based on meaning, not just keywords.
 
 Correct answer: It allows for retrieval based on meaning, not just keywords.
 
@@ -5186,7 +5186,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day-02-answer
 | `cognitive_demand` | diagnose |
 | `estimated_time_seconds` | 150 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T052154Z-openai-gpt-4.1-day-02-order009.md item 4 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -5240,7 +5240,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | select |
 | `estimated_time_seconds` | 120 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T052154Z-openai-gpt-4.1-day-02-order009.md item 5 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -5253,8 +5253,8 @@ An ecommerce team is building a product assistant using Bedrock Knowledge Bases 
 
 Options:
 
-1. It retrieves passages semantically similar to the user’s query.
-2. It automatically tags documents with product categories.
+1. It automatically tags documents with product categories.
+2. It retrieves passages semantically similar to the user’s query.
 3. It guarantees that only the latest product manuals are retrieved.
 4. It reduces the document preprocessing steps needed.
 
@@ -5294,7 +5294,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/study-guides/day-02-data-embed
 | `cognitive_demand` | integrate |
 | `estimated_time_seconds` | 150 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T052154Z-openai-gpt-4.1-day-02-order009.md item 6 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -5349,7 +5349,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | explain |
 | `estimated_time_seconds` | 120 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T052154Z-openai-gpt-4.1-day-02-order009.md item 7 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -5362,9 +5362,9 @@ A legal firm uses RAG with Amazon Aurora and the pgvector extension to retrieve 
 
 Options:
 
-1. The closest (least distant) document vectors will be returned, but results are likely irrelevant.
-2. No results will be returned at all.
-3. The query will trigger a fallback to keyword search automatically.
+1. No results will be returned at all.
+2. The query will trigger a fallback to keyword search automatically.
+3. The closest (least distant) document vectors will be returned, but results are likely irrelevant.
 4. The database will prevent the query from running.
 
 Correct answer: The closest (least distant) document vectors will be returned, but results are likely irrelevant.
@@ -5403,7 +5403,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day-02-answer
 | `cognitive_demand` | judge |
 | `estimated_time_seconds` | 150 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T052154Z-openai-gpt-4.1-day-02-order009.md item 8 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -5416,10 +5416,10 @@ A financial data company wants to use RAG with OpenSearch Service and vector sim
 
 Options:
 
-1. Combine vector search with document-level access filters and reranker models.
-2. Enable vector search and disable all ACLs for faster retrieval.
-3. Rely on OpenSearch’s default text search and avoid embeddings for simplicity.
-4. Use embeddings only for indexing, but filter by timestamp fields only.
+1. Enable vector search and disable all ACLs for faster retrieval.
+2. Rely on OpenSearch’s default text search and avoid embeddings for simplicity.
+3. Use embeddings only for indexing, but filter by timestamp fields only.
+4. Combine vector search with document-level access filters and reranker models.
 
 Correct answer: Combine vector search with document-level access filters and reranker models.
 
@@ -5457,7 +5457,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/study-guides/day-02-data-embed
 | `cognitive_demand` | compare |
 | `estimated_time_seconds` | 150 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T052154Z-openai-gpt-4.1-day-02-order009.md item 9 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -5512,7 +5512,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | select |
 | `estimated_time_seconds` | 120 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T052154Z-openai-gpt-4.1-day-02-order009.md item 10 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -5566,7 +5566,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day-02-answer
 | `cognitive_demand` | diagnose |
 | `estimated_time_seconds` | 180 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T052154Z-openai-gpt-4.1-day-02-order009.md item 11 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -5579,8 +5579,8 @@ You are troubleshooting a Bedrock-powered RAG application where users report tha
 
 Options:
 
-1. Vector embeddings have not been updated for the latest documents.
-2. The Bedrock model is not fine-tuned for policy Q&A.
+1. The Bedrock model is not fine-tuned for policy Q&A.
+2. Vector embeddings have not been updated for the latest documents.
 3. The S3 bucket uses an incompatible storage class.
 4. OpenSearch index does not have search analyzers enabled.
 
@@ -5620,7 +5620,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/study-guides/day-02-data-embed
 | `cognitive_demand` | configure |
 | `estimated_time_seconds` | 150 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T052154Z-openai-gpt-4.1-day-02-order009.md item 12 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -5675,7 +5675,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day-02-answer
 | `cognitive_demand` | select |
 | `estimated_time_seconds` | 120 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T052302Z-openai-gpt-4.1-day-02-order010.md item 2 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -5688,9 +5688,9 @@ You are architecting a Retrieval-Augmented Generation (RAG) pipeline. The pipeli
 
 Options:
 
-1. Define a consistent retrieval interface with a function-calling protocol and abstract retrieval logic from the FM endpoint.
-2. Embed context retrieval logic directly in the FM prompt and update it with each model change.
-3. Use different custom APIs for each FM so that queries can be optimized per model.
+1. Embed context retrieval logic directly in the FM prompt and update it with each model change.
+2. Use different custom APIs for each FM so that queries can be optimized per model.
+3. Define a consistent retrieval interface with a function-calling protocol and abstract retrieval logic from the FM endpoint.
 4. Connect the FM to the vector database using hardcoded endpoint URLs from environment variables.
 
 Correct answer: Define a consistent retrieval interface with a function-calling protocol and abstract retrieval logic from the FM endpoint.
@@ -5729,7 +5729,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order01
 | `cognitive_demand` | diagnose |
 | `estimated_time_seconds` | 150 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T052302Z-openai-gpt-4.1-day-02-order010.md item 3 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -5742,10 +5742,10 @@ After deploying a basic RAG architecture, users notice that the FM sometimes hal
 
 Options:
 
-1. The retrieval process does not enforce synchronization between the vector store and live source documents.
-2. The FM is not fine-tuned for the customer’s domain and generates general knowledge instead.
-3. The RAG pipeline lacks prompt engineering to emphasize retrieval grounding.
-4. The system does not include an additional classifier model for relevance filtering.
+1. The FM is not fine-tuned for the customer’s domain and generates general knowledge instead.
+2. The RAG pipeline lacks prompt engineering to emphasize retrieval grounding.
+3. The system does not include an additional classifier model for relevance filtering.
+4. The retrieval process does not enforce synchronization between the vector store and live source documents.
 
 Correct answer: The retrieval process does not enforce synchronization between the vector store and live source documents.
 
@@ -5783,7 +5783,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day-02-answer
 | `cognitive_demand` | explain |
 | `estimated_time_seconds` | 120 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T052302Z-openai-gpt-4.1-day-02-order010.md item 4 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -5837,7 +5837,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/study-guides/day-02-data-embed
 | `cognitive_demand` | judge |
 | `estimated_time_seconds` | 150 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T052302Z-openai-gpt-4.1-day-02-order010.md item 6 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -5850,8 +5850,8 @@ During a code review, a junior developer suggests invoking search APIs directly 
 
 Options:
 
-1. It incorrectly assumes that the FM can autonomously conduct searches and navigate external APIs.
-2. It requires each API to return inference-ready prompt text, which is not possible using standard vector stores.
+1. It requires each API to return inference-ready prompt text, which is not possible using standard vector stores.
+2. It incorrectly assumes that the FM can autonomously conduct searches and navigate external APIs.
 3. It improves modularity but adds unnecessary cost and latency.
 4. It implements a correct but less efficient approach to retrieval-augmented generation.
 
@@ -5891,7 +5891,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day-02-answer
 | `cognitive_demand` | implement |
 | `estimated_time_seconds` | 120 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T052302Z-openai-gpt-4.1-day-02-order010.md item 8 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -5904,9 +5904,9 @@ A cross-functional AWS team needs to integrate a new document source into their 
 
 Options:
 
-1. Implement a document chunker that formats new source data to match retrieval interface requirements.
-2. Update the FM architecture to directly ingest new documents without vectorization.
-3. Configure FM endpoints to increase their maximum input context size for the new data.
+1. Update the FM architecture to directly ingest new documents without vectorization.
+2. Configure FM endpoints to increase their maximum input context size for the new data.
+3. Implement a document chunker that formats new source data to match retrieval interface requirements.
 4. Change the retrieval orchestration so that the FM initiates its own fetch of the new document type.
 
 Correct answer: Implement a document chunker that formats new source data to match retrieval interface requirements.
@@ -5945,7 +5945,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order01
 | `cognitive_demand` | judge |
 | `estimated_time_seconds` | 180 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T052302Z-openai-gpt-4.1-day-02-order010.md item 9 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -5958,10 +5958,10 @@ In a cost review, you find that RAG inference spends more on outbound network tr
 
 Options:
 
-1. Restrict context retrieval to top-k most semantically similar chunks using Bedrock’s retrieval API.
-2. Move the FM endpoint closer to the vector database using a private VPC endpoint.
-3. Precompute and cache all likely context documents in an S3 bucket daily.
-4. Switch from semantic search to keyword-based search to reduce chunk count.
+1. Move the FM endpoint closer to the vector database using a private VPC endpoint.
+2. Precompute and cache all likely context documents in an S3 bucket daily.
+3. Switch from semantic search to keyword-based search to reduce chunk count.
+4. Restrict context retrieval to top-k most semantically similar chunks using Bedrock’s retrieval API.
 
 Correct answer: Restrict context retrieval to top-k most semantically similar chunks using Bedrock’s retrieval API.
 
@@ -5999,7 +5999,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day-02-answer
 | `cognitive_demand` | configure |
 | `estimated_time_seconds` | 120 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T052302Z-openai-gpt-4.1-day-02-order010.md item 12 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -6053,7 +6053,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/study-guides/day-02-data-embed
 | `cognitive_demand` | optimize |
 | `estimated_time_seconds` | 150 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T052302Z-openai-gpt-4.1-day-02-order010.md item 13 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -6066,8 +6066,8 @@ A large organization is facing high latency in FM responses within its RAG workf
 
 Options:
 
-1. The top-k retrieval limit used for fetching context from the vector store.
-2. The concurrency setting of the downstream FM inference endpoint.
+1. The concurrency setting of the downstream FM inference endpoint.
+2. The top-k retrieval limit used for fetching context from the vector store.
 3. The IAM policy permissions on the retrieval pipeline.
 4. The batch size used by the document chunking Lambda.
 
@@ -6107,7 +6107,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day-02-answer
 | `cognitive_demand` | select |
 | `estimated_time_seconds` | 150 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T060928Z-openai-gpt-4.1-day-02-order010-top-up-4.md item 1 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -6120,9 +6120,9 @@ A team is building a language support chatbot using a RAG pipeline on AWS. The b
 
 Options:
 
-1. Implement a service layer that exposes a standardized retrieval API and keeps FM consumption code separate from retrieval logic.
-2. Hardcode vector store connection details within the FM inference script to ensure direct access to context.
-3. Use in-FM prompt engineering to specify the retrieval and context-assembly instructions.
+1. Hardcode vector store connection details within the FM inference script to ensure direct access to context.
+2. Use in-FM prompt engineering to specify the retrieval and context-assembly instructions.
+3. Implement a service layer that exposes a standardized retrieval API and keeps FM consumption code separate from retrieval logic.
 4. Integrate vector store and FM consumption flows tightly into a single Lambda for highest throughput.
 
 Correct answer: Implement a service layer that exposes a standardized retrieval API and keeps FM consumption code separate from retrieval logic.
@@ -6161,7 +6161,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/study-guides/day-02-data-embed
 | `cognitive_demand` | diagnose |
 | `estimated_time_seconds` | 120 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T060928Z-openai-gpt-4.1-day-02-order010-top-up-4.md item 2 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -6174,10 +6174,10 @@ A FinTech company notices inconsistent relevance in their FM-generated answers w
 
 Options:
 
-1. Retrieval requests lack explicit knowledge base or domain parameters, causing ambiguous routing.
-2. The FM is not capable of understanding multiple languages in retrieved content.
-3. Context chunks are formatted in XML while the FM expects JSON input.
-4. Vector embeddings are regenerated on every request, adding latency.
+1. The FM is not capable of understanding multiple languages in retrieved content.
+2. Context chunks are formatted in XML while the FM expects JSON input.
+3. Vector embeddings are regenerated on every request, adding latency.
+4. Retrieval requests lack explicit knowledge base or domain parameters, causing ambiguous routing.
 
 Correct answer: Retrieval requests lack explicit knowledge base or domain parameters, causing ambiguous routing.
 
@@ -6215,7 +6215,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day-02-answer
 | `cognitive_demand` | judge |
 | `estimated_time_seconds` | 150 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T060928Z-openai-gpt-4.1-day-02-order010-top-up-4.md item 3 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -6270,7 +6270,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order01
 | `cognitive_demand` | optimize |
 | `estimated_time_seconds` | 180 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T060928Z-openai-gpt-4.1-day-02-order010-top-up-4.md item 4 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -6324,7 +6324,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/study-guides/day-02-data-embed
 | `cognitive_demand` | diagnose |
 | `estimated_time_seconds` | 150 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T060943Z-openai-gpt-4.1-day-02-order002-top-up-3.md item 1 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -6337,8 +6337,8 @@ An AI team is seeing inconsistent foundation model outputs when dynamically merg
 
 Options:
 
-1. Inconsistent input data ordering and missing image metadata are leading to unreliable feature extraction and context loss during preprocessing.
-2. The foundation model API limit has been exceeded, resulting in dropped inputs during batch processing.
+1. The foundation model API limit has been exceeded, resulting in dropped inputs during batch processing.
+2. Inconsistent input data ordering and missing image metadata are leading to unreliable feature extraction and context loss during preprocessing.
 3. The images are in unsupported file formats and cause the FM to ignore them entirely.
 4. The tabular data should be stored in a relational database before processing to ensure data integrity.
 
@@ -6378,7 +6378,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | select |
 | `estimated_time_seconds` | 120 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T060943Z-openai-gpt-4.1-day-02-order002-top-up-3.md item 2 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |
@@ -6391,9 +6391,9 @@ A retailer wants to use a Foundation Model to generate product descriptions from
 
 Options:
 
-1. Normalize all audio files to a standard format and bitrate before transcription.
-2. Group review audio files by field rep ID prior to processing.
-3. Attach product images as base64-encoded strings to the tabular item data before FM ingest.
+1. Group review audio files by field rep ID prior to processing.
+2. Attach product images as base64-encoded strings to the tabular item data before FM ingest.
+3. Normalize all audio files to a standard format and bitrate before transcription.
 4. Use sentiment analysis models on the raw audio files before sending them to the FM.
 
 Correct answer: Normalize all audio files to a standard format and bitrate before transcription.
@@ -6432,7 +6432,7 @@ docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-02-artifacts/day02-order00
 | `cognitive_demand` | judge |
 | `estimated_time_seconds` | 150 |
 | `last_reviewed` | 2026-06-23 |
-| `source_trace_status` | source-verified |
+| `source_trace_status` | needs-human-source-review |
 | `raw_source` | 2026-06-23T060943Z-openai-gpt-4.1-day-02-order002-top-up-3.md item 3 |
 | `raw_provider` | openai |
 | `raw_model` | gpt-4.1 |

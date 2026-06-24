@@ -26,9 +26,9 @@
 
 - Status: `mapped`
 - `exam_domain`: Content Domain 1: Foundation Model Integration, Data Management, and Compliance
-- `exam_task`: Task 1.5: Design retrieval mechanisms for FM augmentation.
-- `exam_skill`: Skill 1.5.6: Create consistent access mechanisms to enable seamless integration with FMs (for example, by using function calling interfaces for vector search, Model Context Protocol [MCP] clients for vector queries, standardized API patterns for retrieval augmentation).
-- `secondary_exam_skills`: Skill 1.1.1: Create comprehensive architectural designs that align with specific business needs and technical constraints (for example, by using appropriate FMs, integration patterns, deployment strategies).
+- `exam_task`: Task 1.4: Design and implement vector store solutions.
+- `exam_skill`: Skill 1.4.1: Create advanced vector database architectures specifically for FM augmentation to enable efficient semantic retrieval beyond traditional search capabilities (for example, by using Amazon Bedrock Knowledge Bases for hierarchical organization, Amazon OpenSearch Service with the Neural plugin for Amazon Bedrock integration for topic-based segmentation, Amazon RDS with Amazon S3 document repositories, Amazon DynamoDB with vector databases for metadata and embeddings).
+- `secondary_exam_skills`: Skill 1.5.3: Deploy and configure vector search solutions to enable semantic search capabilities for FM augmentation (for example, by using OpenSearch Service with vector search capabilities, Amazon Aurora with the pgvector extension, Amazon Bedrock Knowledge Bases with managed vector store functionality).
 
 ## Question Focus
 

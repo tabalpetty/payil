@@ -53,12 +53,12 @@ STALE_OR_RISKY_PATTERNS = [
     "sagemaker studio classic",
 ]
 
-HIGH_RISK_UNSUPPORTED_PATTERNS = [
-    "mcp",
-    "function calling",
-    "hybrid support is current",
-    "true bedrock model multilingual support limitations",
-    "frame extraction",
+REVIEWER_META_PATTERNS = [
+    "reviewer should",
+    "reviewer must",
+    "reviewer needs to",
+    "confirm against current",
+    "verify against current",
 ]
 
 PROMPT_ADJUSTMENTS = {
@@ -67,7 +67,7 @@ PROMPT_ADJUSTMENTS = {
     "recall-only item": "Ask for diagnosis, configuration, tradeoff, or first action instead of a definition or service lookup.",
     "not scenario-based": "Require actor, workload, goal, constraint, and failure signal in every stem.",
     "stale or risky technical claim": "Avoid dated or capability-boundary claims unless the exact current AWS source is provided.",
-    "unsupported high-risk claim": "Ask the generator to avoid high-risk service-capability claims unless it cites an exact official source for review.",
+    "reviewer meta-text": "Return learner-visible question content only. Put review instructions in generation notes, never in stems, options, rationales, or source traces.",
     "schema defect": "Regenerate with the required schema and validate before returning items.",
 }
 
@@ -332,13 +332,23 @@ def review_candidate(candidate: Candidate) -> tuple[bool, list[str], list[str]]:
             ),
         )
 
-    high_risk_matches = [pattern for pattern in HIGH_RISK_UNSUPPORTED_PATTERNS if pattern in searchable]
-    if high_risk_matches:
+    learner_visible = " ".join(
+        [
+            candidate.stem,
+            " ".join(candidate.options),
+            candidate.correct_answer,
+            candidate.rationale,
+            candidate.distractors,
+            candidate.source_trace,
+        ]
+    ).lower()
+    meta_matches = [pattern for pattern in REVIEWER_META_PATTERNS if pattern in learner_visible]
+    if meta_matches:
         reject(
-            "unsupported high-risk claim",
+            "reviewer meta-text",
             "; ".join(
                 f"pattern={pattern}; excerpt=\"{context_excerpt(searchable, pattern)}\""
-                for pattern in high_risk_matches
+                for pattern in meta_matches
             ),
         )
 
