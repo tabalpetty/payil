@@ -47,6 +47,9 @@ tools, or humans to fill each role.
   gate evidence.
 - Keep author and reviewer roles independent where practical.
 - Use deterministic status and release gates.
-- Treat Day 1 and Day 2 as quality exemplars and regression fixtures.
+- Treat Day 1 and Day 2 as quality exemplars and regression fixtures. (The Day
+  2 *exam-prep* bank is still gate-`blocked` and not yet released; see
+  `docs/Pilot1/aip-c01/exam-prep/exam-prep-agent-open-items.md`. The Day 2
+  *student kit* has passed content review.)
 - Record provider choice in configuration rather than embedding it into
   workflow semantics.

@@ -101,8 +101,15 @@ exists at
 - adaptation and remediation rules;
 - validation criteria for the first AIP-C01 pilot.
 
-Superseded status as of June 18, 2026: the generated AIP-C01 implementation
-folders were deleted after an exam-identity correction. The next AIP-C01 pass
-should regenerate the curriculum model, Teacher Kit, Student Kit, and exam-prep
-materials from the official AWS Certified Generative AI Developer -
-Professional (AIP-C01) exam guide.
+Status update as of 2026-06-23: the AIP-C01 implementation has since been
+rebuilt under `docs/Pilot1/aip-c01/`. The curriculum model is complete (133
+topics, 98 official skills mapped across 226 relationships, 7-day accelerated
+track); Day 1 and Day 2 Student Kits are built; Day 1 exam-prep has an approved
+100-item bank; and the Day 2 exam-prep production agent has had its first full
+run (118 items, final gate result `blocked`).
+
+This handoff predates the numbered decision records. The authoritative
+decisions are now `docs/decisions/0001`–`0009`, and live implementation status
+is tracked in
+`docs/Pilot1/aip-c01/exam-prep/exam-prep-agent-open-items.md` and
+`docs/Pilot1/aip-c01/exam-prep/agent_creation_progress.md`.

@@ -1,8 +1,13 @@
 # Exam-Prep Production Agent — Consolidated Review
 
-> Engineering disposition and post-fix rerun:
-> [exam-prep-agent-review-disposition.md](exam-prep-agent-review-disposition.md).
-> The original findings below are retained as the review record.
+> **SUPERSEDED (2026-06-23).** This is the original first-run review, retained
+> as the historical record. Every finding below has since been dispositioned —
+> see [exam-prep-agent-review-disposition.md](exam-prep-agent-review-disposition.md)
+> for the post-fix rerun and
+> [exam-prep-agent-open-items.md](exam-prep-agent-open-items.md) for live
+> status. Figures here describe the first run (e.g. a 119-item bank); the
+> current reviewed bank is **118 items** and the Day 2 gate result is
+> **`blocked`**, not "approved." Read this document for its history only.
 
 **Status as of:** 2026-06-23 (working tree, branch `main`, uncommitted)
 **Scope:** Architecture, cost model, implementation scripts, the Day 2 first
