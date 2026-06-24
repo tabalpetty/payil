@@ -40,6 +40,9 @@ multiple-choice keys are now balanced `23/23/23/22` across positions 1-4.
 
 ## Next Action
 
-yet to start - Repair or regenerate the Day 2 items needed for mapped-skill
-coverage, then complete the item-level claim-verification ledger. Rerun source
-verification and final gates only after those repairs.
+in-progress - Source verification has now been run: the claim-verification
+ledger is built and all 118 items returned `needs-human-source-review` (0
+auto-verified). Remaining work is to (1) repair or regenerate the Day 2 items
+needed for mapped-skill coverage and to drop the off-map `1.5.6` tag on
+order010, and (2) resolve the 118 human-source-review verdicts so items can move
+to `source-verified`. Rerun final gates only after those repairs.

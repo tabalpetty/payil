@@ -400,9 +400,11 @@ question-bank and generated-material workflow guidance.
 **What happened:** The Day 2 exam-prep agent flow initially had a final gate
 for traceability, source checks, distribution, and cost, but source
 verification was not yet functional. When the fact-checker was implemented, it
-verified 118 items and culled one additional item, `P1-AIP-D2-083`, because
-the item taught an unsupported operational remediation: increasing OpenSearch
-shard count as the best response to `Too many open files`.
+ran over all 118 items and culled one item, `P1-AIP-D2-083`, because the item
+taught an unsupported operational remediation: increasing OpenSearch shard
+count as the best response to `Too many open files`. The verifier auto-confirmed
+none of the remaining items: all 118 are routed to `needs-human-source-review`,
+so the factual-verification gate stays pending until that human review is done.
 
 **Why it matters:** Final fact checking is one of the most important learner
 protection steps in generated assessment workflows. A question can have a
@@ -433,8 +435,9 @@ fact-checking is required before any bank is labeled complete or approved.
 **What happened:** While designing upstream layers for the exam-prep agent, the
 project recognized that every downstream artifact depends on the original
 source decomposition. The AIP-C01 accelerated plan references all 20 official
-tasks, but the topic map does not yet explicitly record official Skill X.Y.Z
-coverage or deferrals for all 98 official skills.
+tasks, but at that point the topic map did not yet explicitly record official
+Skill X.Y.Z coverage or deferrals for all 98 official skills. (This gap is now
+closed — see the "Kit update needed" note below.)
 
 **Why it matters:** If decomposition silently misses an official objective,
 later topic briefs, lessons, artifacts, question banks, remediation routes, and

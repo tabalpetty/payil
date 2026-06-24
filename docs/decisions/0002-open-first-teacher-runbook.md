@@ -37,3 +37,12 @@ supporting documents.
 - A unit is not ready for delivery until its runbook covers preparation,
   instruction, evidence, assessment, remediation, and recording.
 
+## Implementation Note (2026-06-23)
+
+In Pilot1's accelerated 7-day track, the realized instructor entry point is the
+teacher-kit `facilitator-guide.md`, and the learner-facing entry point is
+`student-kit/accelerated-7-day/OPEN_FIRST.md` (underscore, not the hyphenated
+`OPEN-FIRST.md` named above). The decision's intent — a single authoritative
+"open first" runbook per unit — holds; the realized filename and kit placement
+differ from the original wording.
+
