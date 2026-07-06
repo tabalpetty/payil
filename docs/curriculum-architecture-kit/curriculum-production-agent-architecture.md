@@ -20,6 +20,8 @@ source identity
   -> lessons learned and prompt/process improvement
 ```
 
+
+
 The architecture uses one deterministic **Curriculum Production Orchestrator**
 to coordinate specialized worker agents. Worker agents may use different LLMs,
 tools, or humans, but no worker declares its own output production-complete.
@@ -379,6 +381,12 @@ Responsibilities:
 Source presence is not claim verification. A service name appearing in a
 trusted document does not prove the item's precise claim.
 
+Source labels are not sources. Generated artifacts must cite resolvable source
+tokens: official URLs, approved local paths, configured source IDs, or explicit
+unresolved markers. Claim ledgers must be synchronized after final assembly and
+bound to current item content, for example with a claim-text hash, before they
+can be used as release evidence.
+
 ### 14. Deterministic Gate Engine
 
 The gate engine performs checks that should not depend on LLM judgment.
@@ -600,7 +608,7 @@ Human input is required or recommended:
 | Gate | Pass condition |
 |---|---|
 | Teaching completeness | Every required topic has actual exposition and examples. |
-| Knowledge-method alignment | Teaching and activity forms match dominant and secondary knowledge types. |
+| Knowledge-method alignment | Teaching and activity forms match dominant and secondary knowledge types; method-specific artifact forms, such as `Embedded Inspection Record`, are present when required. |
 | Reverse test | Every activity can be completed from prescribed teaching, prerequisites, and guidance. |
 | Exemplar and guidance | Every substantial artifact has calibration, rubric, or worked guidance. |
 | Remediation | Gaps route to existing targeted material and a reassessment path. |
@@ -795,8 +803,8 @@ Updates requiring a decision record:
 | Architecture component | Current Pilot1 implementation |
 |---|---|
 | Source Identity Agent | Source identity checkpoint and Source Identity Workbench |
-| Source Extraction Agent | `scripts/extract_aip_c01_exam_guide.py` |
-| Layer 0 auditor | Source-to-topic matrix and `scripts/audit_source_decomposition_coverage.py` |
+| Source Extraction Agent | `scripts/pilot1_aip_c01/extract_aip_c01_exam_guide.py` |
+| Layer 0 auditor | Source-to-topic matrix and `scripts/pilot1_aip_c01/audit_source_decomposition_coverage.py` |
 | Curriculum map | `aip-c01-topic-knowledge-category-map.md` |
 | High-quality teaching exemplars | Day 1 and Day 2 study guides, artifacts, and answer guidance |
 | Independent review method | `quality-review-guide.md` and external review passes |

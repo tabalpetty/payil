@@ -47,6 +47,18 @@ for every Day 1 focused artifact.
 4. Summarize the evidence in the parent Day 1 roll-up workbook.
 5. Record misses or weak answers in the daily error log.
 
+## Accelerated-Path Quality Rule
+
+Day 1 is allowed to be fast, but it is not allowed to be shallow. These
+foundations support every later day. If a learner cannot produce a correct
+system map, explain the invocation path, place AWS services by role, and
+describe prompt/output/evaluation controls, do not mark Day 1 complete merely
+because the time box ended.
+
+If the work takes longer than the nominal accelerated block, extend the day or
+record explicit remediation. The accelerated route compresses calendar time,
+not evidence of mastery.
+
 ## Audit Rule
 
 For a focused artifact to count as complete, it must include:
@@ -55,3 +67,5 @@ For a focused artifact to count as complete, it must include:
 - at least one scenario-specific example;
 - evidence matching the knowledge type;
 - a self-check or gap note.
+
+If any of those are missing, the artifact remains in remediation.

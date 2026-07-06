@@ -259,11 +259,11 @@ Responsibilities:
 Example command shape:
 
 ```bash
-python3 scripts/build_exam_prep_day.py --day 02 --plan
-python3 scripts/build_exam_prep_day.py --day 02 --generate
-python3 scripts/build_exam_prep_day.py --day 02 --review
-python3 scripts/build_exam_prep_day.py --day 02 --top-up
-python3 scripts/build_exam_prep_day.py --day 02 --check
+python3 scripts/pilot1_aip_c01/build_exam_prep_day.py --day 02 --plan
+python3 scripts/pilot1_aip_c01/build_exam_prep_day.py --day 02 --generate
+python3 scripts/pilot1_aip_c01/build_exam_prep_day.py --day 02 --review
+python3 scripts/pilot1_aip_c01/build_exam_prep_day.py --day 02 --top-up
+python3 scripts/pilot1_aip_c01/build_exam_prep_day.py --day 02 --check
 ```
 
 ### 2. Source Loader
@@ -750,7 +750,7 @@ Refactor Day 1-specific review code into day-parameterized modules:
 scripts/exam_prep_schema.py
 scripts/exam_prep_sources.py
 scripts/exam_prep_review.py
-scripts/build_exam_prep_day.py
+scripts/pilot1_aip_c01/build_exam_prep_day.py
 ```
 
 Keep deterministic checks in code.

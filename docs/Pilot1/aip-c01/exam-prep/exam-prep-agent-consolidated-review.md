@@ -392,8 +392,8 @@ Key figures in this review were produced by:
   day-02-final-gates.json` (`answer_position_counts`, `difficulty_counts`,
   `cost_summary`), cross-checked against the bank text.
 - **Gate/verifier defects (IMP-1/3/4):** read
-  `scripts/run_exam_prep_final_gates.py` lines 280, 283 and
-  `scripts/review_exam_prep_questions.py` line 376.
+  `scripts/pilot1_aip_c01/run_exam_prep_final_gates.py` lines 280, 283 and
+  `scripts/pilot1_aip_c01/review_exam_prep_questions.py` line 376.
 
 All counts were recomputed from these artifacts rather than read from the run's
 gate summary.

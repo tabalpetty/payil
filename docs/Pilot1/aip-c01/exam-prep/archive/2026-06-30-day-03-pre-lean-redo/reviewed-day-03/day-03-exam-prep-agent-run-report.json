@@ -1,0 +1,229 @@
+{
+  "day": 3,
+  "target": 10,
+  "status": "needs-human-source-review",
+  "started_at_utc": "2026-06-29T21:47:52+00:00",
+  "finished_at_utc": "2026-06-29T21:48:00+00:00",
+  "completed_steps": [
+    "build-topic-briefs",
+    "map-topic-brief-objectives",
+    "build-prompt-pack-check",
+    "build-prompt-pack",
+    "normalize",
+    "review-cull",
+    "top-up-loop",
+    "write-review-outputs",
+    "rebalance-answer-positions",
+    "source-url-verification",
+    "source-review-triage"
+  ],
+  "blocked_step": "claim-source-verification",
+  "outputs": {
+    "topic_briefs": "docs/Pilot1/aip-c01/exam-prep/topic-briefs/day-03",
+    "prompt_pack": "docs/Pilot1/aip-c01/exam-prep/day-03-question-generation-prompts.md",
+    "raw_dir": "docs/Pilot1/aip-c01/exam-prep/raw/day-03",
+    "logs_dir": "docs/Pilot1/aip-c01/exam-prep/logs/day-03",
+    "reviewed_dir": "docs/Pilot1/aip-c01/exam-prep/reviewed/day-03",
+    "normalized_bank": "docs/Pilot1/aip-c01/exam-prep/reviewed/day-03/day-03-normalized-draft-question-bank.md",
+    "candidate_bank": "docs/Pilot1/aip-c01/exam-prep/reviewed/day-03/day-03-reviewed-candidate-bank.md",
+    "reviewed_bank": "docs/Pilot1/aip-c01/exam-prep/reviewed/day-03/day-03-reviewed-question-bank.md",
+    "source_verification": "docs/Pilot1/aip-c01/exam-prep/reviewed/day-03/day-03-source-verification.json",
+    "source_url_verification": "docs/Pilot1/aip-c01/exam-prep/reviewed/day-03/day-03-source-url-verification.json",
+    "claim_source_verification": "docs/Pilot1/aip-c01/exam-prep/reviewed/day-03/day-03-claim-source-verification.json",
+    "source_review_triage": "docs/Pilot1/aip-c01/exam-prep/reviewed/day-03/day-03-source-review-triage.json",
+    "grounded_claim_judge": "docs/Pilot1/aip-c01/exam-prep/reviewed/day-03/day-03-grounded-claim-judge.json",
+    "answer_position_report": "docs/Pilot1/aip-c01/exam-prep/reviewed/day-03/day-03-answer-position-report.md",
+    "final_gate_report": "docs/Pilot1/aip-c01/exam-prep/reviewed/day-03/day-03-final-gate-report.md",
+    "final_gates_json": "docs/Pilot1/aip-c01/exam-prep/reviewed/day-03/day-03-final-gates.json",
+    "agent_report": "docs/Pilot1/aip-c01/exam-prep/reviewed/day-03/day-03-exam-prep-agent-run-report.json"
+  },
+  "step_results": [
+    {
+      "name": "build-topic-briefs",
+      "command": [
+        "/opt/anaconda3/bin/python3",
+        "scripts/pilot1_aip_c01/build_exam_prep_day.py",
+        "--day",
+        "3",
+        "--plan"
+      ],
+      "returncode": 0,
+      "stdout": "Day 3 topic briefs: 18\nOutput directory: docs/Pilot1/aip-c01/exam-prep/topic-briefs/day-03\n\n| Curriculum order | Topic | Study guide | Artifact | Answer guidance | Brief |\n|---|---|---|---|---|---|\n| Day03-order001 | Hybrid search and custom scoring | OK | OK | OK | docs/Pilot1/aip-c01/exam-prep/topic-briefs/day-03/day03-order001-topic-brief.md |\n| Day03-order002 | Reranking | OK | OK | OK | docs/Pilot1/aip-c01/exam-prep/topic-briefs/day-03/day03-order002-topic-brief.md |\n| Day03-order003 | Query expansion, decomposition, and transformation | OK | OK | OK | docs/Pilot1/aip-c01/exam-prep/topic-briefs/day-03/day03-order003-topic-brief.md |\n| Day03-order004 | Vector-store ingestion, synchronization, refresh, and maintenance | OK | OK | OK | docs/Pilot1/aip-c01/exam-prep/topic-briefs/day-03/day03-order004-topic-brief.md |\n| Day03-order005 | Retrieval APIs, function interfaces, and MCP access | OK | OK | OK | docs/Pilot1/aip-c01/exam-prep/topic-briefs/day-03/day03-order005-topic-brief.md |\n| Day03-order006 | RAG quality evaluation and retrieval troubleshooting | OK | OK | OK | docs/Pilot1/aip-c01/exam-prep/topic-briefs/day-03/day03-order006-topic-brief.md |\n| Day03-order007 | Conversation context, history, intent, and state management | OK | OK | OK | docs/Pilot1/aip-c01/exam-prep/topic-briefs/day-03/day03-order007-topic-brief.md |\n| Day03-order008 | Advanced prompt engineering and iterative refinement | OK | OK | OK | docs/Pilot1/aip-c01/exam-prep/topic-briefs/day-03/day03-order008-topic-brief.md |\n| Day03-order009 | Prompt versioning, repositories, approvals, and governance | OK | OK | OK | docs/Pilot1/aip-c01/exam-prep/topic-briefs/day-03/day03-order009-topic-brief.md |\n| Day03-order010 | Prompt regression testing and quality assurance | OK | OK | OK | docs/Pilot1/aip-c01/exam-prep/topic-briefs/day-03/day03-order010-topic-brief.md |\n| Day03-order011 | Prompt chaining, branching, and Bedrock Prompt Flows | OK | OK | OK | docs/Pilot1/aip-c01/exam-prep/topic-briefs/day-03/day03-order011-topic-brief.md |\n| Day03-order012 | Synchronous FM API integration | OK | OK | OK | docs/Pilot1/aip-c01/exam-prep/topic-briefs/day-03/day03-order012-topic-brief.md |\n| Day03-order013 | Asynchronous FM processing | OK | OK | OK | docs/Pilot1/aip-c01/exam-prep/topic-briefs/day-03/day03-order013-topic-brief.md |\n| Day03-order014 | Streaming responses, WebSockets, and server-sent events | OK | OK | OK | docs/Pilot1/aip-c01/exam-prep/topic-briefs/day-03/day03-order014-topic-brief.md |\n| Day03-order015 | Token limits, request validation, and response handling | OK | OK | OK | docs/Pilot1/aip-c01/exam-prep/topic-briefs/day-03/day03-order015-topic-brief.md |\n| Day03-order016 | Retries, exponential backoff, rate limiting, and timeouts | OK | OK | OK | docs/Pilot1/aip-c01/exam-prep/topic-briefs/day-03/day03-order016-topic-brief.md |\n| Day03-order017 | Fallbacks, circuit breakers, and graceful degradation | OK | OK | OK | docs/Pilot1/aip-c01/exam-prep/topic-briefs/day-03/day03-order017-topic-brief.md |\n| Day03-order018 | Distributed tracing and FM API observability | OK | OK | OK | docs/Pilot1/aip-c01/exam-prep/topic-briefs/day-03/day03-order018-topic-brief.md |\n\nWrote 0 briefs; skipped 18 already-mapped briefs.\n",
+      "stderr": "",
+      "status": "completed"
+    },
+    {
+      "name": "map-topic-brief-objectives",
+      "command": [
+        "/opt/anaconda3/bin/python3",
+        "scripts/pilot1_aip_c01/map_exam_prep_topic_briefs.py",
+        "--day",
+        "3"
+      ],
+      "returncode": 0,
+      "stdout": "Day 3 objective mapping complete: mapped=0 skipped=18\nDirectory: docs/Pilot1/aip-c01/exam-prep/topic-briefs/day-03\n",
+      "stderr": "",
+      "status": "completed"
+    },
+    {
+      "name": "build-prompt-pack-check",
+      "command": [
+        "/opt/anaconda3/bin/python3",
+        "scripts/pilot1_aip_c01/build_exam_prep_prompts.py",
+        "--day",
+        "3",
+        "--per-topic",
+        "12",
+        "--check"
+      ],
+      "returncode": 0,
+      "stdout": "Day 3 prompt pack would use 18 mapped topic briefs.\nOutput path: docs/Pilot1/aip-c01/exam-prep/day-03-question-generation-prompts.md\nRaw candidate target: 216\n",
+      "stderr": "",
+      "status": "completed"
+    },
+    {
+      "name": "build-prompt-pack",
+      "command": [
+        "/opt/anaconda3/bin/python3",
+        "scripts/pilot1_aip_c01/build_exam_prep_prompts.py",
+        "--day",
+        "3",
+        "--per-topic",
+        "12"
+      ],
+      "returncode": 0,
+      "stdout": "Wrote docs/Pilot1/aip-c01/exam-prep/day-03-question-generation-prompts.md\nPrompt pack uses 18 mapped topic briefs.\nRaw candidate target: 216\n",
+      "stderr": "",
+      "status": "completed"
+    },
+    {
+      "name": "normalize",
+      "command": [
+        "/opt/anaconda3/bin/python3",
+        "scripts/pilot1_aip_c01/normalize_exam_prep_questions.py",
+        "--day",
+        "3"
+      ],
+      "returncode": 0,
+      "stdout": "normalized=568 parse_errors=0\n",
+      "stderr": "",
+      "status": "completed"
+    },
+    {
+      "name": "review-cull",
+      "command": [
+        "/opt/anaconda3/bin/python3",
+        "scripts/pilot1_aip_c01/review_exam_prep_questions.py",
+        "--day",
+        "3"
+      ],
+      "returncode": 0,
+      "stdout": "reviewed_candidates=257 culled=311 output=docs/Pilot1/aip-c01/exam-prep/reviewed/day-03/day-03-reviewed-candidate-bank.md feedback=docs/Pilot1/aip-c01/exam-prep/reviewed/day-03/day-03-review-feedback.json\n",
+      "stderr": "",
+      "status": "completed"
+    },
+    {
+      "name": "top-up-loop",
+      "command": [
+        "/opt/anaconda3/bin/python3",
+        "scripts/pilot1_aip_c01/run_exam_prep_topup_loop.py",
+        "--day",
+        "3",
+        "--target",
+        "10",
+        "--max-iterations",
+        "1"
+      ],
+      "returncode": 0,
+      "stdout": "2026-06-29T21:47:52+00:00 loop-start - top-up loop started day=3 target=10 max_iterations=1 dry_run=False log_file=docs/Pilot1/aip-c01/exam-prep/logs/day-03/2026-06-29T214752Z-day-03-topup-loop.log jsonl_file=docs/Pilot1/aip-c01/exam-prep/logs/day-03/2026-06-29T214752Z-day-03-topup-loop.jsonl\n2026-06-29T21:47:52+00:00 iteration-start - normalizing and reviewing iteration=1\n2026-06-29T21:47:52+00:00 normalize - command started command=/opt/anaconda3/bin/python3 scripts/pilot1_aip_c01/normalize_exam_prep_questions.py --day 3\n2026-06-29T21:47:52+00:00 normalize - stdout line=normalized=568 parse_errors=0\n2026-06-29T21:47:52+00:00 normalize - command completed returncode=0\n2026-06-29T21:47:52+00:00 review - command started command=/opt/anaconda3/bin/python3 scripts/pilot1_aip_c01/review_exam_prep_questions.py --day 3\n2026-06-29T21:47:52+00:00 review - stdout line=reviewed_candidates=257 culled=311 output=docs/Pilot1/aip-c01/exam-prep/reviewed/day-03/day-03-reviewed-candidate-bank.md feedback=docs/Pilot1/aip-c01/exam-prep/reviewed/day-03/day-03-review-feedback.json\n2026-06-29T21:47:52+00:00 review - command completed returncode=0\n2026-06-29T21:47:52+00:00 loop-complete - coverage target satisfied iteration=1\n",
+      "stderr": "",
+      "status": "completed"
+    },
+    {
+      "name": "write-review-outputs",
+      "command": [
+        "/opt/anaconda3/bin/python3",
+        "scripts/pilot1_aip_c01/write_exam_prep_review_outputs.py",
+        "--day",
+        "3",
+        "--target",
+        "10"
+      ],
+      "returncode": 0,
+      "stdout": "reviewed_bank=docs/Pilot1/aip-c01/exam-prep/reviewed/day-03/day-03-reviewed-question-bank.md\ncull_log=docs/Pilot1/aip-c01/exam-prep/reviewed/day-03/day-03-cull-log.md\nchecks=docs/Pilot1/aip-c01/exam-prep/reviewed/day-03/day-03-review-output-checks.md\n",
+      "stderr": "",
+      "status": "completed"
+    },
+    {
+      "name": "rebalance-answer-positions",
+      "command": [
+        "/opt/anaconda3/bin/python3",
+        "scripts/pilot1_aip_c01/rebalance_exam_prep_answer_positions.py",
+        "--day",
+        "3"
+      ],
+      "returncode": 0,
+      "stdout": "multiple_choice_items=202\nplanned_positions={'1': 51, '2': 51, '3': 50, '4': 50}\nwrote=docs/Pilot1/aip-c01/exam-prep/reviewed/day-03/day-03-reviewed-question-bank.md\nreport=docs/Pilot1/aip-c01/exam-prep/reviewed/day-03/day-03-answer-position-report.md\n",
+      "stderr": "",
+      "status": "completed"
+    },
+    {
+      "name": "source-url-verification",
+      "command": [
+        "/opt/anaconda3/bin/python3",
+        "scripts/pilot1_aip_c01/verify_exam_prep_source_urls.py",
+        "--day",
+        "3",
+        "--write"
+      ],
+      "returncode": 0,
+      "stdout": "[1/55] reachable https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-message-lifecycle.html\n[2/55] reachable https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AnalyzingLogData.html\n[3/55] reachable https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Dashboards.html\n[4/55] reachable https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/publishingMetrics.html\n[5/55] reachable https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/EncryptionAtRest.html\n[6/55] reachable https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.CoreComponents.html\n[7/55] reachable https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/bp-key-design.html\n[8/55] reachable https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/bp-modeling-nosql.html\n[9/55] reachable https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-api-usage-plans.html\n[10/55] reachable https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-known-issues.html#api-gateway-known-issues-content-type\n[11/55] reachable https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-mapping-template-reference.html\n[12/55] reachable https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-method-request-validation.html\n[13/55] reachable https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-request-throttling.html\n[14/55] reachable https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-troubleshooting.html\n[15/55] reachable https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-websocket-api-asynchronous.html\n[16/55] reachable https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-control-access-to-api.html\n[17/55] reachable https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-use-lambda-authorizer.html\n[18/55] reachable https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-overview.html\n[19/55] reachable https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-set-up-method-response.html\n[20/55] reachable https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-chunked-transfer.html\n[21/55] reachable https://docs.aws.amazon.com/apigateway/latest/developerguide/limits.html\n[22/55] reachable https://docs.aws.amazon.com/apigateway/latest/developerguide/limits.html#apigateway-limits-api-gateway\n[23/55] reachable https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html\n[24/55] reachable https://docs.aws.amazon.com/bedrock/latest/userguide/conversation.html\n[25/55] reachable https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html\n[26/55] reachable https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-flows-architecture.html\n[27/55] reachable https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-flows-benefits.html\n[28/55] reachable https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-flows-best-practices.html\n[29/55] reachable https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-flows-branching.html\n[30/55] reachable https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-flows-components.html\n[31/55] reachable https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-flows-sequence.html\n[32/55] reachable https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-flows-subflows.html\n[33/55] reachable https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-flows.html\n[34/55] reachable https://docs.aws.amazon.com/bedrock/latest/userguide/vpc-interface-endpoints.html\n[35/55] reachable https://docs.aws.amazon.com/comprehend/latest/dg/how-languages.html\n[36/55] reachable https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-request-tracing.html\n[37/55] reachable https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-timeouts.html\n[38/55] reachable https://docs.aws.amazon.com/general/latest/gr/api-retries.html\n[39/55] reachable https://docs.aws.amazon.com/general/latest/gr/api-retries.html#api-retries-circuit-breaker\n[40/55] reachable https://docs.aws.amazon.com/general/latest/gr/api-retries.html#api-retries-exponential-backoff\n[41/55] reachable https://docs.aws.amazon.com/lambda/latest/dg/configuration-response-streaming.html\n[42/55] reachable https://docs.aws.amazon.com/lambda/latest/dg/foundation-vpc.html\n[43/55] reachable https://docs.aws.amazon.com/lambda/latest/dg/invocation-sqs.html\n[44/55] reachable https://docs.aws.amazon.com/lambda/latest/dg/provisioned-concurrency.html\n[45/55] reachable https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html#events-sqs-eventsource-mapping\n[46/55] reachable https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html#events-sqs-queue-configuration\n[47/55] reachable https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html#with-sqs-delete-message\n[48/55] reachable https://docs.aws.amazon.com/sagemaker/latest/dg/realtime-endpoints-ex.html\n[49/55] reachable https://docs.aws.amazon.com/sdkref/latest/guide/feature-retry-behavior.html\n[50/55] reachable https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html\n[51/55] reachable https://docs.aws.amazon.com/xray/latest/devguide/aws-xray.html\n[52/55] reachable https://docs.aws.amazon.com/xray/latest/devguide/xray-concepts.html#xray-concepts-traceheader\n[53/55] reachable https://docs.aws.amazon.com/xray/latest/devguide/xray-console.html\n[54/55] reachable https://docs.aws.amazon.com/xray/latest/devguide/xray-error-fault.html\n[55/55] reachable https://docs.aws.amazon.com/xray/latest/devguide/xray-services-apigateway.html\nurls=55 reachable=55 needs_review=0\nreport=docs/Pilot1/aip-c01/exam-prep/reviewed/day-03/day-03-source-url-verification-report.md\n",
+      "stderr": "",
+      "status": "completed"
+    },
+    {
+      "name": "claim-source-verification",
+      "command": [
+        "/opt/anaconda3/bin/python3",
+        "scripts/pilot1_aip_c01/verify_exam_prep_claims_with_sources.py",
+        "--day",
+        "3",
+        "--write"
+      ],
+      "returncode": 2,
+      "stdout": "items_verified=80 items_unresolved=177\nclaims_supported=80 claims_unresolved=177\nreport=docs/Pilot1/aip-c01/exam-prep/reviewed/day-03/day-03-claim-source-verification-report.md\n",
+      "stderr": "",
+      "status": "blocked"
+    },
+    {
+      "name": "source-review-triage",
+      "command": [
+        "/opt/anaconda3/bin/python3",
+        "scripts/pilot1_aip_c01/triage_exam_prep_source_review.py",
+        "--day",
+        "3",
+        "--write"
+      ],
+      "returncode": 0,
+      "stdout": "A=47 B=68 C=41 D=18 E=3 F=0\nreport=docs/Pilot1/aip-c01/exam-prep/reviewed/day-03/day-03-source-review-triage-report.md\n",
+      "stderr": "",
+      "status": "completed"
+    },
+    {
+      "name": "source-verification",
+      "command": [
+        "/opt/anaconda3/bin/python3",
+        "scripts/pilot1_aip_c01/verify_exam_prep_sources.py",
+        "--day",
+        "3",
+        "--initialize-ledger",
+        "--write"
+      ],
+      "returncode": 2,
+      "stdout": "source_verified=80 needs_human_source_review=177\nreport=docs/Pilot1/aip-c01/exam-prep/reviewed/day-03/day-03-source-verification-report.md\n",
+      "stderr": "",
+      "status": "blocked"
+    }
+  ],
+  "next_action": "Resolve source URL or claim-verification items, then rerun final gates."
+}

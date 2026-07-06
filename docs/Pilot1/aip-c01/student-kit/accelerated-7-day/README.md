@@ -4,6 +4,12 @@ These artifacts turn the accelerated 7-day plan into learner work. Complete
 them in order. The goal is not to produce polished documents; the goal is to
 create evidence that you can explain, choose, build, diagnose, and remediate.
 
+The accelerated path compresses calendar time, not teaching quality. Plan for
+at least six active learning hours per day, and expect dense days to take seven
+to eight hours. If a topic cannot be mastered inside the day, keep the material
+and record it as explicit remediation or self-paced continuation. Do not treat
+"accelerated" as permission to skip evidence of mastery.
+
 Start with [OPEN_FIRST.md](OPEN_FIRST.md).
 
 If you are running the first pilot by yourself, also use
@@ -34,7 +40,9 @@ For actual reading and presentation material, use:
 | 1 | [day-01-system-map-invocation-prompt.md](day-01-system-map-invocation-prompt.md) | Build the foundation model, AWS service, invocation, and prompt baseline. |
 | 1 focused | [day-01-artifacts/README.md](day-01-artifacts/README.md) | Focused, auditable artifacts for each Day 1 curriculum topic. |
 | 2 | [day-02-rag-design-worksheet.md](day-02-rag-design-worksheet.md) | Design the data, embedding, vector-store, chunking, and basic RAG foundation. |
+| 2 focused | [day-02-artifacts/README.md](day-02-artifacts/README.md) | Focused, auditable artifacts for each Day 2 curriculum topic. |
 | 3 | [day-03-integration-decision-record.md](day-03-integration-decision-record.md) | Decide advanced retrieval, prompt governance, API patterns, and resilience. |
+| 3 focused | [day-03-artifacts/README.md](day-03-artifacts/README.md) | Focused, auditable artifacts for each Day 3 curriculum topic. |
 | 4 | [day-04-model-agent-implementation-architecture.md](day-04-model-agent-implementation-architecture.md) | Design deployment, model routing, enterprise integration, and agent behavior. |
 | 5 | [day-05-safety-security-governance-control-pack.md](day-05-safety-security-governance-control-pack.md) | Make safety, security, privacy, governance, and responsible AI operational. |
 | 6 | [day-06-operations-troubleshooting-pack.md](day-06-operations-troubleshooting-pack.md) | Build cost, performance, monitoring, evaluation, and troubleshooting evidence. |

@@ -218,6 +218,30 @@ question-bank workflows: raw source metadata is mandatory; provenance and
 review status are separate fields; any manual or assisted top-up must be
 explicitly labeled before normalization into reviewed outputs.
 
+### 2026-06-29: Verify Sources In Layers, Then Feed The Contract Back Into Generation
+
+**What happened:** Day 3 AIP-C01 exam-prep review exposed that plausible URLs
+and generic source labels were not enough. The workflow needed separate
+machine checks for URL reachability, source text capture, atomic claim support,
+and final item release status.
+
+**Why it matters:** Human review should focus on judgment, not clicking every
+link. A generated bank should not be treated as source-verified merely because
+it contains a URL-shaped string or a broad reference to documentation.
+
+**Reusable lesson:** Use layered source verification:
+
+- verify and cache source URLs;
+- require atomic claims for assessed technical assertions;
+- verify each claim against trusted source text;
+- keep unresolved claims in a visible review state;
+- feed the same contract back into future prompts so generation produces
+  source-backed atomic claims up front.
+
+**Kit update needed:** Yes. Preserve the layered verification pattern as a
+generic quality gate while keeping course-specific URL policies, source lists,
+and domain terminology in the pilot or course implementation.
+
 ### 2026-06-21: Verify Source Extraction Before Claiming Objective Traceability
 
 **What happened:** Day 1 question-bank items initially traced to official
@@ -430,6 +454,119 @@ create candidates; final fact checking earns learner trust. The gate must:
 quality-review guidance, and generated-agent workflow templates so final
 fact-checking is required before any bank is labeled complete or approved.
 
+### 2026-06-29: Separate Normalization Repairs From Review Failures
+
+**What happened:** During Day 3 exam-prep generation, the normalization layer
+correctly filled or aligned metadata such as official objective fields from
+mapped topic briefs. The review layer initially treated every normalization
+warning as a schema defect, causing otherwise usable scenario questions to be
+culled and triggering unnecessary top-up generation.
+
+**Why it matters:** Production pipelines need normalization audit trails, but
+not every audit note is a quality failure. Treating repairs as blockers wastes
+generation budget, hides the real defects, and makes the workflow look less
+stable than it is.
+
+**Reusable lesson:** Classify validation signals by severity. Blocking signals
+should include missing required fields, missing topic mappings, broken
+remediation paths, unresolved source traces, and unsupported claims. Non-
+blocking normalization notes, such as metadata filled from a trusted mapped
+brief or metadata aligned to the canonical topic definition, should remain
+visible in reports without disqualifying the item.
+
+**Kit update needed:** Yes. Assessment review templates should distinguish
+audit notes, repair notes, warning-level quality risks, and blocking release
+defects.
+
+### 2026-06-29: Preserve Knowledge-Type Method Fit Across Days
+
+**What happened:** The Days 1-3 review showed that Days 1 and 2 honored the
+`Embedded` knowledge type with explicit inspection records, while Day 3 had
+mostly equivalent configuration/design tables under inconsistent section names.
+The learning method was present in places, but the audit signal was weak and
+some embedded topics lacked the exact learner-facing inspection artifact form.
+
+**Why it matters:** Knowledge-type method fit should be visible to learners,
+teachers, and auditors. If the curriculum says a topic requires embedded or
+representation/location knowledge, the artifact should explicitly ask the
+learner to inspect an observable configuration, API shape, console surface,
+workflow definition, trace, or repository record. Otherwise the method can
+silently regress into abstract design work.
+
+**Reusable lesson:** Add a cross-day method-fit audit for every knowledge type
+that implies a distinct teaching method. For `Embedded`, require an explicitly
+named inspection record with an observable-fact column. The audit should check
+both semantic presence and grep-friendly headings so review tooling can catch
+regressions early.
+
+**Kit update needed:** Yes. Artifact templates should include required method
+forms by knowledge type, and review checklists should verify their presence.
+
+### 2026-06-29: Validate References Before Review-Ready Status
+
+**What happened:** The Day 3 question-bank review found items whose
+`source_trace` or `remediation_target` contained non-resolving local paths or
+bare markdown filenames. Earlier review logic only checked that fields were
+non-empty, so malformed paths could survive into the reviewed candidate bank.
+
+**Why it matters:** A non-empty source or remediation field is not enough for
+traceability. Broken local paths make human review slower, undermine learner
+remediation, and create false confidence in deterministic gates.
+
+**Reusable lesson:** Review gates must resolve local references, not merely
+check their presence. Missing source fields, bare filenames, and non-existent
+local paths should be blocking defects before a bank is called reviewed. When
+generation creates malformed paths, the cull evidence should preserve the
+exact path and failure reason so prompt and mapper rules can improve.
+
+**Kit update needed:** Yes. Assessment and artifact validators should include
+reference-resolution checks for source traces, remediation targets, linked
+artifacts, and generated review packets.
+
+### 2026-06-29: Run Mechanical Fairness Gates Before Blocking Human Gates
+
+**What happened:** The Day 3 bank had a severe answer-position clustering risk
+in multiple-choice items. The rebalancer existed, but it ran after source
+verification, so a deliberately blocking human source-review gate could prevent
+the reviewed bank from receiving a mechanical fairness fix. When the
+rebalancer finally ran, it also exposed items whose correct answer was encoded
+as an option number instead of answer text.
+
+**Why it matters:** Some deterministic quality gates should run even when final
+source verification remains unresolved. Learners can exploit answer-position
+patterns, and reviewers should not have to inspect a mechanically biased bank.
+Also, mechanical tools often reveal schema variants that earlier checks missed.
+
+**Reusable lesson:** Order gates by dependency and reversibility. Mechanical
+format, distribution, answer-position, duplicate, path, and schema checks
+should run before human source-review blockers whenever they do not depend on
+final source verdicts. Tools should emit persistent reports, not only terminal
+output, so reviewers can audit the fix.
+
+**Kit update needed:** Yes. Workflow templates should distinguish mechanical
+candidate-quality gates from final human/source approval gates and specify
+which gates must always run before handoff.
+
+### 2026-06-29: Generated Status Files Must Describe The Latest Pipeline Stage
+
+**What happened:** The Day 3 reviewed-folder README was generated during
+normalization and said the folder contained only draft-normalized inputs. Later
+pipeline steps added reviewed banks, cull logs, answer-position reports, source
+verification reports, and run reports, but the README stayed stale until the
+generator was updated.
+
+**Why it matters:** Status files are part of the review packet. If they describe
+an earlier stage, reviewers can misunderstand whether an output is draft,
+reviewed candidate, blocked, or approved.
+
+**Reusable lesson:** Any generated README or manifest in a multi-stage pipeline
+should either be stage-neutral or be rewritten by the final stage. It should
+name the current approval state, the authoritative report files, and the next
+required gate.
+
+**Kit update needed:** Yes. Production-agent templates should require a
+stage-aware manifest for every generated artifact folder.
+
 ### 2026-06-23: Audit Source-To-Decomposition Coverage Before Generation
 
 **What happened:** While designing upstream layers for the exam-prep agent, the
@@ -507,3 +644,53 @@ level.
 **Kit update needed:** Yes. The kit now includes a project-level Curriculum
 Production Agent Architecture and a decision record for the multi-agent
 authority model.
+
+### 2026-06-29: Reject Phantom Citations And Bind Claim Ledgers To Content
+
+**What happened:** A generated exam-prep item used a prose source label that
+looked like a real vendor document title but was not an audit-resolvable source
+token. The source-verification stage held the item for human review, but the
+claim ledger could still become stale when reviewed-bank items were rewritten or
+renumbered because records were keyed only by item ID.
+
+**Why it matters:** A citation-shaped phrase can create false confidence even
+when the review status is pending. ID-only claim ledgers are also fragile: a
+record for one version of an item can appear to cover a later item that kept the
+same ID but changed its answer, rationale, or source-sensitive claim.
+
+**Reusable lesson:** Generators must use only resolvable source tokens:
+official URLs, approved local paths, configured source IDs, or explicit
+unresolved markers such as `NONE`/`source_trace_needed`. Review gates should
+reject prose citation labels. Source-verification ledgers should be regenerated
+or synchronized after final bank assembly and should store a content hash for
+the current claim text before any record can count as evidence.
+
+**Kit update needed:** Yes. The quality-review guide, production-agent
+architecture, exam-prep prompts, and source-verification scripts now enforce
+token-only source traces and claim-ledger/content alignment.
+
+### 2026-06-29: Monitor The Automation Tail, Not Just Completion Counts
+
+**What happened:** An assessment-generation pass reached topic coverage and
+schema completeness, but too many reviewed items still required downstream
+repair or human source review. The run looked productive by count, yet the
+large unresolved tail showed that source-grounded generation had not carried
+enough of the verification burden upstream.
+
+**Why it matters:** A production workflow can hide poor generation quality by
+moving work into later queues. If the repair or human-review tail is large, the
+system is not truly automated and reviewers become the real production engine.
+
+**Reusable lesson:** Define explicit tail thresholds for generated assessment
+systems. For the current exam-prep pattern, use these defaults:
+
+- LLM repair/judgment tail <= 15% of reviewed items.
+- Human source-review tail <= 5% of reviewed items.
+
+Breaching either threshold should notify operators and mark the run as an
+upstream process-quality breach, even when item-count and schema gates pass.
+This does not reduce the priority of tough, realistic questions; it prevents
+weak source discipline from being disguised as successful generation.
+
+**Kit update needed:** Yes. Production-agent gates should monitor unresolved
+repair and human-review tails as first-class process-quality metrics.

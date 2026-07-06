@@ -1,0 +1,1820 @@
+{
+  "day": 3,
+  "generated": "2026-06-30",
+  "minimum_reviewed_candidates_per_topic": 10,
+  "summary_by_topic": {
+    "Day03-order001": {
+      "raw_normalized": 13,
+      "reviewed_candidates": 13,
+      "culled": 0,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    },
+    "Day03-order002": {
+      "raw_normalized": 13,
+      "reviewed_candidates": 13,
+      "culled": 0,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    },
+    "Day03-order003": {
+      "raw_normalized": 13,
+      "reviewed_candidates": 13,
+      "culled": 0,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    },
+    "Day03-order004": {
+      "raw_normalized": 12,
+      "reviewed_candidates": 12,
+      "culled": 0,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    },
+    "Day03-order005": {
+      "raw_normalized": 13,
+      "reviewed_candidates": 13,
+      "culled": 0,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    },
+    "Day03-order006": {
+      "raw_normalized": 12,
+      "reviewed_candidates": 12,
+      "culled": 0,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    },
+    "Day03-order007": {
+      "raw_normalized": 12,
+      "reviewed_candidates": 12,
+      "culled": 0,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    },
+    "Day03-order008": {
+      "raw_normalized": 13,
+      "reviewed_candidates": 13,
+      "culled": 0,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    },
+    "Day03-order009": {
+      "raw_normalized": 13,
+      "reviewed_candidates": 13,
+      "culled": 0,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    },
+    "Day03-order010": {
+      "raw_normalized": 18,
+      "reviewed_candidates": 12,
+      "culled": 6,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    },
+    "Day03-order011": {
+      "raw_normalized": 13,
+      "reviewed_candidates": 13,
+      "culled": 0,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    },
+    "Day03-order012": {
+      "raw_normalized": 13,
+      "reviewed_candidates": 12,
+      "culled": 1,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    },
+    "Day03-order013": {
+      "raw_normalized": 13,
+      "reviewed_candidates": 12,
+      "culled": 1,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    },
+    "Day03-order014": {
+      "raw_normalized": 12,
+      "reviewed_candidates": 12,
+      "culled": 0,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    },
+    "Day03-order015": {
+      "raw_normalized": 25,
+      "reviewed_candidates": 10,
+      "culled": 15,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    },
+    "Day03-order016": {
+      "raw_normalized": 13,
+      "reviewed_candidates": 13,
+      "culled": 0,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    },
+    "Day03-order017": {
+      "raw_normalized": 12,
+      "reviewed_candidates": 12,
+      "culled": 0,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    },
+    "Day03-order018": {
+      "raw_normalized": 17,
+      "reviewed_candidates": 12,
+      "culled": 5,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    }
+  },
+  "prompt_improvement_signals": [
+    {
+      "failure_reason": "schema defect",
+      "count": 24,
+      "prompt_adjustment": "Regenerate with the required schema and validate before returning items."
+    },
+    {
+      "failure_reason": "source-grounding defect",
+      "count": 24,
+      "prompt_adjustment": "Regenerate with an allowed source, source_contract_version, allowed_source_id, and atomic_claims containing claim/source/evidence_span."
+    },
+    {
+      "failure_reason": "keyword-trivia stem",
+      "count": 4,
+      "prompt_adjustment": "Ban glossary-style or service-name stems; require a professional scenario with a constraint-driven decision."
+    }
+  ],
+  "top_up_guidance": {
+    "Day03-order001": {
+      "reviewed_candidates": 13,
+      "deficit_to_10": 0,
+      "recommended_raw_top_up": 0
+    },
+    "Day03-order002": {
+      "reviewed_candidates": 13,
+      "deficit_to_10": 0,
+      "recommended_raw_top_up": 0
+    },
+    "Day03-order003": {
+      "reviewed_candidates": 13,
+      "deficit_to_10": 0,
+      "recommended_raw_top_up": 0
+    },
+    "Day03-order004": {
+      "reviewed_candidates": 12,
+      "deficit_to_10": 0,
+      "recommended_raw_top_up": 0
+    },
+    "Day03-order005": {
+      "reviewed_candidates": 13,
+      "deficit_to_10": 0,
+      "recommended_raw_top_up": 0
+    },
+    "Day03-order006": {
+      "reviewed_candidates": 12,
+      "deficit_to_10": 0,
+      "recommended_raw_top_up": 0
+    },
+    "Day03-order007": {
+      "reviewed_candidates": 12,
+      "deficit_to_10": 0,
+      "recommended_raw_top_up": 0
+    },
+    "Day03-order008": {
+      "reviewed_candidates": 13,
+      "deficit_to_10": 0,
+      "recommended_raw_top_up": 0
+    },
+    "Day03-order009": {
+      "reviewed_candidates": 13,
+      "deficit_to_10": 0,
+      "recommended_raw_top_up": 0
+    },
+    "Day03-order010": {
+      "reviewed_candidates": 12,
+      "deficit_to_10": 0,
+      "recommended_raw_top_up": 0
+    },
+    "Day03-order011": {
+      "reviewed_candidates": 13,
+      "deficit_to_10": 0,
+      "recommended_raw_top_up": 0
+    },
+    "Day03-order012": {
+      "reviewed_candidates": 12,
+      "deficit_to_10": 0,
+      "recommended_raw_top_up": 0
+    },
+    "Day03-order013": {
+      "reviewed_candidates": 12,
+      "deficit_to_10": 0,
+      "recommended_raw_top_up": 0
+    },
+    "Day03-order014": {
+      "reviewed_candidates": 12,
+      "deficit_to_10": 0,
+      "recommended_raw_top_up": 0
+    },
+    "Day03-order015": {
+      "reviewed_candidates": 10,
+      "deficit_to_10": 0,
+      "recommended_raw_top_up": 0
+    },
+    "Day03-order016": {
+      "reviewed_candidates": 13,
+      "deficit_to_10": 0,
+      "recommended_raw_top_up": 0
+    },
+    "Day03-order017": {
+      "reviewed_candidates": 12,
+      "deficit_to_10": 0,
+      "recommended_raw_top_up": 0
+    },
+    "Day03-order018": {
+      "reviewed_candidates": 12,
+      "deficit_to_10": 0,
+      "recommended_raw_top_up": 0
+    }
+  },
+  "reviewed_stems_by_topic": {
+    "Day03-order001": [
+      {
+        "item_id": "P1-AIP-D3-001",
+        "stem": "A GenAI development team is dissatisfied with the relevance of results retrieved through keyword search alone. They seek to improve accuracy while supporting a mix of exact string matches and broader semantic matches. Which retrieval architecture offers the best balance of precision and contextual coverage for FM augmentation?",
+        "raw_source": "2026-06-30T050949Z-openai-gpt-4.1-day-03-order001.md item 1"
+      },
+      {
+        "item_id": "P1-AIP-D3-002",
+        "stem": "You manage a RAG system that uses OpenSearch's k-NN for vector search and a keyword filter on a legal contracts dataset. Users complain that many relevant documents aren't being surfaced unless their query is verbatim from the contract. What tuning action should you take for maximum retrieval relevance?",
+        "raw_source": "2026-06-30T050949Z-openai-gpt-4.1-day-03-order001.md item 2"
+      },
+      {
+        "item_id": "P1-AIP-D3-003",
+        "stem": "An AI product manager wants lightning-fast retrievals for customer Q&A, but complains about the occasional appearance of irrelevant results. Custom scoring in the search pipeline is available. Which adjustment most directly increases result relevance while controlling for performance?",
+        "raw_source": "2026-06-30T050949Z-openai-gpt-4.1-day-03-order001.md item 3"
+      },
+      {
+        "item_id": "P1-AIP-D3-004",
+        "stem": "You are troubleshooting a RAG pipeline that uses OpenSearch with a hybrid search setup. Relevance is high for queries with both lexical and semantic overlap, but users are missing highly specific, keyword-heavy results for rare technical terms. What custom scoring strategy should be applied?",
+        "raw_source": "2026-06-30T050949Z-openai-gpt-4.1-day-03-order001.md item 4"
+      },
+      {
+        "item_id": "P1-AIP-D3-005",
+        "stem": "A data architect is asked to design a document retrieval pipeline for a multilingual knowledge base. Which option offers the best tradeoff between retrieval accuracy and language flexibility for FM input context?",
+        "raw_source": "2026-06-30T050949Z-openai-gpt-4.1-day-03-order001.md item 5"
+      },
+      {
+        "item_id": "P1-AIP-D3-006",
+        "stem": "A GenAI developer wants to add product recency as an additional ranking factor to OpenSearch hybrid search for a dynamic retailer FAQ. Which action most directly implements this requirement?",
+        "raw_source": "2026-06-30T050949Z-openai-gpt-4.1-day-03-order001.md item 6"
+      },
+      {
+        "item_id": "P1-AIP-D3-007",
+        "stem": "During an experiment, you find that your RAG pipeline's hybrid OpenSearch queries surface too many loosely related results and too few precise answers. Which two actions are most appropriate to make retrieval stricter without sacrificing semantic recall?",
+        "raw_source": "2026-06-30T050949Z-openai-gpt-4.1-day-03-order001.md item 7"
+      },
+      {
+        "item_id": "P1-AIP-D3-008",
+        "stem": "Your GenAI chat application retrieves context via a hybrid search layer but performance is lagging. Index optimization is possible. Which index design change most likely boosts retrieval speed for frequent queries without sacrificing result quality?",
+        "raw_source": "2026-06-30T050949Z-openai-gpt-4.1-day-03-order001.md item 8"
+      },
+      {
+        "item_id": "P1-AIP-D3-009",
+        "stem": "A critical QA workflow depends on precise legal terms being matched during retrieval in a hybrid search RAG architecture. Precision drops when legalese appears only in some documents. What combination of search configuration actions most directly addresses recall and precision?",
+        "raw_source": "2026-06-30T050949Z-openai-gpt-4.1-day-03-order001.md item 9"
+      },
+      {
+        "item_id": "P1-AIP-D3-010",
+        "stem": "An FM-augmented question-answering system retrieves both news headlines and technical documentation. End-users complain about stale or outdated information surfacing first. With access to a hybrid search architecture, which configuration changes best help resolve this?",
+        "raw_source": "2026-06-30T050949Z-openai-gpt-4.1-day-03-order001.md item 10"
+      },
+      {
+        "item_id": "P1-AIP-D3-011",
+        "stem": "After deploying a hybrid search solution for customer-support chat, you notice some queries for highly specialized products always return low relevance. What two steps can you take to improve accurate retrieval for niche queries while preserving general recall for broader ones?",
+        "raw_source": "2026-06-30T050949Z-openai-gpt-4.1-day-03-order001.md item 11"
+      },
+      {
+        "item_id": "P1-AIP-D3-012",
+        "stem": "You are asked to design a retrieval process for a real-time assistant with both strict latency limits and a hard requirement that no relevant context be missed for FM prompts. What hybrid search configuration (choose TWO) should you prioritize?",
+        "raw_source": "2026-06-30T050949Z-openai-gpt-4.1-day-03-order001.md item 12"
+      },
+      {
+        "item_id": "P1-AIP-D3-013",
+        "stem": "An FM augmentation team must maintain both high-speed retrieval and rigorous accuracy for medical research use-cases. What hybrid search design choices (choose TWO) are most appropriate according to best practice?",
+        "raw_source": "2026-06-30T050949Z-openai-gpt-4.1-day-03-order001.md item 13"
+      }
+    ],
+    "Day03-order002": [
+      {
+        "item_id": "P1-AIP-D3-014",
+        "stem": "A team is deploying a RAG-based application that retrieves candidate passages using a hybrid search, but user evaluations show that the top results frequently miss relevant context. You are tasked with improving the relevance of the returned passages without significantly increasing latency or re-indexing. What is the most appropriate next step?",
+        "raw_source": "2026-06-30T051032Z-openai-gpt-4.1-day-03-order002.md item 1"
+      },
+      {
+        "item_id": "P1-AIP-D3-015",
+        "stem": "You have observed that your OpenSearch-based RAG pipeline consistently returns top-ranked results that match the query\u2019s keywords but fail in semantic relevance. Which change will most directly address this ranking gap?",
+        "raw_source": "2026-06-30T051032Z-openai-gpt-4.1-day-03-order002.md item 2"
+      },
+      {
+        "item_id": "P1-AIP-D3-016",
+        "stem": "A developer notices that integrating a reranker into their passage retrieval workflow increases end-to-end latency by 10%. Stakeholders want to preserve relevance improvements without degrading user experience. Which approach offers the best tradeoff in this scenario?",
+        "raw_source": "2026-06-30T051032Z-openai-gpt-4.1-day-03-order002.md item 3"
+      },
+      {
+        "item_id": "P1-AIP-D3-017",
+        "stem": "A team builds a pipeline that uses a keyword search followed by a Bedrock reranker. User feedback indicates that the answers occasionally lack supporting details. Which next action is most likely to resolve this complaint without degrading system relevance?",
+        "raw_source": "2026-06-30T051032Z-openai-gpt-4.1-day-03-order002.md item 4"
+      },
+      {
+        "item_id": "P1-AIP-D3-018",
+        "stem": "A technical lead wants to reduce hallucination in answers generated by a GenAI FM in a RAG architecture with hybrid retrieval. Which combination of actions below best supports this goal? (Choose TWO.)",
+        "raw_source": "2026-06-30T051032Z-openai-gpt-4.1-day-03-order002.md item 5"
+      },
+      {
+        "item_id": "P1-AIP-D3-019",
+        "stem": "An application is returning inconsistent results: some queries receive highly relevant answers, while others seem completely off-base. Recent logs show that for the problematic queries, only the base retriever was used, and reranking was bypassed. What is the best explanation for this observation?",
+        "raw_source": "2026-06-30T051032Z-openai-gpt-4.1-day-03-order002.md item 6"
+      },
+      {
+        "item_id": "P1-AIP-D3-020",
+        "stem": "A company\u2019s RAG pipeline uses candidate pooling from multiple retrievers, including OpenSearch and an internal custom index. The system often returns context from only one source. How would adding a reranking stage impact the pipeline?",
+        "raw_source": "2026-06-30T051032Z-openai-gpt-4.1-day-03-order002.md item 7"
+      },
+      {
+        "item_id": "P1-AIP-D3-021",
+        "stem": "In a RAG solution, what are two defensible reasons for choosing a learning-to-rank (LTR) model over simple rule-based scoring for reranking context passages? (Choose TWO.)",
+        "raw_source": "2026-06-30T051032Z-openai-gpt-4.1-day-03-order002.md item 8"
+      },
+      {
+        "item_id": "P1-AIP-D3-022",
+        "stem": "An experiment shows little improvement when a generic reranker is added to your RAG architecture. What is the most defensible explanation based on standard practices?",
+        "raw_source": "2026-06-30T051032Z-openai-gpt-4.1-day-03-order002.md item 9"
+      },
+      {
+        "item_id": "P1-AIP-D3-023",
+        "stem": "A retrieval system struggles with passage duplication, showing near-identical documents in the final output. Which reranker configuration is most directly suited to mitigate this, according to best practices?",
+        "raw_source": "2026-06-30T051032Z-openai-gpt-4.1-day-03-order002.md item 10"
+      },
+      {
+        "item_id": "P1-AIP-D3-024",
+        "stem": "A RAG pipeline receives frequent user complaints of off-topic information being included in answers even though all candidates were relevant at the retrieval stage. What is the best explanation?",
+        "raw_source": "2026-06-30T051032Z-openai-gpt-4.1-day-03-order002.md item 11"
+      },
+      {
+        "item_id": "P1-AIP-D3-025",
+        "stem": "You are optimizing a RAG system under the constraint that end-to-end latency for FM responses must stay beneath 1s p95 while still improving context quality. Which are appropriate tactics that support this constraint? (Choose TWO.)",
+        "raw_source": "2026-06-30T051032Z-openai-gpt-4.1-day-03-order002.md item 12"
+      },
+      {
+        "item_id": "P1-AIP-D3-026",
+        "stem": "A multi-stage retrieval system still returns irrelevant snippets after both hybrid retrieval and reranking. What is the FIRST step you should take to diagnose the issue?",
+        "raw_source": "2026-06-30T051032Z-openai-gpt-4.1-day-03-order002.md item 13"
+      }
+    ],
+    "Day03-order003": [
+      {
+        "item_id": "P1-AIP-D3-027",
+        "stem": "A SaaS company uses a retrieval-augmented generation (RAG) architecture for handling complex user queries on its knowledge base. Users are entering ambiguous natural-language questions, leading to inconsistent retrieval relevance. Which approach is most likely to reduce ambiguity and improve retrieval effectiveness?",
+        "raw_source": "2026-06-30T051124Z-openai-gpt-4.1-day-03-order003.md item 1"
+      },
+      {
+        "item_id": "P1-AIP-D3-028",
+        "stem": "An enterprise RAG platform observes that some queries fail to retrieve any relevant documents, even when information exists in the knowledge base. The team wants to increase recall without introducing irrelevant results. What is the best next step?",
+        "raw_source": "2026-06-30T051124Z-openai-gpt-4.1-day-03-order003.md item 2"
+      },
+      {
+        "item_id": "P1-AIP-D3-029",
+        "stem": "You are modernizing a Q&A bot to handle multi-part user questions (e.g., 'What are the benefits of the new product and how is it priced?'). Which AWS solution best enables splitting such queries for parallelized retrieval and answer synthesis?",
+        "raw_source": "2026-06-30T051124Z-openai-gpt-4.1-day-03-order003.md item 3"
+      },
+      {
+        "item_id": "P1-AIP-D3-030",
+        "stem": "A retrieval workflow repeatedly retrieves semantically related but not truly relevant passages for niche medical queries. Which transformation technique would best improve result precision in this scenario?",
+        "raw_source": "2026-06-30T051124Z-openai-gpt-4.1-day-03-order003.md item 4"
+      },
+      {
+        "item_id": "P1-AIP-D3-031",
+        "stem": "During a retrieval test, your RAG pipeline fails to retrieve any results for niche technical queries that use rare terminology, even though relevant documents exist. Which technique can best help address this failure?",
+        "raw_source": "2026-06-30T051124Z-openai-gpt-4.1-day-03-order003.md item 5"
+      },
+      {
+        "item_id": "P1-AIP-D3-032",
+        "stem": "A RAG solution receives complex user questions that reference multiple, loosely related domains. The current approach retrieves irrelevant data because subtopics interfere with one another. Which step best addresses the noise?",
+        "raw_source": "2026-06-30T051124Z-openai-gpt-4.1-day-03-order003.md item 6"
+      },
+      {
+        "item_id": "P1-AIP-D3-033",
+        "stem": "A conversational assistant is failing to retrieve correct historical records when users rephrase questions or use pronouns referencing prior statements. Which combined strategies support improved retrieval under these conditions? (Select TWO.)",
+        "raw_source": "2026-06-30T051124Z-openai-gpt-4.1-day-03-order003.md item 7"
+      },
+      {
+        "item_id": "P1-AIP-D3-034",
+        "stem": "While reviewing retrieval logs, you notice that the same query retrieves inconsistent sets of documents depending on phrasing (e.g., 'How can I access my account?' vs. 'Ways to log in?'). What is the most efficient way to improve consistency of relevant result retrieval across phrasings?",
+        "raw_source": "2026-06-30T051124Z-openai-gpt-4.1-day-03-order003.md item 8"
+      },
+      {
+        "item_id": "P1-AIP-D3-035",
+        "stem": "A team implements a query transformation pipeline that converts natural-language queries into domain-specific, structured search queries but notes some performance delays. What is the most likely architectural explanation for increased latency?",
+        "raw_source": "2026-06-30T051124Z-openai-gpt-4.1-day-03-order003.md item 9"
+      },
+      {
+        "item_id": "P1-AIP-D3-036",
+        "stem": "A Q&A team is considering different query preprocessing strategies to maximize retrieval accuracy in a multilingual customer service platform. Which combination is most defensible for consistent relevance across languages? (Choose TWO.)",
+        "raw_source": "2026-06-30T051124Z-openai-gpt-4.1-day-03-order003.md item 10"
+      },
+      {
+        "item_id": "P1-AIP-D3-037",
+        "stem": "Your RAG system surfaces repeated irrelevant results for long, compound questions containing multiple distinct information needs. What is the most effective architectural mitigation?",
+        "raw_source": "2026-06-30T051124Z-openai-gpt-4.1-day-03-order003.md item 11"
+      },
+      {
+        "item_id": "P1-AIP-D3-038",
+        "stem": "A GenAI application processes free-form customer feedback for trend analysis. It fails to capture similar concepts due to varied user vocabulary. Which retrieval preprocessing technique would improve aggregation of semantically similar feedback?",
+        "raw_source": "2026-06-30T051124Z-openai-gpt-4.1-day-03-order003.md item 12"
+      },
+      {
+        "item_id": "P1-AIP-D3-039",
+        "stem": "A cross-functional RAG system is being flooded with duplicated context when the same user query triggers both query expansion and decomposition features. What action should you take to balance result coverage and minimize noise?",
+        "raw_source": "2026-06-30T051124Z-openai-gpt-4.1-day-03-order003.md item 13"
+      }
+    ],
+    "Day03-order004": [
+      {
+        "item_id": "P1-AIP-D3-040",
+        "stem": "A GenAI application ingests legal documents daily to keep its vector store up to date. Users notice that newly added documents sometimes do not appear in retrieval results even after 24 hours. Which adjustment is most likely to ensure timely document availability for retrieval?",
+        "raw_source": "2026-06-30T051203Z-openai-gpt-4.1-day-03-order004.md item 1"
+      },
+      {
+        "item_id": "P1-AIP-D3-041",
+        "stem": "You maintain a RAG pipeline for a multinational enterprise where multiple teams continuously update a large document repository connected to a vector store. Which combination of practices best ensures that your retrieval-augmented FM queries always reflect the latest document state?",
+        "raw_source": "2026-06-30T051203Z-openai-gpt-4.1-day-03-order004.md item 2"
+      },
+      {
+        "item_id": "P1-AIP-D3-042",
+        "stem": "A GenAI team observes their vector-based search results are returning outdated policy documents after a major document update. The embedding process is running without errors. What is the most likely cause of this issue?",
+        "raw_source": "2026-06-30T051203Z-openai-gpt-4.1-day-03-order004.md item 3"
+      },
+      {
+        "item_id": "P1-AIP-D3-043",
+        "stem": "A team is architecting a knowledge base for RAG. They need to ingest documents from an internal CMS and maintain freshness while minimizing compute overhead. Which solution most directly balances freshness and resource usage?",
+        "raw_source": "2026-06-30T051203Z-openai-gpt-4.1-day-03-order004.md item 4"
+      },
+      {
+        "item_id": "P1-AIP-D3-044",
+        "stem": "During troubleshooting, a developer finds that some records in the vector store never receive embeddings and are missing from results. Which step should be prioritized to address this?",
+        "raw_source": "2026-06-30T051203Z-openai-gpt-4.1-day-03-order004.md item 5"
+      },
+      {
+        "item_id": "P1-AIP-D3-045",
+        "stem": "A knowledge base's vector store holds sensitive HR documents. The team assumes that once documents are embedded, access controls from the source system are always enforced at retrieval. Why is this assumption risky?",
+        "raw_source": "2026-06-30T051203Z-openai-gpt-4.1-day-03-order004.md item 6"
+      },
+      {
+        "item_id": "P1-AIP-D3-046",
+        "stem": "You are reviewing a GenAI system\u2019s vector store ingestion logs and see frequent duplication of document embeddings for unchanged source files. Which configuration change best addresses unnecessary resource consumption?",
+        "raw_source": "2026-06-30T051203Z-openai-gpt-4.1-day-03-order004.md item 7"
+      },
+      {
+        "item_id": "P1-AIP-D3-047",
+        "stem": "You are evaluating RAG system quality for highly dynamic product catalog data. Which maintenance actions should you implement to ensure both the freshness and reliability of the vector store? (Select TWO.)",
+        "raw_source": "2026-06-30T051203Z-openai-gpt-4.1-day-03-order004.md item 8"
+      },
+      {
+        "item_id": "P1-AIP-D3-048",
+        "stem": "Which of the following steps is LEAST likely to mitigate vector store drift, where embedded content gradually diverges from the current source data?",
+        "raw_source": "2026-06-30T051203Z-openai-gpt-4.1-day-03-order004.md item 9"
+      },
+      {
+        "item_id": "P1-AIP-D3-049",
+        "stem": "A vector store pipeline integrates data from multiple source systems, each with different update frequencies. Which set of processes best handles this complexity while maintaining vector store accuracy and minimizing unnecessary compute?",
+        "raw_source": "2026-06-30T051203Z-openai-gpt-4.1-day-03-order004.md item 10"
+      },
+      {
+        "item_id": "P1-AIP-D3-050",
+        "stem": "A GenAI developer needs to maintain accurate, up-to-date search results from a vector store even though source documents are sometimes deleted or moved. Which practices are essential to ensure correct and relevant retrieval from the system? (Select TWO.)",
+        "raw_source": "2026-06-30T051203Z-openai-gpt-4.1-day-03-order004.md item 11"
+      },
+      {
+        "item_id": "P1-AIP-D3-051",
+        "stem": "A customer wants their GenAI assistant to always retrieve the absolutely latest document version in a compliance-critical application. What best-practice change minimizes the risk of retrieving a stale version from the vector store?",
+        "raw_source": "2026-06-30T051203Z-openai-gpt-4.1-day-03-order004.md item 12"
+      }
+    ],
+    "Day03-order005": [
+      {
+        "item_id": "P1-AIP-D3-052",
+        "stem": "A startup is building a platform that leverages retrieval-augmented generation (RAG) with Amazon Bedrock and OpenSearch Serverless. The team wants the retrieval API to support both semantic vector search and traditional keyword search in a composable, consistent manner for all downstream FM usage. Which approach best satisfies this need for consistent and extensible integration?",
+        "raw_source": "2026-06-30T051255Z-openai-gpt-4.1-day-03-order005.md item 1"
+      },
+      {
+        "item_id": "P1-AIP-D3-053",
+        "stem": "A financial organization requires that all systems integrating with their Bedrock-powered GenAI solution utilize a retrieval interface enforcing input validation, access control, and consistent vector-search function signatures. What architectural component best enforces these requirements for downstream FM access?",
+        "raw_source": "2026-06-30T051255Z-openai-gpt-4.1-day-03-order005.md item 2"
+      },
+      {
+        "item_id": "P1-AIP-D3-054",
+        "stem": "You are tasked with integrating a large language model (LLM) via Amazon Bedrock into an internal platform with strict auditability needs. Which design best ensures traceability of all vector-based retrievals made for FM context?",
+        "raw_source": "2026-06-30T051255Z-openai-gpt-4.1-day-03-order005.md item 3"
+      },
+      {
+        "item_id": "P1-AIP-D3-055",
+        "stem": "A dev team wants to minimize their FM integration effort while supporting both changing retrieval logic and new FM types. Which design aligns best with extensibility and long-term maintenance?",
+        "raw_source": "2026-06-30T051255Z-openai-gpt-4.1-day-03-order005.md item 4"
+      },
+      {
+        "item_id": "P1-AIP-D3-056",
+        "stem": "A retail company wants to ensure that their FM-based search application only delivers relevant product data to the FM based on user permissions. What is the best way to enforce policy and filter content within the retrieval API?",
+        "raw_source": "2026-06-30T051255Z-openai-gpt-4.1-day-03-order005.md item 5"
+      },
+      {
+        "item_id": "P1-AIP-D3-057",
+        "stem": "A team deploying a RAG-backed chatbot selects Amazon Bedrock for foundation modeling and wishes to pass rich, structured document context using retrieval augmentation. What integration pattern will best support context-rich results and downstream extension?",
+        "raw_source": "2026-06-30T051255Z-openai-gpt-4.1-day-03-order005.md item 6"
+      },
+      {
+        "item_id": "P1-AIP-D3-058",
+        "stem": "A bank wants all GenAI application retrieval events to be compatible with both current Bedrock-enabled LLMs and potential future FMs. Which design supports this mandate while minimizing code rewrite?",
+        "raw_source": "2026-06-30T051255Z-openai-gpt-4.1-day-03-order005.md item 7"
+      },
+      {
+        "item_id": "P1-AIP-D3-059",
+        "stem": "While reviewing an FM-augmented API, an engineer notices direct calls to the vector database from the client browser. Why is this design strongly discouraged for production RAG solutions?",
+        "raw_source": "2026-06-30T051255Z-openai-gpt-4.1-day-03-order005.md item 8"
+      },
+      {
+        "item_id": "P1-AIP-D3-060",
+        "stem": "An e-commerce firm wants to enable multiple business units to build custom FM-powered search applications using a shared enterprise vector store. Which retrieval API practice best empowers each unit while protecting core data and enforcing consistency?",
+        "raw_source": "2026-06-30T051255Z-openai-gpt-4.1-day-03-order005.md item 9"
+      },
+      {
+        "item_id": "P1-AIP-D3-061",
+        "stem": "You are designing a scalable customer-support chatbot using Amazon Bedrock and a vector store. Which design strategies are recommended for the retrieval API layer? (Select TWO.)",
+        "raw_source": "2026-06-30T051255Z-openai-gpt-4.1-day-03-order005.md item 10"
+      },
+      {
+        "item_id": "P1-AIP-D3-062",
+        "stem": "A healthcare team needs retrieval APIs for RAG with strict compliance logging, context schema stability, and support for Bedrock FMs and future FM ecosystems. What are the most appropriate API design choices? (Select TWO.)",
+        "raw_source": "2026-06-30T051255Z-openai-gpt-4.1-day-03-order005.md item 11"
+      },
+      {
+        "item_id": "P1-AIP-D3-063",
+        "stem": "You are tasked with onboarding new LLMs from different vendors via Amazon Bedrock for a RAG platform. Which are valid requirements for the retrieval API/function interface to maximize cross-FM compatibility? (Select TWO.)",
+        "raw_source": "2026-06-30T051255Z-openai-gpt-4.1-day-03-order005.md item 12"
+      },
+      {
+        "item_id": "P1-AIP-D3-064",
+        "stem": "A SaaS vendor prepares to launch an FM-augmented search platform as a multi-region managed service. Security, tenant isolation, and feature evolution are required. What should the retrieval API design emphasize? (Select TWO.)",
+        "raw_source": "2026-06-30T051255Z-openai-gpt-4.1-day-03-order005.md item 13"
+      }
+    ],
+    "Day03-order006": [
+      {
+        "item_id": "P1-AIP-D3-065",
+        "stem": "A customer using a RAG application on AWS notices that the responses provided by their FM are frequently irrelevant, despite an apparently well-structured knowledge base and up-to-date vector store. As the principal developer, which diagnostic approach should you prioritize to identify the root cause?",
+        "raw_source": "2026-06-30T051339Z-openai-gpt-4.1-day-03-order006.md item 1"
+      },
+      {
+        "item_id": "P1-AIP-D3-066",
+        "stem": "You receive user complaints that a GenAI application based on RAG frequently takes too long to return answers or sometimes exceeds API timeouts. Which action is most effective to isolate where latency is introduced in the retrieval pipeline?",
+        "raw_source": "2026-06-30T051339Z-openai-gpt-4.1-day-03-order006.md item 2"
+      },
+      {
+        "item_id": "P1-AIP-D3-067",
+        "stem": "During retrieval quality testing, you observe that relevant documents are available in the knowledge base but rarely surface among the top retrieved results. What is the most likely cause?",
+        "raw_source": "2026-06-30T051339Z-openai-gpt-4.1-day-03-order006.md item 3"
+      },
+      {
+        "item_id": "P1-AIP-D3-068",
+        "stem": "You have implemented relevance scoring and context matching verification for your GenAI FM augmentation pipeline. A new batch of test queries shows excellent context matching but inconsistent answer quality. What should you check next?",
+        "raw_source": "2026-06-30T051339Z-openai-gpt-4.1-day-03-order006.md item 4"
+      },
+      {
+        "item_id": "P1-AIP-D3-069",
+        "stem": "Multiple users report paraphrased but factually incorrect answers from a Bedrock RAG application after a recent embedding model upgrade. Which step is most likely to resolve the issue?",
+        "raw_source": "2026-06-30T051339Z-openai-gpt-4.1-day-03-order006.md item 5"
+      },
+      {
+        "item_id": "P1-AIP-D3-070",
+        "stem": "You deploy an updated chunking pipeline and immediately notice a sudden drop in retrieval relevance scores across your RAG system. What troubleshooting action should you take first?",
+        "raw_source": "2026-06-30T051339Z-openai-gpt-4.1-day-03-order006.md item 6"
+      },
+      {
+        "item_id": "P1-AIP-D3-071",
+        "stem": "Your RAG application passes all retrieval quality checks in development, but live users flag important information as missing from model responses. Which set of evaluation or troubleshooting actions should you take to cover environment-specific retrieval issues? (Choose TWO.)",
+        "raw_source": "2026-06-30T051339Z-openai-gpt-4.1-day-03-order006.md item 7"
+      },
+      {
+        "item_id": "P1-AIP-D3-072",
+        "stem": "You are tasked with improving the evaluation process for information retrieval in a RAG solution. Which combination of techniques will best provide actionable feedback on retrieval quality? (Choose TWO.)",
+        "raw_source": "2026-06-30T051339Z-openai-gpt-4.1-day-03-order006.md item 8"
+      },
+      {
+        "item_id": "P1-AIP-D3-073",
+        "stem": "A RAG system\u2019s FM responses suddenly become hallucinated and no longer reference recent updates, even though the recent documents appear present in the vector store. What is the most plausible system-level explanation?",
+        "raw_source": "2026-06-30T051339Z-openai-gpt-4.1-day-03-order006.md item 9"
+      },
+      {
+        "item_id": "P1-AIP-D3-074",
+        "stem": "After launching a RAG application, you measure excellent response latency but observe that answer relevance is erratic depending on query formulation. What remediation or test will directly address the issue?",
+        "raw_source": "2026-06-30T051339Z-openai-gpt-4.1-day-03-order006.md item 10"
+      },
+      {
+        "item_id": "P1-AIP-D3-075",
+        "stem": "You are responsible for a production RAG system. Which set of ongoing monitoring or evaluation practices best support both real-time troubleshooting and long-term improvement? (Choose TWO.)",
+        "raw_source": "2026-06-30T051339Z-openai-gpt-4.1-day-03-order006.md item 11"
+      },
+      {
+        "item_id": "P1-AIP-D3-076",
+        "stem": "A GenAI RAG application demonstrates high latency when queries result in large context payloads assembled from many documents. What is the most effective remediation to balance response time and context usefulness?",
+        "raw_source": "2026-06-30T051339Z-openai-gpt-4.1-day-03-order006.md item 12"
+      }
+    ],
+    "Day03-order007": [
+      {
+        "item_id": "P1-AIP-D3-077",
+        "stem": "A conversational AI assistant for employee HR queries uses Amazon Comprehend for intent recognition and Amazon DynamoDB for conversation state. Users often return after several days and expect the AI to continue their previous dialogue seamlessly. What is the most appropriate DynamoDB design pattern to reliably store and retrieve the user's conversation context over time?",
+        "raw_source": "2026-06-30T051420Z-openai-gpt-4.1-day-03-order007.md item 1"
+      },
+      {
+        "item_id": "P1-AIP-D3-078",
+        "stem": "Your conversational AI system uses Amazon Comprehend for detecting the dominant language and identifying user intent, and stores conversation history in DynamoDB. Users speak both supported and unsupported languages, and the AI sometimes fails to route queries properly. Which step should you take to improve routing of unsupported languages?",
+        "raw_source": "2026-06-30T051420Z-openai-gpt-4.1-day-03-order007.md item 2"
+      },
+      {
+        "item_id": "P1-AIP-D3-079",
+        "stem": "A support chatbot should ask for clarification only when the user's intent is ambiguous. You use Amazon Comprehend for intent recognition and DynamoDB to store session context. How can you implement this requirement most efficiently?",
+        "raw_source": "2026-06-30T051420Z-openai-gpt-4.1-day-03-order007.md item 3"
+      },
+      {
+        "item_id": "P1-AIP-D3-080",
+        "stem": "A banking virtual assistant must enforce privacy by ensuring that only the authenticated user can access their own past conversation history. You plan to use Amazon DynamoDB as the storage backend. Which combination of design choices best supports this requirement? (Select TWO.)",
+        "raw_source": "2026-06-30T051420Z-openai-gpt-4.1-day-03-order007.md item 4"
+      },
+      {
+        "item_id": "P1-AIP-D3-081",
+        "stem": "For a multilingual support bot using Amazon Comprehend and DynamoDB, you want accurate intent recognition for all supported languages and clear user messaging for unsupported languages. What is the MOST effective workflow improvement?",
+        "raw_source": "2026-06-30T051420Z-openai-gpt-4.1-day-03-order007.md item 5"
+      },
+      {
+        "item_id": "P1-AIP-D3-082",
+        "stem": "A global organization wants to deploy an AI assistant that supports intent detection in all regions where it operates. You use Amazon Comprehend for intent recognition. Which approach is BEST for supporting diverse regional languages and consistently handling input where language is undetected or unsupported?",
+        "raw_source": "2026-06-30T051420Z-openai-gpt-4.1-day-03-order007.md item 6"
+      },
+      {
+        "item_id": "P1-AIP-D3-083",
+        "stem": "In a customer support chat system, the bot should use conversation history to provide more relevant responses. Using DynamoDB, which mechanism BEST supports rapid access to the latest N messages for a given user conversation?",
+        "raw_source": "2026-06-30T051420Z-openai-gpt-4.1-day-03-order007.md item 7"
+      },
+      {
+        "item_id": "P1-AIP-D3-084",
+        "stem": "A conversational AI for technical support must manage context, intent, and state for each user. You have implemented DynamoDB for conversation history and Amazon Comprehend for intent recognition. Which actions will help ensure conversations are stateful and intent is tracked correctly across multiple sessions? (Select TWO.)",
+        "raw_source": "2026-06-30T051420Z-openai-gpt-4.1-day-03-order007.md item 8"
+      },
+      {
+        "item_id": "P1-AIP-D3-085",
+        "stem": "Your AI assistant provides support in several languages using Amazon Comprehend for language and intent detection. You discover the model is misclassifying intent for languages not on the supported list. What should you do to improve intent recognition reliability?",
+        "raw_source": "2026-06-30T051420Z-openai-gpt-4.1-day-03-order007.md item 9"
+      },
+      {
+        "item_id": "P1-AIP-D3-086",
+        "stem": "A legal advice chatbot must track intent and maintain conversation state through complex multi-turn exchanges, including clarifications and corrections. You already use DynamoDB for message history and Amazon Comprehend for intent detection. Which architectural pattern is most suitable for managing dynamic state transitions and contextually branching conversations?",
+        "raw_source": "2026-06-30T051420Z-openai-gpt-4.1-day-03-order007.md item 10"
+      },
+      {
+        "item_id": "P1-AIP-D3-087",
+        "stem": "A customer service assistant maintains session continuity for users switching devices, such as from desktop to mobile. Which design choice enables a seamless user experience?",
+        "raw_source": "2026-06-30T051420Z-openai-gpt-4.1-day-03-order007.md item 11"
+      },
+      {
+        "item_id": "P1-AIP-D3-088",
+        "stem": "A voice assistant uses Comprehend for language and intent detection. After a system update, user feedback reports that intent recognition accuracy for Spanish has dropped significantly. What is the FIRST action you should take to diagnose the problem?",
+        "raw_source": "2026-06-30T051420Z-openai-gpt-4.1-day-03-order007.md item 12"
+      }
+    ],
+    "Day03-order008": [
+      {
+        "item_id": "P1-AIP-D3-089",
+        "stem": "An enterprise GenAI team is consistently getting incorrect entity extraction results from their FM on financial texts, even after basic instructions are added to the prompt. Which iterative prompt refinement approach is most likely to improve model accuracy?",
+        "raw_source": "2026-06-30T051507Z-openai-gpt-4.1-day-03-order008.md item 1"
+      },
+      {
+        "item_id": "P1-AIP-D3-090",
+        "stem": "Your model is consistently adding irrelevant details in generated responses, even after providing examples in the prompt. Which prompt engineering strategy best addresses this?",
+        "raw_source": "2026-06-30T051507Z-openai-gpt-4.1-day-03-order008.md item 2"
+      },
+      {
+        "item_id": "P1-AIP-D3-091",
+        "stem": "After multiple iterative prompt changes, your team's FM is still returning unordered lists when you require a numbered step-by-step list. What is the most direct next action?",
+        "raw_source": "2026-06-30T051507Z-openai-gpt-4.1-day-03-order008.md item 3"
+      },
+      {
+        "item_id": "P1-AIP-D3-092",
+        "stem": "A team wants to improve summarization quality in an FM-driven customer support app. They notice repetitive information and lack of focus in summaries. Which advanced prompt engineering intervention is most likely to increase summary quality?",
+        "raw_source": "2026-06-30T051507Z-openai-gpt-4.1-day-03-order008.md item 4"
+      },
+      {
+        "item_id": "P1-AIP-D3-093",
+        "stem": "Which combination of advanced prompt engineering techniques is most effective for creating a robust FM-based information extraction workflow?",
+        "raw_source": "2026-06-30T051507Z-openai-gpt-4.1-day-03-order008.md item 5"
+      },
+      {
+        "item_id": "P1-AIP-D3-094",
+        "stem": "Your organization observes that slight changes in the prompt wording cause FM outputs to swing unpredictably. What advanced prompt engineering strategy can increase consistency of outputs?",
+        "raw_source": "2026-06-30T051507Z-openai-gpt-4.1-day-03-order008.md item 6"
+      },
+      {
+        "item_id": "P1-AIP-D3-095",
+        "stem": "You want your FM to provide a detailed explanation of its answer as part of every response. Your initial prompts yield only simple answers. What should you do to achieve your goal?",
+        "raw_source": "2026-06-30T051507Z-openai-gpt-4.1-day-03-order008.md item 7"
+      },
+      {
+        "item_id": "P1-AIP-D3-096",
+        "stem": "A developer needs to iteratively improve the factuality of FM responses in their knowledge assistant. Which workflow offers the best solution?",
+        "raw_source": "2026-06-30T051507Z-openai-gpt-4.1-day-03-order008.md item 8"
+      },
+      {
+        "item_id": "P1-AIP-D3-097",
+        "stem": "A GenAI developer wants to reduce hallucinations in RAG responses using prompt engineering alone. Which techniques should they use? (Select TWO.)",
+        "raw_source": "2026-06-30T051507Z-openai-gpt-4.1-day-03-order008.md item 9"
+      },
+      {
+        "item_id": "P1-AIP-D3-098",
+        "stem": "During a prompt refinement session, your FM model unexpectedly returns very verbose, unfocused summaries. You have already provided one example summary. What is the next best step?",
+        "raw_source": "2026-06-30T051507Z-openai-gpt-4.1-day-03-order008.md item 10"
+      },
+      {
+        "item_id": "P1-AIP-D3-099",
+        "stem": "A product manager wants to enable non-technical users to customize AI assistant prompt outputs by changing response structure and tone. What is the most maintainable approach for supporting this?",
+        "raw_source": "2026-06-30T051507Z-openai-gpt-4.1-day-03-order008.md item 11"
+      },
+      {
+        "item_id": "P1-AIP-D3-100",
+        "stem": "Which advanced prompt engineering practices collectively increase the reliability and auditability of AI-generated outputs in regulated environments? (Select TWO.)",
+        "raw_source": "2026-06-30T051507Z-openai-gpt-4.1-day-03-order008.md item 12"
+      },
+      {
+        "item_id": "P1-AIP-D3-101",
+        "stem": "A technical lead observes that team members keep iterating prompts but ignore model response failures when actual data is missing or ambiguous. To robustly improve output quality beyond prompt language, what should the team focus on in conjunction with iterative prompt engineering?",
+        "raw_source": "2026-06-30T051507Z-openai-gpt-4.1-day-03-order008.md item 13"
+      }
+    ],
+    "Day03-order009": [
+      {
+        "item_id": "P1-AIP-D3-102",
+        "stem": "A company is deploying a GenAI application and wants to maintain strict oversight over prompt updates. In their governance plan, which control is most effective for ensuring changes to critical prompts are tracked and traceable when using Amazon Bedrock Prompt Management?",
+        "raw_source": "2026-06-30T051603Z-openai-gpt-4.1-day-03-order009.md item 1"
+      },
+      {
+        "item_id": "P1-AIP-D3-103",
+        "stem": "Your GenAI team is experiencing drift in prompt consistency across staging and production environments. You want to standardize prompt management while maintaining quick access for different development teams. Which mechanism best supports prompt consistency, access control, and automated promotion to production?",
+        "raw_source": "2026-06-30T051603Z-openai-gpt-4.1-day-03-order009.md item 2"
+      },
+      {
+        "item_id": "P1-AIP-D3-104",
+        "stem": "A regulated enterprise must restrict who can update prompts and ensure those changes are only pushed to production after formal approval. Using Amazon Bedrock Prompt Management, which combination most conservatively enforces this policy?",
+        "raw_source": "2026-06-30T051603Z-openai-gpt-4.1-day-03-order009.md item 3"
+      },
+      {
+        "item_id": "P1-AIP-D3-105",
+        "stem": "A GenAI platform team needs to track which prompts led to unexpected model behaviors in production. What is the most efficient way to capture usage and enable rapid auditing of prompt activity?",
+        "raw_source": "2026-06-30T051603Z-openai-gpt-4.1-day-03-order009.md item 4"
+      },
+      {
+        "item_id": "P1-AIP-D3-106",
+        "stem": "You have defined critical business prompts as parameterized templates in Amazon Bedrock Prompt Management. Which policy configuration best ensures that only QA-approved, unchanged prompt templates are deployed to production?",
+        "raw_source": "2026-06-30T051603Z-openai-gpt-4.1-day-03-order009.md item 5"
+      },
+      {
+        "item_id": "P1-AIP-D3-107",
+        "stem": "During a prompt versioning review, your team finds multiple copies of similar templates with inconsistent identifiers. What is the best step to improve oversight and enable reliable governance of prompt changes?",
+        "raw_source": "2026-06-30T051603Z-openai-gpt-4.1-day-03-order009.md item 6"
+      },
+      {
+        "item_id": "P1-AIP-D3-108",
+        "stem": "A GenAI application receives a critical security finding related to prompt tampering. Which combination of governance controls should you deploy to address both unauthorized edits and forensic investigation requirements? (Select TWO.)",
+        "raw_source": "2026-06-30T051603Z-openai-gpt-4.1-day-03-order009.md item 7"
+      },
+      {
+        "item_id": "P1-AIP-D3-109",
+        "stem": "After rolling out a new prompt version, users report unexpected model outputs tied to the update. Which governance process most effectively supports a controlled rollback and prevents similar incidents?",
+        "raw_source": "2026-06-30T051603Z-openai-gpt-4.1-day-03-order009.md item 8"
+      },
+      {
+        "item_id": "P1-AIP-D3-110",
+        "stem": "Your organization's GenAI audit uncovered gaps in documentation of who approved prompt changes. Which additional governance measure will directly address this traceability gap?",
+        "raw_source": "2026-06-30T051603Z-openai-gpt-4.1-day-03-order009.md item 9"
+      },
+      {
+        "item_id": "P1-AIP-D3-111",
+        "stem": "The GenAI platform lead wants to improve efficiency for developers updating prompt templates while minimizing risk of unwanted changes in production. Which two practices best enable rapid, safe iteration within an approved governance framework? (Select TWO.)",
+        "raw_source": "2026-06-30T051603Z-openai-gpt-4.1-day-03-order009.md item 10"
+      },
+      {
+        "item_id": "P1-AIP-D3-112",
+        "stem": "While auditing prompt management governance, your team finds several legacy templates with no clear record of their usage or deployment dates. Beyond implementing approvals and logs, what is the most defensible action to address future ambiguity in template deployment history?",
+        "raw_source": "2026-06-30T051603Z-openai-gpt-4.1-day-03-order009.md item 11"
+      },
+      {
+        "item_id": "P1-AIP-D3-113",
+        "stem": "A target state for GenAI prompt management requires both multi-environment pipelines and compliance with change management policies. Which architecture components together provide versioning, access control, and end-to-end auditability? (Select THREE.)",
+        "raw_source": "2026-06-30T051603Z-openai-gpt-4.1-day-03-order009.md item 12"
+      },
+      {
+        "item_id": "P1-AIP-D3-114",
+        "stem": "You are optimizing a GenAI prompt repository for controlled template evolution, regulatory compliance, and continuous improvement. Which two practices most directly advance those objectives? (Select TWO.)",
+        "raw_source": "2026-06-30T051603Z-openai-gpt-4.1-day-03-order009.md item 13"
+      }
+    ],
+    "Day03-order010": [
+      {
+        "item_id": "P1-AIP-D3-115",
+        "stem": "A GenAI development team notices that recent changes to prompt structures have resulted in inconsistent model responses for a critical business use case. The team wants to ensure future prompt modifications do not introduce unexpected errors before deployment. Which approach best meets the need for systematic prompt regression testing and catch regressions early?",
+        "raw_source": "2026-06-30T051656Z-openai-gpt-4.1-day-03-order010.md item 1"
+      },
+      {
+        "item_id": "P1-AIP-D3-116",
+        "stem": "An organization needs to ensure rapid detection when a prompt modification causes model responses to deviate unexpectedly. They want all model integrations, including obscure API clients, to be covered by their QA process. What should the team put in place to meet these needs?",
+        "raw_source": "2026-06-30T051656Z-openai-gpt-4.1-day-03-order010.md item 2"
+      },
+      {
+        "item_id": "P1-AIP-D3-117",
+        "stem": "A team notices that prompt changes occasionally break rare edge case queries that are not covered by basic test cases. How should the quality assurance system be improved to guard against regressions for these cases?",
+        "raw_source": "2026-06-30T051656Z-openai-gpt-4.1-day-03-order010.md item 4"
+      },
+      {
+        "item_id": "P1-AIP-D3-118",
+        "stem": "When implementing prompt regression testing for a critical GenAI-powered insurance assistant, which practices improve both reliability and prompt effectiveness? (Select TWO.)",
+        "raw_source": "2026-06-30T051656Z-openai-gpt-4.1-day-03-order010.md item 5"
+      },
+      {
+        "item_id": "P1-AIP-D3-119",
+        "stem": "A GenAI project\u2019s model accuracy dropped after a new prompt template was deployed. The regression test suite had passed. Investigation shows the test suite only uses static, high-frequency prompt cases. What could best address this blind spot?",
+        "raw_source": "2026-06-30T051656Z-openai-gpt-4.1-day-03-order010.md item 6"
+      },
+      {
+        "item_id": "P1-AIP-D3-120",
+        "stem": "You are architecting a QA process for prompts used by a multi-national customer support bot. What is the primary advantage of integrating automated prompt regression testing into the continuous deployment pipeline?",
+        "raw_source": "2026-06-30T051656Z-openai-gpt-4.1-day-03-order010.md item 7"
+      },
+      {
+        "item_id": "P1-AIP-D3-121",
+        "stem": "A prompt QA team struggles with long-term drift in prompt output quality due to periodic model updates by a third-party FM provider. What techniques should the team employ to systematically detect when model drift causes output regressions? (Select TWO.)",
+        "raw_source": "2026-06-30T051656Z-openai-gpt-4.1-day-03-order010.md item 9"
+      },
+      {
+        "item_id": "P1-AIP-D3-205",
+        "stem": "A global retailer recently overhauled its FM prompt templates. Following this, they observe that expected outputs remain correct for standard test cases, but subtle language ambiguities now cause inconsistent model behavior in certain regions. What is the most effective action to systematically prevent such regressions in the future?",
+        "raw_source": "2026-06-30T052342Z-openai-gpt-4.1-day-03-order010-top-up-5.md item 1"
+      },
+      {
+        "item_id": "P1-AIP-D3-206",
+        "stem": "An insurance company is enhancing its prompt quality assurance pipeline. After recent failures due to prompt changes that affected specific downstream analytics, what combination of strategies best increases confidence in prompt stability before each release? (Select TWO.)",
+        "raw_source": "2026-06-30T052342Z-openai-gpt-4.1-day-03-order010-top-up-5.md item 2"
+      },
+      {
+        "item_id": "P1-AIP-D3-207",
+        "stem": "A startup\u2019s product pipeline pushes prompt template updates several times per week via a CI/CD system. On one occasion, a bug in a prompt broke a rare user flow in production, bypassing the test stage. How should the QA design be improved to prevent recurrence of this issue?",
+        "raw_source": "2026-06-30T052342Z-openai-gpt-4.1-day-03-order010-top-up-5.md item 3"
+      },
+      {
+        "item_id": "P1-AIP-D3-208",
+        "stem": "A development team wants to reduce the risk of prompt-related outages after deploying new prompt templates for their GenAI-driven helpdesk chatbot. Which approach best provides continual assurance that critical bot behaviors remain reliable release after release?",
+        "raw_source": "2026-06-30T052342Z-openai-gpt-4.1-day-03-order010-top-up-5.md item 4"
+      },
+      {
+        "item_id": "P1-AIP-D3-209",
+        "stem": "An e-commerce company\u2019s LLM-powered recommendations engine suffers a drop in personalization quality a week after a prompt template update. Their regression suite covers the most common queries. Which improvement will best prevent this quality degradation from recurring in the future?",
+        "raw_source": "2026-06-30T052342Z-openai-gpt-4.1-day-03-order010-top-up-5.md item 5"
+      }
+    ],
+    "Day03-order011": [
+      {
+        "item_id": "P1-AIP-D3-122",
+        "stem": "A team builds a legal document review agent using Amazon Bedrock Prompt Flows. The system needs to answer initial user queries, then\u2014if a risk factor is detected in the response\u2014branch to a subflow that requests additional user confirmation. Which Bedrock Prompt Flows feature most directly enables this multi-path behavior?",
+        "raw_source": "2026-06-30T051742Z-openai-gpt-4.1-day-03-order011.md item 1"
+      },
+      {
+        "item_id": "P1-AIP-D3-123",
+        "stem": "You are tasked with designing a prompt flow for a customer support AI that starts with a classification prompt, then either routes to a retrieval step or escalates to a human if the confidence score is below a threshold. What approach should you adopt in Bedrock Prompt Flows to handle this scenario?",
+        "raw_source": "2026-06-30T051742Z-openai-gpt-4.1-day-03-order011.md item 2"
+      },
+      {
+        "item_id": "P1-AIP-D3-124",
+        "stem": "You need to set up an Amazon Bedrock Prompt Flow that allows dynamic preprocessing of input data, ensures multi-step reasoning, and includes a reusable evaluation component. Which design correctly applies Prompt Flow features?",
+        "raw_source": "2026-06-30T051742Z-openai-gpt-4.1-day-03-order011.md item 3"
+      },
+      {
+        "item_id": "P1-AIP-D3-125",
+        "stem": "A Bedrock Prompt Flow must switch between three different summarization strategies based on user input complexity, and later merge their outputs for a unified response. What is the correct architecture pattern for this requirement?",
+        "raw_source": "2026-06-30T051742Z-openai-gpt-4.1-day-03-order011.md item 4"
+      },
+      {
+        "item_id": "P1-AIP-D3-126",
+        "stem": "A generative AI application built on Bedrock Prompt Flows begins with a data validation node, then conditionally processes either structured data or free text through different downstream chains. What aspect of Prompt Flows enables this targeted path execution?",
+        "raw_source": "2026-06-30T051742Z-openai-gpt-4.1-day-03-order011.md item 5"
+      },
+      {
+        "item_id": "P1-AIP-D3-127",
+        "stem": "A retail chatbot requires two steps: first, a product search; second, a follow-up reasoning prompt that adapts based on product type. How should a Bedrock Prompt Flow implement this adaptive follow-up based on the model output's product type?",
+        "raw_source": "2026-06-30T051742Z-openai-gpt-4.1-day-03-order011.md item 6"
+      },
+      {
+        "item_id": "P1-AIP-D3-128",
+        "stem": "You run a Bedrock Prompt Flow with four chained nodes: two model prompts, an evaluation step, and a summarization node. During runs, only partial outputs are appearing from the summarization node. Which flow design issue is the most likely cause?",
+        "raw_source": "2026-06-30T051742Z-openai-gpt-4.1-day-03-order011.md item 7"
+      },
+      {
+        "item_id": "P1-AIP-D3-129",
+        "stem": "A team needs beginner developers to rapidly author reusable language evaluation steps that can be incorporated across multiple Prompt Flows. Which approach best leverages Bedrock Prompt Flow\u2019s strengths for this requirement?",
+        "raw_source": "2026-06-30T051742Z-openai-gpt-4.1-day-03-order011.md item 8"
+      },
+      {
+        "item_id": "P1-AIP-D3-130",
+        "stem": "A workflow requires chaining multiple LLM prompts with data transformation and business rules enforced between each step. What is the main advantage of using Bedrock Prompt Flows over embedding all sub-logic in a single monolithic prompt?",
+        "raw_source": "2026-06-30T051742Z-openai-gpt-4.1-day-03-order011.md item 9"
+      },
+      {
+        "item_id": "P1-AIP-D3-131",
+        "stem": "In a complex prompt pipeline implemented with Bedrock Prompt Flows, you need to invoke an external API after obtaining an intermediate model result and pass its output back to the next prompt node. Which technique supports this requirement?",
+        "raw_source": "2026-06-30T051742Z-openai-gpt-4.1-day-03-order011.md item 10"
+      },
+      {
+        "item_id": "P1-AIP-D3-132",
+        "stem": "Select ALL valid applications of branching in Amazon Bedrock Prompt Flows for professional RAG implementations. (Choose TWO.)",
+        "raw_source": "2026-06-30T051742Z-openai-gpt-4.1-day-03-order011.md item 11"
+      },
+      {
+        "item_id": "P1-AIP-D3-133",
+        "stem": "A Bedrock Prompt Flow handles: 1) data processing, 2) classification by an LLM, and 3) invoking a different summarizer depending on the classification result. Which of the following are BEST practices for this branching scenario? (Choose TWO.)",
+        "raw_source": "2026-06-30T051742Z-openai-gpt-4.1-day-03-order011.md item 12"
+      },
+      {
+        "item_id": "P1-AIP-D3-134",
+        "stem": "Your Prompt Flow contains a pre-processing node, a language model node, and a post-processing node. You observe that the post-processing step sometimes receives null data. What is the most likely cause in the flow configuration?",
+        "raw_source": "2026-06-30T051742Z-openai-gpt-4.1-day-03-order011.md item 13"
+      }
+    ],
+    "Day03-order012": [
+      {
+        "item_id": "P1-AIP-D3-135",
+        "stem": "A retail application integrates with Amazon Bedrock for product description generation via an API Gateway endpoint backed by a Lambda function. Customers report increased latency during periods of high request volume. Which approach best improves response times for synchronous FM API integration?",
+        "raw_source": "2026-06-30T051823Z-openai-gpt-4.1-day-03-order012.md item 1"
+      },
+      {
+        "item_id": "P1-AIP-D3-136",
+        "stem": "An engineering team must provide robust request validation on their API Gateway endpoint in front of a Lambda that queries Amazon Bedrock synchronously. Which API Gateway feature should they enable to reject invalid requests before reaching Lambda?",
+        "raw_source": "2026-06-30T051823Z-openai-gpt-4.1-day-03-order012.md item 2"
+      },
+      {
+        "item_id": "P1-AIP-D3-137",
+        "stem": "A developer configures synchronous FM API integration using Amazon Bedrock, API Gateway (HTTP API), and AWS Lambda. Demand surges during a viral campaign. The Lambda function experiences scaling delays resulting in occasional timeouts at the API Gateway. What should the developer do to ensure consistently low latencies?",
+        "raw_source": "2026-06-30T051823Z-openai-gpt-4.1-day-03-order012.md item 3"
+      },
+      {
+        "item_id": "P1-AIP-D3-138",
+        "stem": "A team is building a synchronous GenAI inference API for internal users. To maintain stable performance, they need to enforce maximum payload sizes and limit incoming calls. Which combination of API Gateway features should they use?",
+        "raw_source": "2026-06-30T051823Z-openai-gpt-4.1-day-03-order012.md item 4"
+      },
+      {
+        "item_id": "P1-AIP-D3-139",
+        "stem": "While integrating Bedrock FMs using synchronous Lambda invocations behind API Gateway, a sudden surge in traffic leads to intermittent throttling errors. After reviewing API Gateway quotas, the team decides to investigate Lambda configurations. Which Lambda metric or feature should they focus on first to reduce throttling?",
+        "raw_source": "2026-06-30T051823Z-openai-gpt-4.1-day-03-order012.md item 5"
+      },
+      {
+        "item_id": "P1-AIP-D3-140",
+        "stem": "You must secure your synchronous GenAI API (API Gateway + Lambda + Bedrock) such that only well-formed requests reach the Lambda function. Which API Gateway configuration allows you to reject non-JSON requests without invoking downstream compute?",
+        "raw_source": "2026-06-30T051823Z-openai-gpt-4.1-day-03-order012.md item 6"
+      },
+      {
+        "item_id": "P1-AIP-D3-141",
+        "stem": "Your company is integrating a front-end web portal with an FM backend via synchronous Bedrock API calls, exposed through API Gateway with Lambda. Executives require near-instant responses for all users, at any scale. What feature must you configure to guarantee this requirement?",
+        "raw_source": "2026-06-30T051823Z-openai-gpt-4.1-day-03-order012.md item 7"
+      },
+      {
+        "item_id": "P1-AIP-D3-142",
+        "stem": "A synchronous Bedrock API is exposed via API Gateway. During performance tuning, developers want to know the maximum payload size allowed in a single request. Which documentation section should they consult for this exact figure?",
+        "raw_source": "2026-06-30T051823Z-openai-gpt-4.1-day-03-order012.md item 8"
+      },
+      {
+        "item_id": "P1-AIP-D3-143",
+        "stem": "Your Lambda-based synchronous FM API behind API Gateway needs to meet strict sub-100ms response SLAs during business hours, even with unpredictable traffic spikes. What is the most effective Lambda configuration to achieve this goal?",
+        "raw_source": "2026-06-30T051823Z-openai-gpt-4.1-day-03-order012.md item 9"
+      },
+      {
+        "item_id": "P1-AIP-D3-144",
+        "stem": "A team integrates an external system with a synchronous Bedrock API via API Gateway and Lambda. The system occasionally sends malformed requests that break JSON structure. Which configuration prevents these bad payloads from reaching Lambda or Bedrock?",
+        "raw_source": "2026-06-30T051823Z-openai-gpt-4.1-day-03-order012.md item 10"
+      },
+      {
+        "item_id": "P1-AIP-D3-145",
+        "stem": "A developer is integrating Lambda with API Gateway for low-latency, synchronous Bedrock inference. How can they guarantee Lambda functions won't experience cold start latency for requests routed via API Gateway during heavy usage?",
+        "raw_source": "2026-06-30T051823Z-openai-gpt-4.1-day-03-order012.md item 11"
+      },
+      {
+        "item_id": "P1-AIP-D3-146",
+        "stem": "A developer is troubleshooting an intermittent 413 Payload Too Large error for their synchronous Bedrock API behind API Gateway and Lambda. What is the most likely cause, and where should they look first?",
+        "raw_source": "2026-06-30T051823Z-openai-gpt-4.1-day-03-order012.md item 13"
+      }
+    ],
+    "Day03-order013": [
+      {
+        "item_id": "P1-AIP-D3-147",
+        "stem": "A generative AI application runs an Amazon Bedrock-augmented backend. To ensure requests are not lost if the FM has variable response times, a developer places incoming requests on an SQS queue and invokes Lambda functions for downstream processing. After a scaling event, some requests are being lost. What is the MOST likely cause?",
+        "raw_source": "2026-06-30T051911Z-openai-gpt-4.1-day-03-order013.md item 1"
+      },
+      {
+        "item_id": "P1-AIP-D3-148",
+        "stem": "A SaaS platform sends thousands of inference requests to an Amazon Bedrock FM through Lambda functions triggered by SQS messages. There is a sudden spike in the number of Lambda invocations and message re-drives. What is the MOST probable root cause?",
+        "raw_source": "2026-06-30T051911Z-openai-gpt-4.1-day-03-order013.md item 3"
+      },
+      {
+        "item_id": "P1-AIP-D3-149",
+        "stem": "You are designing a GenAI batch inference pipeline where compute resources must not block on FM responses. The team suggests using Amazon SQS with Lambda, but wants to guarantee at-least-once delivery and error capture. Which actions should you recommend? (Select TWO.)",
+        "raw_source": "2026-06-30T051911Z-openai-gpt-4.1-day-03-order013.md item 4"
+      },
+      {
+        "item_id": "P1-AIP-D3-150",
+        "stem": "An enterprise GenAI system processes documents through asynchronous Bedrock API calls. The team wants to sequence processing, add timeouts, and handle retryable failure conditions across multiple microservices. Which AWS component or pattern is MOST suitable?",
+        "raw_source": "2026-06-30T051911Z-openai-gpt-4.1-day-03-order013.md item 5"
+      },
+      {
+        "item_id": "P1-AIP-D3-151",
+        "stem": "A large document analysis batch job uses Lambda triggered by SQS. After a spike in job volume, some messages stay in the SQS queue for a long time and are not processed until nearly the retention limit. What is the MOST likely misconfiguration?",
+        "raw_source": "2026-06-30T051911Z-openai-gpt-4.1-day-03-order013.md item 6"
+      },
+      {
+        "item_id": "P1-AIP-D3-152",
+        "stem": "A developer designs an async pipeline where Bedrock FM inference requests are enqueued to SQS and processed by Lambda. They notice the same message is sometimes processed by two Lambda invocations nearly simultaneously. What is the MOST likely explanation?",
+        "raw_source": "2026-06-30T051911Z-openai-gpt-4.1-day-03-order013.md item 7"
+      },
+      {
+        "item_id": "P1-AIP-D3-153",
+        "stem": "A customer asks how to prevent message loss when using SQS and Lambda for asynchronous Bedrock inference jobs, even if their Lambda code encounters errors randomly. Which steps form the minimal AWS-recommended configuration? (Select TWO.)",
+        "raw_source": "2026-06-30T051911Z-openai-gpt-4.1-day-03-order013.md item 8"
+      },
+      {
+        "item_id": "P1-AIP-D3-154",
+        "stem": "A generative AI company leverages Step Functions to coordinate multiple asynchronous tasks: document extraction, Bedrock model invocation, and post-processing. Occasionally, a failure in document extraction leads to silent process drops. What is the MOST effective configuration to address this?",
+        "raw_source": "2026-06-30T051911Z-openai-gpt-4.1-day-03-order013.md item 9"
+      },
+      {
+        "item_id": "P1-AIP-D3-155",
+        "stem": "A team needs to decouple API-facing workloads from long-running generative AI jobs, guaranteeing API latency SLAs even when FM processing is slow. Which asynchronous AWS design pattern provides the MOST consistency for this requirement?",
+        "raw_source": "2026-06-30T051911Z-openai-gpt-4.1-day-03-order013.md item 10"
+      },
+      {
+        "item_id": "P1-AIP-D3-156",
+        "stem": "Your async Amazon Bedrock FM pipeline includes SQS, Lambda, and Step Functions for complex coordination. Failure notifications are needed for unprocessable jobs. Which mechanisms are BEST for robust, observable error handling? (Select TWO.)",
+        "raw_source": "2026-06-30T051911Z-openai-gpt-4.1-day-03-order013.md item 11"
+      },
+      {
+        "item_id": "P1-AIP-D3-157",
+        "stem": "A developer wants to parallelize hundreds of asynchronous Bedrock FM inference jobs using AWS managed services in a cost-optimized and scalable way. Which option is MOST aligned with AWS recommendations?",
+        "raw_source": "2026-06-30T051911Z-openai-gpt-4.1-day-03-order013.md item 12"
+      },
+      {
+        "item_id": "P1-AIP-D3-158",
+        "stem": "A Bedrock-powered GenAI batch process has unpredictable peak load periods and must never drop jobs. Which SQS configuration settings should the team review to minimize risk of lost or unprocessed messages? (Select TWO.)",
+        "raw_source": "2026-06-30T051911Z-openai-gpt-4.1-day-03-order013.md item 13"
+      }
+    ],
+    "Day03-order014": [
+      {
+        "item_id": "P1-AIP-D3-159",
+        "stem": "A development team is building a real-time chat application powered by a generative AI model. Users expect to see message responses appear incrementally as the FM generates text. The current API Gateway HTTP API sends full responses only after the Lambda has completed execution. What configuration should be enabled to improve the real-time feedback in the application?",
+        "raw_source": "2026-06-30T051954Z-openai-gpt-4.1-day-03-order014.md item 1"
+      },
+      {
+        "item_id": "P1-AIP-D3-160",
+        "stem": "You are troubleshooting a GenAI web app where users see a long delay before receiving any FM output, even when using Lambda and API Gateway HTTP APIs. You want the interface to display model output tokens as they are generated. Which configuration change will most likely resolve the issue?",
+        "raw_source": "2026-06-30T051954Z-openai-gpt-4.1-day-03-order014.md item 2"
+      },
+      {
+        "item_id": "P1-AIP-D3-161",
+        "stem": "A GenAI developer is designing a real-time document summarization tool that displays summarization results as the model produces them. Which approach will provide the best user experience for low-latency incremental response delivery?",
+        "raw_source": "2026-06-30T051954Z-openai-gpt-4.1-day-03-order014.md item 3"
+      },
+      {
+        "item_id": "P1-AIP-D3-162",
+        "stem": "A GenAI API team wants to reduce time-to-first-byte (TTFB) for user-facing FM responses. They already use Lambda and API Gateway HTTP API. Which configuration should be reviewed first when aiming for incremental results?",
+        "raw_source": "2026-06-30T051954Z-openai-gpt-4.1-day-03-order014.md item 4"
+      },
+      {
+        "item_id": "P1-AIP-D3-163",
+        "stem": "A generative AI service provides users with real-time updates as model output is generated. The team uses API Gateway HTTP API integrated with a Lambda function but notices that the clients only see the response after Lambda finishes execution. Which combination of changes is required to enable real-time updates?",
+        "raw_source": "2026-06-30T051954Z-openai-gpt-4.1-day-03-order014.md item 5"
+      },
+      {
+        "item_id": "P1-AIP-D3-164",
+        "stem": "An AI developer is asked to build a web client that receives incremental updates directly as a generative model processes a prompt. Which protocol should be implemented in the client to maintain a persistent, two-way connection for full-duplex communication?",
+        "raw_source": "2026-06-30T051954Z-openai-gpt-4.1-day-03-order014.md item 6"
+      },
+      {
+        "item_id": "P1-AIP-D3-165",
+        "stem": "A product team is evaluating patterns to provide live updates from a generating FM to a browser-based dashboard. The communication should allow the server to push new tokens to the client as soon as they are available. The client can live without sending data back to the server post-request. Which approach is most suitable?",
+        "raw_source": "2026-06-30T051954Z-openai-gpt-4.1-day-03-order014.md item 7"
+      },
+      {
+        "item_id": "P1-AIP-D3-166",
+        "stem": "A SaaS platform needs to deliver generative AI completions to thousands of web clients with minimal latency as text is generated. The team prefers the server to initiate the data transmission, with clients receiving chunks in real time. Which factor must be considered when using chunked transfer encoding with API Gateway HTTP APIs?",
+        "raw_source": "2026-06-30T051954Z-openai-gpt-4.1-day-03-order014.md item 8"
+      },
+      {
+        "item_id": "P1-AIP-D3-167",
+        "stem": "A GenAI developer needs to choose between Server-Sent Events (SSE) and WebSockets to deliver FM tokens to web clients in real time. Which of the following scenarios justifies using WebSockets over SSE for incremental FM delivery?",
+        "raw_source": "2026-06-30T051954Z-openai-gpt-4.1-day-03-order014.md item 9"
+      },
+      {
+        "item_id": "P1-AIP-D3-168",
+        "stem": "A support engineer is investigating why a client receives an incomplete JSON payload during an FM streaming session over HTTP API. Which factor is most likely at play?",
+        "raw_source": "2026-06-30T051954Z-openai-gpt-4.1-day-03-order014.md item 10"
+      },
+      {
+        "item_id": "P1-AIP-D3-169",
+        "stem": "A SaaS engineering team is optimizing a GenAI-powered real-time dashboard. They plan to migrate from standard REST API responses to streaming. Which changes should they implement to minimize both latency and coupling for server-to-client FM token delivery? (Select TWO.)",
+        "raw_source": "2026-06-30T051954Z-openai-gpt-4.1-day-03-order014.md item 11"
+      },
+      {
+        "item_id": "P1-AIP-D3-170",
+        "stem": "A platform team must design a scalable architecture to stream FM-generated data to mobile and web clients, ensuring the solution is cost-effective, browser-compatible, and easy to integrate. Which two mechanisms fit these constraints? (Select TWO.)",
+        "raw_source": "2026-06-30T051954Z-openai-gpt-4.1-day-03-order014.md item 12"
+      }
+    ],
+    "Day03-order015": [
+      {
+        "item_id": "P1-AIP-D3-171",
+        "stem": "A workload using Bedrock's conversation API occasionally throws validation errors when switching from single-message to conversation mode. Which step is required for consistent operation across both modes?",
+        "raw_source": "2026-06-30T052035Z-openai-gpt-4.1-day-03-order015.md item 7"
+      },
+      {
+        "item_id": "P1-AIP-D3-210",
+        "stem": "A developer notices that a Bedrock-powered customer support chatbot sometimes returns responses with missing or incomplete information when users submit lengthy multi-turn questions containing significant context. What design change should they prioritize to ensure the chatbot consistently returns relevant and complete responses without API errors?",
+        "raw_source": "2026-06-30T052440Z-openai-gpt-4.1-day-03-order015-top-up-12.md item 1"
+      },
+      {
+        "item_id": "P1-AIP-D3-211",
+        "stem": "A Bedrock-based document summarizer frequently returns error messages related to exceeding the model\u2019s token limit when users upload very large files for processing. What operational response will most reliably prevent these errors when scaling to many simultaneous users?",
+        "raw_source": "2026-06-30T052440Z-openai-gpt-4.1-day-03-order015-top-up-12.md item 3"
+      },
+      {
+        "item_id": "P1-AIP-D3-212",
+        "stem": "An engineering team\u2019s Bedrock-powered Q&A bot sometimes answers incompletely or with reduced accuracy after several turns of a long conversation. What is the most probable cause, and the recommended mitigation?",
+        "raw_source": "2026-06-30T052440Z-openai-gpt-4.1-day-03-order015-top-up-12.md item 4"
+      },
+      {
+        "item_id": "P1-AIP-D3-213",
+        "stem": "A GenAI batch processing pipeline combines system-generated text and user inputs to construct prompts for Bedrock model inference. After a recent update, the pipeline produces frequent validation failures with larger input payloads. Which debugging step is most likely to reveal the root cause?",
+        "raw_source": "2026-06-30T052440Z-openai-gpt-4.1-day-03-order015-top-up-12.md item 5"
+      },
+      {
+        "item_id": "P1-AIP-D3-214",
+        "stem": "A conversational application using Bedrock is required to guarantee that user prompts are always accepted by the model without truncation or rejection. Which two actions most directly accomplish this for varied user message lengths? (Select TWO.)",
+        "raw_source": "2026-06-30T052440Z-openai-gpt-4.1-day-03-order015-top-up-12.md item 6"
+      },
+      {
+        "item_id": "P1-AIP-D3-215",
+        "stem": "A conversation-aware Bedrock application must maintain context across user sessions while avoiding frequent context overflows and response truncations. Which two techniques will help you most reliably handle these challenges? (Select TWO.)",
+        "raw_source": "2026-06-30T052440Z-openai-gpt-4.1-day-03-order015-top-up-12.md item 9"
+      },
+      {
+        "item_id": "P1-AIP-D3-216",
+        "stem": "A GenAI service team observes production requests to a Bedrock FM sometimes return a 400 validation error, while requests with similar but slightly shorter content always succeed. Which immediate validation check should they automate in their client library?",
+        "raw_source": "2026-06-30T052440Z-openai-gpt-4.1-day-03-order015-top-up-12.md item 10"
+      },
+      {
+        "item_id": "P1-AIP-D3-217",
+        "stem": "An LLM-integrated workflow on Bedrock processes user questions and multi-step task context for document generation. Developers see unexpected truncation of model outputs when large documents are involved. What adjustment should be prioritized for optimal output completeness?",
+        "raw_source": "2026-06-30T052440Z-openai-gpt-4.1-day-03-order015-top-up-12.md item 11"
+      },
+      {
+        "item_id": "P1-AIP-D3-218",
+        "stem": "You implement a generic SaaS FM API client and want to guarantee that user submissions never lead to FM model rejection from input that is too long, regardless of client language. Which design pattern most effectively guarantees this requirement?",
+        "raw_source": "2026-06-30T052440Z-openai-gpt-4.1-day-03-order015-top-up-12.md item 12"
+      }
+    ],
+    "Day03-order016": [
+      {
+        "item_id": "P1-AIP-D3-172",
+        "stem": "A generative AI application built on AWS frequently encounters transient 5xx errors from a foundation model API integration. The solution currently retries calls without any delay. What is the best next step to increase success rates and avoid overloading upstream services?",
+        "raw_source": "2026-06-30T052118Z-openai-gpt-4.1-day-03-order016.md item 1"
+      },
+      {
+        "item_id": "P1-AIP-D3-173",
+        "stem": "Your GenAI workload using API Gateway begins returning HTTP 429 errors for some users during high-traffic periods. What is the most direct architectural change to reliably reduce these errors?",
+        "raw_source": "2026-06-30T052118Z-openai-gpt-4.1-day-03-order016.md item 2"
+      },
+      {
+        "item_id": "P1-AIP-D3-174",
+        "stem": "You are deploying a GenAI-powered recommendation engine that integrates with Amazon Bedrock via API Gateway. To handle unpredictable spikes and transient FM API timeouts, which mechanism should you include in your AWS SDK configuration?",
+        "raw_source": "2026-06-30T052118Z-openai-gpt-4.1-day-03-order016.md item 3"
+      },
+      {
+        "item_id": "P1-AIP-D3-175",
+        "stem": "A conversational AI system built on AWS fails with frequent 'Rate Exceeded' errors from API Gateway during user traffic surges. Which combination of approaches can most directly address both immediate and long-term reliability? (Select TWO.)",
+        "raw_source": "2026-06-30T052118Z-openai-gpt-4.1-day-03-order016.md item 4"
+      },
+      {
+        "item_id": "P1-AIP-D3-176",
+        "stem": "After integrating exponential backoff in your GenAI client, you notice a sharp increase in user latency during peak periods. What is the main tradeoff introduced by this retry strategy?",
+        "raw_source": "2026-06-30T052118Z-openai-gpt-4.1-day-03-order016.md item 5"
+      },
+      {
+        "item_id": "P1-AIP-D3-177",
+        "stem": "A data scientist notices that GenAI requests to a Bedrock model are being rejected with API Gateway 429 errors, even though the downstream Lambda function is rarely at full concurrency. What primary issue should be investigated?",
+        "raw_source": "2026-06-30T052118Z-openai-gpt-4.1-day-03-order016.md item 6"
+      },
+      {
+        "item_id": "P1-AIP-D3-178",
+        "stem": "Your development team implements a fixed retry interval of 100ms for API calls to Foundation Model endpoints. They've noticed that errors sometimes cluster, and overall throughput suffers. What AWS SDK retry strategy strongly mitigates this problem?",
+        "raw_source": "2026-06-30T052118Z-openai-gpt-4.1-day-03-order016.md item 7"
+      },
+      {
+        "item_id": "P1-AIP-D3-179",
+        "stem": "A large-scale AI workload faces unpredictable timeouts due to transient model inference slowdowns. Which set of changes will provide the most balanced resilience with minimal unnecessary backend load? (Select TWO.)",
+        "raw_source": "2026-06-30T052118Z-openai-gpt-4.1-day-03-order016.md item 8"
+      },
+      {
+        "item_id": "P1-AIP-D3-180",
+        "stem": "A GenAI solution uses API Gateway in front of a Bedrock-powered inference service. After deploying a new client application, you're seeing an increase in 429 (Too Many Requests) errors during model calls even though peak throughput hasn't increased. Which client misconfiguration is the most likely root cause?",
+        "raw_source": "2026-06-30T052118Z-openai-gpt-4.1-day-03-order016.md item 9"
+      },
+      {
+        "item_id": "P1-AIP-D3-181",
+        "stem": "You are tasked with reducing model inference latency spikes in your GenAI API. You already use exponential backoff and have tuned Gateway limits, but users still see random slowdowns. What is the next best step?",
+        "raw_source": "2026-06-30T052118Z-openai-gpt-4.1-day-03-order016.md item 10"
+      },
+      {
+        "item_id": "P1-AIP-D3-182",
+        "stem": "A team implements a retry strategy for GenAI API calls and configures the maximum retry attempts to 20 for each request. As load increases, the backend experiences resource exhaustion. What is the main risk of this configuration?",
+        "raw_source": "2026-06-30T052118Z-openai-gpt-4.1-day-03-order016.md item 11"
+      },
+      {
+        "item_id": "P1-AIP-D3-183",
+        "stem": "A GenAI API client receives consistent timeouts after three retry attempts when calling a Bedrock-powered inference endpoint behind API Gateway. The API Gateway burst and rate limits are sufficient. What is the most likely remaining cause?",
+        "raw_source": "2026-06-30T052118Z-openai-gpt-4.1-day-03-order016.md item 12"
+      },
+      {
+        "item_id": "P1-AIP-D3-184",
+        "stem": "You want to ensure resilience of your GenAI API under unpredictable load but wish to avoid unnecessary latency and resource waste. What combination of architectural best practices should you employ? (Select THREE.)",
+        "raw_source": "2026-06-30T052118Z-openai-gpt-4.1-day-03-order016.md item 13"
+      }
+    ],
+    "Day03-order017": [
+      {
+        "item_id": "P1-AIP-D3-185",
+        "stem": "An AWS Generative AI application running on multiple Regions relies on a foundation model available only in a subset of regions. The workload requires high availability even if a regional outage occurs. What architecture pattern best maintains service continuity for FM inference requests?",
+        "raw_source": "2026-06-30T052157Z-openai-gpt-4.1-day-03-order017.md item 1"
+      },
+      {
+        "item_id": "P1-AIP-D3-186",
+        "stem": "A development team is designing an FM-powered chatbot for a critical application. They want to ensure that if the FM experiences service disruptions, the application can continue to respond with a useful but less capable answer. Which strategy best achieves this goal?",
+        "raw_source": "2026-06-30T052157Z-openai-gpt-4.1-day-03-order017.md item 2"
+      },
+      {
+        "item_id": "P1-AIP-D3-187",
+        "stem": "An AI team is implementing a circuit breaker for their GenAI API integration. What scenario should trigger the circuit breaker to open and invoke an alternate path?",
+        "raw_source": "2026-06-30T052157Z-openai-gpt-4.1-day-03-order017.md item 3"
+      },
+      {
+        "item_id": "P1-AIP-D3-188",
+        "stem": "A customer wants to minimize the impact of FM inference service outages on their public-facing question-answer bot. Which combination of mechanisms collectively provides the most resilient user experience?",
+        "raw_source": "2026-06-30T052157Z-openai-gpt-4.1-day-03-order017.md item 4"
+      },
+      {
+        "item_id": "P1-AIP-D3-189",
+        "stem": "A team notices that their RAG application returns generic error messages to end-users whenever FM capacity errors occur. Which change can improve user experience by aligning with graceful degradation best practices?",
+        "raw_source": "2026-06-30T052157Z-openai-gpt-4.1-day-03-order017.md item 5"
+      },
+      {
+        "item_id": "P1-AIP-D3-190",
+        "stem": "You are architecting an enterprise workflow that relies on a Bedrock-hosted FM. To maximize overall uptime across unpredictable failure events, which set of practices covers SI resilient operations as recommended in AWS guidance? (Select TWO.)",
+        "raw_source": "2026-06-30T052157Z-openai-gpt-4.1-day-03-order017.md item 6"
+      },
+      {
+        "item_id": "P1-AIP-D3-191",
+        "stem": "In a multi-step workflow, you want to prevent downstream service overload caused by circuit breaker misconfiguration. What is the most appropriate practice for tuning the circuit breaker in your Step Functions state machine?",
+        "raw_source": "2026-06-30T052157Z-openai-gpt-4.1-day-03-order017.md item 7"
+      },
+      {
+        "item_id": "P1-AIP-D3-192",
+        "stem": "Your FM workflow uses AWS SDKs and Step Functions to orchestrate multi-API calls. Which action helps prevent runaway retries and service collapse during extended backend disruption?",
+        "raw_source": "2026-06-30T052157Z-openai-gpt-4.1-day-03-order017.md item 8"
+      },
+      {
+        "item_id": "P1-AIP-D3-193",
+        "stem": "A financial services GenAI application must meet regulatory uptime guarantees. Which architecture ensures compliance if the Bedrock-hosted FM becomes unavailable in the region during a trading day?",
+        "raw_source": "2026-06-30T052157Z-openai-gpt-4.1-day-03-order017.md item 9"
+      },
+      {
+        "item_id": "P1-AIP-D3-194",
+        "stem": "An AI development lead wants to ensure the system meets business SLAs even if all regional Bedrock FMs are temporarily unreachable. Which strategies should they adopt? (Select TWO.)",
+        "raw_source": "2026-06-30T052157Z-openai-gpt-4.1-day-03-order017.md item 10"
+      },
+      {
+        "item_id": "P1-AIP-D3-195",
+        "stem": "Your prompt workflow uses Step Functions to orchestrate aggregation, retrieval, and FM inference. Occasionally, the Bedrock FM becomes unresponsive for several minutes, affecting downstream tasks. What should you do to minimize overall workflow disruption and latency?",
+        "raw_source": "2026-06-30T052157Z-openai-gpt-4.1-day-03-order017.md item 11"
+      },
+      {
+        "item_id": "P1-AIP-D3-196",
+        "stem": "You are consulting for an enterprise building a high-availability AI service on AWS. Their main concern is ensuring user workflows do not completely fail when a new model launch causes accidental Bedrock downtime. What is the MOST reliable way to handle this?",
+        "raw_source": "2026-06-30T052157Z-openai-gpt-4.1-day-03-order017.md item 12"
+      }
+    ],
+    "Day03-order018": [
+      {
+        "item_id": "P1-AIP-D3-197",
+        "stem": "A generative AI application deployed on AWS Bedrock begins experiencing intermittent latency spikes during inference. You enable AWS X-Ray on the application and want to understand the exact service in the pipeline that causes the bottleneck. What should you do next in the X-Ray console to diagnose this issue efficiently?",
+        "raw_source": "2026-06-30T052243Z-openai-gpt-4.1-day-03-order018.md item 1"
+      },
+      {
+        "item_id": "P1-AIP-D3-198",
+        "stem": "You are asked to customize observability for a generative AI workload that orchestrates multiple Bedrock API calls along with calls to external services. The operations team requires a dashboard with unified, real-time metrics\u2014including FM response times, integration failures, and business-level indicators. What is the most effective AWS-native approach?",
+        "raw_source": "2026-06-30T052243Z-openai-gpt-4.1-day-03-order018.md item 2"
+      },
+      {
+        "item_id": "P1-AIP-D3-199",
+        "stem": "You are developing a GenAI-powered customer support system that repeatedly provides delayed responses to certain intents. To identify where delays occur, which CloudWatch dashboard feature is essential for correlating model latency with specific user intents and time periods?",
+        "raw_source": "2026-06-30T052243Z-openai-gpt-4.1-day-03-order018.md item 4"
+      },
+      {
+        "item_id": "P1-AIP-D3-200",
+        "stem": "During an outage of a downstream payment service, your distributed AI application suddenly accumulates throttling errors and retry storms visible in the X-Ray console. Which visualization or tab will most quickly help you identify the affected service and the propagation of failures?",
+        "raw_source": "2026-06-30T052243Z-openai-gpt-4.1-day-03-order018.md item 6"
+      },
+      {
+        "item_id": "P1-AIP-D3-201",
+        "stem": "While analyzing prompt failures in a GenAI API, you need to track prompt payload content, user IDs, and FM model name across the distributed logs and traces for a recent production incident. Which feature of AWS X-Ray or CloudWatch best supports this kind of search and correlation?",
+        "raw_source": "2026-06-30T052243Z-openai-gpt-4.1-day-03-order018.md item 7"
+      },
+      {
+        "item_id": "P1-AIP-D3-202",
+        "stem": "A team is responsible for several GenAI-powered REST APIs running across different AWS accounts. Management requests an integrated dashboard summarizing real-time FM API health, error rates, and business indicators without granting access to each account\u2019s console. What is the most suitable AWS-native solution?",
+        "raw_source": "2026-06-30T052243Z-openai-gpt-4.1-day-03-order018.md item 8"
+      },
+      {
+        "item_id": "P1-AIP-D3-203",
+        "stem": "After a new FM model version deploys, your observability dashboard\u2019s error count spikes. Traces show new response patterns, but your dashboards don't surface business-level impact. What dashboard enhancement addresses this visibility gap for leadership?",
+        "raw_source": "2026-06-30T052243Z-openai-gpt-4.1-day-03-order018.md item 12"
+      },
+      {
+        "item_id": "P1-AIP-D3-204",
+        "stem": "You're investigating intermittent errors in a multi-step GenAI pipeline. You need to confirm whether API timeouts correlate with downstream FM retries and to visually verify the causal path. What is the best X-Ray console approach to accomplish this end-to-end investigation?",
+        "raw_source": "2026-06-30T052243Z-openai-gpt-4.1-day-03-order018.md item 13"
+      },
+      {
+        "item_id": "P1-AIP-D3-219",
+        "stem": "A GenAI workflow uses AWS Lambda and AWS Bedrock in separate microservices. After rolling out a new FM model version, users report intermittent failures. CloudWatch dashboards show stable system resource metrics but increasing errors related to model invocation. You must rapidly pinpoint where failures originate, spanning several services. What is the most direct X-Ray console feature or workflow to use?",
+        "raw_source": "2026-06-30T052520Z-openai-gpt-4.1-day-03-order018-top-up-4.md item 1"
+      },
+      {
+        "item_id": "P1-AIP-D3-220",
+        "stem": "A development team has configured CloudWatch dashboards for a GenAI API, but business stakeholders want to view both technical and business metrics in one place, including model latency and conversion rates from user queries. Which CloudWatch dashboard strategy most directly meets this requirement with minimal maintenance?",
+        "raw_source": "2026-06-30T052520Z-openai-gpt-4.1-day-03-order018-top-up-4.md item 2"
+      },
+      {
+        "item_id": "P1-AIP-D3-221",
+        "stem": "You're building an end-to-end GenAI application where latency spikes are hard to diagnose because some API calls are external, and others are to AWS services. What sequence of actions in the X-Ray console helps you most efficiently distinguish between external dependency bottlenecks and AWS service delays affecting the FM pipeline?",
+        "raw_source": "2026-06-30T052520Z-openai-gpt-4.1-day-03-order018-top-up-4.md item 3"
+      },
+      {
+        "item_id": "P1-AIP-D3-222",
+        "stem": "A GenAI team is introducing a new business metric for user engagement and wants to track it side-by-side with FM-specific latency and error metrics, surfacing all in a unified monitoring interface with drill-down capability for operators. What is the best CloudWatch dashboard design pattern to recommend?",
+        "raw_source": "2026-06-30T052520Z-openai-gpt-4.1-day-03-order018-top-up-4.md item 4"
+      }
+    ]
+  },
+  "culled_items": [
+    {
+      "raw_source": "2026-06-30T051656Z-openai-gpt-4.1-day-03-order010.md item 3",
+      "curriculum_order": "Day03-order010",
+      "stem": "A developer is tasked with verifying that recent prompt updates for a finance chatbot do not cause failures on previously functioning queries. Which AWS service combination is most suitable for automating regression checks at scale?",
+      "reasons": [
+        "keyword-trivia stem"
+      ],
+      "evidence": [
+        "keyword-trivia stem: matched weak stem pattern(s): which aws service; stem=\"A developer is tasked with verifying that recent prompt updates for a finance chatbot do not cause failures on previously functioning queries. Which AWS service combination is most suitable for automating regression checks at scale?\""
+      ]
+    },
+    {
+      "raw_source": "2026-06-30T051656Z-openai-gpt-4.1-day-03-order010.md item 8",
+      "curriculum_order": "Day03-order010",
+      "stem": "A company wants to automate prompt regression testing for all prompt template changes but also wants to collect and analyze statistics on test results over time. Which AWS services should be used together for this goal? (Select TWO.)",
+      "reasons": [
+        "keyword-trivia stem"
+      ],
+      "evidence": [
+        "keyword-trivia stem: matched weak stem pattern(s): which aws service; stem=\"A company wants to automate prompt regression testing for all prompt template changes but also wants to collect and analyze statistics on test results over time. Which AWS services should be used together for this goal? (Select TWO.)\""
+      ]
+    },
+    {
+      "raw_source": "2026-06-30T051656Z-openai-gpt-4.1-day-03-order010.md item 10",
+      "curriculum_order": "Day03-order010",
+      "stem": "Which feature of prompt regression testing is most essential in preventing repeated introduction of old errors when prompt designs evolve over multiple releases?",
+      "reasons": [
+        "schema defect",
+        "source-grounding defect"
+      ],
+      "evidence": [
+        "schema defect: source_trace must use official AWS docs URLs, resolving local docs/... paths, the canonical objectives JSON, or explicit NONE/source_trace_needed",
+        "schema defect: source_trace references non-resolving local path(s): docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day03-order010-prompt-regression-testing-quality-assurance.md",
+        "source-grounding defect: source_contract_version=''",
+        "source-grounding defect: allowed_source_id is not in allowlist: ''",
+        "source-grounding defect: atomic_claims[1].source is not in topic allowlist: 'docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day03-order010-prompt-regression-testing-quality-assurance.md'"
+      ]
+    },
+    {
+      "raw_source": "2026-06-30T051656Z-openai-gpt-4.1-day-03-order010.md item 11",
+      "curriculum_order": "Day03-order010",
+      "stem": "A downstream application throws exceptions after a new prompt template is deployed, even though prompt regression tests passed on expected output content. What likely failure mode did the QA process miss?",
+      "reasons": [
+        "schema defect",
+        "source-grounding defect"
+      ],
+      "evidence": [
+        "schema defect: source_trace must use official AWS docs URLs, resolving local docs/... paths, the canonical objectives JSON, or explicit NONE/source_trace_needed",
+        "schema defect: source_trace references non-resolving local path(s): docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day03-order010-prompt-regression-testing-quality-assurance.md",
+        "source-grounding defect: source_contract_version=''",
+        "source-grounding defect: allowed_source_id is not in allowlist: ''",
+        "source-grounding defect: atomic_claims[1].source is not in topic allowlist: 'docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day03-order010-prompt-regression-testing-quality-assurance.md'"
+      ]
+    },
+    {
+      "raw_source": "2026-06-30T051656Z-openai-gpt-4.1-day-03-order010.md item 12",
+      "curriculum_order": "Day03-order010",
+      "stem": "Which two practices most effectively minimize risk and maintain confidence in the quality of prompts before every GenAI service production deployment? (Select TWO.)",
+      "reasons": [
+        "schema defect",
+        "source-grounding defect"
+      ],
+      "evidence": [
+        "schema defect: source_trace must use official AWS docs URLs, resolving local docs/... paths, the canonical objectives JSON, or explicit NONE/source_trace_needed",
+        "schema defect: source_trace references non-resolving local path(s): docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day03-order010-prompt-regression-testing-quality-assurance.md",
+        "source-grounding defect: source_contract_version=''",
+        "source-grounding defect: allowed_source_id is not in allowlist: ''",
+        "source-grounding defect: atomic_claims[1].source is not in topic allowlist: 'docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day03-order010-prompt-regression-testing-quality-assurance.md'"
+      ]
+    },
+    {
+      "raw_source": "2026-06-30T051656Z-openai-gpt-4.1-day-03-order010.md item 13",
+      "curriculum_order": "Day03-order010",
+      "stem": "Your team leverages CI/CD to deploy new prompt templates for a smart legal assistant on a weekly cadence. Which QA control is BEST to include in your pipeline to ensure prompt regression issues are discovered before code merges?",
+      "reasons": [
+        "schema defect",
+        "source-grounding defect"
+      ],
+      "evidence": [
+        "schema defect: source_trace must use official AWS docs URLs, resolving local docs/... paths, the canonical objectives JSON, or explicit NONE/source_trace_needed",
+        "schema defect: source_trace references non-resolving local path(s): docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day03-order010-prompt-regression-testing-quality-assurance.md",
+        "source-grounding defect: source_contract_version=''",
+        "source-grounding defect: allowed_source_id is not in allowlist: ''",
+        "source-grounding defect: atomic_claims[1].source is not in topic allowlist: 'docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day03-order010-prompt-regression-testing-quality-assurance.md'"
+      ]
+    },
+    {
+      "raw_source": "2026-06-30T051823Z-openai-gpt-4.1-day-03-order012.md item 12",
+      "curriculum_order": "Day03-order012",
+      "stem": "You are tasked with implementing a production-grade synchronous FM API: API Gateway sits in front of a Lambda function which calls Bedrock. Select ALL approaches you should take to guarantee valid data is received and performance SLAs are met. (Select TWO.)",
+      "reasons": [
+        "schema defect",
+        "source-grounding defect"
+      ],
+      "evidence": [
+        "schema defect: source_trace must use official AWS docs URLs, resolving local docs/... paths, the canonical objectives JSON, or explicit NONE/source_trace_needed",
+        "schema defect: source_trace references non-resolving local path(s): docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day03-order012-synchronous-fm-api-integration.md",
+        "source-grounding defect: source_contract_version=''",
+        "source-grounding defect: allowed_source_id is not in allowlist: ''",
+        "source-grounding defect: atomic_claims[1].source is not in topic allowlist: 'docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day03-order012-synchronous-fm-api-integration.md'"
+      ]
+    },
+    {
+      "raw_source": "2026-06-30T051911Z-openai-gpt-4.1-day-03-order013.md item 2",
+      "curriculum_order": "Day03-order013",
+      "stem": "An AWS developer is tasked with orchestrating a multi-stage asynchronous generative AI workflow that requires integrating Bedrock API calls, document parsing, and post-processing in a fault-tolerant way. Which AWS service or pattern BEST supports this requirement?",
+      "reasons": [
+        "keyword-trivia stem"
+      ],
+      "evidence": [
+        "keyword-trivia stem: matched weak stem pattern(s): which aws service; stem=\"An AWS developer is tasked with orchestrating a multi-stage asynchronous generative AI workflow that requires integrating Bedrock API calls, document parsing, and post-processing in a fault-tolerant way. Which AWS service or pattern BEST supports this requi...\""
+      ]
+    },
+    {
+      "raw_source": "2026-06-30T052035Z-openai-gpt-4.1-day-03-order015.md item 1",
+      "curriculum_order": "Day03-order015",
+      "stem": "A financial advice chatbot using Amazon Bedrock begins returning truncated responses when complex user questions are submitted. The FM is configured for lengthy, context-rich answers, but output is still cut off mid-sentence. The development team wants to ensure users always receive complete, coherent responses. What is the most appropriate next step?",
+      "reasons": [
+        "schema defect",
+        "source-grounding defect"
+      ],
+      "evidence": [
+        "schema defect: source_trace must use official AWS docs URLs, resolving local docs/... paths, the canonical objectives JSON, or explicit NONE/source_trace_needed",
+        "schema defect: source_trace references non-resolving local path(s): docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day03-order015-token-limits-request-validation-response-handling.md",
+        "source-grounding defect: source_contract_version=''",
+        "source-grounding defect: allowed_source_id is not in allowlist: ''",
+        "source-grounding defect: atomic_claims[1].source is not in topic allowlist: 'docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day03-order015-token-limits-request-validation-response-handling.md'"
+      ]
+    },
+    {
+      "raw_source": "2026-06-30T052035Z-openai-gpt-4.1-day-03-order015.md item 2",
+      "curriculum_order": "Day03-order015",
+      "stem": "Your API client for Bedrock models is occasionally returning 400 errors when submitting requests with large documents as context. The model being used accepts up to 4096 tokens per request. Which action is most likely to prevent these validation errors for users with long-form content?",
+      "reasons": [
+        "schema defect",
+        "source-grounding defect"
+      ],
+      "evidence": [
+        "schema defect: source_trace must use official AWS docs URLs, resolving local docs/... paths, the canonical objectives JSON, or explicit NONE/source_trace_needed",
+        "schema defect: source_trace references non-resolving local path(s): docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day03-order015-token-limits-request-validation-response-handling.md",
+        "source-grounding defect: source_contract_version=''",
+        "source-grounding defect: allowed_source_id is not in allowlist: ''",
+        "source-grounding defect: atomic_claims[1].source is not in topic allowlist: 'docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day03-order015-token-limits-request-validation-response-handling.md'"
+      ]
+    },
+    {
+      "raw_source": "2026-06-30T052035Z-openai-gpt-4.1-day-03-order015.md item 3",
+      "curriculum_order": "Day03-order015",
+      "stem": "A GenAI application forwards complex user queries and their full conversation context to an Amazon Bedrock FM. Users report that the model sometimes ignores recent turns of the conversation, especially after a long back-and-forth. What is the most likely cause of this behavior?",
+      "reasons": [
+        "schema defect",
+        "source-grounding defect"
+      ],
+      "evidence": [
+        "schema defect: source_trace must use official AWS docs URLs, resolving local docs/... paths, the canonical objectives JSON, or explicit NONE/source_trace_needed",
+        "schema defect: source_trace references non-resolving local path(s): docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day03-order015-token-limits-request-validation-response-handling.md",
+        "source-grounding defect: source_contract_version=''",
+        "source-grounding defect: allowed_source_id is not in allowlist: ''",
+        "source-grounding defect: atomic_claims[1].source is not in topic allowlist: 'docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day03-order015-token-limits-request-validation-response-handling.md'"
+      ]
+    },
+    {
+      "raw_source": "2026-06-30T052035Z-openai-gpt-4.1-day-03-order015.md item 4",
+      "curriculum_order": "Day03-order015",
+      "stem": "When integrating a new FM endpoint in Bedrock, your QA workflow must check that all input prompts are properly formatted and validated before requests are sent to the API. What is the best approach to automate this input validation step?",
+      "reasons": [
+        "schema defect",
+        "source-grounding defect"
+      ],
+      "evidence": [
+        "schema defect: source_trace must use official AWS docs URLs, resolving local docs/... paths, the canonical objectives JSON, or explicit NONE/source_trace_needed",
+        "schema defect: source_trace references non-resolving local path(s): docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day03-order015-token-limits-request-validation-response-handling.md",
+        "source-grounding defect: source_contract_version=''",
+        "source-grounding defect: allowed_source_id is not in allowlist: ''",
+        "source-grounding defect: atomic_claims[1].source is not in topic allowlist: 'docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day03-order015-token-limits-request-validation-response-handling.md'"
+      ]
+    },
+    {
+      "raw_source": "2026-06-30T052035Z-openai-gpt-4.1-day-03-order015.md item 5",
+      "curriculum_order": "Day03-order015",
+      "stem": "A Bedrock-powered generative API is experiencing inconsistent behavior: some requests are rejected with a message about exceeding the context window, while others return incomplete responses. Which configuration changes should you make to reduce user-facing errors? (Select TWO.)",
+      "reasons": [
+        "schema defect",
+        "source-grounding defect"
+      ],
+      "evidence": [
+        "schema defect: source_trace must use official AWS docs URLs, resolving local docs/... paths, the canonical objectives JSON, or explicit NONE/source_trace_needed",
+        "schema defect: source_trace references non-resolving local path(s): docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day03-order015-token-limits-request-validation-response-handling.md",
+        "source-grounding defect: source_contract_version=''",
+        "source-grounding defect: allowed_source_id is not in allowlist: ''",
+        "source-grounding defect: atomic_claims[1].source is not in topic allowlist: 'docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day03-order015-token-limits-request-validation-response-handling.md'"
+      ]
+    },
+    {
+      "raw_source": "2026-06-30T052035Z-openai-gpt-4.1-day-03-order015.md item 6",
+      "curriculum_order": "Day03-order015",
+      "stem": "You are designing a prompt management workflow for a customer service bot using Bedrock FMs. The support staff sometimes request that output be restructured, but the FM occasionally ignores output formatting instructions. Which change is most likely to improve compliance with response handling requirements?",
+      "reasons": [
+        "schema defect",
+        "source-grounding defect"
+      ],
+      "evidence": [
+        "schema defect: source_trace must use official AWS docs URLs, resolving local docs/... paths, the canonical objectives JSON, or explicit NONE/source_trace_needed",
+        "schema defect: source_trace references non-resolving local path(s): docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day03-order015-token-limits-request-validation-response-handling.md",
+        "source-grounding defect: source_contract_version=''",
+        "source-grounding defect: allowed_source_id is not in allowlist: ''",
+        "source-grounding defect: atomic_claims[1].source is not in topic allowlist: 'docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day03-order015-token-limits-request-validation-response-handling.md'"
+      ]
+    },
+    {
+      "raw_source": "2026-06-30T052035Z-openai-gpt-4.1-day-03-order015.md item 8",
+      "curriculum_order": "Day03-order015",
+      "stem": "You are troubleshooting a GenAI application using Bedrock and discover that when prompts include large code examples, responses are delayed and sometimes incomplete. Which root cause is most likely?",
+      "reasons": [
+        "schema defect",
+        "source-grounding defect"
+      ],
+      "evidence": [
+        "schema defect: source_trace must use official AWS docs URLs, resolving local docs/... paths, the canonical objectives JSON, or explicit NONE/source_trace_needed",
+        "schema defect: source_trace references non-resolving local path(s): docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day03-order015-token-limits-request-validation-response-handling.md",
+        "source-grounding defect: source_contract_version=''",
+        "source-grounding defect: allowed_source_id is not in allowlist: ''",
+        "source-grounding defect: atomic_claims[1].source is not in topic allowlist: 'docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day03-order015-token-limits-request-validation-response-handling.md'"
+      ]
+    },
+    {
+      "raw_source": "2026-06-30T052035Z-openai-gpt-4.1-day-03-order015.md item 9",
+      "curriculum_order": "Day03-order015",
+      "stem": "A GenAI developer is integrating Bedrock and must design robust error handling for content window overflow and request validation failures. Which two actions are most effective for minimizing production incident rates? (Select TWO.)",
+      "reasons": [
+        "schema defect",
+        "source-grounding defect"
+      ],
+      "evidence": [
+        "schema defect: source_trace must use official AWS docs URLs, resolving local docs/... paths, the canonical objectives JSON, or explicit NONE/source_trace_needed",
+        "schema defect: source_trace references non-resolving local path(s): docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day03-order015-token-limits-request-validation-response-handling.md",
+        "source-grounding defect: source_contract_version=''",
+        "source-grounding defect: allowed_source_id is not in allowlist: ''",
+        "source-grounding defect: atomic_claims[1].source is not in topic allowlist: 'docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day03-order015-token-limits-request-validation-response-handling.md'"
+      ]
+    },
+    {
+      "raw_source": "2026-06-30T052035Z-openai-gpt-4.1-day-03-order015.md item 10",
+      "curriculum_order": "Day03-order015",
+      "stem": "A Bedrock-based QA chatbot receives occasional complaints that important citation links are missing in the returned answers whenever the user submits multi-paragraph questions and requests detailed answers. What is the most likely explanation?",
+      "reasons": [
+        "schema defect",
+        "source-grounding defect"
+      ],
+      "evidence": [
+        "schema defect: source_trace must use official AWS docs URLs, resolving local docs/... paths, the canonical objectives JSON, or explicit NONE/source_trace_needed",
+        "schema defect: source_trace references non-resolving local path(s): docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day03-order015-token-limits-request-validation-response-handling.md",
+        "source-grounding defect: source_contract_version=''",
+        "source-grounding defect: allowed_source_id is not in allowlist: ''",
+        "source-grounding defect: atomic_claims[1].source is not in topic allowlist: 'docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day03-order015-token-limits-request-validation-response-handling.md'"
+      ]
+    },
+    {
+      "raw_source": "2026-06-30T052035Z-openai-gpt-4.1-day-03-order015.md item 11",
+      "curriculum_order": "Day03-order015",
+      "stem": "While developing an FM-powered summarization endpoint, you want to validate that your client will always reject requests that could trigger model errors or response truncation. Which step will best enforce this requirement?",
+      "reasons": [
+        "schema defect",
+        "source-grounding defect"
+      ],
+      "evidence": [
+        "schema defect: source_trace must use official AWS docs URLs, resolving local docs/... paths, the canonical objectives JSON, or explicit NONE/source_trace_needed",
+        "schema defect: source_trace references non-resolving local path(s): docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day03-order015-token-limits-request-validation-response-handling.md",
+        "source-grounding defect: source_contract_version=''",
+        "source-grounding defect: allowed_source_id is not in allowlist: ''",
+        "source-grounding defect: atomic_claims[1].source is not in topic allowlist: 'docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day03-order015-token-limits-request-validation-response-handling.md'"
+      ]
+    },
+    {
+      "raw_source": "2026-06-30T052035Z-openai-gpt-4.1-day-03-order015.md item 12",
+      "curriculum_order": "Day03-order015",
+      "stem": "A workflow using Bedrock repeatedly returns authentication errors for seemingly well-formed requests. Upon closer inspection, developers discover the errors occur only when large context documents are included and the FM is overwhelmed. What defensive technique should be prioritized?",
+      "reasons": [
+        "schema defect",
+        "source-grounding defect"
+      ],
+      "evidence": [
+        "schema defect: source_trace must use official AWS docs URLs, resolving local docs/... paths, the canonical objectives JSON, or explicit NONE/source_trace_needed",
+        "schema defect: source_trace references non-resolving local path(s): docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day03-order015-token-limits-request-validation-response-handling.md",
+        "source-grounding defect: source_contract_version=''",
+        "source-grounding defect: allowed_source_id is not in allowlist: ''",
+        "source-grounding defect: atomic_claims[1].source is not in topic allowlist: 'docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day03-order015-token-limits-request-validation-response-handling.md'"
+      ]
+    },
+    {
+      "raw_source": "2026-06-30T052035Z-openai-gpt-4.1-day-03-order015.md item 13",
+      "curriculum_order": "Day03-order015",
+      "stem": "You are asked to improve an internal GenAI FAQ tool built on Bedrock FMs, which occasionally skips over important sections of a long input prompt and returns partial answers. What is the primary cause, and the recommended mitigation? (Select TWO.)",
+      "reasons": [
+        "schema defect",
+        "source-grounding defect"
+      ],
+      "evidence": [
+        "schema defect: source_trace must use official AWS docs URLs, resolving local docs/... paths, the canonical objectives JSON, or explicit NONE/source_trace_needed",
+        "schema defect: source_trace references non-resolving local path(s): docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day03-order015-token-limits-request-validation-response-handling.md",
+        "source-grounding defect: source_contract_version=''",
+        "source-grounding defect: allowed_source_id is not in allowlist: ''",
+        "source-grounding defect: atomic_claims[1].source is not in topic allowlist: 'docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day03-order015-token-limits-request-validation-response-handling.md'"
+      ]
+    },
+    {
+      "raw_source": "2026-06-30T052243Z-openai-gpt-4.1-day-03-order018.md item 3",
+      "curriculum_order": "Day03-order018",
+      "stem": "A FinTech company running a multi-step FM workflow notices that several transaction-related API calls sometimes fail, but the missing transactions are not traceable in logs. You need to enable distributed tracing to visualize end-to-end user journeys and spot failures quickly. Which AWS service should you integrate and why?",
+      "reasons": [
+        "keyword-trivia stem"
+      ],
+      "evidence": [
+        "keyword-trivia stem: matched weak stem pattern(s): which aws service; stem=\"A FinTech company running a multi-step FM workflow notices that several transaction-related API calls sometimes fail, but the missing transactions are not traceable in logs. You need to enable distributed tracing to visualize end-to-end user journeys and sp...\""
+      ]
+    },
+    {
+      "raw_source": "2026-06-30T052243Z-openai-gpt-4.1-day-03-order018.md item 5",
+      "curriculum_order": "Day03-order018",
+      "stem": "Your team manages a Bedrock-integrated AI platform running on multiple AWS regions. They want to ensure traceability and observability across all service boundaries, including direct API calls, Lambda functions, and Step Functions. Which combination of AWS tools delivers the most holistic tracing and observability in this scenario? (Select TWO.)",
+      "reasons": [
+        "schema defect",
+        "source-grounding defect"
+      ],
+      "evidence": [
+        "schema defect: source_trace must use official AWS docs URLs, resolving local docs/... paths, the canonical objectives JSON, or explicit NONE/source_trace_needed",
+        "schema defect: source_trace references non-resolving local path(s): docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day03-order018-distributed-tracing-fm-api-observability.md",
+        "source-grounding defect: source_contract_version=''",
+        "source-grounding defect: allowed_source_id is not in allowlist: ''",
+        "source-grounding defect: atomic_claims[1].source is not in topic allowlist: 'docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day03-order018-distributed-tracing-fm-api-observability.md'"
+      ]
+    },
+    {
+      "raw_source": "2026-06-30T052243Z-openai-gpt-4.1-day-03-order018.md item 9",
+      "curriculum_order": "Day03-order018",
+      "stem": "Your FM-powered microservices architecture emits large volumes of application and API logs. The operations team wants real-time alerts when prompt input length or model response time suddenly exceeds historical norms. Which combination of AWS features best supports this use case? (Select TWO.)",
+      "reasons": [
+        "schema defect",
+        "source-grounding defect"
+      ],
+      "evidence": [
+        "schema defect: source_trace must use official AWS docs URLs, resolving local docs/... paths, the canonical objectives JSON, or explicit NONE/source_trace_needed",
+        "schema defect: source_trace references non-resolving local path(s): docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day03-order018-distributed-tracing-fm-api-observability.md",
+        "source-grounding defect: source_contract_version=''",
+        "source-grounding defect: allowed_source_id is not in allowlist: ''",
+        "source-grounding defect: atomic_claims[1].source is not in topic allowlist: 'docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day03-order018-distributed-tracing-fm-api-observability.md'"
+      ]
+    },
+    {
+      "raw_source": "2026-06-30T052243Z-openai-gpt-4.1-day-03-order018.md item 10",
+      "curriculum_order": "Day03-order018",
+      "stem": "A distributed RAG application\u2019s API latency suddenly increases. You observe longer duration segments in the X-Ray segment timeline, particularly for downstream FM calls. However, CloudWatch dashboards show healthy infrastructure and low error rates. What is the most plausible root cause?",
+      "reasons": [
+        "schema defect",
+        "source-grounding defect"
+      ],
+      "evidence": [
+        "schema defect: source_trace must use official AWS docs URLs, resolving local docs/... paths, the canonical objectives JSON, or explicit NONE/source_trace_needed",
+        "schema defect: source_trace references non-resolving local path(s): docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day03-order018-distributed-tracing-fm-api-observability.md",
+        "source-grounding defect: source_contract_version=''",
+        "source-grounding defect: allowed_source_id is not in allowlist: ''",
+        "source-grounding defect: atomic_claims[1].source is not in topic allowlist: 'docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day03-order018-distributed-tracing-fm-api-observability.md'"
+      ]
+    },
+    {
+      "raw_source": "2026-06-30T052243Z-openai-gpt-4.1-day-03-order018.md item 11",
+      "curriculum_order": "Day03-order018",
+      "stem": "Your monitoring solution for a distributed generative AI pipeline must provide both real-time visual feedback for operators and support ad-hoc deep troubleshooting by developers investigating FM inference slowness. Which paired AWS features best satisfy this dual requirement?",
+      "reasons": [
+        "schema defect",
+        "source-grounding defect"
+      ],
+      "evidence": [
+        "schema defect: source_trace must use official AWS docs URLs, resolving local docs/... paths, the canonical objectives JSON, or explicit NONE/source_trace_needed",
+        "schema defect: source_trace references non-resolving local path(s): docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day03-order018-distributed-tracing-fm-api-observability.md",
+        "source-grounding defect: source_contract_version=''",
+        "source-grounding defect: allowed_source_id is not in allowlist: ''",
+        "source-grounding defect: atomic_claims[1].source is not in topic allowlist: 'docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day03-order018-distributed-tracing-fm-api-observability.md'"
+      ]
+    },
+    {
+      "raw_source": "2026-06-30T052440Z-openai-gpt-4.1-day-03-order015-top-up-12.md item 2",
+      "curriculum_order": "Day03-order015",
+      "stem": "A GenAI developer is integrating Bedrock's conversation API for a knowledge assistant. They want to ensure each API request is validated before sending to avoid runtime errors. Which method best addresses input validation requirements for Bedrock requests from client applications?",
+      "reasons": [
+        "schema defect",
+        "source-grounding defect"
+      ],
+      "evidence": [
+        "schema defect: source_trace must use official AWS docs URLs, resolving local docs/... paths, the canonical objectives JSON, or explicit NONE/source_trace_needed",
+        "schema defect: source_trace references non-resolving local path(s): docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day03-order015-token-limits-request-validation-response-handling.md",
+        "source-grounding defect: source_contract_version=''",
+        "source-grounding defect: allowed_source_id is not in allowlist: ''",
+        "source-grounding defect: atomic_claims[1].source is not in topic allowlist: 'docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day03-order015-token-limits-request-validation-response-handling.md'"
+      ]
+    },
+    {
+      "raw_source": "2026-06-30T052440Z-openai-gpt-4.1-day-03-order015-top-up-12.md item 7",
+      "curriculum_order": "Day03-order015",
+      "stem": "You\u2019re building a Bedrock GenAI endpoint for business draft generation. User complaints indicate the API sometimes rejects requests with validation errors whenever the user input contains a mixture of text and unsupported data types (e.g., images or binary blobs). What is the most effective first remediation?",
+      "reasons": [
+        "schema defect",
+        "source-grounding defect"
+      ],
+      "evidence": [
+        "schema defect: source_trace must use official AWS docs URLs, resolving local docs/... paths, the canonical objectives JSON, or explicit NONE/source_trace_needed",
+        "schema defect: source_trace references non-resolving local path(s): docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day03-order015-token-limits-request-validation-response-handling.md",
+        "source-grounding defect: source_contract_version=''",
+        "source-grounding defect: allowed_source_id is not in allowlist: ''",
+        "source-grounding defect: atomic_claims[1].source is not in topic allowlist: 'docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day03-order015-token-limits-request-validation-response-handling.md'"
+      ]
+    },
+    {
+      "raw_source": "2026-06-30T052440Z-openai-gpt-4.1-day-03-order015-top-up-12.md item 8",
+      "curriculum_order": "Day03-order015",
+      "stem": "During prompt testing for an FAQ support bot using Bedrock, you notice that several requests with complex input structures are accepted but result in nonsensical or partially empty responses. What is the most likely root cause, and how should you address it?",
+      "reasons": [
+        "schema defect",
+        "source-grounding defect"
+      ],
+      "evidence": [
+        "schema defect: source_trace must use official AWS docs URLs, resolving local docs/... paths, the canonical objectives JSON, or explicit NONE/source_trace_needed",
+        "schema defect: source_trace references non-resolving local path(s): docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day03-order015-token-limits-request-validation-response-handling.md",
+        "source-grounding defect: source_contract_version=''",
+        "source-grounding defect: allowed_source_id is not in allowlist: ''",
+        "source-grounding defect: atomic_claims[1].source is not in topic allowlist: 'docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day03-order015-token-limits-request-validation-response-handling.md'"
+      ]
+    }
+  ]
+}

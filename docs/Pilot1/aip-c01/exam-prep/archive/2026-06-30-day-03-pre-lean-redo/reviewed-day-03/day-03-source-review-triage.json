@@ -1,0 +1,2981 @@
+{
+  "day": 3,
+  "generated": "2026-06-29",
+  "bucket_counts": {
+    "A": 22,
+    "B": 120,
+    "C": 0,
+    "D": 11,
+    "E": 0,
+    "F": 0
+  },
+  "buckets": {
+    "A": {
+      "name": "AWS URL with fetched evidence",
+      "action": "Run grounded judge; likely highest auto-clear yield."
+    },
+    "B": {
+      "name": "Local teaching source with fetched evidence",
+      "action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims."
+    },
+    "C": {
+      "name": "source_trace_needed placeholder",
+      "action": "Retrieve/propose a real source, then fetch and judge."
+    },
+    "D": {
+      "name": "AWS URL without fetched evidence",
+      "action": "Retry fetch or reject/reassign dead URLs before human review."
+    },
+    "E": {
+      "name": "NONE source marker",
+      "action": "Apply policy: judgment item, rewrite, or cull."
+    },
+    "F": {
+      "name": "Other unsupported source condition",
+      "action": "Inspect source token and normalize to an accepted source type."
+    }
+  },
+  "items": [
+    {
+      "item_id": "P1-AIP-D3-001",
+      "learning_unit": "Day03-order001",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order001-hybrid-search-custom-scoring.md",
+      "has_evidence": true,
+      "evidence_length": 600,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.2,
+      "matched_terms": [
+        "hybrid",
+        "search",
+        "relevance",
+        "scoring"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Add a reranking component to reorder the initially retrieved documents. - Hybrid search may still retrieve loosely relevant documents; reranking can further optimize relevance by reordering candidates based on richer scoring."
+    },
+    {
+      "item_id": "P1-AIP-D3-004",
+      "learning_unit": "Day03-order001",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order001-hybrid-search-custom-scoring.md",
+      "has_evidence": true,
+      "evidence_length": 341,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.222,
+      "matched_terms": [
+        "boost",
+        "weight",
+        "keyword",
+        "search"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Boost the weight of the keyword search component for low-recall queries. - Rare terminology benefits from keyword search; adjusting weights based on recall adapts the system for sparse entities."
+    },
+    {
+      "item_id": "P1-AIP-D3-005",
+      "learning_unit": "Day03-order001",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order001-hybrid-search-custom-scoring.md",
+      "has_evidence": true,
+      "evidence_length": 600,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.227,
+      "matched_terms": [
+        "keyword",
+        "custom",
+        "scoring",
+        "retrieval",
+        "quality"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Reduce the initial candidate pool size from both keyword and vector searches before applying custom scoring. - Trimming candidates early minimizes the computational cost of rescoring while preserving retrieval quality."
+    },
+    {
+      "item_id": "P1-AIP-D3-006",
+      "learning_unit": "Day03-order001",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order001-hybrid-search-custom-scoring.md",
+      "has_evidence": true,
+      "evidence_length": 600,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.222,
+      "matched_terms": [
+        "search",
+        "hybrid",
+        "scoring",
+        "relevance"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Limit the number of candidate documents returned by each search modality before rescoring. - Pruning candidates early allows fast hybrid scoring without sacrificing too much recall or relevance."
+    },
+    {
+      "item_id": "P1-AIP-D3-007",
+      "learning_unit": "Day03-order001",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order001-hybrid-search-custom-scoring.md",
+      "has_evidence": true,
+      "evidence_length": 600,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.222,
+      "matched_terms": [
+        "hybrid",
+        "search",
+        "results",
+        "retrieval"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Implement caching for the hybrid search results keyed by normalized queries. - Caching reduces repeated computation for common queries, accelerating frequent retrieval paths with no loss in precision."
+    },
+    {
+      "item_id": "P1-AIP-D3-008",
+      "learning_unit": "Day03-order001",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order001-hybrid-search-custom-scoring.md",
+      "has_evidence": true,
+      "evidence_length": 600,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.261,
+      "matched_terms": [
+        "hybrid",
+        "search",
+        "results",
+        "keyword",
+        "lower",
+        "relevance"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Implement caching for repeated hybrid search queries.; Reduce the number of candidate results from both vector and keyword stages before rescoring. - Both candidate pool reduction and caching lower latency without majorly sacrificing relevance or recall."
+    },
+    {
+      "item_id": "P1-AIP-D3-009",
+      "learning_unit": "Day03-order001",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order001-hybrid-search-custom-scoring.md",
+      "has_evidence": true,
+      "evidence_length": 600,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.25,
+      "matched_terms": [
+        "custom",
+        "scoring",
+        "retrieval",
+        "query",
+        "relevance"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Tune custom scoring weights independently for each domain.; Expand queries with domain-specific synonyms before retrieval. - Custom scoring and query expansion tuned per domain control for varied vocabulary and context, ensuring domain-specific relevance."
+    },
+    {
+      "item_id": "P1-AIP-D3-010",
+      "learning_unit": "Day03-order001",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order001-hybrid-search-custom-scoring.md",
+      "has_evidence": true,
+      "evidence_length": 600,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.235,
+      "matched_terms": [
+        "search",
+        "results",
+        "scoring",
+        "document",
+        "custom",
+        "lower",
+        "relevance",
+        "data"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Cache search results and scoring computations for repeated queries.; Limit the candidate document pool size before applying custom scoring.; Automate index refreshes to maintain near real-time updates. - Caching and candidate limits lower latency and computational load, while automated index refresh ensures relevance for fast data changes."
+    },
+    {
+      "item_id": "P1-AIP-D3-011",
+      "learning_unit": "Day03-order002",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order002-reranking.md",
+      "has_evidence": true,
+      "evidence_length": 124,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.25,
+      "matched_terms": [
+        "reranking",
+        "model",
+        "query",
+        "retrieval",
+        "results"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Implement a reranking model to reorder the initially retrieved snippets based on query relevance. - A reranking model evaluates and orders retrieval results based on semantic relevance, increasing the likelihood that the highest-value snippets are presented first for the FM."
+    },
+    {
+      "item_id": "P1-AIP-D3-013",
+      "learning_unit": "Day03-order002",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order002-reranking.md",
+      "has_evidence": true,
+      "evidence_length": 524,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.333,
+      "matched_terms": [
+        "apply",
+        "reranker",
+        "reranking",
+        "candidate",
+        "better",
+        "ranking",
+        "latency"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Apply a lightweight reranker only to the top K retrieved documents before passing them to the FM. - Limiting reranking to a smaller candidate pool ensures better ranking quality with acceptable latency, matching best practice."
+    },
+    {
+      "item_id": "P1-AIP-D3-014",
+      "learning_unit": "Day03-order002",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order002-reranking.md",
+      "has_evidence": true,
+      "evidence_length": 524,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.222,
+      "matched_terms": [
+        "value",
+        "candidate",
+        "reranking",
+        "latency"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Reduce the value of K (the candidate pool) for reranking to focus on probable top matches. - Smaller candidate pools for reranking decrease latency, and still allow the highest-confidence candidates to be optimally ordered."
+    },
+    {
+      "item_id": "P1-AIP-D3-015",
+      "learning_unit": "Day03-order002",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order002-reranking.md",
+      "has_evidence": true,
+      "evidence_length": 524,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.269,
+      "matched_terms": [
+        "candidate",
+        "reranking",
+        "results",
+        "cost",
+        "lower",
+        "latency",
+        "top-k"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Reduce the candidate pool K for reranking to the minimum necessary.; Cache reranked results for queries with high frequency. - Reducing candidate pool lowers compute cost, and caching reduces reranking for repeated queries\u2014both lower observed latency without sacrificing top-k quality."
+    },
+    {
+      "item_id": "P1-AIP-D3-016",
+      "learning_unit": "Day03-order002",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order002-reranking.md",
+      "has_evidence": true,
+      "evidence_length": 524,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.333,
+      "matched_terms": [
+        "reranker",
+        "results",
+        "query",
+        "context",
+        "order",
+        "ranking",
+        "retrieval"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Adopt a trainable reranker that scores retrieved results against the user's query. - A reranker uses context and the user's query to order candidates for maximum semantic relevance, correcting ranking errors not solved by retrieval alone."
+    },
+    {
+      "item_id": "P1-AIP-D3-017",
+      "learning_unit": "Day03-order002",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order002-reranking.md",
+      "has_evidence": true,
+      "evidence_length": 524,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.19,
+      "matched_terms": [
+        "reranking",
+        "step",
+        "query",
+        "context"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Integrate a reranking step that evaluates both the original query and downstream FM objective. - Reranking based on query and FM objective can optimize context selection, adjusting for domain and intent rather than relying solely on vector similarity."
+    },
+    {
+      "item_id": "P1-AIP-D3-018",
+      "learning_unit": "Day03-order002",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order002-reranking.md",
+      "has_evidence": true,
+      "evidence_length": 524,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.273,
+      "matched_terms": [
+        "reranker",
+        "model",
+        "data",
+        "apply",
+        "reranking",
+        "ranking"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Fine-tune the reranker model on your task/domain-specific data.; Apply keyword filtering before reranking to prune non-relevant hits. - Task/domain tuning sharpens a reranker's accuracy. Keyword filtering improves pool quality before expensive ranking."
+    },
+    {
+      "item_id": "P1-AIP-D3-019",
+      "learning_unit": "Day03-order002",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order002-reranking.md",
+      "has_evidence": true,
+      "evidence_length": 524,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.222,
+      "matched_terms": [
+        "reranking",
+        "conditional",
+        "reranker",
+        "cost"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Limit reranking to queries requiring high-precision responses using conditional logic. - Careful triggering of reranker for only critical queries controls usage, balancing cost and benefit."
+    },
+    {
+      "item_id": "P1-AIP-D3-020",
+      "learning_unit": "Day03-order002",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order002-reranking.md",
+      "has_evidence": true,
+      "evidence_length": 124,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.292,
+      "matched_terms": [
+        "candidate",
+        "search",
+        "apply",
+        "reranking",
+        "relevant",
+        "ranking",
+        "retrieval"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Adjust candidate pool selection post-hybrid search, then apply business-aware reranking logic for relevant queries. - Applying business logic at reranking allows dynamic, targeted ranking without touching core index, preserving upstream retrieval for most cases."
+    },
+    {
+      "item_id": "P1-AIP-D3-021",
+      "learning_unit": "Day03-order002",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order002-reranking.md",
+      "has_evidence": true,
+      "evidence_length": 524,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.192,
+      "matched_terms": [
+        "sent",
+        "reranker",
+        "model",
+        "relevant",
+        "retrieval"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Increase the number of top candidates sent to the reranker model specifically for compliance-related queries.; Fine-tune or bias the reranker\u2019s scoring for compliance documents when relevant queries are detected. - Including more candidates and scoring them preferentially for compliance queries lifts retrieval coverage and lets the reranker prioritize required facts."
+    },
+    {
+      "item_id": "P1-AIP-D3-022",
+      "learning_unit": "Day03-order003",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order003-query-expansion-decomposition-transformation.md",
+      "has_evidence": true,
+      "evidence_length": 600,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.2,
+      "matched_terms": [
+        "query",
+        "expansion",
+        "foundation",
+        "retrieval"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Integrate a query expansion component that generates synonyms and related phrases using a Foundation Model before retrieval. - Query expansion using an FM helps include synonyms and related terms, increasing recall without drastically lowering precision."
+    },
+    {
+      "item_id": "P1-AIP-D3-023",
+      "learning_unit": "Day03-order003",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order003-query-expansion-decomposition-transformation.md",
+      "has_evidence": true,
+      "evidence_length": 600,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.154,
+      "matched_terms": [
+        "query",
+        "decomposition"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: The system lacks query decomposition logic, so only the first query clause is processed. - If there is no decomposition, only the first part of a compound query will be handled."
+    },
+    {
+      "item_id": "P1-AIP-D3-024",
+      "learning_unit": "Day03-order003",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order003-query-expansion-decomposition-transformation.md",
+      "has_evidence": true,
+      "evidence_length": 599,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.238,
+      "matched_terms": [
+        "query",
+        "expansion",
+        "user",
+        "queries",
+        "decomposition"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Integrate a query expansion component that uses FMs to generate alternative phrasings.; Apply Lambda functions to decompose compound user queries. - Query expansion and decomposition address linguistic variety and compound logic respectively."
+    },
+    {
+      "item_id": "P1-AIP-D3-025",
+      "learning_unit": "Day03-order003",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order003-query-expansion-decomposition-transformation.md",
+      "has_evidence": true,
+      "evidence_length": 600,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.176,
+      "matched_terms": [
+        "query",
+        "expansion",
+        "retrieval"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Add a query expansion component leveraging a multilingual FM to generate equivalent terms in all target languages before retrieval. - Multilingual query expansion ensures semantic coverage for diverse languages, boosting retrieval accuracy."
+    },
+    {
+      "item_id": "P1-AIP-D3-026",
+      "learning_unit": "Day03-order003",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order003-query-expansion-decomposition-transformation.md",
+      "has_evidence": true,
+      "evidence_length": 600,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.091,
+      "matched_terms": [
+        "transformation",
+        "query"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Configure Step Functions to sequentially apply transformation steps: decompose the query, expand relevant terms, and assemble sub-results. - Step Functions can orchestrate multi-step pipelines, such as decomposing, expanding, and merging results."
+    },
+    {
+      "item_id": "P1-AIP-D3-027",
+      "learning_unit": "Day03-order003",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order003-query-expansion-decomposition-transformation.md",
+      "has_evidence": true,
+      "evidence_length": 600,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.235,
+      "matched_terms": [
+        "query",
+        "decomposition",
+        "retrieval",
+        "intent"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Implement a query decomposition module using Lambda to split and parallelize intents before retrieval. - Query decomposition via Lambda targets the root issue by separating and addressing each intent efficiently."
+    },
+    {
+      "item_id": "P1-AIP-D3-028",
+      "learning_unit": "Day03-order003",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order003-query-expansion-decomposition-transformation.md",
+      "has_evidence": true,
+      "evidence_length": 599,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.143,
+      "matched_terms": [
+        "query",
+        "expansion",
+        "queries"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Combine query expansion using FMs for ambiguous queries and use original, unmodified queries for highly structured searches. - This hybrid approach matches the style of query to the processing needed, optimizing both recall and precision."
+    },
+    {
+      "item_id": "P1-AIP-D3-029",
+      "learning_unit": "Day03-order003",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order003-query-expansion-decomposition-transformation.md",
+      "has_evidence": true,
+      "evidence_length": 599,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.273,
+      "matched_terms": [
+        "queries",
+        "query",
+        "transformation",
+        "retrieval",
+        "decomposition",
+        "user"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Use Lambda functions to decompose queries and clarify ambiguous task types.; Implement query transformation to standardize time expressions before retrieval. - Decomposition and transformation directly address user ambiguity and temporal normalization."
+    },
+    {
+      "item_id": "P1-AIP-D3-030",
+      "learning_unit": "Day03-order003",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order003-query-expansion-decomposition-transformation.md",
+      "has_evidence": true,
+      "evidence_length": 600,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.278,
+      "matched_terms": [
+        "query",
+        "decomposition",
+        "layer",
+        "queries",
+        "expansion"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: A Lambda-based query decomposition layer for multi-intent or compound queries.; A multilingual FM-powered query expansion module to handle diverse phrasing and synonymy. - Decomposition and query expansion are key to robust, adaptable pipelines."
+    },
+    {
+      "item_id": "P1-AIP-D3-031",
+      "learning_unit": "Day03-order004",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order004-vector-store-ingestion-synchronization-refresh-maintenance.md",
+      "has_evidence": true,
+      "evidence_length": 600,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.333,
+      "matched_terms": [
+        "knowledge",
+        "extract",
+        "embed",
+        "update",
+        "vector",
+        "store",
+        "synchronization",
+        "operational"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: An AWS Lambda function triggered by the knowledge base notification to extract, embed, and update the vector store. - A Lambda function triggered by notifications ensures synchronization occurs automatically and as soon as an article is created or updated, minimizing staleness and operational overhead."
+    },
+    {
+      "item_id": "P1-AIP-D3-035",
+      "learning_unit": "Day03-order004",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order004-vector-store-ingestion-synchronization-refresh-maintenance.md",
+      "has_evidence": true,
+      "evidence_length": 600,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.241,
+      "matched_terms": [
+        "event-driven",
+        "ingestion",
+        "update",
+        "changes",
+        "freshness",
+        "real",
+        "full"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Implement event-driven micro-batch ingestion triggered on update notifications, batching several changes per interval. - Micro-batching in response to events maintains freshness with high efficiency and cost control, whereas doing everything in real time or with large full re-indexes is wasteful."
+    },
+    {
+      "item_id": "P1-AIP-D3-036",
+      "learning_unit": "Day03-order004",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order004-vector-store-ingestion-synchronization-refresh-maintenance.md",
+      "has_evidence": true,
+      "evidence_length": 600,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.318,
+      "matched_terms": [
+        "event",
+        "ingestion",
+        "embedding",
+        "event-driven",
+        "handling",
+        "what",
+        "changes"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Integrate the wiki\u2019s publish event stream with a Lambda function that performs ingestion and embedding for new articles. - Event-driven processing is efficient and timely, handling only what changes and requiring little manual intervention."
+    },
+    {
+      "item_id": "P1-AIP-D3-040",
+      "learning_unit": "Day03-order004",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order004-vector-store-ingestion-synchronization-refresh-maintenance.md",
+      "has_evidence": true,
+      "evidence_length": 600,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.333,
+      "matched_terms": [
+        "sync",
+        "deletes",
+        "updates",
+        "vector",
+        "store",
+        "change",
+        "data"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Enable bidirectional sync by performing deletes or updates in the vector store whenever patient summaries change or are removed in the source. - Bidirectional sync ensures the vector store is always in alignment with source state, preventing data staleness or leak."
+    },
+    {
+      "item_id": "P1-AIP-D3-041",
+      "learning_unit": "Day03-order004",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order004-vector-store-ingestion-synchronization-refresh-maintenance.md",
+      "has_evidence": true,
+      "evidence_length": 599,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.208,
+      "matched_terms": [
+        "sync",
+        "data",
+        "vector",
+        "change",
+        "queries"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Adopt near-real-time, asynchronous cross-region replication with prioritized sync for changed data and local vector reads. - Asynchronous replication based on change events allows each region to serve queries rapidly while still maintaining eventual consistency and accuracy."
+    },
+    {
+      "item_id": "P1-AIP-D3-042",
+      "learning_unit": "Day03-order004",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order004-vector-store-ingestion-synchronization-refresh-maintenance.md",
+      "has_evidence": true,
+      "evidence_length": 600,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.188,
+      "matched_terms": [
+        "ingestion",
+        "vector",
+        "store",
+        "document",
+        "metadata",
+        "mapping"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Ingestion jobs from different sources conflict and overwrite vector store entries with mismatched document IDs.; Some ingestion pipelines lack a consistent source-to-vector metadata mapping. - Both conflicting overwrites and missing/incorrect metadata mappings cause non-deterministic or inaccurate vector lookups and can lead to inconsistent search results."
+    },
+    {
+      "item_id": "P1-AIP-D3-043",
+      "learning_unit": "Day03-order005",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order005-retrieval-apis-function-interfaces-mcp-access.md",
+      "has_evidence": true,
+      "evidence_length": 346,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.312,
+      "matched_terms": [
+        "retrieval",
+        "schema",
+        "function",
+        "calling",
+        "interface"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Implement a retrieval API with a standardized schema and use an FM-agnostic function calling interface. - A dedicated retrieval API with a standardized schema, accessed via an FM-agnostic function calling interface, supports interoperability, maintainability, and integration across multiple FM providers."
+    },
+    {
+      "item_id": "P1-AIP-D3-044",
+      "learning_unit": "Day03-order005",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order005-retrieval-apis-function-interfaces-mcp-access.md",
+      "has_evidence": true,
+      "evidence_length": 599,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.235,
+      "matched_terms": [
+        "schema",
+        "validation",
+        "interfaces",
+        "interface"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: The MCP client enforces stricter schema validation than previous custom interfaces. - MCP standardizes schema and interface contracts, so previously accepted irregularities may now cause validation failures and incompatibilities."
+    },
+    {
+      "item_id": "P1-AIP-D3-045",
+      "learning_unit": "Day03-order005",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order005-retrieval-apis-function-interfaces-mcp-access.md",
+      "has_evidence": true,
+      "evidence_length": 346,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.312,
+      "matched_terms": [
+        "schema",
+        "input",
+        "output",
+        "consistently",
+        "retrieval"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: FM-agnostic schema for input queries and output results - An FM-agnostic schema guarantees that different models interact consistently, isolating retrieval logic from provider-specific changes."
+    },
+    {
+      "item_id": "P1-AIP-D3-046",
+      "learning_unit": "Day03-order005",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order005-retrieval-apis-function-interfaces-mcp-access.md",
+      "has_evidence": true,
+      "evidence_length": 599,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.222,
+      "matched_terms": [
+        "function",
+        "interface",
+        "authorization",
+        "access"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Implement a function interface that mediates search requests and enforces authentication and authorization. - A function interface forms a boundary supporting standardized access, authentication, and permission enforcement, regardless of FM provider."
+    },
+    {
+      "item_id": "P1-AIP-D3-047",
+      "learning_unit": "Day03-order005",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order005-retrieval-apis-function-interfaces-mcp-access.md",
+      "has_evidence": true,
+      "evidence_length": 346,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.233,
+      "matched_terms": [
+        "design",
+        "apis",
+        "schema",
+        "expose",
+        "retrieval",
+        "layer",
+        "instead"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Design APIs using an FM-agnostic schema and expose only high-level retrieval operations.; Use the MCP client abstraction layer to mediate embedding queries instead of relying on provider customs. - These actions support architecture independence and abstract away underlying vendor-specific details, reducing coupling."
+    },
+    {
+      "item_id": "P1-AIP-D3-048",
+      "learning_unit": "Day03-order005",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order005-retrieval-apis-function-interfaces-mcp-access.md",
+      "has_evidence": true,
+      "evidence_length": 599,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.211,
+      "matched_terms": [
+        "layer",
+        "boundaries",
+        "data",
+        "access"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Isolate vector store details behind an authenticated, access-controlled API layer. - Abstracting storage details and securing credentials behind API boundaries prevents data leakage and ensures only authorized access."
+    },
+    {
+      "item_id": "P1-AIP-D3-049",
+      "learning_unit": "Day03-order005",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order005-retrieval-apis-function-interfaces-mcp-access.md",
+      "has_evidence": true,
+      "evidence_length": 346,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.167,
+      "matched_terms": [
+        "function",
+        "interfaces",
+        "expose",
+        "contract",
+        "retrieval"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Rely on function interfaces that expose a minimal, stable contract for retrieval operations.; Adopt MCP as the standard client protocol for embedding queries across retrievals. - Minimal, stable interfaces and standardized protocols (like MCP) decouple implementation details from downstream clients, making future integrations easier and less risky."
+    },
+    {
+      "item_id": "P1-AIP-D3-050",
+      "learning_unit": "Day03-order005",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order005-retrieval-apis-function-interfaces-mcp-access.md",
+      "has_evidence": true,
+      "evidence_length": 346,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.278,
+      "matched_terms": [
+        "main",
+        "interface",
+        "retrieval",
+        "calls",
+        "code"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Integrate using the MCP-compliant protocol as the main interface for all retrieval calls. - MCP's abstraction and vendor-neutral protocol simplifies integration, future-proofs for FM changes, and eliminates code sprawl and rewrites."
+    },
+    {
+      "item_id": "P1-AIP-D3-051",
+      "learning_unit": "Day03-order005",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order005-retrieval-apis-function-interfaces-mcp-access.md",
+      "has_evidence": true,
+      "evidence_length": 599,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.105,
+      "matched_terms": [
+        "interfaces",
+        "code"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: The system risks higher maintenance due to redundant logic for each provider. - Retaining both MCP and legacy interfaces increases technical debt and code complexity, hindering integration and maintainability."
+    },
+    {
+      "item_id": "P1-AIP-D3-052",
+      "learning_unit": "Day03-order005",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order005-retrieval-apis-function-interfaces-mcp-access.md",
+      "has_evidence": true,
+      "evidence_length": 346,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.125,
+      "matched_terms": [
+        "retrieval",
+        "contract"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: The MCP protocol implements only standardized retrieval functionality and may not propagate vendor-specific extensions. - MCP enforces standardization, so custom extensions outside its contract are not automatically implemented or passed through."
+    },
+    {
+      "item_id": "P1-AIP-D3-053",
+      "learning_unit": "Day03-order005",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order005-retrieval-apis-function-interfaces-mcp-access.md",
+      "has_evidence": true,
+      "evidence_length": 599,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.263,
+      "matched_terms": [
+        "retrieval",
+        "contract",
+        "make",
+        "interface",
+        "consistent"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Define a high-level, FM-agnostic retrieval API contract and enforce it via both OpenAPI and MCP compliance. - Standard, well-documented contracts (OpenAPI, MCP) make the retrieval interface reusable, discoverable, and consistent across teams and models."
+    },
+    {
+      "item_id": "P1-AIP-D3-054",
+      "learning_unit": "Day03-order005",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order005-retrieval-apis-function-interfaces-mcp-access.md",
+      "has_evidence": true,
+      "evidence_length": 599,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.174,
+      "matched_terms": [
+        "function",
+        "interfaces",
+        "schema",
+        "retrieval"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Function interfaces rely on undocumented, provider-specific conventions not described in the official schema.; There is no versioning or schema negotiation between different FM and retrieval layers. - Reliance on undocumented, ad hoc conventions, and lack of versioning/schema negotiation, both break abstraction and cause integration failures."
+    },
+    {
+      "item_id": "P1-AIP-D3-055",
+      "learning_unit": "Day03-order006",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order006-rag-quality-evaluation-retrieval-troubleshooting.md",
+      "has_evidence": true,
+      "evidence_length": 600,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.24,
+      "matched_terms": [
+        "quality",
+        "generation",
+        "retrieval",
+        "poor",
+        "root",
+        "cause"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Analyze recent embedding quality metrics and compare them to previous runs. - Recent embedding generation could have introduced drift or reduced semantic alignment, directly impacting retrieval quality. Comparing embedding metrics helps identify if poor embeddings are the root cause."
+    },
+    {
+      "item_id": "P1-AIP-D3-056",
+      "learning_unit": "Day03-order006",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order006-rag-quality-evaluation-retrieval-troubleshooting.md",
+      "has_evidence": true,
+      "evidence_length": 600,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.105,
+      "matched_terms": [
+        "retrieval",
+        "quality"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Benchmark several top-K values and assess both retrieval relevance and overall latency for each. - Measuring relevance and latency across different top-K values helps you find the right tradeoff between quality and performance for your use case."
+    },
+    {
+      "item_id": "P1-AIP-D3-057",
+      "learning_unit": "Day03-order006",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order006-rag-quality-evaluation-retrieval-troubleshooting.md",
+      "has_evidence": true,
+      "evidence_length": 103,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.263,
+      "matched_terms": [
+        "inspect",
+        "chunking",
+        "chunks",
+        "retrieval",
+        "context"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Inspect and potentially revise the chunking and preprocessing logic used before embedding documents. - Improper chunking can make unrelated information end up together in chunks, resulting in retrieval of irrelevant context."
+    },
+    {
+      "item_id": "P1-AIP-D3-058",
+      "learning_unit": "Day03-order006",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order006-rag-quality-evaluation-retrieval-troubleshooting.md",
+      "has_evidence": true,
+      "evidence_length": 600,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.069,
+      "matched_terms": [
+        "knowledge",
+        "data"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Review vector index refresh and synchronization jobs for missed schedule or failures.; Audit the embedding pipeline for dropped or skipped knowledge base updates. - Refresh/sync job issues and missing updates directly explain the presence of outdated data and increasing latency from index bloat or staleness."
+    },
+    {
+      "item_id": "P1-AIP-D3-059",
+      "learning_unit": "Day03-order006",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order006-rag-quality-evaluation-retrieval-troubleshooting.md",
+      "has_evidence": true,
+      "evidence_length": 495,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.176,
+      "matched_terms": [
+        "query",
+        "document",
+        "content"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: The embedding pipeline is not processing those query terms correctly due to tokenization mismatches. - Tokenization mismatches between query and document embedding pipelines can result in queries not matching otherwise retrievable content."
+    },
+    {
+      "item_id": "P1-AIP-D3-060",
+      "learning_unit": "Day03-order006",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order006-rag-quality-evaluation-retrieval-troubleshooting.md",
+      "has_evidence": true,
+      "evidence_length": 103,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.3,
+      "matched_terms": [
+        "chunk",
+        "document",
+        "retrieval",
+        "chunks",
+        "same",
+        "output"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Chunk overlap or sliding window parameters are misconfigured, causing document redundancy in retrieval. - Improper chunk overlap or windowing can result in multiple chunks from the same source becoming prevalent in the results, causing output redundancy."
+    },
+    {
+      "item_id": "P1-AIP-D3-061",
+      "learning_unit": "Day03-order006",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order006-rag-quality-evaluation-retrieval-troubleshooting.md",
+      "has_evidence": true,
+      "evidence_length": 600,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.294,
+      "matched_terms": [
+        "check",
+        "retrieval",
+        "even",
+        "context",
+        "quality"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Check if your retrieval scoring threshold is set too low, allowing less relevant documents through. - A low threshold allows marginally related or even unrelated results to pollute the context, reducing answer quality."
+    },
+    {
+      "item_id": "P1-AIP-D3-062",
+      "learning_unit": "Day03-order006",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order006-rag-quality-evaluation-retrieval-troubleshooting.md",
+      "has_evidence": true,
+      "evidence_length": 600,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.179,
+      "matched_terms": [
+        "evaluation",
+        "retrieval",
+        "quality",
+        "query",
+        "document"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Measure end-to-end latency and recall as part of the evaluation suite.; Benchmark retrieval quality using gold-labeled query/document pairs.; Run vector index compaction and query pathway profiling. - These approaches jointly evaluate, measure, and optimize both latency and recall, and quantitatively assess retrieval effectiveness."
+    },
+    {
+      "item_id": "P1-AIP-D3-063",
+      "learning_unit": "Day03-order006",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order006-rag-quality-evaluation-retrieval-troubleshooting.md",
+      "has_evidence": true,
+      "evidence_length": 495,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.048,
+      "matched_terms": [
+        "inspect"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Index size or configuration is suboptimal causing slow vector operations\u2014inspect index statistics and sharding. - Large/unoptimized indexes, improper sharding, or index fragmentation commonly drive vector search latency and timeouts."
+    },
+    {
+      "item_id": "P1-AIP-D3-064",
+      "learning_unit": "Day03-order006",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order006-rag-quality-evaluation-retrieval-troubleshooting.md",
+      "has_evidence": true,
+      "evidence_length": 600,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.238,
+      "matched_terms": [
+        "evaluation",
+        "gold",
+        "answers",
+        "retrieval",
+        "time"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Implement periodic evaluation with gold query-document pairs and trend analysis of recall/precision metrics. - Gold queries enable benchmarking with known answers and trend metrics quantify retrieval accuracy over time."
+    },
+    {
+      "item_id": "P1-AIP-D3-065",
+      "learning_unit": "Day03-order006",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order006-rag-quality-evaluation-retrieval-troubleshooting.md",
+      "has_evidence": true,
+      "evidence_length": 103,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.179,
+      "matched_terms": [
+        "check",
+        "filters",
+        "knowledge",
+        "isolate",
+        "test",
+        "context",
+        "filter"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Check tenant-specific access filters and embeddings for missed or corrupted updates.; Audit recent embedding jobs and knowledge base sync logs for each affected tenant.; Isolate knowledge base partitions and run targeted test queries per tenant. - Tenant context issues typically arise from filter, embedding, or update pipeline errors that only affect subsets. Partition isolation and targeted tests confirm and localize the break."
+    },
+    {
+      "item_id": "P1-AIP-D3-066",
+      "learning_unit": "Day03-order006",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order006-rag-quality-evaluation-retrieval-troubleshooting.md",
+      "has_evidence": true,
+      "evidence_length": 600,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.15,
+      "matched_terms": [
+        "retrieval",
+        "edge",
+        "data"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Perform error analysis on false positive queries to identify retrieval edge cases. - Reviewing false positives helps focus on the specific queries or data properties that systematically break retrieval alignment."
+    },
+    {
+      "item_id": "P1-AIP-D3-067",
+      "learning_unit": "Day03-order007",
+      "bucket": "A",
+      "bucket_name": "AWS URL with fetched evidence",
+      "recommended_action": "Run grounded judge; likely highest auto-clear yield.",
+      "source": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.CoreComponents.html",
+      "has_evidence": true,
+      "evidence_length": 184,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.217,
+      "matched_terms": [
+        "store",
+        "dynamodb",
+        "table",
+        "data",
+        "using"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Store all message exchanges in a DynamoDB table indexed by session token. - DynamoDB offers a scalable, low-latency mechanism for persisting and retrieving context-related data, making it ideal for tracking conversation history using session tokens."
+    },
+    {
+      "item_id": "P1-AIP-D3-068",
+      "learning_unit": "Day03-order007",
+      "bucket": "A",
+      "bucket_name": "AWS URL with fetched evidence",
+      "recommended_action": "Run grounded judge; likely highest auto-clear yield.",
+      "source": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.CoreComponents.html",
+      "has_evidence": true,
+      "evidence_length": 84,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.235,
+      "matched_terms": [
+        "store",
+        "dynamodb",
+        "state",
+        "even"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Store conversation context and intent in DynamoDB, rehydrating state from the persistent store on recovery. - Persisting state in a scalable, durable store like DynamoDB enables reliable state recovery even after failover or redeployment."
+    },
+    {
+      "item_id": "P1-AIP-D3-069",
+      "learning_unit": "Day03-order007",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order007-conversation-context-history-intent-state-management.md",
+      "has_evidence": true,
+      "evidence_length": 600,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.238,
+      "matched_terms": [
+        "intent",
+        "context",
+        "changes",
+        "topic",
+        "change"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Intent recognition does not account for context switches due to stateless invocation. - Without tracking context changes and intent transitions, relying on Comprehend alone will not recognize topic change, leading to irrelevant responses."
+    },
+    {
+      "item_id": "P1-AIP-D3-070",
+      "learning_unit": "Day03-order007",
+      "bucket": "A",
+      "bucket_name": "AWS URL with fetched evidence",
+      "recommended_action": "Run grounded judge; likely highest auto-clear yield.",
+      "source": "https://docs.aws.amazon.com/comprehend/latest/dg/how-languages.html",
+      "has_evidence": true,
+      "evidence_length": 50,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.333,
+      "matched_terms": [
+        "english",
+        "spanish",
+        "languages",
+        "comprehend"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: That both English and Spanish are supported languages for intent recognition in Comprehend. - You must confirm Comprehend supports the languages required for accurate intent recognition."
+    },
+    {
+      "item_id": "P1-AIP-D3-071",
+      "learning_unit": "Day03-order007",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order007-conversation-context-history-intent-state-management.md",
+      "has_evidence": true,
+      "evidence_length": 600,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.15,
+      "matched_terms": [
+        "storage",
+        "history",
+        "context"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Lambda's ephemeral runtime is not shared between separate invocations, making global variable storage unreliable for history. - Global variables in Lambda do not persist across invocations; persistent stores like DynamoDB should be used for context."
+    },
+    {
+      "item_id": "P1-AIP-D3-072",
+      "learning_unit": "Day03-order007",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order007-conversation-context-history-intent-state-management.md",
+      "has_evidence": true,
+      "evidence_length": 600,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.176,
+      "matched_terms": [
+        "context",
+        "management",
+        "intent"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Use Amazon Comprehend custom classification with context management to disambiguate multi-intent inputs. - Context management combined with custom intent models allows for disambiguation and more accurate intent recognition in complex cases."
+    },
+    {
+      "item_id": "P1-AIP-D3-074",
+      "learning_unit": "Day03-order007",
+      "bucket": "A",
+      "bucket_name": "AWS URL with fetched evidence",
+      "recommended_action": "Run grounded judge; likely highest auto-clear yield.",
+      "source": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.CoreComponents.html",
+      "has_evidence": true,
+      "evidence_length": 132,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.19,
+      "matched_terms": [
+        "state",
+        "dynamodb",
+        "lambda",
+        "storage"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Session tokens map to conversation state persisted in DynamoDB, enabling rehydration on any Lambda instance. - Persistent external storage like DynamoDB, keyed by session tokens, allows consistent conversation retrieval no matter which Lambda instance services the current request."
+    },
+    {
+      "item_id": "P1-AIP-D3-075",
+      "learning_unit": "Day03-order007",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order007-conversation-context-history-intent-state-management.md",
+      "has_evidence": true,
+      "evidence_length": 251,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.267,
+      "matched_terms": [
+        "intent",
+        "history",
+        "storage",
+        "data"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Amazon Comprehend for intent classification and DynamoDB with KMS encryption enabled for history storage. - Comprehend is for intent analysis and DynamoDB with KMS ensures at-rest data encryption for securely storing history."
+    },
+    {
+      "item_id": "P1-AIP-D3-077",
+      "learning_unit": "Day03-order007",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order007-conversation-context-history-intent-state-management.md",
+      "has_evidence": true,
+      "evidence_length": 600,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.19,
+      "matched_terms": [
+        "step",
+        "prompt",
+        "context",
+        "intent"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Design clarification flows with AWS Step Functions to prompt users for missing context.; Use Amazon Comprehend to detect potential ambiguous or low-confidence intents. - Step Functions enable interactive clarification flows, and Comprehend can programmatically identify when intent is ambiguous or missing."
+    },
+    {
+      "item_id": "P1-AIP-D3-078",
+      "learning_unit": "Day03-order008",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order008-advanced-prompt-engineering-iterative-refinement.md",
+      "has_evidence": true,
+      "evidence_length": 558,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.056,
+      "matched_terms": [
+        "improve"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Add explicit chain-of-thought instructions to guide stepwise reasoning. - Chain-of-thought instructions improve structure and stepwise logic, addressing the lack of clarity and verbosity by steering the FM toward ordered, human-legible answers."
+    },
+    {
+      "item_id": "P1-AIP-D3-079",
+      "learning_unit": "Day03-order008",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order008-advanced-prompt-engineering-iterative-refinement.md",
+      "has_evidence": true,
+      "evidence_length": 523,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.148,
+      "matched_terms": [
+        "output",
+        "format",
+        "introduce",
+        "iterative"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Implement output format specifications that define clear headers and ordered steps.; Introduce a feedback loop that scores each response on completeness and clarity. - Output format specification provides structure and clarity, while a feedback loop enables ongoing iterative improvements based on real or synthetic user scoring for completeness."
+    },
+    {
+      "item_id": "P1-AIP-D3-080",
+      "learning_unit": "Day03-order008",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order008-advanced-prompt-engineering-iterative-refinement.md",
+      "has_evidence": true,
+      "evidence_length": 558,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.294,
+      "matched_terms": [
+        "prompt",
+        "context",
+        "results",
+        "advanced",
+        "engineering"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: The prompt template is not effectively integrating retrieved context into the FM input. - If references exist but context is missing in outputs, the prompt may not be integrating retrieval results, a core step in advanced prompt engineering."
+    },
+    {
+      "item_id": "P1-AIP-D3-081",
+      "learning_unit": "Day03-order008",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order008-advanced-prompt-engineering-iterative-refinement.md",
+      "has_evidence": true,
+      "evidence_length": 523,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.263,
+      "matched_terms": [
+        "evidence",
+        "prompt",
+        "instruction",
+        "output",
+        "format"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Specify mandatory source attribution with supporting evidence in the prompt instruction.; Define an explicit output format of a numbered list. - Explicit prompt requirements for evidence and output format most directly address the structural and compliance needs."
+    },
+    {
+      "item_id": "P1-AIP-D3-082",
+      "learning_unit": "Day03-order008",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order008-advanced-prompt-engineering-iterative-refinement.md",
+      "has_evidence": true,
+      "evidence_length": 523,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.105,
+      "matched_terms": [
+        "output",
+        "prompt"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Limit the FM output space using an explicit allowed values list in the prompt. - Explicitly restricting the output through allowed values in the prompt strongly reduces hallucinated/unexpected classes while supporting legitimate ones."
+    },
+    {
+      "item_id": "P1-AIP-D3-083",
+      "learning_unit": "Day03-order008",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order008-advanced-prompt-engineering-iterative-refinement.md",
+      "has_evidence": true,
+      "evidence_length": 523,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.238,
+      "matched_terms": [
+        "prompts",
+        "instruction",
+        "prompt",
+        "output",
+        "just"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Augment prompts with explicit instruction to provide next steps or actions. - Explicit prompt instructions aimed at actionable output motivate the FM to deliver recommendations and procedures, not just accurate information or summaries."
+    },
+    {
+      "item_id": "P1-AIP-D3-084",
+      "learning_unit": "Day03-order008",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order008-advanced-prompt-engineering-iterative-refinement.md",
+      "has_evidence": true,
+      "evidence_length": 558,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.071,
+      "matched_terms": [
+        "trace"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: When logical reasoning steps are more critical than consistent formatting. - Chain-of-thought is focused on reasoning trace\u2014most valuable for multi-step logic over mere formatting."
+    },
+    {
+      "item_id": "P1-AIP-D3-085",
+      "learning_unit": "Day03-order008",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order008-advanced-prompt-engineering-iterative-refinement.md",
+      "has_evidence": true,
+      "evidence_length": 523,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.118,
+      "matched_terms": [
+        "prompt",
+        "instruction"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: The prompt lacks explicit instruction for detailed, specific outputs. - If iteration is not addressing genericity, the prompt itself is likely missing instruction for high specificity and actionable detail."
+    },
+    {
+      "item_id": "P1-AIP-D3-086",
+      "learning_unit": "Day03-order008",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order008-advanced-prompt-engineering-iterative-refinement.md",
+      "has_evidence": true,
+      "evidence_length": 523,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.067,
+      "matched_terms": [
+        "output"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Define a detailed output template listing required sections and structure. - A detailed output template guides the model to produce consistent structure and ensures required sections are addressed directly."
+    },
+    {
+      "item_id": "P1-AIP-D3-087",
+      "learning_unit": "Day03-order008",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order008-advanced-prompt-engineering-iterative-refinement.md",
+      "has_evidence": true,
+      "evidence_length": 523,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.214,
+      "matched_terms": [
+        "instruction",
+        "prompt",
+        "risk"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Add a chain-of-thought reasoning instruction to the prompt. - Chain-of-thought prompting leads FMs to elaborate their logic, catching subtle or multi-step risk patterns for explainability."
+    },
+    {
+      "item_id": "P1-AIP-D3-088",
+      "learning_unit": "Day03-order008",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order008-advanced-prompt-engineering-iterative-refinement.md",
+      "has_evidence": true,
+      "evidence_length": 523,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.12,
+      "matched_terms": [
+        "context",
+        "output",
+        "format"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Adopt structured input fields to reduce ambiguity in the FM\u2019s context.; Incorporate output format specification with clear, expected sections and sample content. - Structured input reduces ambiguity, and specific output formatting ensures that FM responses remain relevant, targeted, and actionable."
+    },
+    {
+      "item_id": "P1-AIP-D3-089",
+      "learning_unit": "Day03-order008",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order008-advanced-prompt-engineering-iterative-refinement.md",
+      "has_evidence": true,
+      "evidence_length": 523,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.176,
+      "matched_terms": [
+        "instruct",
+        "prompt",
+        "output"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Explicitly instruct the FM in the prompt to minimize background and prioritize actionable steps. - Prompt instructions are most direct for guiding FMs to output less background and focus on usable steps, enabling actionable memos."
+    },
+    {
+      "item_id": "P1-AIP-D3-091",
+      "learning_unit": "Day03-order009",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order009-prompt-versioning-repositories-approvals-governance.md",
+      "has_evidence": true,
+      "evidence_length": 600,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.292,
+      "matched_terms": [
+        "audit",
+        "template",
+        "management",
+        "prompt",
+        "approved",
+        "changes",
+        "policy"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Enable CloudTrail to audit API operations for template management.; Use AWS IAM policies to restrict Bedrock prompt template modification to approved roles. - CloudTrail supports auditing who made changes, satisfying tracking. IAM policy enforcement prevents unauthorized modifications."
+    },
+    {
+      "item_id": "P1-AIP-D3-092",
+      "learning_unit": "Day03-order009",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order009-prompt-versioning-repositories-approvals-governance.md",
+      "has_evidence": true,
+      "evidence_length": 167,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.211,
+      "matched_terms": [
+        "versioning",
+        "prompt",
+        "management",
+        "audit"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Store templates in S3 with versioning, enable CloudTrail tracking, and use Bedrock Prompt Management\u2019s restore capability. - Combining S3 versioning for content management, CloudTrail for audit, and Bedrock\u2019s restore tools provides backup, tracking, and rapid recovery."
+    },
+    {
+      "item_id": "P1-AIP-D3-093",
+      "learning_unit": "Day03-order009",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order009-prompt-versioning-repositories-approvals-governance.md",
+      "has_evidence": true,
+      "evidence_length": 600,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.333,
+      "matched_terms": [
+        "prompt",
+        "versioning",
+        "changes",
+        "management",
+        "approval",
+        "version",
+        "control"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Centralize prompt storage in S3 with versioning and tie changes to Bedrock Prompt Management approval workflows - This solution directly addresses version control as well as enforcement of reviews before prompt publication, reducing process gaps."
+    },
+    {
+      "item_id": "P1-AIP-D3-094",
+      "learning_unit": "Day03-order009",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order009-prompt-versioning-repositories-approvals-governance.md",
+      "has_evidence": true,
+      "evidence_length": 600,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.25,
+      "matched_terms": [
+        "version",
+        "prompt",
+        "management",
+        "versioning",
+        "files"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Restore the previous version from S3 versioned objects and redeploy using Bedrock Prompt Management - S3 versioning makes reverting to prior versions simple, and Bedrock supports redeployment based on versioned files."
+    },
+    {
+      "item_id": "P1-AIP-D3-095",
+      "learning_unit": "Day03-order009",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order009-prompt-versioning-repositories-approvals-governance.md",
+      "has_evidence": true,
+      "evidence_length": 599,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.263,
+      "matched_terms": [
+        "prompt",
+        "management",
+        "version",
+        "control",
+        "audit"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: It enables seamless integration with Bedrock Prompt Management and direct version control within AWS environments. - The key benefit is AWS-native integration, supporting automation and audit trails directly tied to Bedrock workflows."
+    },
+    {
+      "item_id": "P1-AIP-D3-100",
+      "learning_unit": "Day03-order009",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order009-prompt-versioning-repositories-approvals-governance.md",
+      "has_evidence": true,
+      "evidence_length": 600,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.267,
+      "matched_terms": [
+        "versioning",
+        "template",
+        "repository",
+        "prompt"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Enable S3 versioning on the template repository bucket - S3 versioning allows recovery of deleted objects (including prompt templates) without support or waiting for a daily export."
+    },
+    {
+      "item_id": "P1-AIP-D3-102",
+      "learning_unit": "Day03-order010",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order010-prompt-regression-testing-quality-assurance.md",
+      "has_evidence": true,
+      "evidence_length": 417,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.152,
+      "matched_terms": [
+        "prompt",
+        "output",
+        "tests",
+        "model",
+        "version"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Store snapshot examples of prompt/response pairs and verify for drift.; Use Lambda functions to programmatically parse and assert on output fields.; Schedule continuous integration jobs that run prompt tests on every model version update. - Snapshot comparison, programmatic assertions, and automated runs ensure detection of content drift and format-breaking changes on each update."
+    },
+    {
+      "item_id": "P1-AIP-D3-103",
+      "learning_unit": "Day03-order010",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order010-prompt-regression-testing-quality-assurance.md",
+      "has_evidence": true,
+      "evidence_length": 600,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.222,
+      "matched_terms": [
+        "checks",
+        "allow",
+        "regressions",
+        "release"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Integrate Lambda-based verification steps triggered by the CI/CD pipeline prior to deployment. - Automated Lambda checks as part of CI/CD allow pre-deployment QA that blocks or flags regressions before release."
+    },
+    {
+      "item_id": "P1-AIP-D3-104",
+      "learning_unit": "Day03-order010",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order010-prompt-regression-testing-quality-assurance.md",
+      "has_evidence": true,
+      "evidence_length": 600,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.211,
+      "matched_terms": [
+        "build",
+        "process",
+        "tests",
+        "regressions"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Build an automated workflow that evaluates accuracy over a fixed set of benchmark prompts. - A systematic QA process runs repeatable, benchmarked tests to surface regressions like hallucinations."
+    },
+    {
+      "item_id": "P1-AIP-D3-105",
+      "learning_unit": "Day03-order010",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order010-prompt-regression-testing-quality-assurance.md",
+      "has_evidence": true,
+      "evidence_length": 600,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.158,
+      "matched_terms": [
+        "compare",
+        "checks",
+        "regressions"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Update the pipeline to normalize and compare semantically equivalent outputs. - Optimizing semantic equivalence checks reduces noise and targets real regressions rather than formatting artifacts."
+    },
+    {
+      "item_id": "P1-AIP-D3-106",
+      "learning_unit": "Day03-order010",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order010-prompt-regression-testing-quality-assurance.md",
+      "has_evidence": true,
+      "evidence_length": 129,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.3,
+      "matched_terms": [
+        "model",
+        "failure",
+        "cases",
+        "edge",
+        "case",
+        "tests"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: It exposes model failure points that might not be visible in typical use cases. - Edge case tests surface failings not likely to appear in standard usage, mitigating risk on deployment."
+    },
+    {
+      "item_id": "P1-AIP-D3-107",
+      "learning_unit": "Day03-order010",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order010-prompt-regression-testing-quality-assurance.md",
+      "has_evidence": true,
+      "evidence_length": 417,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.267,
+      "matched_terms": [
+        "edge",
+        "cases",
+        "miss",
+        "production"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: It may not capture domain-specific edge cases relevant to the client. - Provider samples are generic and likely miss client- or context-specific scenarios critical for production QA."
+    },
+    {
+      "item_id": "P1-AIP-D3-108",
+      "learning_unit": "Day03-order010",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order010-prompt-regression-testing-quality-assurance.md",
+      "has_evidence": true,
+      "evidence_length": 178,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.12,
+      "matched_terms": [
+        "strict",
+        "case",
+        "catch"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Normalize whitespace and casing before comparing outputs.; Use semantic similarity scoring rather than strict string equality. - Whitespaces/case normalization and semantic matching reduce noise from formatting and catch genuinely equivalent outputs, leading to higher QA precision."
+    },
+    {
+      "item_id": "P1-AIP-D3-109",
+      "learning_unit": "Day03-order010",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order010-prompt-regression-testing-quality-assurance.md",
+      "has_evidence": true,
+      "evidence_length": 600,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.2,
+      "matched_terms": [
+        "section",
+        "field",
+        "allow",
+        "regressions"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Refactor the pipeline to extract and validate only the answer section, ignoring boilerplate disclaimers. - Automated parsing and targeted field validation reduce noise and allow disclaimers while preserving detection of real regressions."
+    },
+    {
+      "item_id": "P1-AIP-D3-111",
+      "learning_unit": "Day03-order010",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order010-prompt-regression-testing-quality-assurance.md",
+      "has_evidence": true,
+      "evidence_length": 417,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.167,
+      "matched_terms": [
+        "regressions",
+        "production",
+        "unsafe"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Undetected regressions may reach production and impact users before QA intervenes. - Without systematic QA, breaking changes or subtle errors could affect users before being noticed\u2014relying on complaints is reactive and unsafe."
+    },
+    {
+      "item_id": "P1-AIP-D3-112",
+      "learning_unit": "Day03-order010",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order010-prompt-regression-testing-quality-assurance.md",
+      "has_evidence": true,
+      "evidence_length": 157,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.107,
+      "matched_terms": [
+        "regression",
+        "checks",
+        "release"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Maintain an up-to-date suite of representative benchmark prompts reflecting real user intents.; Incorporate both semantic and structural validations for FM response outputs.; Integrate regression checks directly into the CI/CD release pipeline. - Representative prompts, semantic/structural checks, and pipeline integration are hallmarks of a robust, automated QA with real coverage."
+    },
+    {
+      "item_id": "P1-AIP-D3-113",
+      "learning_unit": "Day03-order011",
+      "bucket": "D",
+      "bucket_name": "AWS URL without fetched evidence",
+      "recommended_action": "Retry fetch or reject/reassign dead URLs before human review.",
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-flows-branching.html",
+      "has_evidence": false,
+      "evidence_length": 0,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.0,
+      "matched_terms": [],
+      "claim_excerpt": "Keyed answer and rationale: Conditional branching based on output variables - Conditional branching in Prompt Flows allows execution paths to change based on the model's output, such as escalating if the FM response signals unresolved status."
+    },
+    {
+      "item_id": "P1-AIP-D3-114",
+      "learning_unit": "Day03-order011",
+      "bucket": "D",
+      "bucket_name": "AWS URL without fetched evidence",
+      "recommended_action": "Retry fetch or reject/reassign dead URLs before human review.",
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-flows-components.html",
+      "has_evidence": false,
+      "evidence_length": 0,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.0,
+      "matched_terms": [],
+      "claim_excerpt": "Keyed answer and rationale: Create a reusable prompt component for summarization and chain it after extraction for each entity type - Reusable prompt components minimize duplication and enable chaining the same summarization logic after extracting different entities."
+    },
+    {
+      "item_id": "P1-AIP-D3-115",
+      "learning_unit": "Day03-order011",
+      "bucket": "D",
+      "bucket_name": "AWS URL without fetched evidence",
+      "recommended_action": "Retry fetch or reject/reassign dead URLs before human review.",
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-flows.html",
+      "has_evidence": false,
+      "evidence_length": 0,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.0,
+      "matched_terms": [],
+      "claim_excerpt": "Keyed answer and rationale: Integrated pre-processing component at the beginning of the flow - Pre-processing steps are designed to transform or sanitize incoming data before it reaches any prompt logic."
+    },
+    {
+      "item_id": "P1-AIP-D3-116",
+      "learning_unit": "Day03-order011",
+      "bucket": "D",
+      "bucket_name": "AWS URL without fetched evidence",
+      "recommended_action": "Retry fetch or reject/reassign dead URLs before human review.",
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-flows-components.html",
+      "has_evidence": false,
+      "evidence_length": 0,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.0,
+      "matched_terms": [],
+      "claim_excerpt": "Keyed answer and rationale: Reusable post-processing component - Post-processing components allow consistent transformation or formatting of FM outputs before returning results to downstream systems."
+    },
+    {
+      "item_id": "P1-AIP-D3-117",
+      "learning_unit": "Day03-order011",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order011-prompt-chaining-branching-bedrock-prompt-flows.md",
+      "has_evidence": true,
+      "evidence_length": 600,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.294,
+      "matched_terms": [
+        "prompt",
+        "chain",
+        "steps",
+        "chaining",
+        "inputs"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Break the process into a prompt chain with extraction and summarization steps - Chaining prompts allows intermediate extraction and summarization to handle complex/long inputs more reliably and structure responses."
+    },
+    {
+      "item_id": "P1-AIP-D3-118",
+      "learning_unit": "Day03-order011",
+      "bucket": "D",
+      "bucket_name": "AWS URL without fetched evidence",
+      "recommended_action": "Retry fetch or reject/reassign dead URLs before human review.",
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-flows-branching.html",
+      "has_evidence": false,
+      "evidence_length": 0,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.0,
+      "matched_terms": [],
+      "claim_excerpt": "Keyed answer and rationale: Integrate an external or pre-processing component for language detection; Implement conditional branching to select the language-specific chain - First, pre-processing or an external function can identify the language. Then, conditional branching sends the input to the correct FM chain."
+    },
+    {
+      "item_id": "P1-AIP-D3-119",
+      "learning_unit": "Day03-order011",
+      "bucket": "D",
+      "bucket_name": "AWS URL without fetched evidence",
+      "recommended_action": "Retry fetch or reject/reassign dead URLs before human review.",
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-flows-components.html",
+      "has_evidence": false,
+      "evidence_length": 0,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.0,
+      "matched_terms": [],
+      "claim_excerpt": "Keyed answer and rationale: Design a reusable pre-processing component and use branching for summarization prompts - Reusable pre-processing avoids duplicated logic, and branching dispatches to the appropriate summarization based on input type."
+    },
+    {
+      "item_id": "P1-AIP-D3-120",
+      "learning_unit": "Day03-order011",
+      "bucket": "D",
+      "bucket_name": "AWS URL without fetched evidence",
+      "recommended_action": "Retry fetch or reject/reassign dead URLs before human review.",
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-flows.html",
+      "has_evidence": false,
+      "evidence_length": 0,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.0,
+      "matched_terms": [],
+      "claim_excerpt": "Keyed answer and rationale: Implement sequential prompt chaining to manage extraction in steps; Use conditional branching to escalate ambiguous outcomes - Chaining prompts manages multi-step logic; conditional branching checks results for ambiguity and routes escalation. Post-processing and pre-processing support output adjustments but not the core optimization."
+    },
+    {
+      "item_id": "P1-AIP-D3-121",
+      "learning_unit": "Day03-order011",
+      "bucket": "D",
+      "bucket_name": "AWS URL without fetched evidence",
+      "recommended_action": "Retry fetch or reject/reassign dead URLs before human review.",
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-flows-components.html",
+      "has_evidence": false,
+      "evidence_length": 0,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.0,
+      "matched_terms": [],
+      "claim_excerpt": "Keyed answer and rationale: Reusable prompt components invoked within a loop or for each paragraph - Reusable components support applying the same logic repeatedly\u2014such as fact extraction for each paragraph\u2014promoting consistency and maintainability."
+    },
+    {
+      "item_id": "P1-AIP-D3-122",
+      "learning_unit": "Day03-order011",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order011-prompt-chaining-branching-bedrock-prompt-flows.md",
+      "has_evidence": true,
+      "evidence_length": 600,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.318,
+      "matched_terms": [
+        "chain",
+        "text",
+        "connect",
+        "prompt",
+        "node",
+        "chaining",
+        "step"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Configure an image analysis component, chain text extraction, then connect the result to the FM prompt node - Sequentially chaining components\u2014first for image analysis, then text extraction, then FM processing\u2014maximizes modularity and correctly prepares each step for the next."
+    },
+    {
+      "item_id": "P1-AIP-D3-123",
+      "learning_unit": "Day03-order011",
+      "bucket": "D",
+      "bucket_name": "AWS URL without fetched evidence",
+      "recommended_action": "Retry fetch or reject/reassign dead URLs before human review.",
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-flows-components.html",
+      "has_evidence": false,
+      "evidence_length": 0,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.0,
+      "matched_terms": [],
+      "claim_excerpt": "Keyed answer and rationale: Using modular, reusable prompt components across entry points; Centralizing pre-processing logic in one component - Reusable components and centralized pre-processing reduce duplication and facilitate maintenance/updates. Branching guides execution flow; embedding and duplication reduce maintainability."
+    },
+    {
+      "item_id": "P1-AIP-D3-130",
+      "learning_unit": "Day03-order012",
+      "bucket": "A",
+      "bucket_name": "AWS URL with fetched evidence",
+      "recommended_action": "Run grounded judge; likely highest auto-clear yield.",
+      "source": "https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-method-request-validation.html",
+      "has_evidence": true,
+      "evidence_length": 376,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.25,
+      "matched_terms": [
+        "model",
+        "validation",
+        "gateway",
+        "unnecessary"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Attach input model validation at the API Gateway stage. - API Gateway model validation rejects malformed requests before they reach Lambda, reducing unnecessary invocations at scale."
+    },
+    {
+      "item_id": "P1-AIP-D3-131",
+      "learning_unit": "Day03-order012",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order012-synchronous-fm-api-integration.md",
+      "has_evidence": true,
+      "evidence_length": 564,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.158,
+      "matched_terms": [
+        "request",
+        "validation",
+        "starts"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Configure Lambda provisioned concurrency.; Attach API Gateway request validation models. - Provisioned concurrency eliminates cold starts during spikes; request validation stops bad payloads from wasting backend resources."
+    },
+    {
+      "item_id": "P1-AIP-D3-132",
+      "learning_unit": "Day03-order012",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order012-synchronous-fm-api-integration.md",
+      "has_evidence": true,
+      "evidence_length": 564,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.125,
+      "matched_terms": [
+        "request",
+        "validation",
+        "start",
+        "under"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Use provisioned concurrency for all Lambda functions invoked synchronously.; Attach API Gateway request validation schemas to all relevant methods.; Configure API Gateway usage plans and throttle limits. - Provisioned concurrency mitigates cold start; request validation ensures only good payloads are processed; usage plans with throttling protect backend reliability under high volume."
+    },
+    {
+      "item_id": "P1-AIP-D3-133",
+      "learning_unit": "Day03-order012",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order012-synchronous-fm-api-integration.md",
+      "has_evidence": true,
+      "evidence_length": 600,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.231,
+      "matched_terms": [
+        "request",
+        "validation",
+        "model",
+        "input",
+        "start",
+        "under"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Set API Gateway request validation using model schemas.; Enable Lambda provisioned concurrency.; Define API Gateway usage plans with throttling limits. - Request validation blocks bad input, provisioned concurrency prevents cold start delays under spikes, and usage plans/throttling limit rates to maintain SLA."
+    },
+    {
+      "item_id": "P1-AIP-D3-135",
+      "learning_unit": "Day03-order012",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order012-synchronous-fm-api-integration.md",
+      "has_evidence": true,
+      "evidence_length": 564,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.167,
+      "matched_terms": [
+        "integration",
+        "request",
+        "validation"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Approach A: API Gateway with Lambda proxy integration - API Gateway provides request validation and native quota/throttling controls, reducing backend compute waste, which Lambda URLs alone do not."
+    },
+    {
+      "item_id": "P1-AIP-D3-141",
+      "learning_unit": "Day03-order013",
+      "bucket": "A",
+      "bucket_name": "AWS URL with fetched evidence",
+      "recommended_action": "Run grounded judge; likely highest auto-clear yield.",
+      "source": "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-message-lifecycle.html",
+      "has_evidence": true,
+      "evidence_length": 27,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.071,
+      "matched_terms": [
+        "queue"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: FIFO queue with deduplication and a short message delay configuration - FIFO with deduplication prevents duplicate processing, maintains order, and a short message delay allows batching without significant delay."
+    },
+    {
+      "item_id": "P1-AIP-D3-146",
+      "learning_unit": "Day03-order013",
+      "bucket": "D",
+      "bucket_name": "AWS URL without fetched evidence",
+      "recommended_action": "Retry fetch or reject/reassign dead URLs before human review.",
+      "source": "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-message-lifecycle.html",
+      "has_evidence": false,
+      "evidence_length": 0,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.0,
+      "matched_terms": [],
+      "claim_excerpt": "Keyed answer and rationale: When job processing order must exactly match job submission order.; When message deduplication is necessary to avoid processing the same job multiple times. - FIFO ensures ordered processing and deduplication; standard queues prioritize scale and at-least-once delivery."
+    },
+    {
+      "item_id": "P1-AIP-D3-148",
+      "learning_unit": "Day03-order014",
+      "bucket": "A",
+      "bucket_name": "AWS URL with fetched evidence",
+      "recommended_action": "Run grounded judge; likely highest auto-clear yield.",
+      "source": "https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-chunked-transfer.html",
+      "has_evidence": true,
+      "evidence_length": 18,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.042,
+      "matched_terms": [
+        "gateway"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Implement an HTTP API Gateway with chunked transfer encoding and connect it to a Lambda function using Lambda response streaming. - This option connects Lambda response streaming with API Gateway's chunked transfer encoding, allowing partial results to flow to the client as soon as they are generated, ensuring near-instant feedback."
+    },
+    {
+      "item_id": "P1-AIP-D3-150",
+      "learning_unit": "Day03-order014",
+      "bucket": "A",
+      "bucket_name": "AWS URL with fetched evidence",
+      "recommended_action": "Run grounded judge; likely highest auto-clear yield.",
+      "source": "https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-chunked-transfer.html",
+      "has_evidence": true,
+      "evidence_length": 18,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.059,
+      "matched_terms": [
+        "gateway"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Enable Lambda response streaming and configure API Gateway to use chunked transfer encoding. - Response streaming from Lambda in combination with API Gateway chunked transfer encoding ensures users receive incremental results with minimal delay."
+    },
+    {
+      "item_id": "P1-AIP-D3-152",
+      "learning_unit": "Day03-order014",
+      "bucket": "A",
+      "bucket_name": "AWS URL with fetched evidence",
+      "recommended_action": "Run grounded judge; likely highest auto-clear yield.",
+      "source": "https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-chunked-transfer.html",
+      "has_evidence": true,
+      "evidence_length": 18,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.05,
+      "matched_terms": [
+        "gateway"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Switch to Lambda response streaming with chunked transfer through HTTP API Gateway. - Using Lambda response streaming enables partial responses to flow to the client, reducing wait times and making the system feel more responsive."
+    },
+    {
+      "item_id": "P1-AIP-D3-153",
+      "learning_unit": "Day03-order014",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order014-streaming-websockets-server-sent-events.md",
+      "has_evidence": true,
+      "evidence_length": 600,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.091,
+      "matched_terms": [
+        "websockets",
+        "one-way"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Use SSE for standard users and implement WebSockets only for admin sessions requiring two-way messaging. - SSE offers a simple, scalable method for one-way real-time updates; WebSockets can be added selectively for two-way use cases without adding extra complexity for all sessions."
+    },
+    {
+      "item_id": "P1-AIP-D3-154",
+      "learning_unit": "Day03-order014",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order014-streaming-websockets-server-sent-events.md",
+      "has_evidence": true,
+      "evidence_length": 600,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.312,
+      "matched_terms": [
+        "server-sent",
+        "events",
+        "http",
+        "streaming",
+        "works"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Server-sent events (SSE) over HTTP via API Gateway - SSE is natively supported by most browsers, is simple to implement for server-to-client streaming updates, and works well over standard HTTP."
+    },
+    {
+      "item_id": "P1-AIP-D3-155",
+      "learning_unit": "Day03-order014",
+      "bucket": "D",
+      "bucket_name": "AWS URL without fetched evidence",
+      "recommended_action": "Retry fetch or reject/reassign dead URLs before human review.",
+      "source": "https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-chunked-transfer.html",
+      "has_evidence": false,
+      "evidence_length": 0,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.0,
+      "matched_terms": [],
+      "claim_excerpt": "Keyed answer and rationale: It enables incremental delivery of data to clients as it becomes available. - Chunked transfer encoding allows Lambda function output to reach clients piece by piece, significantly improving perceived responsiveness for AI-generated output."
+    },
+    {
+      "item_id": "P1-AIP-D3-156",
+      "learning_unit": "Day03-order014",
+      "bucket": "A",
+      "bucket_name": "AWS URL with fetched evidence",
+      "recommended_action": "Run grounded judge; likely highest auto-clear yield.",
+      "source": "https://docs.aws.amazon.com/lambda/latest/dg/configuration-response-streaming.html",
+      "has_evidence": true,
+      "evidence_length": 63,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.192,
+      "matched_terms": [
+        "lambda",
+        "response",
+        "streaming",
+        "gateway",
+        "supports"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Combine Lambda response streaming with API Gateway chunked transfer for HTTP APIs. - This method supports true real-time, scalable delivery by directly streaming output as it's produced, handling bursts efficiently and avoiding the delays inherent in polling or batching."
+    },
+    {
+      "item_id": "P1-AIP-D3-157",
+      "learning_unit": "Day03-order014",
+      "bucket": "A",
+      "bucket_name": "AWS URL with fetched evidence",
+      "recommended_action": "Run grounded judge; likely highest auto-clear yield.",
+      "source": "https://docs.aws.amazon.com/lambda/latest/dg/configuration-response-streaming.html",
+      "has_evidence": true,
+      "evidence_length": 174,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.3,
+      "matched_terms": [
+        "lambda",
+        "function",
+        "timeout",
+        "enabled",
+        "gateway",
+        "responses"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Increase the Lambda function timeout and ensure keep-alive is enabled in API Gateway configuration. - Ensuring the Lambda timeout is sufficient for long-running responses and keeping connections alive mitigates unexpected disconnects during big outputs."
+    },
+    {
+      "item_id": "P1-AIP-D3-158",
+      "learning_unit": "Day03-order014",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order014-streaming-websockets-server-sent-events.md",
+      "has_evidence": true,
+      "evidence_length": 600,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.2,
+      "matched_terms": [
+        "server-sent",
+        "events",
+        "http",
+        "websockets",
+        "websocket"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Leverage server-sent events (SSE) for notification delivery using HTTP API Gateway endpoints. - SSE allows efficient server-to-client push of updates, reduces the need for clients to repeatedly poll, and requires less stateful tracking than WebSockets or WebSocket API Gateway solutions."
+    },
+    {
+      "item_id": "P1-AIP-D3-159",
+      "learning_unit": "Day03-order014",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order014-streaming-websockets-server-sent-events.md",
+      "has_evidence": true,
+      "evidence_length": 600,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.212,
+      "matched_terms": [
+        "response",
+        "streaming",
+        "http",
+        "text",
+        "websocket",
+        "media",
+        "responses"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Implement Lambda response streaming and HTTP API Gateway chunked transfer for text delivery.; Leverage WebSocket API Gateway for sessions that may require future bi-directional or media expansion. - Lambda streaming and chunked transfer directly enable real-time incremental responses. WebSocket API Gateway is extensible for future advanced interactions such as voice/video requiring lower-latency two-way communication."
+    },
+    {
+      "item_id": "P1-AIP-D3-162",
+      "learning_unit": "Day03-order015",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order015-token-limits-request-validation-response-handling.md",
+      "has_evidence": true,
+      "evidence_length": 328,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.318,
+      "matched_terms": [
+        "user",
+        "input",
+        "required",
+        "json",
+        "require",
+        "validation",
+        "failures"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Sanitize user input to ensure UTF-8 encoding and required JSON structure before forwarding to Bedrock. - Amazon Bedrock APIs require proper JSON payloads and UTF-8 encoding. Sanitizing and encoding inputs before forwarding ensures compatibility and prevents API validation failures."
+    },
+    {
+      "item_id": "P1-AIP-D3-163",
+      "learning_unit": "Day03-order015",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order015-token-limits-request-validation-response-handling.md",
+      "has_evidence": true,
+      "evidence_length": 600,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.222,
+      "matched_terms": [
+        "return",
+        "input",
+        "token",
+        "limit",
+        "user",
+        "action"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Detect the error, then return a user-friendly message indicating the input exceeded the maximum token limit. - Proactively monitoring responses and presenting helpful messages increases user understanding and enables remedial action, following best practice for API-driven GenAI UX."
+    },
+    {
+      "item_id": "P1-AIP-D3-165",
+      "learning_unit": "Day03-order017",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order017-fallbacks-circuit-breakers-graceful-degradation.md",
+      "has_evidence": true,
+      "evidence_length": 600,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.182,
+      "matched_terms": [
+        "model",
+        "region",
+        "circuit",
+        "breaker",
+        "user",
+        "service"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Deploy a backup Bedrock model in a second region and orchestrate cross-Region failover using Step Functions circuit breaker patterns. - Provisioning a cross-Region backup and orchestrating failover with Step Functions circuit breaker patterns ensures user requests can be routed to healthy endpoints in alternate Regions, guaranteeing service continuity even during main regional outages."
+    },
+    {
+      "item_id": "P1-AIP-D3-166",
+      "learning_unit": "Day03-order017",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order017-fallbacks-circuit-breakers-graceful-degradation.md",
+      "has_evidence": true,
+      "evidence_length": 352,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.333,
+      "matched_terms": [
+        "return",
+        "fallback",
+        "response",
+        "graceful",
+        "degradation",
+        "partial",
+        "failure",
+        "service",
+        "conditions"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Return a fallback caption response when Bedrock API inference fails after retrying with exponential backoff. - Graceful degradation provides users with a meaningful partial or fallback result instead of a failure notice, maintaining some service capability under fault conditions."
+    },
+    {
+      "item_id": "P1-AIP-D3-167",
+      "learning_unit": "Day03-order017",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order017-fallbacks-circuit-breakers-graceful-degradation.md",
+      "has_evidence": true,
+      "evidence_length": 365,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.211,
+      "matched_terms": [
+        "circuit",
+        "breaker",
+        "fallback",
+        "user"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: 0; 1 - Both circuit breaker with a cache-based fallback and shifting to a simpler backup summarizer provide well-established patterns to sustain functionality under stress and minimize user impact."
+    },
+    {
+      "item_id": "P1-AIP-D3-168",
+      "learning_unit": "Day03-order017",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order017-fallbacks-circuit-breakers-graceful-degradation.md",
+      "has_evidence": true,
+      "evidence_length": 365,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.233,
+      "matched_terms": [
+        "threshold",
+        "application",
+        "block",
+        "model",
+        "cached",
+        "circuit",
+        "breaker"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Set a request counter threshold in the chat application middleware that triggers a temporary block on model invocations and serves cached responses during brownout periods. - Having the application trigger a temporary block (circuit breaker) on repeated errors and serving cached content provides resilience and shields users from repeated failures."
+    },
+    {
+      "item_id": "P1-AIP-D3-169",
+      "learning_unit": "Day03-order017",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order017-fallbacks-circuit-breakers-graceful-degradation.md",
+      "has_evidence": true,
+      "evidence_length": 365,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.207,
+      "matched_terms": [
+        "fallback",
+        "region",
+        "available",
+        "degrade",
+        "service",
+        "quality"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Deploy cross-Region inference with health checks and offer a simplified fallback summary if no region is available. - AWS recommends using cross-Region redundancy and explicit fallback pathways so applications degrade gracefully, preserving minimum required service quality even during total regional outages."
+    },
+    {
+      "item_id": "P1-AIP-D3-171",
+      "learning_unit": "Day03-order017",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order017-fallbacks-circuit-breakers-graceful-degradation.md",
+      "has_evidence": true,
+      "evidence_length": 352,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.29,
+      "matched_terms": [
+        "fallback",
+        "unavailable",
+        "later",
+        "cached",
+        "graceful",
+        "degradation",
+        "experience",
+        "service",
+        "partial"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Provide fallback responses, such as 'Support agent unavailable, please try again later' or cached FAQ answers, to preserve basic customer trust and functionality. - Graceful degradation emphasizes maintaining minimum viable customer experience, even if full service is impossible\u2014offering fallback or partial content helps preserve trust."
+    },
+    {
+      "item_id": "P1-AIP-D3-172",
+      "learning_unit": "Day03-order017",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order017-fallbacks-circuit-breakers-graceful-degradation.md",
+      "has_evidence": true,
+      "evidence_length": 600,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.269,
+      "matched_terms": [
+        "define",
+        "failure",
+        "threshold",
+        "workflow",
+        "state",
+        "fallback",
+        "fallbacks"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Define failure threshold and timeout values in the workflow state, so after repeated errors further calls are halted and fallback is invoked. - Explicit thresholds for marking workflow steps as unhealthy enable Step Functions to switch to fallbacks, maximizing resilience."
+    },
+    {
+      "item_id": "P1-AIP-D3-173",
+      "learning_unit": "Day03-order017",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order017-fallbacks-circuit-breakers-graceful-degradation.md",
+      "has_evidence": true,
+      "evidence_length": 365,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.167,
+      "matched_terms": [
+        "degraded",
+        "safety"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: 0; 2 - Automated cross-Region failover and informative degraded answers satisfy both resilience and patient safety requirements."
+    },
+    {
+      "item_id": "P1-AIP-D3-175",
+      "learning_unit": "Day03-order017",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order017-fallbacks-circuit-breakers-graceful-degradation.md",
+      "has_evidence": true,
+      "evidence_length": 365,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.333,
+      "matched_terms": [
+        "fallback",
+        "experience",
+        "model",
+        "circuit",
+        "breakers",
+        "degraded",
+        "response",
+        "user"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: It minimizes wasted computation and quickly transitions users to a fallback experience when the model endpoint is unhealthy. - Circuit breakers avoid excessive, doomed retries, and ensure a timely degraded response for end users, preserving both resources and user experience."
+    },
+    {
+      "item_id": "P1-AIP-D3-180",
+      "learning_unit": "Day03-order018",
+      "bucket": "A",
+      "bucket_name": "AWS URL with fetched evidence",
+      "recommended_action": "Run grounded judge; likely highest auto-clear yield.",
+      "source": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Dashboards.html",
+      "has_evidence": true,
+      "evidence_length": 600,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.269,
+      "matched_terms": [
+        "create",
+        "cloudwatch",
+        "dashboards",
+        "metrics",
+        "metric",
+        "full",
+        "health"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Create CloudWatch Dashboards integrating both technical and business-level metrics and configure anomaly detection on key performance indicators. - Combining both metric types on dashboards and leveraging anomaly detection gives full visibility and proactive alerts for service health and business impact."
+    },
+    {
+      "item_id": "P1-AIP-D3-181",
+      "learning_unit": "Day03-order018",
+      "bucket": "A",
+      "bucket_name": "AWS URL with fetched evidence",
+      "recommended_action": "Run grounded judge; likely highest auto-clear yield.",
+      "source": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Dashboards.html",
+      "has_evidence": true,
+      "evidence_length": 463,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.294,
+      "matched_terms": [
+        "cloudwatch",
+        "dashboard",
+        "metrics",
+        "specific",
+        "user"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Add business-segment breakdowns to the CloudWatch Dashboard and correlate latency with FM context features. - Correlating business metrics and FM context in CloudWatch enables targeted root-cause investigation for specific user segments."
+    },
+    {
+      "item_id": "P1-AIP-D3-183",
+      "learning_unit": "Day03-order018",
+      "bucket": "A",
+      "bucket_name": "AWS URL with fetched evidence",
+      "recommended_action": "Run grounded judge; likely highest auto-clear yield.",
+      "source": "https://docs.aws.amazon.com/xray/latest/devguide/xray-console.html",
+      "has_evidence": true,
+      "evidence_length": 104,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.333,
+      "matched_terms": [
+        "x-ray",
+        "trace",
+        "format",
+        "response",
+        "infrastructure",
+        "metrics",
+        "cloudwatch",
+        "infra",
+        "insight"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Standardize X-Ray trace ID propagation and logging format among all regional deployments.; Visualize business, FM response, and API infrastructure metrics in unified CloudWatch Dashboards. - Consistency across trace/log formats makes cross-region analysis possible, and unified dashboards provide complete business/infra insight."
+    },
+    {
+      "item_id": "P1-AIP-D3-187",
+      "learning_unit": "Day03-order018",
+      "bucket": "A",
+      "bucket_name": "AWS URL with fetched evidence",
+      "recommended_action": "Run grounded judge; likely highest auto-clear yield.",
+      "source": "https://docs.aws.amazon.com/xray/latest/devguide/xray-console.html",
+      "has_evidence": true,
+      "evidence_length": 429,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.333,
+      "matched_terms": [
+        "adaptive",
+        "x-ray",
+        "sampling",
+        "traces",
+        "correlate",
+        "cloudwatch"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Implement adaptive X-Ray sampling to preserve representative traces and correlate alerts via CloudWatch Dashboards. - Adaptive sampling protects cost while ensuring key traces are captured; dashboards correlate these for actionable, real-time visibility."
+    },
+    {
+      "item_id": "P1-AIP-D3-188",
+      "learning_unit": "Day03-order003",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order003-query-expansion-decomposition-transformation.md",
+      "has_evidence": true,
+      "evidence_length": 599,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.174,
+      "matched_terms": [
+        "query",
+        "decomposition",
+        "queries",
+        "subqueries"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: The Lambda function lacks proper query decomposition, so multipart requests are not split and handled independently. - If multipart queries are not decomposed, the system may process them as a single search, missing subqueries and causing incomplete answers."
+    },
+    {
+      "item_id": "P1-AIP-D3-189",
+      "learning_unit": "Day03-order003",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order003-query-expansion-decomposition-transformation.md",
+      "has_evidence": true,
+      "evidence_length": 600,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.13,
+      "matched_terms": [
+        "query",
+        "expansion",
+        "retrieval"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Integrating a query expansion step using Bedrock or embedding-based methods before retrieval. - Query expansion using embedding- or LLM-powered techniques can bridge the vocabulary gap by mapping synonyms and uncommon abbreviations to conceptually similar terms, improving recall."
+    },
+    {
+      "item_id": "P1-AIP-D3-190",
+      "learning_unit": "Day03-order003",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order003-query-expansion-decomposition-transformation.md",
+      "has_evidence": true,
+      "evidence_length": 599,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.138,
+      "matched_terms": [
+        "query",
+        "decomposition",
+        "transformation",
+        "queries"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Add a query decomposition Lambda function that splits multipart requests into independent retrievals.; Introduce a Step Functions workflow to sequence query transformation and context assembly before FM inference. - Decomposing multipart queries and using Step Functions for orchestration ensures all sub-requests are independently handled, transformed, and the assembled context is accurate for each."
+    },
+    {
+      "item_id": "P1-AIP-D3-192",
+      "learning_unit": "Day03-order015",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order015-token-limits-request-validation-response-handling.md",
+      "has_evidence": true,
+      "evidence_length": 600,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.231,
+      "matched_terms": [
+        "token",
+        "limit",
+        "failure",
+        "application",
+        "sensitive",
+        "user"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Intercept token limit failure responses, transform them into generic application errors before returning to clients. - Transforming FM-specific errors to a generic, user-friendly message ensures sensitive operational detail is not leaked while still notifying the user an issue occurred."
+    },
+    {
+      "item_id": "P1-AIP-D3-193",
+      "learning_unit": "Day03-order015",
+      "bucket": "A",
+      "bucket_name": "AWS URL with fetched evidence",
+      "recommended_action": "Run grounded judge; likely highest auto-clear yield.",
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html",
+      "has_evidence": true,
+      "evidence_length": 447,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.111,
+      "matched_terms": [
+        "model",
+        "code"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: The FM output was truncated due to reaching the model's token limit. - When inputs approach or exceed the FM\u2019s context window, outputs can be truncated without an explicit error code, resulting in answers being cut off abruptly."
+    },
+    {
+      "item_id": "P1-AIP-D3-194",
+      "learning_unit": "Day03-order015",
+      "bucket": "A",
+      "bucket_name": "AWS URL with fetched evidence",
+      "recommended_action": "Run grounded judge; likely highest auto-clear yield.",
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/conversation.html",
+      "has_evidence": true,
+      "evidence_length": 14,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.045,
+      "matched_terms": [
+        "bedrock"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Format each turn as a structured object in an ordered array and include the full chat history in the API request. - The Bedrock conversation API expects structured arrays for multi-turn context, preserving system and user messages in order."
+    },
+    {
+      "item_id": "P1-AIP-D3-196",
+      "learning_unit": "Day03-order015",
+      "bucket": "A",
+      "bucket_name": "AWS URL with fetched evidence",
+      "recommended_action": "Run grounded judge; likely highest auto-clear yield.",
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html",
+      "has_evidence": true,
+      "evidence_length": 447,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.208,
+      "matched_terms": [
+        "check",
+        "requests",
+        "foundation",
+        "models",
+        "will"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Check if requests nearing the FM\u2019s token context limit are causing output truncation. - Output truncation without an error is a known symptom of hitting token limits in foundation models. Reviewing input/output token counts will quickly confirm or rule out this cause."
+    },
+    {
+      "item_id": "P1-AIP-D3-197",
+      "learning_unit": "Day03-order015",
+      "bucket": "A",
+      "bucket_name": "AWS URL with fetched evidence",
+      "recommended_action": "Run grounded judge; likely highest auto-clear yield.",
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html",
+      "has_evidence": true,
+      "evidence_length": 447,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.176,
+      "matched_terms": [
+        "fields",
+        "document",
+        "section"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Ensure the input JSON specifies required sections as explicit structured fields for each document. - Structured input allows the FM to understand and address each section explicitly, improving output completeness for all required elements."
+    },
+    {
+      "item_id": "P1-AIP-D3-198",
+      "learning_unit": "Day03-order015",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order015-token-limits-request-validation-response-handling.md",
+      "has_evidence": true,
+      "evidence_length": 328,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.321,
+      "matched_terms": [
+        "context",
+        "validate",
+        "tokens",
+        "input",
+        "expected",
+        "output",
+        "request",
+        "token",
+        "truncation"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Implement dynamic chunking of large inputs to fit within FM context window constraints.; Validate the total tokens (input+expected output) before sending a request and adjust accordingly. - Dynamic chunking and pre-validation of token counts are proven strategies to avoid output truncation and maximize completeness."
+    },
+    {
+      "item_id": "P1-AIP-D3-199",
+      "learning_unit": "Day03-order015",
+      "bucket": "A",
+      "bucket_name": "AWS URL with fetched evidence",
+      "recommended_action": "Run grounded judge; likely highest auto-clear yield.",
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html",
+      "has_evidence": true,
+      "evidence_length": 306,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.15,
+      "matched_terms": [
+        "format",
+        "follow",
+        "section"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: The new input format does not follow the model-specific structured JSON schema, causing the FM to miss required sections. - If the input format does not conform to the required schema, the FM cannot reliably generate each section, leading to inconsistent completion."
+    },
+    {
+      "item_id": "P1-AIP-D3-200",
+      "learning_unit": "Day03-order015",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order015-token-limits-request-validation-response-handling.md",
+      "has_evidence": true,
+      "evidence_length": 600,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.346,
+      "matched_terms": [
+        "whether",
+        "input",
+        "context",
+        "truncation",
+        "requests",
+        "token",
+        "limit",
+        "section",
+        "output"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Whether the dynamic chunking algorithm is producing final input sizes that exceed the FM\u2019s context window, causing truncation. - Improper chunk sizing can result in requests that hit the token limit, causing silent truncation of the last section of output for long documents."
+    },
+    {
+      "item_id": "P1-AIP-D3-205",
+      "learning_unit": "Day03-order016",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order016-retries-backoff-rate-limiting-timeouts.md",
+      "has_evidence": true,
+      "evidence_length": 582,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.281,
+      "matched_terms": [
+        "exponential",
+        "backoff",
+        "capped",
+        "retries",
+        "rate",
+        "retry",
+        "system",
+        "load",
+        "protects"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Introduce client-side exponential backoff with capped retries; Enable API Gateway rate and burst limits appropriate for expected usage - Backoff with capped retries prevents retry storms that worsen congestion during slow FM responses. Setting limits in API Gateway ensures the system gracefully throttles excess load and protects core services."
+    },
+    {
+      "item_id": "P1-AIP-D3-208",
+      "learning_unit": "Day03-order016",
+      "bucket": "A",
+      "bucket_name": "AWS URL with fetched evidence",
+      "recommended_action": "Run grounded judge; likely highest auto-clear yield.",
+      "source": "https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-request-throttling.html",
+      "has_evidence": true,
+      "evidence_length": 120,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.227,
+      "matched_terms": [
+        "increase",
+        "gateway",
+        "burst",
+        "limit",
+        "requests"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Increase the API Gateway burst limit to accommodate peak connections - 504 errors during traffic bursts typically result from requests exceeding API Gateway\u2019s short-term burst threshold; raising the burst limit allows more simultaneous requests to pass through without immediate rejection."
+    },
+    {
+      "item_id": "P1-AIP-D3-210",
+      "learning_unit": "Day03-order016",
+      "bucket": "A",
+      "bucket_name": "AWS URL with fetched evidence",
+      "recommended_action": "Run grounded judge; likely highest auto-clear yield.",
+      "source": "https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-request-throttling.html",
+      "has_evidence": true,
+      "evidence_length": 600,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.292,
+      "matched_terms": [
+        "increase",
+        "gateway",
+        "burst",
+        "limit",
+        "many",
+        "requests",
+        "throttling"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Increase API Gateway burst limit proportional to anticipated peak batch arrival - The burst limit directly controls how many short-term requests are accepted. If bursts are expected, raising this value allows the system to absorb surges with minimal throttling."
+    },
+    {
+      "item_id": "P1-AIP-D3-211",
+      "learning_unit": "Day03-order016",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order016-retries-backoff-rate-limiting-timeouts.md",
+      "has_evidence": true,
+      "evidence_length": 582,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.143,
+      "matched_terms": [
+        "limit",
+        "backoff",
+        "retry"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Set a conservative burst limit in API Gateway and couple with jittered backoff retry logic in clients - A conservative burst limit prevents the API from being overwhelmed, while jittered retry logic on the client side mitigates retry storms and gives backend services room to recover."
+    },
+    {
+      "item_id": "P1-AIP-D3-212",
+      "learning_unit": "Day03-order016",
+      "bucket": "B",
+      "bucket_name": "Local teaching source with fetched evidence",
+      "recommended_action": "Run grounded judge, but prefer AWS reassignment for AWS factual claims.",
+      "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order016-retries-backoff-rate-limiting-timeouts.md",
+      "has_evidence": true,
+      "evidence_length": 582,
+      "verification_note": "insufficient lexical support for conservative auto-approval",
+      "term_coverage": 0.231,
+      "matched_terms": [
+        "rate",
+        "exponential",
+        "backoff",
+        "jitter",
+        "retry",
+        "load"
+      ],
+      "claim_excerpt": "Keyed answer and rationale: Enforce strict rate and burst limits in API Gateway, implement exponential backoff with jitter in all client SDKs - Combination of API Gateway burst/rate limits at entry and distributed jittered client retry logic best manages systemic risk by proactive rejection and load spreading."
+    }
+  ]
+}

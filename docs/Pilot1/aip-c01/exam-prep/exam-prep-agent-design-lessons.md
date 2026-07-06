@@ -200,7 +200,7 @@ run log before and after each meaningful milestone. For generation, log
 machine-readable `.jsonl` stream so a monitor can draw a progress bar without
 interrupting the process.
 
-**Applied in architecture:** `scripts/generate_exam_prep_questions.py` writes
+**Applied in architecture:** `scripts/pilot1_aip_c01/generate_exam_prep_questions.py` writes
 progress logs under `exam-prep/logs/day-XX/` and flushes console progress
 messages immediately.
 
@@ -348,6 +348,30 @@ Any item culled during Step 13 must be added to the cull log with observable
 evidence, and coverage must be recomputed after the cull before the bank can be
 called complete.
 
+### 25. Keep The Repair Tail Small
+
+**Symptom:** The Day 3 source-grounded prompt pass produced enough reviewed
+questions, but the final source-verification tail remained too large:
+`153/212` reviewed items still needed human source review. That is not a
+review-stage success; it is an upstream generation-quality failure wearing a
+complete-count mask.
+
+**Lesson:** A pipeline can have good coverage, good-looking schemas, and
+balanced answer positions while still failing the automation contract. Source
+fields are not valuable if they mostly move work into a later human queue.
+
+**Required fix:** Treat tail size as a monitored production threshold:
+
+- LLM repair/judge tail should be <= 15% of reviewed items.
+- Human source-review tail should be <= 5% of reviewed items.
+- Breaching either threshold means the generation/review process needs
+  correction before the day can be called automation-ready.
+
+These thresholds protect question quality rather than replacing it: the goal is
+still tough, scenario-rich, misconception-testing questions. The source contract
+must make those strong questions defensible without creating a large downstream
+review queue.
+
 ## Implementation Checklist
 
 Before implementing or running the agent for a new day, confirm:
@@ -365,6 +389,8 @@ Before implementing or running the agent for a new day, confirm:
   cost, top-up guidance, and approved-output checks;
 - final fact checking has a real verifier or explicit human-review path; it is
   not allowed to be a placeholder stage.
+- LLM repair/judge and human-review tail thresholds are configured and monitored
+  (`<=15%` and `<=5%`, respectively).
 
 After a run, before trusting the gate report, also confirm:
 
@@ -375,6 +401,9 @@ After a run, before trusting the gate report, also confirm:
   blanket-marking items `needs-source-check`;
 - Step 13 source/fact checking has zero unresolved source markers before a bank
   is called complete;
+- the LLM repair/judge tail is <=15% and the human source-review tail is <=5%;
+  otherwise treat the run as an upstream process breach, not merely as pending
+  review work;
 - any Step 13 factual cull appears in the cull log with the stem, challenged
   claim/rationale, and review finding;
 - per-topic coverage was recomputed after final fact-check culls;

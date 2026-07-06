@@ -33,6 +33,11 @@ If a RAG answer is bad, the model may not be the root cause. The source data,
 chunking, metadata, embedding model, index freshness, filters, ranking, prompt
 assembly, or evaluation set may be the real failure point.
 
+Acceleration note: Day 2 can be intense, but it should not be thin. If you
+cannot defend the data-quality checks, chunking decision, metadata/access
+labels, embedding/search behavior, and basic RAG path, extend the study block
+or record explicit remediation. Retrieval gaps compound quickly on Day 3.
+
 ## Day 2 Scenario
 
 Use this shared scenario in the artifacts and answer guidance.

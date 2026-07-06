@@ -1,6 +1,6 @@
 # Source-To-Decomposition Coverage Audit
 
-Generated: 2026-06-23
+Generated: 2026-06-29
 
 ## Verdict
 

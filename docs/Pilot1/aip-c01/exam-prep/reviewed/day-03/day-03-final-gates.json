@@ -1,0 +1,335 @@
+{
+  "day": 3,
+  "generated": "2026-06-30",
+  "target_per_topic": 10,
+  "reviewed_item_count": 222,
+  "gate_status": {
+    "teaching_substrate_gate": "pass",
+    "source_objective_gate": "pass",
+    "raw_provenance_gate": "pass",
+    "schema_gate": "pass",
+    "traceability_gate": "pass",
+    "factual_verification_gate": "pending",
+    "review_evidence_gate": "pass",
+    "coverage_gate": "fail",
+    "distribution_gate": "pass",
+    "approved_output_gate": "pass",
+    "cost_gate": "pass",
+    "iteration_gate": "pass",
+    "automation_tail_gate": "fail",
+    "human_resolution_gate": "pending"
+  },
+  "blockers": [
+    "coverage_gate",
+    "automation_tail_gate"
+  ],
+  "pending_items": [
+    "factual_verification_gate",
+    "human_resolution_gate"
+  ],
+  "per_topic_counts": {
+    "Day03-order001": 13,
+    "Day03-order002": 13,
+    "Day03-order003": 13,
+    "Day03-order004": 12,
+    "Day03-order005": 13,
+    "Day03-order006": 12,
+    "Day03-order007": 12,
+    "Day03-order008": 13,
+    "Day03-order009": 13,
+    "Day03-order010": 12,
+    "Day03-order011": 13,
+    "Day03-order012": 12,
+    "Day03-order013": 12,
+    "Day03-order014": 12,
+    "Day03-order015": 10,
+    "Day03-order016": 13,
+    "Day03-order017": 12,
+    "Day03-order018": 12
+  },
+  "difficulty_counts": {
+    "medium": 129,
+    "hard": 81,
+    "exam-plus": 12
+  },
+  "question_format_counts": {
+    "multiple-choice": 178,
+    "multiple-response": 44
+  },
+  "cognitive_demand_counts": {
+    "select": 14,
+    "optimize": 48,
+    "configure": 47,
+    "design": 10,
+    "implement": 29,
+    "diagnose": 48,
+    "explain": 1,
+    "compare": 4,
+    "integrate": 2,
+    "judge": 18,
+    "analyze": 1
+  },
+  "answer_position_counts": {
+    "1": 45,
+    "2": 45,
+    "3": 44,
+    "4": 44,
+    "multiple-response": 44
+  },
+  "answer_position_max_share": 0.2528,
+  "source_trace_status_counts": {
+    "source-verified": 52,
+    "needs-human-source-review": 170
+  },
+  "claim_verification_counts": {
+    "verified": 52,
+    "unresolved": 170
+  },
+  "automation_tail_thresholds": {
+    "llm_repair_tail_max_ratio": 0.15,
+    "human_source_review_tail_max_ratio": 0.05
+  },
+  "automation_tail_metrics": {
+    "llm_repair_tail_count": 170,
+    "llm_repair_tail_ratio": 0.7658,
+    "human_review_tail_count": 170,
+    "human_review_tail_ratio": 0.7658
+  },
+  "automation_tail_threshold_breaches": [
+    "llm_repair_tail 170/222 (76.6%) > 15%",
+    "human_review_tail 170/222 (76.6%) > 5%"
+  ],
+  "objective_mismatches": [],
+  "topic_skill_mismatches": [],
+  "missing_mapped_skills": {
+    "Day03-order001": [
+      "4.2.2"
+    ],
+    "Day03-order004": [
+      "1.4.5"
+    ],
+    "Day03-order006": [
+      "5.2.4"
+    ],
+    "Day03-order010": [
+      "5.1.4"
+    ],
+    "Day03-order015": [
+      "2.5.1",
+      "5.2.1"
+    ],
+    "Day03-order016": [
+      "2.5.1"
+    ],
+    "Day03-order017": [
+      "2.4.3"
+    ],
+    "Day03-order018": [
+      "2.5.6",
+      "4.3.1"
+    ]
+  },
+  "must_not_drift_skills": [
+    "1.4.4",
+    "1.4.5",
+    "1.5.5",
+    "1.6.2",
+    "1.6.3",
+    "1.6.4",
+    "1.6.6",
+    "2.4.2"
+  ],
+  "remediation_missing": [],
+  "source_trace_missing": [],
+  "teaching_substrate_missing": [],
+  "approved_output_regressions": [],
+  "cost_summary": {
+    "api_calls": 21,
+    "token_totals": {
+      "input_tokens": 425399,
+      "output_tokens": 107670,
+      "total_tokens": 533069,
+      "candidate_count": 250
+    },
+    "calls": [
+      {
+        "raw_source": "2026-06-30T050949Z-openai-gpt-4.1-day-03-order001.md",
+        "run_id": "order001",
+        "candidate_count": 13,
+        "input_tokens": 19962,
+        "output_tokens": 5573,
+        "total_tokens": 25535
+      },
+      {
+        "raw_source": "2026-06-30T051032Z-openai-gpt-4.1-day-03-order002.md",
+        "run_id": "order002",
+        "candidate_count": 13,
+        "input_tokens": 19885,
+        "output_tokens": 5530,
+        "total_tokens": 25415
+      },
+      {
+        "raw_source": "2026-06-30T051124Z-openai-gpt-4.1-day-03-order003.md",
+        "run_id": "order003",
+        "candidate_count": 13,
+        "input_tokens": 19896,
+        "output_tokens": 5134,
+        "total_tokens": 25030
+      },
+      {
+        "raw_source": "2026-06-30T051203Z-openai-gpt-4.1-day-03-order004.md",
+        "run_id": "order004",
+        "candidate_count": 12,
+        "input_tokens": 20006,
+        "output_tokens": 4944,
+        "total_tokens": 24950
+      },
+      {
+        "raw_source": "2026-06-30T051255Z-openai-gpt-4.1-day-03-order005.md",
+        "run_id": "order005",
+        "candidate_count": 13,
+        "input_tokens": 19921,
+        "output_tokens": 6115,
+        "total_tokens": 26036
+      },
+      {
+        "raw_source": "2026-06-30T051339Z-openai-gpt-4.1-day-03-order006.md",
+        "run_id": "order006",
+        "candidate_count": 12,
+        "input_tokens": 19983,
+        "output_tokens": 5312,
+        "total_tokens": 25295
+      },
+      {
+        "raw_source": "2026-06-30T051420Z-openai-gpt-4.1-day-03-order007.md",
+        "run_id": "order007",
+        "candidate_count": 12,
+        "input_tokens": 19988,
+        "output_tokens": 5484,
+        "total_tokens": 25472
+      },
+      {
+        "raw_source": "2026-06-30T051507Z-openai-gpt-4.1-day-03-order008.md",
+        "run_id": "order008",
+        "candidate_count": 13,
+        "input_tokens": 19895,
+        "output_tokens": 5365,
+        "total_tokens": 25260
+      },
+      {
+        "raw_source": "2026-06-30T051603Z-openai-gpt-4.1-day-03-order009.md",
+        "run_id": "order009",
+        "candidate_count": 13,
+        "input_tokens": 19933,
+        "output_tokens": 5360,
+        "total_tokens": 25293
+      },
+      {
+        "raw_source": "2026-06-30T051656Z-openai-gpt-4.1-day-03-order010.md",
+        "run_id": "order010",
+        "candidate_count": 13,
+        "input_tokens": 19968,
+        "output_tokens": 5476,
+        "total_tokens": 25444
+      },
+      {
+        "raw_source": "2026-06-30T051742Z-openai-gpt-4.1-day-03-order011.md",
+        "run_id": "order011",
+        "candidate_count": 13,
+        "input_tokens": 20055,
+        "output_tokens": 5518,
+        "total_tokens": 25573
+      },
+      {
+        "raw_source": "2026-06-30T051823Z-openai-gpt-4.1-day-03-order012.md",
+        "run_id": "order012",
+        "candidate_count": 13,
+        "input_tokens": 19994,
+        "output_tokens": 5062,
+        "total_tokens": 25056
+      },
+      {
+        "raw_source": "2026-06-30T051911Z-openai-gpt-4.1-day-03-order013.md",
+        "run_id": "order013",
+        "candidate_count": 13,
+        "input_tokens": 20031,
+        "output_tokens": 5767,
+        "total_tokens": 25798
+      },
+      {
+        "raw_source": "2026-06-30T051954Z-openai-gpt-4.1-day-03-order014.md",
+        "run_id": "order014",
+        "candidate_count": 12,
+        "input_tokens": 19987,
+        "output_tokens": 5492,
+        "total_tokens": 25479
+      },
+      {
+        "raw_source": "2026-06-30T052035Z-openai-gpt-4.1-day-03-order015.md",
+        "run_id": "order015",
+        "candidate_count": 13,
+        "input_tokens": 20124,
+        "output_tokens": 5527,
+        "total_tokens": 25651
+      },
+      {
+        "raw_source": "2026-06-30T052118Z-openai-gpt-4.1-day-03-order016.md",
+        "run_id": "order016",
+        "candidate_count": 13,
+        "input_tokens": 20058,
+        "output_tokens": 5418,
+        "total_tokens": 25476
+      },
+      {
+        "raw_source": "2026-06-30T052157Z-openai-gpt-4.1-day-03-order017.md",
+        "run_id": "order017",
+        "candidate_count": 12,
+        "input_tokens": 20050,
+        "output_tokens": 5386,
+        "total_tokens": 25436
+      },
+      {
+        "raw_source": "2026-06-30T052243Z-openai-gpt-4.1-day-03-order018.md",
+        "run_id": "order018",
+        "candidate_count": 13,
+        "input_tokens": 20127,
+        "output_tokens": 5693,
+        "total_tokens": 25820
+      },
+      {
+        "raw_source": "2026-06-30T052342Z-openai-gpt-4.1-day-03-order010-top-up-5.md",
+        "run_id": "order010-top-up-5",
+        "candidate_count": 5,
+        "input_tokens": 21505,
+        "output_tokens": 2315,
+        "total_tokens": 23820
+      },
+      {
+        "raw_source": "2026-06-30T052440Z-openai-gpt-4.1-day-03-order015-top-up-12.md",
+        "run_id": "order015-top-up-12",
+        "candidate_count": 12,
+        "input_tokens": 22369,
+        "output_tokens": 5076,
+        "total_tokens": 27445
+      },
+      {
+        "raw_source": "2026-06-30T052520Z-openai-gpt-4.1-day-03-order018-top-up-4.md",
+        "run_id": "order018-top-up-4",
+        "candidate_count": 4,
+        "input_tokens": 21662,
+        "output_tokens": 2123,
+        "total_tokens": 23785
+      }
+    ],
+    "used_external_raw_sources": 21,
+    "missing_telemetry": [],
+    "telemetry_complete": true
+  },
+  "iteration_summary": {
+    "observed_iterations": 0,
+    "configured_max_iterations": 3,
+    "blocked": false,
+    "within_limit": true
+  },
+  "completion_status": "blocked"
+}

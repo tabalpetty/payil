@@ -1,0 +1,44 @@
+{
+  "day": 3,
+  "generated": "2026-06-29",
+  "reviewed_item_count": 212,
+  "thresholds": {
+    "llm_repair_tail_max_ratio": 0.15,
+    "human_review_tail_max_ratio": 0.05
+  },
+  "counts": {
+    "claim_verification": {
+      "unresolved": 153,
+      "verified": 59
+    },
+    "source_trace_status": {
+      "needs-human-source-review": 153,
+      "source-verified": 59
+    },
+    "llm_repair_tail": 153,
+    "human_review_tail": 153
+  },
+  "ratios": {
+    "llm_repair_tail": 0.7217,
+    "human_review_tail": 0.7217
+  },
+  "breaches": [
+    {
+      "threshold": "llm_repair_tail",
+      "count": 153,
+      "total": 212,
+      "ratio": 0.7217,
+      "limit": 0.15,
+      "meaning": "Too many items require LLM repair/judgment after deterministic verification."
+    },
+    {
+      "threshold": "human_review_tail",
+      "count": 153,
+      "total": 212,
+      "ratio": 0.7217,
+      "limit": 0.05,
+      "meaning": "Too many reviewed items still require human source review."
+    }
+  ],
+  "status": "breach"
+}

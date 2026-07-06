@@ -75,7 +75,7 @@ built rather than rediscovered.
 
 | ID | Item | Verification |
 |---|---|---|
-| B-3 / O-1 | **Answer-position balance** (was `distribution_gate` blocker). | `scripts/rebalance_exam_prep_answer_positions.py` has landed; the bank's single-answer keys are now `23/23/23/22` across positions 1–4, max single-position share `0.2527` (≤ `0.50`). `distribution_gate` = **pass**. Was previously `0.934` (85 of 91 in position 1). |
+| B-3 / O-1 | **Answer-position balance** (was `distribution_gate` blocker). | `scripts/pilot1_aip_c01/rebalance_exam_prep_answer_positions.py` has landed; the bank's single-answer keys are now `23/23/23/22` across positions 1–4, max single-position share `0.2527` (≤ `0.50`). `distribution_gate` = **pass**. Was previously `0.934` (85 of 91 in position 1). |
 | COV-2 | Per-skill coverage gate | Implemented + enforcing (`coverage_gate` includes `missing_mapped_skills`); independently reconciled. |
 | COV-3 | Single-topic skill tracking | `must_not_drift_skills` computed. |
 | IMP-1 | Real claim-ledger verifier (mechanism) | `verify_exam_prep_sources.py` (`source-verified` vs `needs-human-source-review`); items carry the ledger status. *(Verification has now been run; resolving the verdicts = O-2.)* |

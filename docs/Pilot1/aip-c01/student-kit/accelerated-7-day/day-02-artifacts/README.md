@@ -45,3 +45,15 @@ for every Day 2 focused artifact.
 For each worksheet row, activity, and self-check, the Day 2 study guide or
 answer guidance must provide enough teaching support for a learner to complete
 the row. If a row is only `mostly` answerable, the artifact remains draft.
+
+## Accelerated-Path Quality Rule
+
+Day 2 is allowed to move quickly, but it is not allowed to skip the retrieval
+foundation. Data quality, preprocessing, chunking, metadata, embeddings,
+vector-store choice, semantic retrieval, and the RAG request path must all be
+represented in learner evidence.
+
+If a learner cannot explain where a bad RAG answer failed, or cannot defend the
+chunking, metadata, and retrieval choices for the shared scenario, do not mark
+Day 2 complete only because the schedule says to move on. Extend the day,
+complete evening remediation, or carry the named gap forward.

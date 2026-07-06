@@ -1,0 +1,331 @@
+{
+  "day": 3,
+  "contract_version": "source-grounded-v1",
+  "status": "initial-curated-from-current-day3-sources",
+  "policy": [
+    "Generation must choose source_trace_needed from the allowed source list for the topic.",
+    "AWS factual claims should prefer source_type=aws_doc.",
+    "Local teaching documents may support curriculum judgment or remediation claims, but should not be the only support for AWS service capability claims.",
+    "Every generated item must include atomic_claims with claim, source, and evidence_span."
+  ],
+  "topics": {
+    "Day03-order001": {
+      "topic": "Hybrid search and custom scoring",
+      "allowed_sources": [
+        {
+          "id": "day03-order001-local-artifact",
+          "source_type": "local_teaching",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order001-hybrid-search-custom-scoring.md",
+          "use_for": "Curriculum method, scenario judgment, and remediation."
+        }
+      ]
+    },
+    "Day03-order002": {
+      "topic": "Reranking",
+      "allowed_sources": [
+        {
+          "id": "day03-order002-local-artifact",
+          "source_type": "local_teaching",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order002-reranking.md",
+          "use_for": "Curriculum method, scenario judgment, and remediation."
+        }
+      ]
+    },
+    "Day03-order003": {
+      "topic": "Query expansion, decomposition, and transformation",
+      "allowed_sources": [
+        {
+          "id": "day03-order003-local-artifact",
+          "source_type": "local_teaching",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order003-query-expansion-decomposition-transformation.md",
+          "use_for": "Curriculum method, scenario judgment, and remediation."
+        }
+      ]
+    },
+    "Day03-order004": {
+      "topic": "Vector-store ingestion, synchronization, refresh, and maintenance",
+      "allowed_sources": [
+        {
+          "id": "day03-order004-local-artifact",
+          "source_type": "local_teaching",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order004-vector-store-ingestion-synchronization-refresh-maintenance.md",
+          "use_for": "Curriculum method, scenario judgment, and remediation."
+        }
+      ]
+    },
+    "Day03-order005": {
+      "topic": "Retrieval APIs, function interfaces, and MCP access",
+      "allowed_sources": [
+        {
+          "id": "day03-order005-local-artifact",
+          "source_type": "local_teaching",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order005-retrieval-apis-function-interfaces-mcp-access.md",
+          "use_for": "Curriculum method, scenario judgment, and remediation."
+        }
+      ]
+    },
+    "Day03-order006": {
+      "topic": "RAG quality evaluation and retrieval troubleshooting",
+      "allowed_sources": [
+        {
+          "id": "day03-order006-local-artifact",
+          "source_type": "local_teaching",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order006-rag-quality-evaluation-retrieval-troubleshooting.md",
+          "use_for": "Curriculum method, scenario judgment, and remediation."
+        }
+      ]
+    },
+    "Day03-order007": {
+      "topic": "Conversation context, history, intent, and state management",
+      "allowed_sources": [
+        {
+          "id": "dynamodb-core-components",
+          "source_type": "aws_doc",
+          "source": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.CoreComponents.html",
+          "use_for": "DynamoDB table/item/key design facts."
+        },
+        {
+          "id": "comprehend-languages",
+          "source_type": "aws_doc",
+          "source": "https://docs.aws.amazon.com/comprehend/latest/dg/how-languages.html",
+          "use_for": "Language capability claims."
+        },
+        {
+          "id": "day03-order007-local-artifact",
+          "source_type": "local_teaching",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order007-conversation-context-history-intent-state-management.md",
+          "use_for": "Curriculum method, scenario judgment, and remediation."
+        }
+      ]
+    },
+    "Day03-order008": {
+      "topic": "Advanced prompt engineering and iterative refinement",
+      "allowed_sources": [
+        {
+          "id": "day03-order008-local-artifact",
+          "source_type": "local_teaching",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order008-advanced-prompt-engineering-iterative-refinement.md",
+          "use_for": "Curriculum method, scenario judgment, and remediation."
+        }
+      ]
+    },
+    "Day03-order009": {
+      "topic": "Prompt versioning, repositories, approvals, and governance",
+      "allowed_sources": [
+        {
+          "id": "day03-order009-local-artifact",
+          "source_type": "local_teaching",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order009-prompt-versioning-repositories-approvals-governance.md",
+          "use_for": "Curriculum method, scenario judgment, and remediation."
+        }
+      ]
+    },
+    "Day03-order010": {
+      "topic": "Prompt regression testing and quality assurance",
+      "allowed_sources": [
+        {
+          "id": "day03-order010-local-artifact",
+          "source_type": "local_teaching",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order010-prompt-regression-testing-quality-assurance.md",
+          "use_for": "Curriculum method, scenario judgment, and remediation."
+        }
+      ]
+    },
+    "Day03-order011": {
+      "topic": "Prompt chaining, branching, and Bedrock Prompt Flows",
+      "allowed_sources": [
+        {
+          "id": "bedrock-prompt-flows",
+          "source_type": "aws_doc",
+          "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-flows.html",
+          "use_for": "Bedrock Prompt Flows overview."
+        },
+        {
+          "id": "bedrock-prompt-flows-branching",
+          "source_type": "aws_doc",
+          "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-flows-branching.html",
+          "use_for": "Branching behavior in prompt flows."
+        },
+        {
+          "id": "bedrock-prompt-flows-components",
+          "source_type": "aws_doc",
+          "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-flows-components.html",
+          "use_for": "Prompt flow components."
+        },
+        {
+          "id": "day03-order011-local-artifact",
+          "source_type": "local_teaching",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order011-prompt-chaining-branching-bedrock-prompt-flows.md",
+          "use_for": "Curriculum method, scenario judgment, and remediation."
+        }
+      ]
+    },
+    "Day03-order012": {
+      "topic": "Synchronous FM API integration",
+      "allowed_sources": [
+        {
+          "id": "api-gateway-limits",
+          "source_type": "aws_doc",
+          "source": "https://docs.aws.amazon.com/apigateway/latest/developerguide/limits.html",
+          "use_for": "API Gateway quota and limit claims."
+        },
+        {
+          "id": "api-gateway-request-validation",
+          "source_type": "aws_doc",
+          "source": "https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-method-request-validation.html",
+          "use_for": "Request validation behavior."
+        },
+        {
+          "id": "lambda-provisioned-concurrency",
+          "source_type": "aws_doc",
+          "source": "https://docs.aws.amazon.com/lambda/latest/dg/provisioned-concurrency.html",
+          "use_for": "Lambda concurrency and latency claims."
+        },
+        {
+          "id": "day03-order012-local-artifact",
+          "source_type": "local_teaching",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order012-synchronous-fm-api-integration.md",
+          "use_for": "Curriculum method, scenario judgment, and remediation."
+        }
+      ]
+    },
+    "Day03-order013": {
+      "topic": "Asynchronous FM processing",
+      "allowed_sources": [
+        {
+          "id": "lambda-sqs-event-source",
+          "source_type": "aws_doc",
+          "source": "https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html#events-sqs-eventsource-mapping",
+          "use_for": "Lambda and SQS event source mapping."
+        },
+        {
+          "id": "sqs-message-lifecycle",
+          "source_type": "aws_doc",
+          "source": "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-message-lifecycle.html",
+          "use_for": "SQS message lifecycle."
+        },
+        {
+          "id": "step-functions-overview",
+          "source_type": "aws_doc",
+          "source": "https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html",
+          "use_for": "Step Functions orchestration overview."
+        },
+        {
+          "id": "day03-order013-local-artifact",
+          "source_type": "local_teaching",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order013-asynchronous-fm-processing.md",
+          "use_for": "Curriculum method, scenario judgment, and remediation."
+        }
+      ]
+    },
+    "Day03-order014": {
+      "topic": "Streaming responses, WebSockets, and server-sent events",
+      "allowed_sources": [
+        {
+          "id": "api-gateway-chunked-transfer",
+          "source_type": "aws_doc",
+          "source": "https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-chunked-transfer.html",
+          "use_for": "API Gateway and chunked transfer behavior."
+        },
+        {
+          "id": "lambda-response-streaming",
+          "source_type": "aws_doc",
+          "source": "https://docs.aws.amazon.com/lambda/latest/dg/configuration-response-streaming.html",
+          "use_for": "Lambda response streaming."
+        },
+        {
+          "id": "day03-order014-local-artifact",
+          "source_type": "local_teaching",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order014-streaming-websockets-server-sent-events.md",
+          "use_for": "Curriculum method, scenario judgment, and remediation."
+        }
+      ]
+    },
+    "Day03-order015": {
+      "topic": "Token limits, request validation, and response handling",
+      "allowed_sources": [
+        {
+          "id": "bedrock-model-parameters",
+          "source_type": "aws_doc",
+          "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html",
+          "use_for": "Bedrock model parameter claims."
+        },
+        {
+          "id": "bedrock-conversation",
+          "source_type": "aws_doc",
+          "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/conversation.html",
+          "use_for": "Bedrock conversation API behavior."
+        },
+        {
+          "id": "day03-order015-local-artifact",
+          "source_type": "local_teaching",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order015-token-limits-request-validation-response-handling.md",
+          "use_for": "Curriculum method, scenario judgment, and remediation."
+        }
+      ]
+    },
+    "Day03-order016": {
+      "topic": "Retries, exponential backoff, rate limiting, and timeouts",
+      "allowed_sources": [
+        {
+          "id": "aws-retry-behavior",
+          "source_type": "aws_doc",
+          "source": "https://docs.aws.amazon.com/sdkref/latest/guide/feature-retry-behavior.html",
+          "use_for": "AWS SDK retry behavior."
+        },
+        {
+          "id": "api-gateway-throttling",
+          "source_type": "aws_doc",
+          "source": "https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-request-throttling.html",
+          "use_for": "API Gateway throttling behavior."
+        },
+        {
+          "id": "day03-order016-local-artifact",
+          "source_type": "local_teaching",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order016-retries-backoff-rate-limiting-timeouts.md",
+          "use_for": "Curriculum method, scenario judgment, and remediation."
+        }
+      ]
+    },
+    "Day03-order017": {
+      "topic": "Fallbacks, circuit breakers, and graceful degradation",
+      "allowed_sources": [
+        {
+          "id": "aws-retry-circuit-breaker",
+          "source_type": "aws_doc",
+          "source": "https://docs.aws.amazon.com/general/latest/gr/api-retries.html#api-retries-circuit-breaker",
+          "use_for": "Retry and circuit breaker behavior."
+        },
+        {
+          "id": "day03-order017-local-artifact",
+          "source_type": "local_teaching",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order017-fallbacks-circuit-breakers-graceful-degradation.md",
+          "use_for": "Curriculum method, scenario judgment, and remediation."
+        }
+      ]
+    },
+    "Day03-order018": {
+      "topic": "Distributed tracing and FM API observability",
+      "allowed_sources": [
+        {
+          "id": "cloudwatch-dashboards",
+          "source_type": "aws_doc",
+          "source": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Dashboards.html",
+          "use_for": "CloudWatch dashboard claims."
+        },
+        {
+          "id": "xray-console",
+          "source_type": "aws_doc",
+          "source": "https://docs.aws.amazon.com/xray/latest/devguide/xray-console.html",
+          "use_for": "X-Ray trace inspection claims."
+        },
+        {
+          "id": "day03-order018-local-artifact",
+          "source_type": "local_teaching",
+          "source": "docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order018-distributed-tracing-fm-api-observability.md",
+          "use_for": "Curriculum method, scenario judgment, and remediation."
+        }
+      ]
+    }
+  }
+}

@@ -40,7 +40,7 @@ Before claiming whole-syllabus coverage, run the Layer 0
 source-to-decomposition gate:
 
 ```bash
-python3 scripts/audit_source_decomposition_coverage.py --strict
+python3 scripts/pilot1_aip_c01/audit_source_decomposition_coverage.py --strict
 ```
 
 The current audit report is

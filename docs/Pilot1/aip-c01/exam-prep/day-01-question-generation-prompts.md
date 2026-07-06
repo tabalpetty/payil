@@ -549,7 +549,7 @@ The repo includes a helper script that sends these prompts to the OpenAI API
 and saves the raw response:
 
 ```bash
-python3 scripts/generate_day01_questions.py --batch balanced
+python3 scripts/pilot1_aip_c01/generate_day01_questions.py --batch balanced
 ```
 
 Set `OPENAI_API_KEY` before running. Use `--dry-run` to inspect the prompt

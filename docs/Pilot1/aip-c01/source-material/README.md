@@ -33,7 +33,7 @@ For future AIP-C01 work, use these files in this order:
 Do not re-extract or paraphrase the PDF for objective-tagged curriculum,
 question-bank, prompt-generation, review, or remediation work unless the
 derived files are being regenerated with
-`scripts/extract_aip_c01_exam_guide.py`.
+`scripts/pilot1_aip_c01/extract_aip_c01_exam_guide.py`.
 
 If the source PDF changes, regenerate all derived files and verify that the
 SHA-256 in `ai-professional-01.extraction-meta.json` matches the new PDF.
@@ -44,7 +44,7 @@ SHA-256 in `ai-professional-01.extraction-meta.json` matches the new PDF.
 - The attached syllabus PDF and prompt list were copied into this directory on
   June 18, 2026.
 - The exam-guide transcript, objective JSON, and extraction metadata were
-  derived from `ai-professional-01.pdf` with `scripts/extract_aip_c01_exam_guide.py`.
+  derived from `ai-professional-01.pdf` with `scripts/pilot1_aip_c01/extract_aip_c01_exam_guide.py`.
 - Some workbook sheet names are abbreviated in this inventory for readability.
 - The workbooks should inform the canonical Markdown curriculum model, but
   future design decisions must be recorded under `docs/`.

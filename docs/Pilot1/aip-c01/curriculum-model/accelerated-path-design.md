@@ -11,8 +11,9 @@ conversion path for a learner who already has enough technical foundation to
 learn AIP-C01-specific GenAI, AWS, integration, governance, operations, and exam
 reasoning quickly.
 
-The path may compress time and practice volume. It must not compress away the
-knowledge types that make the exam professional-level:
+The path may compress calendar time and reduce repetition on already-mastered
+material. It must not compress away the knowledge types that make the exam
+professional-level:
 
 - conceptual models;
 - procedural implementation ability;
@@ -91,7 +92,14 @@ verified. They are load-bearing: later decisions depend on them.
 ## Acceleration Rules
 
 The path accelerates by changing delivery intensity, not by lowering the
-capability standard.
+capability standard. Complete and wholesome learning remains the intent in both
+the self-paced and accelerated routes.
+
+Six active learning hours is a floor, not a promise that every day fits neatly
+inside six hours. Dense days may reasonably require seven to eight hours. If a
+topic needs more time than the accelerated day can responsibly hold, the course
+should still provide the learning material and explicitly label the topic as
+requiring extra remediation time or self-paced continuation.
 
 ### What Can Be Compressed
 
@@ -104,13 +112,26 @@ capability standard.
 ### What Cannot Be Compressed Away
 
 - the first correct mental model of a GenAI application on AWS;
+- teaching material needed to complete a required learner artifact;
 - at least one meaningful RAG/data design artifact;
 - at least one integration/resilience decision artifact;
 - at least one safety, security, and governance control artifact;
 - at least one operations and troubleshooting artifact;
+- knowledge-type-matched activities, including configuration inspection for
+  embedded knowledge and diagnostic work for troubleshooting knowledge;
 - timed exam practice with error analysis;
 - remediation of severe gaps in safety, security, governance, retrieval,
   integration, or troubleshooting.
+
+### When A Topic Does Not Fit The Accelerated Day
+
+Do not delete or thin the topic to preserve the calendar. Instead:
+
+- create the full material required for mastery;
+- state the expected extra time or prerequisite assumption;
+- mark whether the topic is completed in-session, completed as evening
+  extension, or carried into self-paced remediation;
+- preserve the same assessment and remediation expectations.
 
 ## Method Mix By Knowledge Type
 

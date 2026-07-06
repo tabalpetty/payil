@@ -17,6 +17,11 @@ By the end of today, you should be able to explain the difference among:
 - safety and security controls;
 - monitoring and evaluation.
 
+Acceleration note: Day 1 is not a service-name skim. It is the foundation for
+the whole system. If you cannot reconstruct the system path, classify service
+roles, and explain where controls and evaluation belong, spend the extra time
+now. A weak Day 1 makes Days 2-7 feel artificially harder.
+
 ## The Core Mental Model
 
 A GenAI application is not just a model call.

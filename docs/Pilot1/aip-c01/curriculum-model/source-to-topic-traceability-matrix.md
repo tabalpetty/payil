@@ -279,5 +279,5 @@ Generated from:
 Regenerate with:
 
 ```bash
-python3 scripts/export_source_topic_traceability_matrix.py
+python3 scripts/pilot1_aip_c01/export_source_topic_traceability_matrix.py
 ```

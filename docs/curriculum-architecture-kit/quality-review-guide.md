@@ -174,6 +174,14 @@ and remediation claims, not only product-capability claims. If final fact
 checking rejects an item, verify that the cull log records the challenged claim
 and evidence, then recompute coverage after the cull.
 
+For generated assessment banks, a source trace must be an audit-resolvable
+token, not a prose citation label. Accept official source URLs, resolving local
+paths, explicitly configured source IDs, or `NONE`/`source_trace_needed` as a
+blocker. Reject labels such as "Vendor X documentation" unless they include a
+real URL/path and no unsupported prose decoration. Regenerate claim ledgers from
+the final reviewed bank and store a content hash so old claim records cannot
+silently attach to rewritten items with the same ID.
+
 ### Temporal-claim sweep
 
 Grep for date and recency markers ("as of", "currently", "not yet", year
@@ -252,6 +260,28 @@ stop condition.
 Check spread, not just presence: difficulty mix, cognitive-demand mix,
 answer-position balance, per-topic counts, duplicate-stem detection. Quality
 hides in the distribution, not the individual item.
+
+### Knowledge-method artifact audit
+
+For every topic whose knowledge type implies a specific learning method, verify
+that the artifact contains that method in a visible, auditable form. Do not
+accept a header promise alone.
+
+For `Embedded` or representation/location knowledge, require an explicit
+inspection record: the learner must inspect a real or simulated configuration,
+API shape, console surface, workflow definition, trace, repository record, or
+other embedded surface and record observable facts. A design table can support
+the learning, but it is not a substitute for the inspection record.
+
+For Pilot1 focused artifacts, run:
+
+```bash
+python3 scripts/pilot1_aip_c01/audit_student_artifact_method_fit.py --day N
+```
+
+The audit must pass before a day is called review-ready. If no focused artifact
+folder exists yet, the audit should fail rather than silently assuming the
+daily roll-up artifact is enough.
 
 ### Atomic technical-claim audit
 
@@ -436,6 +466,7 @@ For each day:
    map; no invented categories; domain and task are mutually consistent.
 4. **Link integrity.** Every `source_trace` and `remediation_target` path
    exists in the repo; source traces are *relevant* to the item, not boilerplate.
+   Source traces must be resolvable tokens, not invented prose doc titles.
 5. **Quality rules.** Scenario-based where required; no easy/keyword-recall
    trivia in the approved set; distractors are plausibly wrong for a real reason.
 6. **Distribution.** Per-topic counts, difficulty spread, and cognitive-demand

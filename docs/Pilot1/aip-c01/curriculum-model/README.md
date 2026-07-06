@@ -54,7 +54,7 @@ Before generating downstream topic briefs, prompt packs, question banks, or
 teaching packages for new days, run:
 
 ```bash
-python3 scripts/audit_source_decomposition_coverage.py --strict
+python3 scripts/pilot1_aip_c01/audit_source_decomposition_coverage.py --strict
 ```
 
 The gate compares the official AIP-C01 objective hierarchy in

@@ -1,0 +1,9 @@
+{"timestamp_utc": "2026-06-29T20:40:16+00:00", "event": "loop-start", "message": "top-up loop started", "day": 3, "target": 10, "max_iterations": 1, "dry_run": false, "log_file": "docs/Pilot1/aip-c01/exam-prep/logs/day-03/2026-06-29T204016Z-day-03-topup-loop.log", "jsonl_file": "docs/Pilot1/aip-c01/exam-prep/logs/day-03/2026-06-29T204016Z-day-03-topup-loop.jsonl"}
+{"timestamp_utc": "2026-06-29T20:40:16+00:00", "event": "iteration-start", "message": "normalizing and reviewing", "iteration": 1}
+{"timestamp_utc": "2026-06-29T20:40:16+00:00", "event": "normalize", "message": "command started", "command": "/opt/anaconda3/bin/python3 scripts/pilot1_aip_c01/normalize_exam_prep_questions.py --day 3"}
+{"timestamp_utc": "2026-06-29T20:40:16+00:00", "event": "normalize", "message": "stdout", "line": "normalized=568 parse_errors=0"}
+{"timestamp_utc": "2026-06-29T20:40:16+00:00", "event": "normalize", "message": "command completed", "returncode": 0}
+{"timestamp_utc": "2026-06-29T20:40:16+00:00", "event": "review", "message": "command started", "command": "/opt/anaconda3/bin/python3 scripts/pilot1_aip_c01/review_exam_prep_questions.py --day 3"}
+{"timestamp_utc": "2026-06-29T20:40:16+00:00", "event": "review", "message": "stdout", "line": "reviewed_candidates=257 culled=311 output=docs/Pilot1/aip-c01/exam-prep/reviewed/day-03/day-03-reviewed-candidate-bank.md feedback=docs/Pilot1/aip-c01/exam-prep/reviewed/day-03/day-03-review-feedback.json"}
+{"timestamp_utc": "2026-06-29T20:40:16+00:00", "event": "review", "message": "command completed", "returncode": 0}
+{"timestamp_utc": "2026-06-29T20:40:16+00:00", "event": "loop-complete", "message": "coverage target satisfied", "iteration": 1}

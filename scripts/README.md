@@ -1,6 +1,12 @@
 # Scripts
 
-Utility scripts for maintaining and generating Pilot1 artifacts.
+Utility scripts for maintaining and generating project artifacts.
+
+Pilot1/AIP-C01-specific automation lives under
+`scripts/pilot1_aip_c01/`. That folder is allowed to encode AIP-C01 source
+paths, AWS documentation rules, exam-prep workflows, and other pilot-instance
+assumptions. Keep subject-agnostic utilities outside that folder when they are
+introduced.
 
 ## AIP-C01 Source Extraction
 
@@ -8,8 +14,8 @@ Use `extract_aip_c01_exam_guide.py` to regenerate durable derived sources from
 the official AIP-C01 exam-guide PDF.
 
 ```bash
-python3 scripts/extract_aip_c01_exam_guide.py
-python3 scripts/extract_aip_c01_exam_guide.py --check
+python3 scripts/pilot1_aip_c01/extract_aip_c01_exam_guide.py
+python3 scripts/pilot1_aip_c01/extract_aip_c01_exam_guide.py --check
 ```
 
 Generated files:
@@ -35,13 +41,13 @@ the curriculum decomposition or explicitly deferred.
 ```bash
 # Regenerate the canonical skill-to-topic relationships when source objectives
 # or the curriculum decomposition changes.
-python3 scripts/export_source_topic_traceability_matrix.py
+python3 scripts/pilot1_aip_c01/export_source_topic_traceability_matrix.py
 
 # Write the audit report and machine-readable result.
-python3 scripts/audit_source_decomposition_coverage.py
+python3 scripts/pilot1_aip_c01/audit_source_decomposition_coverage.py
 
 # Use strict mode in automation to fail when Layer 0 is incomplete.
-python3 scripts/audit_source_decomposition_coverage.py --strict
+python3 scripts/pilot1_aip_c01/audit_source_decomposition_coverage.py --strict
 ```
 
 Generated files:
@@ -62,6 +68,134 @@ The AIP-C01 audit verifies task coverage, every official Skill X.Y.Z
 relationship, and traceability for every curriculum topic. Mapped curriculum
 coverage and delivered teaching-package coverage remain separate measures.
 
+## Exam-Prep Prefect Orchestrator
+
+Use `run_exam_prep_agent_prefect.py` when you want one workflow manager to
+coordinate the existing exam-prep unit scripts for a day.
+
+Install Prefect first:
+
+```bash
+python3 -m pip install -r requirements-prefect.txt
+```
+
+Planning-only run:
+
+```bash
+python3 scripts/pilot1_aip_c01/run_exam_prep_agent_prefect.py --day 3 --stop-after-planning
+```
+
+Dry-run generation path:
+
+```bash
+python3 scripts/pilot1_aip_c01/run_exam_prep_agent_prefect.py --day 3 --dry-run-generation
+```
+
+Full generation path, when `OPENAI_API_KEY` is set:
+
+```bash
+python3 scripts/pilot1_aip_c01/run_exam_prep_agent_prefect.py --day 3 --generate
+```
+
+The Prefect flow runs:
+
+```text
+build topic briefs
+-> map topic briefs to official objectives
+-> check prompt readiness
+-> build prompt pack
+-> generate raw candidates, if requested
+-> normalize
+-> review/cull
+-> top-up loop
+-> write reviewed outputs
+-> answer-position rebalance
+-> source URL verification/cache
+-> claim source verification
+-> source review triage
+-> source verification
+-> final gates
+-> agent run report
+```
+
+The review and source-verification gates reject phantom citations. A
+`source_trace` must use an official source URL, a resolving local `docs/...`
+path, the canonical objectives JSON path, or an explicit unresolved marker such
+as `NONE`/`source_trace_needed`. Prose labels like "AWS service documentation"
+are not accepted as citations. Source verification also syncs the claim ledger
+from the final reviewed bank and records a content hash per item, so a ledger
+record for an older item cannot satisfy a rewritten item with the same ID.
+Before the final source gate, the orchestrator machine-checks official AWS
+documentation URLs and caches their extracted text, then checks the item-level
+claim ledger against local trusted sources and cached AWS source text. This
+keeps existing banks auditable and gives future generation runs a clearer
+contract: generate source-backed atomic claims up front; let verification audit
+them.
+The triage step splits unresolved source-review work into buckets such as
+AWS evidence already fetched, local evidence already fetched, source
+placeholders, fetch gaps, and `NONE` policy cases. This is the report humans
+and follow-up automation should use instead of treating every unresolved item
+as the same problem.
+
+Run source checks directly when auditing an existing bank:
+
+```bash
+python3 scripts/pilot1_aip_c01/verify_exam_prep_source_urls.py --day 3 --write
+python3 scripts/pilot1_aip_c01/verify_exam_prep_claims_with_sources.py --day 3 --write
+python3 scripts/pilot1_aip_c01/triage_exam_prep_source_review.py --day 3 --write
+python3 scripts/pilot1_aip_c01/verify_exam_prep_sources.py --day 3 --initialize-ledger --write
+```
+
+Run the optional grounded judge on already-fetched AWS evidence first:
+
+```bash
+# Inspect prompts without calling the API.
+python3 scripts/pilot1_aip_c01/judge_exam_prep_claims_with_evidence.py --day 3 --buckets A --limit 2 --dry-run --write
+
+# Apply only high-confidence supported judgments to the claim ledger.
+python3 scripts/pilot1_aip_c01/judge_exam_prep_claims_with_evidence.py --day 3 --buckets A --write --apply-supported --min-confidence 0.92
+python3 scripts/pilot1_aip_c01/verify_exam_prep_sources.py --day 3 --initialize-ledger --write
+```
+
+Do not auto-apply `refuted` or `insufficient` judgments as approvals. Use them
+to cull, rewrite, or reassign sources.
+
+The orchestrator reports honest final status:
+
+| Status | Meaning |
+|---|---|
+| `planning-complete` | Topic briefs/prompt readiness were checked; usually objective mapping is next. |
+| `reviewed-candidate` | Reviewed materials exist, but final approval was not reached. |
+| `needs-human-source-review` | Source-verification ledger still has unresolved claims. |
+| `blocked` | A hard gate or script step failed. |
+| `approved` | Final gates passed. |
+
+Run reports are written to:
+
+```text
+docs/Pilot1/aip-c01/exam-prep/reviewed/day-NN/day-NN-exam-prep-agent-run-report.json
+```
+
+The orchestrator does not bypass gates. In particular, unresolved atomic
+source claims remain blockers for production approval.
+
+## Student Artifact Method-Fit Audit
+
+Use `audit_student_artifact_method_fit.py` before calling a day's focused
+student artifacts review-ready. It turns lessons from prior reviews into a
+deterministic gate, starting with the `Embedded` knowledge type.
+
+```bash
+python3 scripts/pilot1_aip_c01/audit_student_artifact_method_fit.py --day 3
+python3 scripts/pilot1_aip_c01/audit_student_artifact_method_fit.py --day 4
+```
+
+The audit checks the curriculum map for topics whose knowledge type includes
+`Embedded`, then verifies that each matching focused artifact has an explicit
+`Embedded Inspection Record` with an observable inspection prompt. This is what
+prevents Day 4+ generation from repeating the Day 3 regression where embedded
+topics drifted into ordinary design tables.
+
 ## Exam-Prep Agent Planning
 
 Use `build_exam_prep_day.py` to convert curriculum-map rows into deterministic
@@ -71,10 +205,10 @@ question-bank items.
 
 ```bash
 # Inspect readiness without writing files.
-python3 scripts/build_exam_prep_day.py --day 2 --check
+python3 scripts/pilot1_aip_c01/build_exam_prep_day.py --day 2 --check
 
 # Write topic briefs and an index.
-python3 scripts/build_exam_prep_day.py --day 2 --plan
+python3 scripts/pilot1_aip_c01/build_exam_prep_day.py --day 2 --plan
 ```
 
 Generated briefs are written to:
@@ -92,15 +226,42 @@ of inventing traceability tags.
 After a brief is mapped, rerunning `--plan` will not overwrite it. Use
 `--force` only when intentionally regenerating mapped briefs.
 
+Use `map_exam_prep_topic_briefs.py` to fill objective mappings from the
+canonical source-to-topic traceability matrix.
+
+```bash
+python3 scripts/pilot1_aip_c01/map_exam_prep_topic_briefs.py --day 3 --check
+python3 scripts/pilot1_aip_c01/map_exam_prep_topic_briefs.py --day 3
+```
+
 Use `build_exam_prep_prompts.py` to generate a day-specific raw
 question-generation prompt pack from mapped topic briefs.
 
+Before building prompts, update the course source catalog:
+
+```text
+docs/Pilot1/aip-c01/exam-prep/source-catalog.json
+```
+
+The catalog is the upstream source-grounding contract for the whole course.
+Each topic maps to allowed source IDs from the shared source registry.
+Generated lean items must choose one allowed source by using its exact
+`source_value` in `source_trace`, include an `evidence_span`, and provide a
+defensible correct answer. The normalizer then derives
+`source_contract_version=source-grounded-v1`, `allowed_source_id`, and
+`atomic_claims` from the catalog and lean source fields. The prompt builder
+stops when a topic is missing from the catalog or references an invalid source.
+
+The catalog is allowed to grow. If study-guide or question-bank work discovers
+a new topic/source pair, promote it only after the URL/path is reachable,
+relevant to a mapped topic, and verified by the source-review workflow.
+
 ```bash
 # Inspect prompt-pack readiness without writing files.
-python3 scripts/build_exam_prep_prompts.py --day 2 --check
+python3 scripts/pilot1_aip_c01/build_exam_prep_prompts.py --day 2 --check
 
 # Write the Day 2 prompt pack.
-python3 scripts/build_exam_prep_prompts.py --day 2
+python3 scripts/pilot1_aip_c01/build_exam_prep_prompts.py --day 2
 ```
 
 Generated prompt packs are written to:
@@ -113,22 +274,29 @@ The prompt-pack builder does not call an LLM. It preserves official objective
 fields from mapped topic briefs and sets a default target of 12 raw candidates
 per curriculum-order topic.
 
+For new generation, the normalizer enriches lean items into the full review
+schema by filling mechanical metadata from topic briefs and source fields from
+the course catalog. The reviewer culls any `source-grounded-v1` item that uses
+a source outside the topic allowlist, omits atomic claim evidence, or falls back
+to `NONE`/`source_trace_needed`. Older raw items are not retroactively rejected
+unless review is run with `--enforce-source-contract`.
+
 Use `generate_exam_prep_questions.py` to execute a generated prompt pack and
 save raw responses with honest provenance. Use `--dry-run` to save the exact
 prompt without calling an LLM.
 
 ```bash
 # Save the full Day 2 prompt without calling the API.
-python3 scripts/generate_exam_prep_questions.py --day 2 --batch balanced --dry-run
+python3 scripts/pilot1_aip_c01/generate_exam_prep_questions.py --day 2 --batch balanced --dry-run
 
 # Save one topic prompt without calling the API.
-python3 scripts/generate_exam_prep_questions.py --day 2 --topic Day02-order001 --dry-run
+python3 scripts/pilot1_aip_c01/generate_exam_prep_questions.py --day 2 --topic Day02-order001 --dry-run
 
 # Generate the full Day 2 raw draft pool when OPENAI_API_KEY is set.
-python3 scripts/generate_exam_prep_questions.py --day 2 --batch balanced
+python3 scripts/pilot1_aip_c01/generate_exam_prep_questions.py --day 2 --batch balanced
 
 # Generate all Day 2 topic prompts sequentially when OPENAI_API_KEY is set.
-python3 scripts/generate_exam_prep_questions.py --day 2 --all-topics
+python3 scripts/pilot1_aip_c01/generate_exam_prep_questions.py --day 2 --all-topics
 ```
 
 Raw Day 2 responses and dry-run prompt records are written to:
@@ -161,7 +329,7 @@ items, source-check claims, or cull duplicates; it prepares a consistent review
 input while preserving raw provenance.
 
 ```bash
-python3 scripts/normalize_exam_prep_questions.py --day 2
+python3 scripts/pilot1_aip_c01/normalize_exam_prep_questions.py --day 2
 ```
 
 Normalized Day 2 draft outputs are written to:
@@ -182,7 +350,7 @@ candidate status and logs every cull with audit evidence. It does not perform
 the final source-verification gate.
 
 ```bash
-python3 scripts/review_exam_prep_questions.py --day 2
+python3 scripts/pilot1_aip_c01/review_exam_prep_questions.py --day 2
 ```
 
 Reviewed Day 2 candidate output is written to:
@@ -200,8 +368,8 @@ cull reasons, already-reviewed stems, rejected stems, and cull evidence so the
 next generation pass can avoid repeating the same failures.
 
 ```bash
-python3 scripts/generate_exam_prep_questions.py --day 2 --top-up-topic Day02-order002 --count 3 --dry-run
-python3 scripts/generate_exam_prep_questions.py --day 2 --top-up-topic Day02-order010 --count 4 --dry-run
+python3 scripts/pilot1_aip_c01/generate_exam_prep_questions.py --day 2 --top-up-topic Day02-order002 --count 3 --dry-run
+python3 scripts/pilot1_aip_c01/generate_exam_prep_questions.py --day 2 --top-up-topic Day02-order010 --count 4 --dry-run
 ```
 
 Use `run_exam_prep_topup_loop.py` to automate that cycle. It repeatedly
@@ -210,7 +378,7 @@ top-ups for short topics, and repeats until the target is met or the maximum
 iteration count is reached.
 
 ```bash
-python3 scripts/run_exam_prep_topup_loop.py --day 2 --target 10 --max-iterations 3
+python3 scripts/pilot1_aip_c01/run_exam_prep_topup_loop.py --day 2 --target 10 --max-iterations 3
 ```
 
 The loop writes human and JSONL progress logs under:
@@ -224,7 +392,7 @@ Step 12 review outputs: reviewed question bank, separate cull log, and review
 checks. This step does not perform final source verification.
 
 ```bash
-python3 scripts/write_exam_prep_review_outputs.py --day 2 --target 10
+python3 scripts/pilot1_aip_c01/write_exam_prep_review_outputs.py --day 2 --target 10
 ```
 
 Day 2 review outputs are written to:
@@ -238,12 +406,26 @@ docs/Pilot1/aip-c01/exam-prep/reviewed/day-02/day-02-review-output-checks.json
 
 Use `run_exam_prep_final_gates.py` to run Step 13 final gates over the reviewed
 bank. This checks objective traceability, remediation links, schema status,
-coverage, distribution, approved-output regressions, iteration status, and
-recorded token usage. It reports factual verification separately; a bank with
-`needs-final-source-check` items remains pending final source verification.
+coverage, distribution, approved-output regressions, iteration status, recorded
+token usage, and automation-tail thresholds.
+
+Tail thresholds are now hard process-quality gates:
+
+- LLM repair/judge tail must be `<= 15%` of reviewed items.
+- Human source-review tail must be `<= 5%` of reviewed items.
+
+A bank with a small residual source-verification tail remains pending final
+source verification. A bank that breaches either threshold is blocked because
+the generation/review process moved too much work downstream.
 
 ```bash
-python3 scripts/run_exam_prep_final_gates.py --day 2 --target 10
+python3 scripts/pilot1_aip_c01/run_exam_prep_final_gates.py --day 2 --target 10
+```
+
+To run the tail monitor directly:
+
+```bash
+python3 scripts/pilot1_aip_c01/monitor_exam_prep_tail_thresholds.py --day 2 --write
 ```
 
 Final gate outputs are written to:
@@ -274,25 +456,25 @@ Examples:
 
 ```bash
 # Save the exact prompt that would be sent, without calling the API.
-python3 scripts/generate_day01_questions.py --batch balanced --dry-run
+python3 scripts/pilot1_aip_c01/generate_day01_questions.py --batch balanced --dry-run
 
 # Generate the full 120-question Day 1 draft pool.
-python3 scripts/generate_day01_questions.py --batch balanced
+python3 scripts/pilot1_aip_c01/generate_day01_questions.py --batch balanced
 
 # Generate smaller batches if the model struggles with 120 items at once.
-python3 scripts/generate_day01_questions.py --batch foundations
-python3 scripts/generate_day01_questions.py --batch system-map
-python3 scripts/generate_day01_questions.py --batch applied-foundations
+python3 scripts/pilot1_aip_c01/generate_day01_questions.py --batch foundations
+python3 scripts/pilot1_aip_c01/generate_day01_questions.py --batch system-map
+python3 scripts/pilot1_aip_c01/generate_day01_questions.py --batch applied-foundations
 
 # Generate exactly one topic-level prompt, 12 questions.
-python3 scripts/generate_day01_questions.py --topic Day01-order001
+python3 scripts/pilot1_aip_c01/generate_day01_questions.py --topic Day01-order001
 
 # Generate a smaller top-up set for an under-filled topic.
 # Use a surplus over the exact deficit because review will cull weak items.
-python3 scripts/generate_day01_questions.py --top-up-topic Day01-order005 --count 4
+python3 scripts/pilot1_aip_c01/generate_day01_questions.py --top-up-topic Day01-order005 --count 4
 
 # Generate all ten Day 1 topic-level prompts sequentially, 12 questions each.
-python3 scripts/generate_day01_questions.py --all-topics
+python3 scripts/pilot1_aip_c01/generate_day01_questions.py --all-topics
 ```
 
 Raw responses are written to:
@@ -320,7 +502,7 @@ review/cull rules, normalize approved items to the question-bank schema, and
 rewrite the reviewed Day 1 bank.
 
 ```bash
-python3 scripts/review_day01_questions.py
+python3 scripts/pilot1_aip_c01/review_day01_questions.py
 ```
 
 Run this after adding new raw top-up responses.

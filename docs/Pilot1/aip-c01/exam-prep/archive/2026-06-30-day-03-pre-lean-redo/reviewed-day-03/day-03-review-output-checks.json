@@ -1,0 +1,191 @@
+{
+  "day": 3,
+  "generated": "2026-06-29",
+  "target_per_topic": 10,
+  "reviewed_item_count": 212,
+  "cull_count": 607,
+  "summary_rows": [
+    {
+      "curriculum_order": "Day03-order001",
+      "raw_normalized": 39,
+      "reviewed_candidates": 10,
+      "culled": 29,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    },
+    {
+      "curriculum_order": "Day03-order002",
+      "raw_normalized": 39,
+      "reviewed_candidates": 11,
+      "culled": 28,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    },
+    {
+      "curriculum_order": "Day03-order003",
+      "raw_normalized": 41,
+      "reviewed_candidates": 12,
+      "culled": 29,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    },
+    {
+      "curriculum_order": "Day03-order004",
+      "raw_normalized": 40,
+      "reviewed_candidates": 12,
+      "culled": 28,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    },
+    {
+      "curriculum_order": "Day03-order005",
+      "raw_normalized": 41,
+      "reviewed_candidates": 12,
+      "culled": 29,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    },
+    {
+      "curriculum_order": "Day03-order006",
+      "raw_normalized": 47,
+      "reviewed_candidates": 12,
+      "culled": 35,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    },
+    {
+      "curriculum_order": "Day03-order007",
+      "raw_normalized": 46,
+      "reviewed_candidates": 11,
+      "culled": 35,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    },
+    {
+      "curriculum_order": "Day03-order008",
+      "raw_normalized": 54,
+      "reviewed_candidates": 12,
+      "culled": 42,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    },
+    {
+      "curriculum_order": "Day03-order009",
+      "raw_normalized": 56,
+      "reviewed_candidates": 11,
+      "culled": 45,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    },
+    {
+      "curriculum_order": "Day03-order010",
+      "raw_normalized": 61,
+      "reviewed_candidates": 12,
+      "culled": 49,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    },
+    {
+      "curriculum_order": "Day03-order011",
+      "raw_normalized": 37,
+      "reviewed_candidates": 11,
+      "culled": 26,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    },
+    {
+      "curriculum_order": "Day03-order012",
+      "raw_normalized": 53,
+      "reviewed_candidates": 12,
+      "culled": 41,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    },
+    {
+      "curriculum_order": "Day03-order013",
+      "raw_normalized": 41,
+      "reviewed_candidates": 12,
+      "culled": 29,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    },
+    {
+      "curriculum_order": "Day03-order014",
+      "raw_normalized": 41,
+      "reviewed_candidates": 14,
+      "culled": 27,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    },
+    {
+      "curriculum_order": "Day03-order015",
+      "raw_normalized": 49,
+      "reviewed_candidates": 13,
+      "culled": 36,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    },
+    {
+      "curriculum_order": "Day03-order016",
+      "raw_normalized": 53,
+      "reviewed_candidates": 12,
+      "culled": 41,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    },
+    {
+      "curriculum_order": "Day03-order017",
+      "raw_normalized": 40,
+      "reviewed_candidates": 11,
+      "culled": 29,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    },
+    {
+      "curriculum_order": "Day03-order018",
+      "raw_normalized": 41,
+      "reviewed_candidates": 12,
+      "culled": 29,
+      "completion_target": 10,
+      "status": "candidate-complete"
+    }
+  ],
+  "status_counts": {
+    "reviewed": 212
+  },
+  "source_trace_status_counts": {
+    "source-verified": 59,
+    "needs-human-source-review": 153
+  },
+  "per_topic_counts": {
+    "Day03-order001": 10,
+    "Day03-order002": 11,
+    "Day03-order003": 12,
+    "Day03-order004": 12,
+    "Day03-order005": 12,
+    "Day03-order006": 12,
+    "Day03-order007": 11,
+    "Day03-order008": 12,
+    "Day03-order009": 11,
+    "Day03-order010": 12,
+    "Day03-order011": 11,
+    "Day03-order012": 12,
+    "Day03-order013": 12,
+    "Day03-order014": 14,
+    "Day03-order015": 13,
+    "Day03-order016": 12,
+    "Day03-order017": 11,
+    "Day03-order018": 12
+  },
+  "short_topics": {},
+  "missing_required_fields": [],
+  "culls_missing_evidence": [],
+  "checks": {
+    "reviewed_items_present": true,
+    "all_items_reviewed_status": true,
+    "per_topic_target_met": true,
+    "required_fields_present": true,
+    "cull_evidence_present": true,
+    "final_source_verification_pending": true
+  }
+}

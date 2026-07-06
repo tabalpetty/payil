@@ -1,0 +1,12 @@
+{
+  "day": 3,
+  "generated": "2026-06-29",
+  "multiple_choice_items": 161,
+  "answer_position_counts": {
+    "1": 41,
+    "2": 40,
+    "3": 40,
+    "4": 40
+  },
+  "balanced": true
+}

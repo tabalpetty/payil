@@ -1,0 +1,1185 @@
+# Dry Run Day 3 Prompt
+
+## Metadata
+
+```json
+{
+  "provider": "openai",
+  "model": "gpt-4.1",
+  "run_id": "order007",
+  "created_utc": "2026-06-29T160624Z",
+  "status": "dry-run-prompt",
+  "accelerated_day": "Day 3",
+  "prompt_pack": "docs/Pilot1/aip-c01/exam-prep/day-03-question-generation-prompts.md",
+  "provenance": "prompt only; no LLM call"
+}
+```
+
+## Prompt That Would Be Sent
+
+```text
+You are generating raw draft practice-question candidates for a curriculum repository.
+
+Follow the complete Day 3 prompt pack below, especially the output schema,
+global guardrails, question quality requirements, official objective
+traceability, and remediation-target constraints. Then execute the
+selected prompt.
+
+IMPORTANT:
+- Return only the generated draft questions and any compact batch metadata.
+- Do not say you cannot source-review the items; instead mark source_trace_needed.
+- Do not mark anything as approved.
+- Do not include copied official exam questions or third-party question-bank content.
+- Preserve exact official objective values from the selected prompt.
+- Never place reviewer instructions or verification commentary in learner-visible stems, options, answers, rationales, or source traces.
+- Put any reviewer-only concern in generation_notes.
+
+===== DAY 3 PROMPT PACK =====
+# Day 3 Question Generation Prompts
+
+## Purpose
+
+Use this prompt pack to generate **draft** AIP-C01 Day 3 practice questions.
+
+Generated questions are not approved question-bank items. Store raw responses first, then review them against:
+
+- `docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json`;
+- relevant official AWS documentation;
+- the Day 3 study guide, focused artifacts, and answer guidance;
+- [question-bank-specification.md](question-bank-specification.md).
+
+Default raw-generation target: `12` candidates per topic. A complete reviewed bank still requires at least `10` approved items per curriculum-order topic after review.
+
+## Day 3 Scope
+
+| Curriculum order | Topic | Official task | Primary skill |
+|---|---|---|---|
+| Day03-order001 | Hybrid search and custom scoring | Task 1.5: Design retrieval mechanisms for FM augmentation.<br>Task 4.2: Optimize application performance. | Skill 1.5.4, Skill 4.2.2 |
+| Day03-order002 | Reranking | Task 1.5: Design retrieval mechanisms for FM augmentation. | Skill 1.5.4 |
+| Day03-order003 | Query expansion, decomposition, and transformation | Task 1.5: Design retrieval mechanisms for FM augmentation. | Skill 1.5.5 |
+| Day03-order004 | Vector-store ingestion, synchronization, refresh, and maintenance | Task 1.4: Design and implement vector store solutions. | Skill 1.4.4, Skill 1.4.5 |
+| Day03-order005 | Retrieval APIs, function interfaces, and MCP access | Task 1.5: Design retrieval mechanisms for FM augmentation. | Skill 1.5.6 |
+| Day03-order006 | RAG quality evaluation and retrieval troubleshooting | Task 5.1: Implement evaluation systems for GenAI.<br>Task 5.2: Troubleshoot GenAI applications. | Skill 5.1.6, Skill 5.2.4 |
+| Day03-order007 | Conversation context, history, intent, and state management | Task 1.6: Implement prompt engineering strategies and governance for FM interactions. | Skill 1.6.2 |
+| Day03-order008 | Advanced prompt engineering and iterative refinement | Task 1.6: Implement prompt engineering strategies and governance for FM interactions. | Skill 1.6.5 |
+| Day03-order009 | Prompt versioning, repositories, approvals, and governance | Task 1.6: Implement prompt engineering strategies and governance for FM interactions. | Skill 1.6.3 |
+| Day03-order010 | Prompt regression testing and quality assurance | Task 1.6: Implement prompt engineering strategies and governance for FM interactions.<br>Task 5.1: Implement evaluation systems for GenAI. | Skill 1.6.4, Skill 5.1.4 |
+| Day03-order011 | Prompt chaining, branching, and Bedrock Prompt Flows | Task 1.6: Implement prompt engineering strategies and governance for FM interactions. | Skill 1.6.6 |
+| Day03-order012 | Synchronous FM API integration | Task 2.4: Implement FM API integrations. | Skill 2.4.1 |
+| Day03-order013 | Asynchronous FM processing | Task 2.4: Implement FM API integrations. | Skill 2.4.1 |
+| Day03-order014 | Streaming responses, WebSockets, and server-sent events | Task 2.4: Implement FM API integrations. | Skill 2.4.2 |
+| Day03-order015 | Token limits, request validation, and response handling | Task 1.3: Implement data validation and processing pipelines for FM consumption.<br>Task 2.5: Implement application integration patterns and development tools.<br>Task 5.2: Troubleshoot GenAI applications. | Skill 1.3.3, Skill 2.5.1, Skill 5.2.1 |
+| Day03-order016 | Retries, exponential backoff, rate limiting, and timeouts | Task 2.4: Implement FM API integrations.<br>Task 2.5: Implement application integration patterns and development tools. | Skill 2.4.3, Skill 2.5.1 |
+| Day03-order017 | Fallbacks, circuit breakers, and graceful degradation | Task 1.2: Select and configure FMs.<br>Task 2.4: Implement FM API integrations. | Skill 1.2.3, Skill 2.4.3 |
+| Day03-order018 | Distributed tracing and FM API observability | Task 2.4: Implement FM API integrations.<br>Task 2.5: Implement application integration patterns and development tools.<br>Task 4.3: Implement monitoring systems for GenAI applications. | Skill 2.4.3, Skill 2.5.6, Skill 4.3.1 |
+
+## Output Schema Required From The LLM
+
+Return a single JSON array. Each object must contain these fields:
+
+| Field | Requirement |
+|---|---|
+| `status` | Always `draft`. |
+| `official_exam_code` | Always `AIP-C01`. |
+| `accelerated_day` | Always `Day 3`. |
+| `curriculum_order` | Exact curriculum-order value from the prompt. |
+| `topic` | Exact topic name from the prompt. |
+| `exam_domain` | Use the exact domain from the selected allowed objective mapping. |
+| `exam_task` | Use the exact task from one allowed objective mapping for the topic. |
+| `exam_skill` | Use the exact skill from the same allowed objective mapping. |
+| `secondary_exam_skills` | Optional exact additional mapped skill; otherwise `None.` |
+| `knowledge_category` | Exact knowledge category from the topic brief. |
+| `knowledge_type` | Exact knowledge type from the topic brief. |
+| `question_format` | `multiple-choice` or `multiple-response`. |
+| `difficulty` | `medium`, `hard`, or `exam-plus`; do not generate `easy`. |
+| `cognitive_demand` | Recall, explain, implement, integrate, configure, select, diagnose, optimize, compare, or judge. |
+| `stem` | Scenario-based question stem. |
+| `options` | Four options for multiple choice; five or more for multiple response. |
+| `correct_answer` | Correct option or options. |
+| `rationale_correct` | Why the correct answer is best. |
+| `rationale_distractors` | Why each distractor is tempting but wrong or less appropriate. |
+| `misconception_tags` | Trap, misconception, or tradeoff tested. |
+| `source_trace_needed` | Specific AWS doc, objective, or project source that review must verify. |
+| `remediation_target` | Existing study guide, focused artifact, or answer-guidance path from the topic brief. |
+| `generation_notes` | Short note naming the scenario constraint and the quality risk the reviewer should inspect. |
+
+## Global Guardrails
+
+Include this block in every prompt:
+
+```text
+Create original practice questions only. Do not copy official AWS practice
+questions, exam dumps, proprietary question banks, or third-party copyrighted
+questions. The questions are draft learning items and must be source-reviewed
+before approval.
+
+Use the official exam name: AWS Certified Generative AI Developer -
+Professional (AIP-C01).
+
+Use `docs/Pilot1/aip-c01/source-material/ai-professional-01.objectives.json`
+as the canonical source for official objective values. Preserve `exam_domain`,
+`exam_task`, and `exam_skill` exactly as given in the topic brief.
+
+Make questions scenario-based. Avoid trivia unless the topic brief's knowledge
+type is explicitly declarative and the item still tests the fact inside a
+professional scenario. Include plausible distractors that test real
+misconceptions. Prefer professional judgment over keyword matching.
+
+Generated items are raw Day 3 candidates, not approved bank items.
+```
+
+## Question Quality Requirements
+
+Include this block in every prompt:
+
+```text
+Question quality requirements:
+
+- Generate tough, tricky, professional-level questions suitable for serious
+  AIP-C01 preparation.
+- At least 90% of generated items must be scenario-based.
+- Include realistic distractors that are technically plausible but wrong
+  because of a constraint, priority, AWS service boundary, operational risk,
+  security issue, data-quality issue, retrieval failure, or misunderstanding.
+- Avoid obvious answers, toy scenarios, and questions that can be answered by
+  keyword matching.
+- Include a mix of direct best-answer selection, best architecture/control,
+  most likely failure/risk, first action, and multiple-response formats.
+- For multiple-choice items, distribute the correct answer across option
+  positions 1, 2, 3, and 4. Counts per position must differ by at most one.
+  Do not place every correct answer first and do not move weak distractors merely
+  to satisfy the quota.
+- Mark each question with difficulty: `medium`, `hard`, or `exam-plus`.
+- For every distractor, explain why it is tempting and why it is wrong or less
+  suitable.
+- Do not use stale date-bound service claims such as "as of early 2024",
+  "currently does not support", or "does not yet support".
+- If an item depends on a fast-changing AWS service capability, write the item
+  around the decision process and put the exact AWS documentation needed in
+  `source_trace_needed`.
+- Route misses to existing Day 3 remediation files only.
+```
+
+## Review Feedback Incorporated
+
+These prompts intentionally incorporate the Day 1 lessons:
+
+- prompt more raw candidates than the approved target because review will cull
+  weak, duplicate, or unverifiable items;
+- preserve official objective fields from the canonical objectives JSON;
+- require source-sensitive claims to be marked for review;
+- demand scenario constraints and distractor rationales;
+- avoid recall-only, keyword-trivia, and stale service-capability claims;
+- keep remediation targets tied to actual study guide, artifact, or answer
+  guidance files.
+
+## Prompt 1: Day 3 Balanced Full-Pool Draft
+
+Use this prompt when you want the full Day 3 raw draft pool.
+
+```text
+Act as an expert AWS Certified Generative AI Developer - Professional
+(AIP-C01) instructor and exam-item writer.
+
+Generate 216 original draft practice questions for Day 3 of an
+accelerated AIP-C01 curriculum.
+
+Create exactly 12 questions for each curriculum order:
+
+1. Day03-order001 - Hybrid search and custom scoring
+2. Day03-order002 - Reranking
+3. Day03-order003 - Query expansion, decomposition, and transformation
+4. Day03-order004 - Vector-store ingestion, synchronization, refresh, and maintenance
+5. Day03-order005 - Retrieval APIs, function interfaces, and MCP access
+6. Day03-order006 - RAG quality evaluation and retrieval troubleshooting
+7. Day03-order007 - Conversation context, history, intent, and state management
+8. Day03-order008 - Advanced prompt engineering and iterative refinement
+9. Day03-order009 - Prompt versioning, repositories, approvals, and governance
+10. Day03-order010 - Prompt regression testing and quality assurance
+11. Day03-order011 - Prompt chaining, branching, and Bedrock Prompt Flows
+12. Day03-order012 - Synchronous FM API integration
+13. Day03-order013 - Asynchronous FM processing
+14. Day03-order014 - Streaming responses, WebSockets, and server-sent events
+15. Day03-order015 - Token limits, request validation, and response handling
+16. Day03-order016 - Retries, exponential backoff, rate limiting, and timeouts
+17. Day03-order017 - Fallbacks, circuit breakers, and graceful degradation
+18. Day03-order018 - Distributed tracing and FM API observability
+
+Use approximately 162 multiple-choice and 54 multiple-response questions across the whole
+batch. At least 194 of the 216 questions must be
+scenario-based. Make the questions tricky and professional-level, with
+plausible distractors and detailed explanations.
+
+Use the output schema specified above. Preserve all official objective fields
+exactly from the topic briefs below.
+
+Do not mark anything as approved.
+```
+
+## Topic-Level Prompts
+
+## Topic Prompt: Day03-order001 Hybrid search and custom scoring
+
+Use this prompt for focused generation or top-up generation for `Day03-order001`.
+
+```text
+Act as an expert AWS Certified Generative AI Developer - Professional
+(AIP-C01) instructor and exam-item writer.
+
+Generate exactly 12 original draft practice questions for:
+
+- curriculum_order: Day03-order001
+- topic: Hybrid search and custom scoring
+- accelerated_day: Day 3
+- knowledge_category: Skill; Knowledge
+- knowledge_type: Procedural; Causal; Conditional
+
+Allowed official objective mappings:
+- Content Domain 1: Foundation Model Integration, Data Management, and Compliance | Task 1.5: Design retrieval mechanisms for FM augmentation. | Skill 1.5.4: Create advanced search architectures to improve the relevance and accuracy of retrieved information for FM context (for example, by using OpenSearch for semantic search, hybrid search that combines keywords and vectors, Amazon Bedrock reranker models).
+- Content Domain 4: Operational Efficiency and Optimization for GenAI Applications | Task 4.2: Optimize application performance. | Skill 4.2.2: Enhance retrieval performance to improve the relevance and speed of retrieved information for FM context augmentation (for example, by using index optimization, query preprocessing, hybrid search implementation with custom scoring).
+
+Use only these mappings. For every item, copy one complete
+domain/task/skill tuple exactly. Generate at least 6 item(s)
+for each mapped skill before using the remaining item budget.
+
+Question focus:
+- Ask for next step, runbook step, configuration choice, or failure-handling action.
+- Ask when to choose or reject an approach based on scenario constraints.
+- Ask the learner to predict effects or diagnose cause from symptoms.
+
+Misconceptions and traps to test:
+- Confusing a tool or service with the full architecture.
+- Selecting a plausible option without checking the scenario constraint.
+
+Required remediation targets. Use only these existing files:
+
+- study_guide: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/study-guides/day-03-advanced-retrieval-prompt-governance-api-resilience.md
+- focused_artifact: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order001-hybrid-search-custom-scoring.md
+- answer_guidance: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day-03-answer-guidance.md
+
+Generate approximately 9 multiple-choice and 3 multiple-response items for this topic.
+Every item must be scenario-based unless the item is testing a necessary
+declarative fact inside a realistic work situation.
+
+For multiple-choice items, distribute correct answers across positions 1, 2,
+3, and 4 with counts differing by at most one. Preserve official objective
+fields exactly. Do not invent, paraphrase, or rename the official domain, task,
+or skill.
+
+Return only a JSON array of draft items using the required schema.
+```
+
+## Topic Prompt: Day03-order002 Reranking
+
+Use this prompt for focused generation or top-up generation for `Day03-order002`.
+
+```text
+Act as an expert AWS Certified Generative AI Developer - Professional
+(AIP-C01) instructor and exam-item writer.
+
+Generate exactly 12 original draft practice questions for:
+
+- curriculum_order: Day03-order002
+- topic: Reranking
+- accelerated_day: Day 3
+- knowledge_category: Skill; Knowledge
+- knowledge_type: Procedural; Causal; Conditional
+
+Allowed official objective mappings:
+- Content Domain 1: Foundation Model Integration, Data Management, and Compliance | Task 1.5: Design retrieval mechanisms for FM augmentation. | Skill 1.5.4: Create advanced search architectures to improve the relevance and accuracy of retrieved information for FM context (for example, by using OpenSearch for semantic search, hybrid search that combines keywords and vectors, Amazon Bedrock reranker models).
+
+Use only these mappings. For every item, copy one complete
+domain/task/skill tuple exactly. Generate at least 12 item(s)
+for each mapped skill before using the remaining item budget.
+
+Question focus:
+- Ask for next step, runbook step, configuration choice, or failure-handling action.
+- Ask when to choose or reject an approach based on scenario constraints.
+- Ask the learner to predict effects or diagnose cause from symptoms.
+
+Misconceptions and traps to test:
+- Confusing a tool or service with the full architecture.
+- Selecting a plausible option without checking the scenario constraint.
+
+Required remediation targets. Use only these existing files:
+
+- study_guide: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/study-guides/day-03-advanced-retrieval-prompt-governance-api-resilience.md
+- focused_artifact: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order002-reranking.md
+- answer_guidance: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day-03-answer-guidance.md
+
+Generate approximately 9 multiple-choice and 3 multiple-response items for this topic.
+Every item must be scenario-based unless the item is testing a necessary
+declarative fact inside a realistic work situation.
+
+For multiple-choice items, distribute correct answers across positions 1, 2,
+3, and 4 with counts differing by at most one. Preserve official objective
+fields exactly. Do not invent, paraphrase, or rename the official domain, task,
+or skill.
+
+Return only a JSON array of draft items using the required schema.
+```
+
+## Topic Prompt: Day03-order003 Query expansion, decomposition, and transformation
+
+Use this prompt for focused generation or top-up generation for `Day03-order003`.
+
+```text
+Act as an expert AWS Certified Generative AI Developer - Professional
+(AIP-C01) instructor and exam-item writer.
+
+Generate exactly 12 original draft practice questions for:
+
+- curriculum_order: Day03-order003
+- topic: Query expansion, decomposition, and transformation
+- accelerated_day: Day 3
+- knowledge_category: Knowledge; Skill
+- knowledge_type: Conceptual; Procedural; Causal
+
+Allowed official objective mappings:
+- Content Domain 1: Foundation Model Integration, Data Management, and Compliance | Task 1.5: Design retrieval mechanisms for FM augmentation. | Skill 1.5.5: Develop sophisticated query handling systems to improve the retrieval effectiveness and result quality for FM augmentation (for example, by using Amazon Bedrock for query expansion, Lambda functions for query decomposition, Step Functions for query transformation).
+
+Use only these mappings. For every item, copy one complete
+domain/task/skill tuple exactly. Generate at least 12 item(s)
+for each mapped skill before using the remaining item budget.
+
+Question focus:
+- Ask the learner to explain relationships, boundaries, or system roles.
+- Ask for next step, runbook step, configuration choice, or failure-handling action.
+- Ask the learner to predict effects or diagnose cause from symptoms.
+
+Misconceptions and traps to test:
+- Confusing a tool or service with the full architecture.
+- Selecting a plausible option without checking the scenario constraint.
+
+Required remediation targets. Use only these existing files:
+
+- study_guide: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/study-guides/day-03-advanced-retrieval-prompt-governance-api-resilience.md
+- focused_artifact: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order003-query-expansion-decomposition-transformation.md
+- answer_guidance: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day-03-answer-guidance.md
+
+Generate approximately 9 multiple-choice and 3 multiple-response items for this topic.
+Every item must be scenario-based unless the item is testing a necessary
+declarative fact inside a realistic work situation.
+
+For multiple-choice items, distribute correct answers across positions 1, 2,
+3, and 4 with counts differing by at most one. Preserve official objective
+fields exactly. Do not invent, paraphrase, or rename the official domain, task,
+or skill.
+
+Return only a JSON array of draft items using the required schema.
+```
+
+## Topic Prompt: Day03-order004 Vector-store ingestion, synchronization, refresh, and maintenance
+
+Use this prompt for focused generation or top-up generation for `Day03-order004`.
+
+```text
+Act as an expert AWS Certified Generative AI Developer - Professional
+(AIP-C01) instructor and exam-item writer.
+
+Generate exactly 12 original draft practice questions for:
+
+- curriculum_order: Day03-order004
+- topic: Vector-store ingestion, synchronization, refresh, and maintenance
+- accelerated_day: Day 3
+- knowledge_category: Skill; Knowledge; Representation / Location
+- knowledge_type: Procedural; Causal; Strategic; Embedded
+
+Allowed official objective mappings:
+- Content Domain 1: Foundation Model Integration, Data Management, and Compliance | Task 1.4: Design and implement vector store solutions. | Skill 1.4.4: Use AWS services to create integration components to connect with resources (for example, document management systems, knowledge bases, internal wikis for comprehensive data integration in GenAI applications).
+- Content Domain 1: Foundation Model Integration, Data Management, and Compliance | Task 1.4: Design and implement vector store solutions. | Skill 1.4.5: Design and deploy data maintenance systems to ensure that vector stores contain current and accurate information for FM augmentation (for example, by using incremental update mechanisms, real-time change detection systems, automated synchronization workflows, scheduled refresh pipelines).
+
+Use only these mappings. For every item, copy one complete
+domain/task/skill tuple exactly. Generate at least 6 item(s)
+for each mapped skill before using the remaining item budget.
+
+Question focus:
+- Ask for next step, runbook step, configuration choice, or failure-handling action.
+- Ask the learner to predict effects or diagnose cause from symptoms.
+- Ask for tradeoff, architecture decision, or defended plan.
+- Include platform/tool/API/configuration evidence where relevant.
+
+Misconceptions and traps to test:
+- Confusing a tool or service with the full architecture.
+- Selecting a plausible option without checking the scenario constraint.
+- Assuming embeddings enforce authorization, freshness, or source authority.
+
+Required remediation targets. Use only these existing files:
+
+- study_guide: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/study-guides/day-03-advanced-retrieval-prompt-governance-api-resilience.md
+- focused_artifact: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order004-vector-store-ingestion-synchronization-refresh-maintenance.md
+- answer_guidance: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day-03-answer-guidance.md
+
+Generate approximately 9 multiple-choice and 3 multiple-response items for this topic.
+Every item must be scenario-based unless the item is testing a necessary
+declarative fact inside a realistic work situation.
+
+For multiple-choice items, distribute correct answers across positions 1, 2,
+3, and 4 with counts differing by at most one. Preserve official objective
+fields exactly. Do not invent, paraphrase, or rename the official domain, task,
+or skill.
+
+Return only a JSON array of draft items using the required schema.
+```
+
+## Topic Prompt: Day03-order005 Retrieval APIs, function interfaces, and MCP access
+
+Use this prompt for focused generation or top-up generation for `Day03-order005`.
+
+```text
+Act as an expert AWS Certified Generative AI Developer - Professional
+(AIP-C01) instructor and exam-item writer.
+
+Generate exactly 12 original draft practice questions for:
+
+- curriculum_order: Day03-order005
+- topic: Retrieval APIs, function interfaces, and MCP access
+- accelerated_day: Day 3
+- knowledge_category: Knowledge; Skill; Representation / Location
+- knowledge_type: Conceptual; Procedural; Embedded
+
+Allowed official objective mappings:
+- Content Domain 1: Foundation Model Integration, Data Management, and Compliance | Task 1.5: Design retrieval mechanisms for FM augmentation. | Skill 1.5.6: Create consistent access mechanisms to enable seamless integration with FMs (for example, by using function calling interfaces for vector search, Model Context Protocol [MCP] clients for vector queries, standardized API patterns for retrieval augmentation).
+
+Use only these mappings. For every item, copy one complete
+domain/task/skill tuple exactly. Generate at least 12 item(s)
+for each mapped skill before using the remaining item budget.
+
+Question focus:
+- Ask the learner to explain relationships, boundaries, or system roles.
+- Ask for next step, runbook step, configuration choice, or failure-handling action.
+- Include platform/tool/API/configuration evidence where relevant.
+
+Misconceptions and traps to test:
+- Confusing a tool or service with the full architecture.
+- Selecting a plausible option without checking the scenario constraint.
+- Assuming RAG means the model searches documents by itself.
+
+Required remediation targets. Use only these existing files:
+
+- study_guide: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/study-guides/day-03-advanced-retrieval-prompt-governance-api-resilience.md
+- focused_artifact: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order005-retrieval-apis-function-interfaces-mcp-access.md
+- answer_guidance: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day-03-answer-guidance.md
+
+Generate approximately 9 multiple-choice and 3 multiple-response items for this topic.
+Every item must be scenario-based unless the item is testing a necessary
+declarative fact inside a realistic work situation.
+
+For multiple-choice items, distribute correct answers across positions 1, 2,
+3, and 4 with counts differing by at most one. Preserve official objective
+fields exactly. Do not invent, paraphrase, or rename the official domain, task,
+or skill.
+
+Return only a JSON array of draft items using the required schema.
+```
+
+## Topic Prompt: Day03-order006 RAG quality evaluation and retrieval troubleshooting
+
+Use this prompt for focused generation or top-up generation for `Day03-order006`.
+
+```text
+Act as an expert AWS Certified Generative AI Developer - Professional
+(AIP-C01) instructor and exam-item writer.
+
+Generate exactly 12 original draft practice questions for:
+
+- curriculum_order: Day03-order006
+- topic: RAG quality evaluation and retrieval troubleshooting
+- accelerated_day: Day 3
+- knowledge_category: Skill; Knowledge; Representation / Location
+- knowledge_type: Diagnostic; Causal; Procedural; Tacit
+
+Allowed official objective mappings:
+- Content Domain 5: Testing, Validation, and Troubleshooting | Task 5.1: Implement evaluation systems for GenAI. | Skill 5.1.6: Implement retrieval quality testing to evaluate and optimize information retrieval components for FM augmentation (for example, by using relevance scoring, context matching verification, retrieval latency measurements).
+- Content Domain 5: Testing, Validation, and Troubleshooting | Task 5.2: Troubleshoot GenAI applications. | Skill 5.2.4: Troubleshoot retrieval system issues to identify and resolve problems that affect information retrieval effectiveness for FM augmentation (for example, by using model response relevance analysis, embedding quality diagnostics, drift monitoring, vectorization issue resolution, chunking and preprocessing remediation, vector search performance optimization).
+
+Use only these mappings. For every item, copy one complete
+domain/task/skill tuple exactly. Generate at least 6 item(s)
+for each mapped skill before using the remaining item budget.
+
+Question focus:
+- Ask for next step, runbook step, configuration choice, or failure-handling action.
+- Ask the learner to predict effects or diagnose cause from symptoms.
+
+Misconceptions and traps to test:
+- Confusing a tool or service with the full architecture.
+- Selecting a plausible option without checking the scenario constraint.
+- Assuming RAG means the model searches documents by itself.
+
+Required remediation targets. Use only these existing files:
+
+- study_guide: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/study-guides/day-03-advanced-retrieval-prompt-governance-api-resilience.md
+- focused_artifact: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order006-rag-quality-evaluation-retrieval-troubleshooting.md
+- answer_guidance: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day-03-answer-guidance.md
+
+Generate approximately 9 multiple-choice and 3 multiple-response items for this topic.
+Every item must be scenario-based unless the item is testing a necessary
+declarative fact inside a realistic work situation.
+
+For multiple-choice items, distribute correct answers across positions 1, 2,
+3, and 4 with counts differing by at most one. Preserve official objective
+fields exactly. Do not invent, paraphrase, or rename the official domain, task,
+or skill.
+
+Return only a JSON array of draft items using the required schema.
+```
+
+## Topic Prompt: Day03-order007 Conversation context, history, intent, and state management
+
+Use this prompt for focused generation or top-up generation for `Day03-order007`.
+
+```text
+Act as an expert AWS Certified Generative AI Developer - Professional
+(AIP-C01) instructor and exam-item writer.
+
+Generate exactly 12 original draft practice questions for:
+
+- curriculum_order: Day03-order007
+- topic: Conversation context, history, intent, and state management
+- accelerated_day: Day 3
+- knowledge_category: Knowledge; Skill
+- knowledge_type: Conceptual; Procedural; Conditional
+
+Allowed official objective mappings:
+- Content Domain 1: Foundation Model Integration, Data Management, and Compliance | Task 1.6: Implement prompt engineering strategies and governance for FM interactions. | Skill 1.6.2: Build interactive AI systems to maintain context and improve user interactions with FMs (for example, by using Step Functions for clarification workflows, Amazon Comprehend for intent recognition, DynamoDB for conversation history storage).
+
+Use only these mappings. For every item, copy one complete
+domain/task/skill tuple exactly. Generate at least 12 item(s)
+for each mapped skill before using the remaining item budget.
+
+Question focus:
+- Ask the learner to explain relationships, boundaries, or system roles.
+- Ask for next step, runbook step, configuration choice, or failure-handling action.
+- Ask when to choose or reject an approach based on scenario constraints.
+
+Misconceptions and traps to test:
+- Confusing a tool or service with the full architecture.
+- Selecting a plausible option without checking the scenario constraint.
+
+Required remediation targets. Use only these existing files:
+
+- study_guide: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/study-guides/day-03-advanced-retrieval-prompt-governance-api-resilience.md
+- focused_artifact: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order007-conversation-context-history-intent-state-management.md
+- answer_guidance: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day-03-answer-guidance.md
+
+Generate approximately 9 multiple-choice and 3 multiple-response items for this topic.
+Every item must be scenario-based unless the item is testing a necessary
+declarative fact inside a realistic work situation.
+
+For multiple-choice items, distribute correct answers across positions 1, 2,
+3, and 4 with counts differing by at most one. Preserve official objective
+fields exactly. Do not invent, paraphrase, or rename the official domain, task,
+or skill.
+
+Return only a JSON array of draft items using the required schema.
+```
+
+## Topic Prompt: Day03-order008 Advanced prompt engineering and iterative refinement
+
+Use this prompt for focused generation or top-up generation for `Day03-order008`.
+
+```text
+Act as an expert AWS Certified Generative AI Developer - Professional
+(AIP-C01) instructor and exam-item writer.
+
+Generate exactly 12 original draft practice questions for:
+
+- curriculum_order: Day03-order008
+- topic: Advanced prompt engineering and iterative refinement
+- accelerated_day: Day 3
+- knowledge_category: Skill; Knowledge; Representation / Location
+- knowledge_type: Procedural; Causal; Tacit
+
+Allowed official objective mappings:
+- Content Domain 1: Foundation Model Integration, Data Management, and Compliance | Task 1.6: Implement prompt engineering strategies and governance for FM interactions. | Skill 1.6.5: Enhance FM performance to refine prompts iteratively and improve response quality beyond basic prompting techniques (for example, by using structured input components, output format specifications, chain-of-thought instruction patterns, feedback loops).
+
+Use only these mappings. For every item, copy one complete
+domain/task/skill tuple exactly. Generate at least 12 item(s)
+for each mapped skill before using the remaining item budget.
+
+Question focus:
+- Ask for next step, runbook step, configuration choice, or failure-handling action.
+- Ask the learner to predict effects or diagnose cause from symptoms.
+
+Misconceptions and traps to test:
+- Confusing a tool or service with the full architecture.
+- Selecting a plausible option without checking the scenario constraint.
+
+Required remediation targets. Use only these existing files:
+
+- study_guide: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/study-guides/day-03-advanced-retrieval-prompt-governance-api-resilience.md
+- focused_artifact: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order008-advanced-prompt-engineering-iterative-refinement.md
+- answer_guidance: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day-03-answer-guidance.md
+
+Generate approximately 9 multiple-choice and 3 multiple-response items for this topic.
+Every item must be scenario-based unless the item is testing a necessary
+declarative fact inside a realistic work situation.
+
+For multiple-choice items, distribute correct answers across positions 1, 2,
+3, and 4 with counts differing by at most one. Preserve official objective
+fields exactly. Do not invent, paraphrase, or rename the official domain, task,
+or skill.
+
+Return only a JSON array of draft items using the required schema.
+```
+
+## Topic Prompt: Day03-order009 Prompt versioning, repositories, approvals, and governance
+
+Use this prompt for focused generation or top-up generation for `Day03-order009`.
+
+```text
+Act as an expert AWS Certified Generative AI Developer - Professional
+(AIP-C01) instructor and exam-item writer.
+
+Generate exactly 12 original draft practice questions for:
+
+- curriculum_order: Day03-order009
+- topic: Prompt versioning, repositories, approvals, and governance
+- accelerated_day: Day 3
+- knowledge_category: Skill; Knowledge; Representation / Location
+- knowledge_type: Procedural; Normative; Institutional; Embedded
+
+Allowed official objective mappings:
+- Content Domain 1: Foundation Model Integration, Data Management, and Compliance | Task 1.6: Implement prompt engineering strategies and governance for FM interactions. | Skill 1.6.3: Implement comprehensive prompt management and governance systems to ensure consistency and oversight of FM operations (for example, by using Amazon Bedrock Prompt Management to create parameterized templates and approval workflows, Amazon S3 to store template repositories, AWS CloudTrail to track usage, Amazon CloudWatch Logs to log access).
+
+Use only these mappings. For every item, copy one complete
+domain/task/skill tuple exactly. Generate at least 12 item(s)
+for each mapped skill before using the remaining item budget.
+
+Question focus:
+- Ask for next step, runbook step, configuration choice, or failure-handling action.
+- Include platform/tool/API/configuration evidence where relevant.
+- Ask for control placement, policy/risk judgment, or responsible practice.
+
+Misconceptions and traps to test:
+- Confusing a tool or service with the full architecture.
+- Selecting a plausible option without checking the scenario constraint.
+
+Required remediation targets. Use only these existing files:
+
+- study_guide: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/study-guides/day-03-advanced-retrieval-prompt-governance-api-resilience.md
+- focused_artifact: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order009-prompt-versioning-repositories-approvals-governance.md
+- answer_guidance: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day-03-answer-guidance.md
+
+Generate approximately 9 multiple-choice and 3 multiple-response items for this topic.
+Every item must be scenario-based unless the item is testing a necessary
+declarative fact inside a realistic work situation.
+
+For multiple-choice items, distribute correct answers across positions 1, 2,
+3, and 4 with counts differing by at most one. Preserve official objective
+fields exactly. Do not invent, paraphrase, or rename the official domain, task,
+or skill.
+
+Return only a JSON array of draft items using the required schema.
+```
+
+## Topic Prompt: Day03-order010 Prompt regression testing and quality assurance
+
+Use this prompt for focused generation or top-up generation for `Day03-order010`.
+
+```text
+Act as an expert AWS Certified Generative AI Developer - Professional
+(AIP-C01) instructor and exam-item writer.
+
+Generate exactly 12 original draft practice questions for:
+
+- curriculum_order: Day03-order010
+- topic: Prompt regression testing and quality assurance
+- accelerated_day: Day 3
+- knowledge_category: Skill; Knowledge
+- knowledge_type: Procedural; Causal; Strategic
+
+Allowed official objective mappings:
+- Content Domain 1: Foundation Model Integration, Data Management, and Compliance | Task 1.6: Implement prompt engineering strategies and governance for FM interactions. | Skill 1.6.4: Develop quality assurance systems to ensure prompt effectiveness and reliability for FMs (for example, by using Lambda functions to verify expected output, Step Functions to test edge cases, CloudWatch to test prompt regression).
+- Content Domain 5: Testing, Validation, and Troubleshooting | Task 5.1: Implement evaluation systems for GenAI. | Skill 5.1.4: Create systematic quality assurance processes to maintain consistent performance standards for FMs (for example, by using continuous evaluation workflows, regression testing for model outputs, automated quality gates for deployments).
+
+Use only these mappings. For every item, copy one complete
+domain/task/skill tuple exactly. Generate at least 6 item(s)
+for each mapped skill before using the remaining item budget.
+
+Question focus:
+- Ask for next step, runbook step, configuration choice, or failure-handling action.
+- Ask the learner to predict effects or diagnose cause from symptoms.
+- Ask for tradeoff, architecture decision, or defended plan.
+
+Misconceptions and traps to test:
+- Confusing a tool or service with the full architecture.
+- Selecting a plausible option without checking the scenario constraint.
+
+Required remediation targets. Use only these existing files:
+
+- study_guide: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/study-guides/day-03-advanced-retrieval-prompt-governance-api-resilience.md
+- focused_artifact: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order010-prompt-regression-testing-quality-assurance.md
+- answer_guidance: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day-03-answer-guidance.md
+
+Generate approximately 9 multiple-choice and 3 multiple-response items for this topic.
+Every item must be scenario-based unless the item is testing a necessary
+declarative fact inside a realistic work situation.
+
+For multiple-choice items, distribute correct answers across positions 1, 2,
+3, and 4 with counts differing by at most one. Preserve official objective
+fields exactly. Do not invent, paraphrase, or rename the official domain, task,
+or skill.
+
+Return only a JSON array of draft items using the required schema.
+```
+
+## Topic Prompt: Day03-order011 Prompt chaining, branching, and Bedrock Prompt Flows
+
+Use this prompt for focused generation or top-up generation for `Day03-order011`.
+
+```text
+Act as an expert AWS Certified Generative AI Developer - Professional
+(AIP-C01) instructor and exam-item writer.
+
+Generate exactly 12 original draft practice questions for:
+
+- curriculum_order: Day03-order011
+- topic: Prompt chaining, branching, and Bedrock Prompt Flows
+- accelerated_day: Day 3
+- knowledge_category: Knowledge; Skill; Representation / Location
+- knowledge_type: Conceptual; Procedural; Strategic; Embedded
+
+Allowed official objective mappings:
+- Content Domain 1: Foundation Model Integration, Data Management, and Compliance | Task 1.6: Implement prompt engineering strategies and governance for FM interactions. | Skill 1.6.6: Design complex prompt systems to handle sophisticated tasks with FMs (for example, by using Amazon Bedrock Prompt Flows for sequential prompt chains, conditional branching based on model responses, reusable prompt components, integrated pre-processing and post-processing steps).
+
+Use only these mappings. For every item, copy one complete
+domain/task/skill tuple exactly. Generate at least 12 item(s)
+for each mapped skill before using the remaining item budget.
+
+Question focus:
+- Ask the learner to explain relationships, boundaries, or system roles.
+- Ask for next step, runbook step, configuration choice, or failure-handling action.
+- Ask for tradeoff, architecture decision, or defended plan.
+- Include platform/tool/API/configuration evidence where relevant.
+
+Misconceptions and traps to test:
+- Confusing a tool or service with the full architecture.
+- Selecting a plausible option without checking the scenario constraint.
+
+Required remediation targets. Use only these existing files:
+
+- study_guide: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/study-guides/day-03-advanced-retrieval-prompt-governance-api-resilience.md
+- focused_artifact: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order011-prompt-chaining-branching-bedrock-prompt-flows.md
+- answer_guidance: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day-03-answer-guidance.md
+
+Generate approximately 9 multiple-choice and 3 multiple-response items for this topic.
+Every item must be scenario-based unless the item is testing a necessary
+declarative fact inside a realistic work situation.
+
+For multiple-choice items, distribute correct answers across positions 1, 2,
+3, and 4 with counts differing by at most one. Preserve official objective
+fields exactly. Do not invent, paraphrase, or rename the official domain, task,
+or skill.
+
+Return only a JSON array of draft items using the required schema.
+```
+
+## Topic Prompt: Day03-order012 Synchronous FM API integration
+
+Use this prompt for focused generation or top-up generation for `Day03-order012`.
+
+```text
+Act as an expert AWS Certified Generative AI Developer - Professional
+(AIP-C01) instructor and exam-item writer.
+
+Generate exactly 12 original draft practice questions for:
+
+- curriculum_order: Day03-order012
+- topic: Synchronous FM API integration
+- accelerated_day: Day 3
+- knowledge_category: Skill; Representation / Location
+- knowledge_type: Procedural; Embedded
+
+Allowed official objective mappings:
+- Content Domain 2: Implementation and Integration | Task 2.4: Implement FM API integrations. | Skill 2.4.1: Create flexible model interaction systems (for example, by using Amazon Bedrock APIs to manage synchronous requests from various compute environments, language-specific AWS SDKs and Amazon SQS for asynchronous processing, API Gateway to provide custom API clients with request validation).
+
+Use only these mappings. For every item, copy one complete
+domain/task/skill tuple exactly. Generate at least 12 item(s)
+for each mapped skill before using the remaining item budget.
+
+Question focus:
+- Ask for next step, runbook step, configuration choice, or failure-handling action.
+- Include platform/tool/API/configuration evidence where relevant.
+
+Misconceptions and traps to test:
+- Confusing a tool or service with the full architecture.
+- Selecting a plausible option without checking the scenario constraint.
+
+Required remediation targets. Use only these existing files:
+
+- study_guide: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/study-guides/day-03-advanced-retrieval-prompt-governance-api-resilience.md
+- focused_artifact: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order012-synchronous-fm-api-integration.md
+- answer_guidance: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day-03-answer-guidance.md
+
+Generate approximately 9 multiple-choice and 3 multiple-response items for this topic.
+Every item must be scenario-based unless the item is testing a necessary
+declarative fact inside a realistic work situation.
+
+For multiple-choice items, distribute correct answers across positions 1, 2,
+3, and 4 with counts differing by at most one. Preserve official objective
+fields exactly. Do not invent, paraphrase, or rename the official domain, task,
+or skill.
+
+Return only a JSON array of draft items using the required schema.
+```
+
+## Topic Prompt: Day03-order013 Asynchronous FM processing
+
+Use this prompt for focused generation or top-up generation for `Day03-order013`.
+
+```text
+Act as an expert AWS Certified Generative AI Developer - Professional
+(AIP-C01) instructor and exam-item writer.
+
+Generate exactly 12 original draft practice questions for:
+
+- curriculum_order: Day03-order013
+- topic: Asynchronous FM processing
+- accelerated_day: Day 3
+- knowledge_category: Knowledge; Skill; Representation / Location
+- knowledge_type: Conceptual; Procedural; Conditional; Embedded
+
+Allowed official objective mappings:
+- Content Domain 2: Implementation and Integration | Task 2.4: Implement FM API integrations. | Skill 2.4.1: Create flexible model interaction systems (for example, by using Amazon Bedrock APIs to manage synchronous requests from various compute environments, language-specific AWS SDKs and Amazon SQS for asynchronous processing, API Gateway to provide custom API clients with request validation).
+
+Use only these mappings. For every item, copy one complete
+domain/task/skill tuple exactly. Generate at least 12 item(s)
+for each mapped skill before using the remaining item budget.
+
+Question focus:
+- Ask the learner to explain relationships, boundaries, or system roles.
+- Ask for next step, runbook step, configuration choice, or failure-handling action.
+- Ask when to choose or reject an approach based on scenario constraints.
+- Include platform/tool/API/configuration evidence where relevant.
+
+Misconceptions and traps to test:
+- Confusing a tool or service with the full architecture.
+- Selecting a plausible option without checking the scenario constraint.
+
+Required remediation targets. Use only these existing files:
+
+- study_guide: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/study-guides/day-03-advanced-retrieval-prompt-governance-api-resilience.md
+- focused_artifact: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order013-asynchronous-fm-processing.md
+- answer_guidance: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day-03-answer-guidance.md
+
+Generate approximately 9 multiple-choice and 3 multiple-response items for this topic.
+Every item must be scenario-based unless the item is testing a necessary
+declarative fact inside a realistic work situation.
+
+For multiple-choice items, distribute correct answers across positions 1, 2,
+3, and 4 with counts differing by at most one. Preserve official objective
+fields exactly. Do not invent, paraphrase, or rename the official domain, task,
+or skill.
+
+Return only a JSON array of draft items using the required schema.
+```
+
+## Topic Prompt: Day03-order014 Streaming responses, WebSockets, and server-sent events
+
+Use this prompt for focused generation or top-up generation for `Day03-order014`.
+
+```text
+Act as an expert AWS Certified Generative AI Developer - Professional
+(AIP-C01) instructor and exam-item writer.
+
+Generate exactly 12 original draft practice questions for:
+
+- curriculum_order: Day03-order014
+- topic: Streaming responses, WebSockets, and server-sent events
+- accelerated_day: Day 3
+- knowledge_category: Skill; Knowledge; Representation / Location
+- knowledge_type: Procedural; Causal; Embedded
+
+Allowed official objective mappings:
+- Content Domain 2: Implementation and Integration | Task 2.4: Implement FM API integrations. | Skill 2.4.2: Develop real-time AI interaction systems to provide immediate feedback from FM (for example, by using Amazon Bedrock streaming APIs for incremental response delivery, WebSockets or server-sent events to generate text in real time, API Gateway to implement chunked transfer encoding).
+
+Use only these mappings. For every item, copy one complete
+domain/task/skill tuple exactly. Generate at least 12 item(s)
+for each mapped skill before using the remaining item budget.
+
+Question focus:
+- Ask for next step, runbook step, configuration choice, or failure-handling action.
+- Ask the learner to predict effects or diagnose cause from symptoms.
+- Include platform/tool/API/configuration evidence where relevant.
+
+Misconceptions and traps to test:
+- Confusing a tool or service with the full architecture.
+- Selecting a plausible option without checking the scenario constraint.
+
+Required remediation targets. Use only these existing files:
+
+- study_guide: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/study-guides/day-03-advanced-retrieval-prompt-governance-api-resilience.md
+- focused_artifact: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order014-streaming-websockets-server-sent-events.md
+- answer_guidance: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day-03-answer-guidance.md
+
+Generate approximately 9 multiple-choice and 3 multiple-response items for this topic.
+Every item must be scenario-based unless the item is testing a necessary
+declarative fact inside a realistic work situation.
+
+For multiple-choice items, distribute correct answers across positions 1, 2,
+3, and 4 with counts differing by at most one. Preserve official objective
+fields exactly. Do not invent, paraphrase, or rename the official domain, task,
+or skill.
+
+Return only a JSON array of draft items using the required schema.
+```
+
+## Topic Prompt: Day03-order015 Token limits, request validation, and response handling
+
+Use this prompt for focused generation or top-up generation for `Day03-order015`.
+
+```text
+Act as an expert AWS Certified Generative AI Developer - Professional
+(AIP-C01) instructor and exam-item writer.
+
+Generate exactly 12 original draft practice questions for:
+
+- curriculum_order: Day03-order015
+- topic: Token limits, request validation, and response handling
+- accelerated_day: Day 3
+- knowledge_category: Knowledge; Skill
+- knowledge_type: Declarative; Procedural; Causal
+
+Allowed official objective mappings:
+- Content Domain 1: Foundation Model Integration, Data Management, and Compliance | Task 1.3: Implement data validation and processing pipelines for FM consumption. | Skill 1.3.3: Format input data for FM inference according to model-specific requirements (for example, by using JSON formatting for Amazon Bedrock API requests, structured data preparation for SageMaker AI endpoints, conversation formatting for dialog-based applications).
+- Content Domain 2: Implementation and Integration | Task 2.5: Implement application integration patterns and development tools. | Skill 2.5.1: Create FM API interfaces to address the specific requirements of GenAI workloads (for example, by using API Gateway to handle streaming responses, token limit management, retry strategies to handle model timeouts).
+- Content Domain 5: Testing, Validation, and Troubleshooting | Task 5.2: Troubleshoot GenAI applications. | Skill 5.2.1: Resolve content handling issues to ensure that necessary information is processed completely in FM interactions (for example, by using context window overflow diagnostics, dynamic chunking strategies, prompt design optimization, truncation-related error analysis).
+
+Use only these mappings. For every item, copy one complete
+domain/task/skill tuple exactly. Generate at least 4 item(s)
+for each mapped skill before using the remaining item budget.
+
+Question focus:
+- Test necessary recall only inside a scenario; avoid glossary-only stems.
+- Ask for next step, runbook step, configuration choice, or failure-handling action.
+- Ask the learner to predict effects or diagnose cause from symptoms.
+
+Misconceptions and traps to test:
+- Confusing a tool or service with the full architecture.
+- Selecting a plausible option without checking the scenario constraint.
+
+Required remediation targets. Use only these existing files:
+
+- study_guide: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/study-guides/day-03-advanced-retrieval-prompt-governance-api-resilience.md
+- focused_artifact: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order015-token-limits-request-validation-response-handling.md
+- answer_guidance: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day-03-answer-guidance.md
+
+Generate approximately 9 multiple-choice and 3 multiple-response items for this topic.
+Every item must be scenario-based unless the item is testing a necessary
+declarative fact inside a realistic work situation.
+
+For multiple-choice items, distribute correct answers across positions 1, 2,
+3, and 4 with counts differing by at most one. Preserve official objective
+fields exactly. Do not invent, paraphrase, or rename the official domain, task,
+or skill.
+
+Return only a JSON array of draft items using the required schema.
+```
+
+## Topic Prompt: Day03-order016 Retries, exponential backoff, rate limiting, and timeouts
+
+Use this prompt for focused generation or top-up generation for `Day03-order016`.
+
+```text
+Act as an expert AWS Certified Generative AI Developer - Professional
+(AIP-C01) instructor and exam-item writer.
+
+Generate exactly 12 original draft practice questions for:
+
+- curriculum_order: Day03-order016
+- topic: Retries, exponential backoff, rate limiting, and timeouts
+- accelerated_day: Day 3
+- knowledge_category: Skill; Knowledge
+- knowledge_type: Procedural; Causal; Conditional
+
+Allowed official objective mappings:
+- Content Domain 2: Implementation and Integration | Task 2.4: Implement FM API integrations. | Skill 2.4.3: Create resilient FM systems to ensure reliable operations (for example, by using the AWS SDK for exponential backoff, API Gateway to manage rate limiting, fallback mechanisms for graceful degradation, AWS X-Ray to provide observability across service boundaries).
+- Content Domain 2: Implementation and Integration | Task 2.5: Implement application integration patterns and development tools. | Skill 2.5.1: Create FM API interfaces to address the specific requirements of GenAI workloads (for example, by using API Gateway to handle streaming responses, token limit management, retry strategies to handle model timeouts).
+
+Use only these mappings. For every item, copy one complete
+domain/task/skill tuple exactly. Generate at least 6 item(s)
+for each mapped skill before using the remaining item budget.
+
+Question focus:
+- Ask for next step, runbook step, configuration choice, or failure-handling action.
+- Ask when to choose or reject an approach based on scenario constraints.
+- Ask the learner to predict effects or diagnose cause from symptoms.
+
+Misconceptions and traps to test:
+- Confusing a tool or service with the full architecture.
+- Selecting a plausible option without checking the scenario constraint.
+
+Required remediation targets. Use only these existing files:
+
+- study_guide: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/study-guides/day-03-advanced-retrieval-prompt-governance-api-resilience.md
+- focused_artifact: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order016-retries-backoff-rate-limiting-timeouts.md
+- answer_guidance: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day-03-answer-guidance.md
+
+Generate approximately 9 multiple-choice and 3 multiple-response items for this topic.
+Every item must be scenario-based unless the item is testing a necessary
+declarative fact inside a realistic work situation.
+
+For multiple-choice items, distribute correct answers across positions 1, 2,
+3, and 4 with counts differing by at most one. Preserve official objective
+fields exactly. Do not invent, paraphrase, or rename the official domain, task,
+or skill.
+
+Return only a JSON array of draft items using the required schema.
+```
+
+## Topic Prompt: Day03-order017 Fallbacks, circuit breakers, and graceful degradation
+
+Use this prompt for focused generation or top-up generation for `Day03-order017`.
+
+```text
+Act as an expert AWS Certified Generative AI Developer - Professional
+(AIP-C01) instructor and exam-item writer.
+
+Generate exactly 12 original draft practice questions for:
+
+- curriculum_order: Day03-order017
+- topic: Fallbacks, circuit breakers, and graceful degradation
+- accelerated_day: Day 3
+- knowledge_category: Knowledge; Skill
+- knowledge_type: Conceptual; Procedural; Causal; Strategic
+
+Allowed official objective mappings:
+- Content Domain 1: Foundation Model Integration, Data Management, and Compliance | Task 1.2: Select and configure FMs. | Skill 1.2.3: Design resilient AI systems to ensure continuous operation during service disruptions (for example, by using AWS Step Functions circuit breaker patterns, Amazon Bedrock Cross-Region Inference for models that have limited regional availability, cross-Region model deployment, graceful degradation strategies).
+- Content Domain 2: Implementation and Integration | Task 2.4: Implement FM API integrations. | Skill 2.4.3: Create resilient FM systems to ensure reliable operations (for example, by using the AWS SDK for exponential backoff, API Gateway to manage rate limiting, fallback mechanisms for graceful degradation, AWS X-Ray to provide observability across service boundaries).
+
+Use only these mappings. For every item, copy one complete
+domain/task/skill tuple exactly. Generate at least 6 item(s)
+for each mapped skill before using the remaining item budget.
+
+Question focus:
+- Ask the learner to explain relationships, boundaries, or system roles.
+- Ask for next step, runbook step, configuration choice, or failure-handling action.
+- Ask the learner to predict effects or diagnose cause from symptoms.
+- Ask for tradeoff, architecture decision, or defended plan.
+
+Misconceptions and traps to test:
+- Confusing a tool or service with the full architecture.
+- Selecting a plausible option without checking the scenario constraint.
+
+Required remediation targets. Use only these existing files:
+
+- study_guide: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/study-guides/day-03-advanced-retrieval-prompt-governance-api-resilience.md
+- focused_artifact: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order017-fallbacks-circuit-breakers-graceful-degradation.md
+- answer_guidance: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day-03-answer-guidance.md
+
+Generate approximately 9 multiple-choice and 3 multiple-response items for this topic.
+Every item must be scenario-based unless the item is testing a necessary
+declarative fact inside a realistic work situation.
+
+For multiple-choice items, distribute correct answers across positions 1, 2,
+3, and 4 with counts differing by at most one. Preserve official objective
+fields exactly. Do not invent, paraphrase, or rename the official domain, task,
+or skill.
+
+Return only a JSON array of draft items using the required schema.
+```
+
+## Topic Prompt: Day03-order018 Distributed tracing and FM API observability
+
+Use this prompt for focused generation or top-up generation for `Day03-order018`.
+
+```text
+Act as an expert AWS Certified Generative AI Developer - Professional
+(AIP-C01) instructor and exam-item writer.
+
+Generate exactly 12 original draft practice questions for:
+
+- curriculum_order: Day03-order018
+- topic: Distributed tracing and FM API observability
+- accelerated_day: Day 3
+- knowledge_category: Skill; Knowledge; Representation / Location
+- knowledge_type: Procedural; Diagnostic; Causal; Embedded
+
+Allowed official objective mappings:
+- Content Domain 2: Implementation and Integration | Task 2.4: Implement FM API integrations. | Skill 2.4.3: Create resilient FM systems to ensure reliable operations (for example, by using the AWS SDK for exponential backoff, API Gateway to manage rate limiting, fallback mechanisms for graceful degradation, AWS X-Ray to provide observability across service boundaries).
+- Content Domain 2: Implementation and Integration | Task 2.5: Implement application integration patterns and development tools. | Skill 2.5.6: Improve troubleshooting efficiency for FM applications (for example, by using CloudWatch Logs Insights to analyze prompts and responses, X-Ray to trace FM API calls, Amazon Q Developer to implement GenAI-specific error pattern recognition).
+- Content Domain 4: Operational Efficiency and Optimization for GenAI Applications | Task 4.3: Implement monitoring systems for GenAI applications. | Skill 4.3.1: Create holistic observability systems to provide complete visibility into FM application performance (for example, by using operational metrics, performance tracing, FM interaction tracing, business impact metrics with custom dashboards).
+
+Use only these mappings. For every item, copy one complete
+domain/task/skill tuple exactly. Generate at least 4 item(s)
+for each mapped skill before using the remaining item budget.
+
+Question focus:
+- Ask for next step, runbook step, configuration choice, or failure-handling action.
+- Ask the learner to predict effects or diagnose cause from symptoms.
+- Include platform/tool/API/configuration evidence where relevant.
+
+Misconceptions and traps to test:
+- Confusing a tool or service with the full architecture.
+- Selecting a plausible option without checking the scenario constraint.
+
+Required remediation targets. Use only these existing files:
+
+- study_guide: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/study-guides/day-03-advanced-retrieval-prompt-governance-api-resilience.md
+- focused_artifact: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order018-distributed-tracing-fm-api-observability.md
+- answer_guidance: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day-03-answer-guidance.md
+
+Generate approximately 9 multiple-choice and 3 multiple-response items for this topic.
+Every item must be scenario-based unless the item is testing a necessary
+declarative fact inside a realistic work situation.
+
+For multiple-choice items, distribute correct answers across positions 1, 2,
+3, and 4 with counts differing by at most one. Preserve official objective
+fields exactly. Do not invent, paraphrase, or rename the official domain, task,
+or skill.
+
+Return only a JSON array of draft items using the required schema.
+```
+
+
+===== SELECTED PROMPT TO EXECUTE =====
+Use this prompt for focused generation or top-up generation for `Day03-order007`.
+
+```text
+Act as an expert AWS Certified Generative AI Developer - Professional
+(AIP-C01) instructor and exam-item writer.
+
+Generate exactly 12 original draft practice questions for:
+
+- curriculum_order: Day03-order007
+- topic: Conversation context, history, intent, and state management
+- accelerated_day: Day 3
+- knowledge_category: Knowledge; Skill
+- knowledge_type: Conceptual; Procedural; Conditional
+
+Allowed official objective mappings:
+- Content Domain 1: Foundation Model Integration, Data Management, and Compliance | Task 1.6: Implement prompt engineering strategies and governance for FM interactions. | Skill 1.6.2: Build interactive AI systems to maintain context and improve user interactions with FMs (for example, by using Step Functions for clarification workflows, Amazon Comprehend for intent recognition, DynamoDB for conversation history storage).
+
+Use only these mappings. For every item, copy one complete
+domain/task/skill tuple exactly. Generate at least 12 item(s)
+for each mapped skill before using the remaining item budget.
+
+Question focus:
+- Ask the learner to explain relationships, boundaries, or system roles.
+- Ask for next step, runbook step, configuration choice, or failure-handling action.
+- Ask when to choose or reject an approach based on scenario constraints.
+
+Misconceptions and traps to test:
+- Confusing a tool or service with the full architecture.
+- Selecting a plausible option without checking the scenario constraint.
+
+Required remediation targets. Use only these existing files:
+
+- study_guide: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/study-guides/day-03-advanced-retrieval-prompt-governance-api-resilience.md
+- focused_artifact: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day03-order007-conversation-context-history-intent-state-management.md
+- answer_guidance: docs/Pilot1/aip-c01/student-kit/accelerated-7-day/day-03-artifacts/day-03-answer-guidance.md
+
+Generate approximately 9 multiple-choice and 3 multiple-response items for this topic.
+Every item must be scenario-based unless the item is testing a necessary
+declarative fact inside a realistic work situation.
+
+For multiple-choice items, distribute correct answers across positions 1, 2,
+3, and 4 with counts differing by at most one. Preserve official objective
+fields exactly. Do not invent, paraphrase, or rename the official domain, task,
+or skill.
+
+Return only a JSON array of draft items using the required schema.
+```
+
+```

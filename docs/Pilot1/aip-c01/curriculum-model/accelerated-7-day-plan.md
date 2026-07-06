@@ -19,7 +19,8 @@ data, or AI/ML experience into AIP-C01-specific performance.
 
 Use this route only if all of the following are true:
 
-- You can commit at least six hours of active learning per day for seven days.
+- You can commit at least six hours of active learning per day for seven days,
+  with the expectation that dense days may require seven to eight hours.
 - You have prior experience building or operating production-grade
   applications on AWS or comparable open-source/cloud technologies.
 - You understand basic AWS compute, storage, networking, IAM, monitoring, and
@@ -31,8 +32,11 @@ Use this route only if all of the following are true:
 - You can work through dense professional-level material without extensive
   handholding.
 
-This route compresses practice. It does not lower mastery gates,
-source-traceability requirements, or exam-readiness standards.
+This route compresses calendar time. It does not lower teaching quality,
+mastery gates, source-traceability requirements, or exam-readiness standards.
+If a topic requires more time than the accelerated day can reasonably hold, the
+material is still created and the plan must call out the extra time,
+remediation, or self-paced continuation required.
 
 ## Time Budget
 
@@ -40,6 +44,12 @@ Minimum daily commitment:
 
 ```text
 6 active learning hours/day x 7 days = 42 active hours
+```
+
+Expected range:
+
+```text
+6-8 active learning hours/day depending on diagnostic gaps and topic density
 ```
 
 Recommended daily shape:
@@ -108,6 +118,13 @@ move quickly into professional-level tasks.
 - inspect or perform a basic Bedrock request/response flow;
 - create a tiny prompt regression set with expected outputs.
 
+**Quality note:**
+
+Day 1 is foundational. Do not rush past it to protect the calendar. If the
+learner cannot explain the system map, invocation path, prompt/output controls,
+and evaluation baseline, extend Day 1 or record explicit remediation before
+continuing. Later days depend on this mental model.
+
 **Daily artifact:**
 
 - one-page system map plus a minimal invocation and prompt-evaluation record.
@@ -146,6 +163,14 @@ official domain.
 - compare fixed, hierarchical, and semantic chunking decisions;
 - sketch or build a basic RAG flow using Bedrock Knowledge Bases or an
   equivalent faithful simulation.
+
+**Quality note:**
+
+Day 2 carries the retrieval foundation for the rest of the course. Do not
+compress away data-quality reasoning, chunking tradeoffs, metadata/access
+labels, embedding/search behavior, or the basic RAG request path. If the
+learner cannot diagnose where a bad RAG answer failed, extend the day or carry
+the gap as named remediation.
 
 **Daily artifact:**
 
@@ -187,6 +212,23 @@ integration patterns.
 - design API behavior for sync, async, and streaming use cases;
 - run a failure-mode table for throttling, timeout, malformed response, and
   region/model unavailability.
+
+**Focused-artifact tiering:**
+
+Day 3 contains more focused topics than Days 1 and 2. The tiering below is
+pacing guidance, not a quality reduction. All Day 3 topics remain in scope.
+Complete the focused Day 3 artifacts as:
+
+- **Core in-session:** order001, order002, order004, order006, order009, order010,
+  order012, order013, order016, order017, order018.
+- **Guided inspection:** order005, order011, order014, order015.
+- **Compressed but assessed:** order003, order007, order008.
+
+This tiering preserves the same mastery standard while preventing the 18-topic
+practice layer from silently overrunning the day. If the learner cannot
+complete the compressed topics with acceptable self-check evidence, the day
+extends toward the seven-to-eight-hour range or those topics become named
+remediation carryover. They are not silently skipped.
 
 **Daily artifact:**
 
