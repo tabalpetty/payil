@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Murai + Capability-Driven Learning — Unified Framework</title>
+<style>
+  :root {
+    --ink: #1C1C1E;
+    --body-c: #3A3A3C;
+    --murai: #B8860B;
+    --murai-soft: #F5EDD2;
+    --murai-border: #D4A94A;
+    --spec: #4A7C9B;
+    --spec-soft: #DAE8F0;
+    --spec-border: #7BACC8;
+    --merge: #2D6A4F;
+    --merge-soft: #D5EDE2;
+    --merge-border: #5AAF7C;
+    --ground: #F0EDE8;
+    --card: #FAFAF7;
+    --border: #D0CBC2;
+    --dim: #8A8580;
+    --mono: 'SF Mono', 'Cascadia Code', 'Fira Code', 'Consolas', monospace;
+    --serif: Georgia, 'Times New Roman', serif;
+    --sans: -apple-system, 'Segoe UI', system-ui, Helvetica, Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #E8E4DB; --body-c: #B8B4AC;
+      --murai: #D4A94A; --murai-soft: #2A2210; --murai-border: #8A6E2A;
+      --spec: #7BACC8; --spec-soft: #142028; --spec-border: #4A7C9B;
+      --merge: #5AAF7C; --merge-soft: #0E2218; --merge-border: #2D6A4F;
+      --ground: #141210; --card: #242220; --border: #3A3630; --dim: #6A6560;
+    }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: var(--sans);
+    background: var(--ground);
+    color: var(--body-c);
+    font-size: 14px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 4rem;
+  }
+  .diagram-title {
+    font-family: var(--serif);
+    font-size: clamp(1.3rem, 3vw, 1.7rem);
+    color: var(--ink);
+    text-wrap: balance;
+    margin-bottom: 0.3rem;
+  }
+  .diagram-subtitle {
+    font-size: 0.85rem;
+    color: var(--dim);
+    margin-bottom: 2.5rem;
+  }
+  .flow-down {
+    display: flex;
+    justify-content: center;
+    padding: 0.6rem 0;
+  }
+  .flow-arrow {
+    width: 2px; height: 28px;
+    background: var(--merge-border);
+    position: relative;
+  }
+  .flow-arrow::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; left: -4px;
+    width: 0; height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid var(--merge-border);
+  }
+  .two-sources {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  .sys-box {
+    border: 1.5px solid var(--border);
+    border-radius: 6px;
+    padding: 1.1rem 1rem;
+    background: var(--card);
+  }
+  .sys-box.murai-box { border-color: var(--murai-border); }
+  .sys-box.spec-box { border-color: var(--spec-border); }
+  .sys-box.merge-box { border-color: var(--merge-border); background: var(--merge-soft); }
+  .sys-label {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+  }
+  .sys-label.murai-l { color: var(--murai); }
+  .sys-label.spec-l { color: var(--spec); }
+  .sys-label.merge-l { color: var(--merge); }
+  .sys-name {
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    color: var(--ink);
+    font-weight: 700;
+    margin-bottom: 0.15rem;
+  }
+  .sys-role {
+    font-size: 0.78rem;
+    color: var(--dim);
+    font-style: italic;
+    margin-bottom: 0.75rem;
+  }
+  .axis-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+  .axis-item {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    font-size: 0.78rem;
+    line-height: 1.4;
+  }
+  .axis-tag {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 0.1rem 0.4rem;
+    border-radius: 3px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .axis-tag.m { background: var(--murai-soft); color: var(--murai); }
+  .axis-tag.s { background: var(--spec-soft); color: var(--spec); }
+  .converge {
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    position: relative;
+    margin: 0.3rem 0;
+  }
+  .converge-line { position: absolute; top: 0; height: 2px; }
+  .converge-line.left {
+    left: 25%; right: 50%;
+    background: linear-gradient(to right, var(--murai-border), var(--merge-border));
+  }
+  .converge-line.right {
+    left: 50%; right: 25%;
+    background: linear-gradient(to left, var(--spec-border), var(--merge-border));
+  }
+  .converge-stem {
+    position: absolute;
+    top: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 2px; height: 34px;
+    background: var(--merge-border);
+  }
+  .converge-stem::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; left: -4px;
+    width: 0; height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid var(--merge-border);
+  }
+  .merge-header {
+    text-align: center;
+    padding: 1rem 0 0.5rem;
+  }
+  .map-table-wrap {
+    overflow-x: auto;
+    margin: 0.75rem 0;
+    border: 1px solid var(--merge-border);
+    border-radius: 5px;
+  }
+  .map-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.75rem;
+  }
+  .map-table th {
+    font-family: var(--mono);
+    font-size: 0.58rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.55rem 0.65rem;
+    text-align: left;
+    border-bottom: 1px solid var(--merge-border);
+    white-space: nowrap;
+  }
+  .map-table th.col-m { color: var(--murai); background: var(--murai-soft); }
+  .map-table th.col-s { color: var(--spec); background: var(--spec-soft); }
+  .map-table th.col-g { color: var(--merge); background: var(--merge-soft); }
+  .map-table td {
+    padding: 0.45rem 0.65rem;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+    line-height: 1.45;
+  }
+  .map-table tr:last-child td { border-bottom: none; }
+  .map-table td:first-child { font-weight: 600; color: var(--ink); }
+  .output-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--merge-border);
+    border: 1.5px solid var(--merge-border);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .output-cell {
+    background: var(--card);
+    padding: 0.85rem 0.7rem;
+    text-align: center;
+  }
+  .output-icon { font-size: 1.4rem; margin-bottom: 0.3rem; }
+  .output-name {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--merge);
+    margin-bottom: 0.2rem;
+  }
+  .output-desc {
+    font-size: 0.72rem;
+    color: var(--dim);
+    line-height: 1.4;
+  }
+  .gates-wrap {
+    border: 1.5px dashed var(--murai-border);
+    border-radius: 8px;
+    padding: 0.6rem 0.8rem;
+    margin: 1rem 0;
+    position: relative;
+  }
+  .gates-badge {
+    position: absolute;
+    top: -0.55rem; left: 1rem;
+    background: var(--ground);
+    padding: 0 0.5rem;
+    font-family: var(--mono);
+    font-size: 0.55rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--murai);
+    font-weight: 700;
+  }
+  .gates-inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    padding-top: 0.2rem;
+  }
+  .gate-chip {
+    font-family: var(--mono);
+    font-size: 0.55rem;
+    padding: 0.15rem 0.4rem;
+    border-radius: 3px;
+    background: var(--murai-soft);
+    color: var(--murai);
+  }
+  .gate-chip.new {
+    background: var(--merge-soft);
+    color: var(--merge);
+    border: 1px solid var(--merge-border);
+  }
+  .pipeline-strip {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0 0.5rem;
+    overflow-x: auto;
+  }
+  .pipe-box {
+    font-family: var(--mono);
+    font-size: 0.58rem;
+    padding: 0.35rem 0.55rem;
+    border-radius: 4px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .pipe-box.m { background: var(--murai-soft); color: var(--murai); border: 1px solid var(--murai-border); }
+  .pipe-box.s { background: var(--spec-soft); color: var(--spec); border: 1px solid var(--spec-border); }
+  .pipe-box.g { background: var(--merge-soft); color: var(--merge); border: 1px solid var(--merge-border); }
+  .pipe-arrow {
+    width: 16px; height: 1px;
+    background: var(--border);
+    flex-shrink: 0;
+    position: relative;
+  }
+  .pipe-arrow::after {
+    content: '';
+    position: absolute;
+    right: -1px; top: -3px;
+    width: 0; height: 0;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-left: 5px solid var(--border);
+  }
+  .anno {
+    font-size: 0.72rem;
+    color: var(--dim);
+    font-style: italic;
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+  .legend {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.72rem;
+    color: var(--dim);
+  }
+  .legend-item { display: flex; align-items: center; gap: 0.4rem; }
+  .legend-swatch { width: 12px; height: 12px; border-radius: 2px; flex-shrink: 0; }
+  .legend-swatch.lm { background: var(--murai-soft); border: 1px solid var(--murai-border); }
+  .legend-swatch.ls { background: var(--spec-soft); border: 1px solid var(--spec-border); }
+  .legend-swatch.lg { background: var(--merge-soft); border: 1px solid var(--merge-border); }
+  @media (max-width: 640px) {
+    .two-sources { grid-template-columns: 1fr; }
+    .output-grid { grid-template-columns: 1fr 1fr; }
+    .converge { display: none; }
+    .page { padding: 1.5rem 1rem 3rem; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <h1 class="diagram-title">Unified Framework: Murai + Capability-Driven Learning</h1>
+  <p class="diagram-subtitle">How the production engine and the learner experience merge at the knowledge type</p>
+
+  <div class="two-sources">
+    <div class="sys-box murai-box">
+      <div class="sys-label murai-l">Production Side</div>
+      <div class="sys-name">Murai (Curriculum Architecture Kit)</div>
+      <div class="sys-role">Classifies what to teach and validates content integrity</div>
+      <ul class="axis-list">
+        <li class="axis-item"><span class="axis-tag m">Axis 1</span> Cognitive Function (9 types)</li>
+        <li class="axis-item"><span class="axis-tag m">Axis 2</span> Representation &amp; Locus (6 types)</li>
+        <li class="axis-item"><span class="axis-tag m">Axis 3</span> Subject Domain</li>
+        <li class="axis-item"><span class="axis-tag m">Axis 4</span> Proficiency Level (5 stages)</li>
+        <li class="axis-item"><span class="axis-tag m">Output</span> 14 quality gates, traceability chain</li>
+      </ul>
+    </div>
+    <div class="sys-box spec-box">
+      <div class="sys-label spec-l">Learner Side</div>
+      <div class="sys-name">Capability-Driven Learning Spec</div>
+      <div class="sys-role">Structures how the learner experiences each unit</div>
+      <ul class="axis-list">
+        <li class="axis-item"><span class="axis-tag s">Tier 1</span> Capability &mdash; what you can do</li>
+        <li class="axis-item"><span class="axis-tag s">Tier 2</span> Skill &mdash; the tactical how</li>
+        <li class="axis-item"><span class="axis-tag s">Tier 3</span> Task &mdash; deliberate practice</li>
+        <li class="axis-item"><span class="axis-tag s">Tier 4</span> Concept &mdash; the underlying why</li>
+        <li class="axis-item"><span class="axis-tag s">Engine</span> Verification Loop at every capability</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="converge">
+    <div class="converge-line left"></div>
+    <div class="converge-line right"></div>
+    <div class="converge-stem"></div>
+  </div>
+
+  <div class="merge-header">
+    <div class="sys-label merge-l">Merge Point &mdash; Knowledge Type Determines Everything</div>
+  </div>
+
+  <div class="sys-box merge-box">
+    <div class="map-table-wrap">
+      <table class="map-table">
+        <thead>
+          <tr>
+            <th class="col-m">Murai Classifies</th>
+            <th class="col-s">Spec Structures</th>
+            <th class="col-g">Verification Pattern</th>
+            <th class="col-g">Learner Outcome</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Declarative (facts, rules)</td><td>Concept tier primary</td><td>Recall check</td><td>Knowledge</td></tr>
+          <tr><td>Procedural (methods)</td><td>Task tier primary</td><td>Command check</td><td>Muscle memory</td></tr>
+          <tr><td>Conceptual (models)</td><td>Concept + Skill co-primary</td><td>Predict then confirm</td><td>Clarity</td></tr>
+          <tr><td>Conditional (when/where)</td><td>Capability tier primary</td><td>Scenario decision</td><td>Judgment</td></tr>
+          <tr><td>Causal (explain, predict)</td><td>Concept tier primary</td><td>Intentional failure</td><td>Troubleshooting</td></tr>
+          <tr><td>Strategic (plan, adapt)</td><td>Capability tier primary</td><td>Design review</td><td>Architecture</td></tr>
+          <tr><td>Tacit (judgment)</td><td>Task tier, varied contexts</td><td>Pattern recognition</td><td>Intuition</td></tr>
+          <tr><td>Embedded (in tools)</td><td>Task tier primary</td><td>Tool output check</td><td>Proficiency</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="anno">Murai's Axis 1 (cognitive function) selects which tier leads. The Spec structures the unit. The Loop proves it.</p>
+  </div>
+
+  <div class="flow-down"><div class="flow-arrow"></div></div>
+
+  <div class="sys-box" style="border-color: var(--border);">
+    <div class="sys-label merge-l">Unified Production Pipeline</div>
+    <div class="pipeline-strip">
+      <div class="pipe-box m">Source Objectives</div>
+      <div class="pipe-arrow"></div>
+      <div class="pipe-box m">4-Axis Classification</div>
+      <div class="pipe-arrow"></div>
+      <div class="pipe-box g">Tier Selection</div>
+      <div class="pipe-arrow"></div>
+      <div class="pipe-box s">Four-Tier Unit</div>
+      <div class="pipe-arrow"></div>
+      <div class="pipe-box s">Verification Loop</div>
+      <div class="pipe-arrow"></div>
+      <div class="pipe-box m">14 + 1 Gates</div>
+    </div>
+    <div class="gates-wrap">
+      <span class="gates-badge">Quality Gates (14 existing + 1 new)</span>
+      <div class="gates-inner">
+        <span class="gate-chip">teaching_substrate</span>
+        <span class="gate-chip">source_objective</span>
+        <span class="gate-chip">raw_provenance</span>
+        <span class="gate-chip">schema</span>
+        <span class="gate-chip">traceability</span>
+        <span class="gate-chip">factual_verification</span>
+        <span class="gate-chip">review_evidence</span>
+        <span class="gate-chip">coverage</span>
+        <span class="gate-chip">distribution</span>
+        <span class="gate-chip">approved_output</span>
+        <span class="gate-chip">cost</span>
+        <span class="gate-chip">iteration</span>
+        <span class="gate-chip">automation_tail</span>
+        <span class="gate-chip">human_resolution</span>
+        <span class="gate-chip new">tier_completeness &larr; NEW</span>
+      </div>
+    </div>
+    <p class="anno">Gate 15: Every topic must produce a complete Four-Tier unit with a Verification Loop matching the dominant knowledge type</p>
+  </div>
+
+  <div class="flow-down"><div class="flow-arrow"></div></div>
+
+  <div class="sys-label merge-l" style="text-align: center; margin-bottom: 0.5rem;">Learner Outcomes</div>
+  <div class="output-grid">
+    <div class="output-cell">
+      <div class="output-icon">&#9679;</div>
+      <div class="output-name">Knowledge</div>
+      <div class="output-desc">Every official skill covered, no gaps &mdash; verified by traceability chain</div>
+    </div>
+    <div class="output-cell">
+      <div class="output-icon">&#9881;</div>
+      <div class="output-name">Proficiency</div>
+      <div class="output-desc">Every capability demonstrated, not just studied &mdash; enforced by Verification Loops</div>
+    </div>
+    <div class="output-cell">
+      <div class="output-icon">&#8635;</div>
+      <div class="output-name">Muscle Memory</div>
+      <div class="output-desc">Procedural and embedded skills drilled with varied contexts &mdash; built by Task tier</div>
+    </div>
+    <div class="output-cell">
+      <div class="output-icon">&#9670;</div>
+      <div class="output-name">Clarity</div>
+      <div class="output-desc">Predict-then-check loops build deep mental models &mdash; powered by Concept tier</div>
+    </div>
+  </div>
+
+  <div class="legend">
+    <div class="legend-item"><div class="legend-swatch lm"></div> Murai &mdash; production &amp; validation</div>
+    <div class="legend-item"><div class="legend-swatch ls"></div> Capability-Driven Spec &mdash; learner structure</div>
+    <div class="legend-item"><div class="legend-swatch lg"></div> Unified &mdash; where both systems merge</div>
+  </div>
+</div>
+</body>
+</html>

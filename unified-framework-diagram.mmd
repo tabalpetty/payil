@@ -1,0 +1,55 @@
+flowchart TD
+    subgraph MURAI["MURAI — Production Side"]
+        direction TB
+        M0["Classifies what to teach\nand validates content integrity"]
+        A1["Axis 1 · Cognitive Function (9 types)"]
+        A2["Axis 2 · Representation & Locus (6 types)"]
+        A3["Axis 3 · Subject Domain"]
+        A4["Axis 4 · Proficiency Level (5 stages)"]
+        MQ["Output · 14 quality gates + traceability chain"]
+    end
+
+    subgraph SPEC["CAPABILITY-DRIVEN SPEC — Learner Side"]
+        direction TB
+        S0["Structures how the learner\nexperiences each unit"]
+        T1["Tier 1 · Capability — what you can do"]
+        T2["Tier 2 · Skill — the tactical how"]
+        T3["Tier 3 · Task — deliberate practice"]
+        T4["Tier 4 · Concept — the underlying why"]
+        VL["Engine · Verification Loop at every capability"]
+    end
+
+    MURAI --> MERGE
+    SPEC --> MERGE
+
+    subgraph MERGE["MERGE POINT — Knowledge Type Determines Everything"]
+        direction TB
+        MP["Murai Axis 1 classifies the knowledge type\n→ Spec selects which tier leads\n→ Verification Loop proves it"]
+    end
+
+    MERGE --> PIPELINE
+
+    subgraph PIPELINE["UNIFIED PRODUCTION PIPELINE"]
+        direction LR
+        P1["Source\nObjectives"] --> P2["4-Axis\nClassification"]
+        P2 --> P3["Tier\nSelection"]
+        P3 --> P4["Four-Tier\nUnit"]
+        P4 --> P5["Verification\nLoop"]
+        P5 --> P6["14 + 1\nGates"]
+    end
+
+    PIPELINE --> OUTCOMES
+
+    subgraph OUTCOMES["LEARNER OUTCOMES"]
+        direction LR
+        O1["Knowledge\nEvery skill covered,\nno gaps"]
+        O2["Proficiency\nEvery capability\ndemonstrated"]
+        O3["Muscle Memory\nProcedural skills\ndrilled in context"]
+        O4["Clarity\nDeep mental models\nfrom predict-check"]
+    end
+
+    style MURAI fill:#F5EDD2,stroke:#D4A94A,stroke-width:2px,color:#1C1C1E
+    style SPEC fill:#DAE8F0,stroke:#7BACC8,stroke-width:2px,color:#1C1C1E
+    style MERGE fill:#D5EDE2,stroke:#5AAF7C,stroke-width:2px,color:#1C1C1E
+    style PIPELINE fill:#D5EDE2,stroke:#5AAF7C,stroke-width:2px,color:#1C1C1E
+    style OUTCOMES fill:#D5EDE2,stroke:#5AAF7C,stroke-width:2px,color:#1C1C1E
